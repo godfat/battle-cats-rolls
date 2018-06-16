@@ -1,0 +1,552 @@
+{
+  "Cat Quest": {
+    "order": 1,
+    "id": 427,
+    "rarity": 2
+  },
+  "Onsen Tenshi Termae": {
+    "order": 2,
+    "id": 417,
+    "rarity": 2
+  },
+  "Voli": {
+    "order": 3,
+    "id": 401,
+    "rarity": 2
+  },
+  "Ganglion": {
+    "order": 4,
+    "id": 396,
+    "rarity": 2
+  },
+  "Dark Mitama": {
+    "order": 5,
+    "id": 378,
+    "rarity": 2
+  },
+  "Fencer Cat": {
+    "order": 6,
+    "id": 377,
+    "rarity": 1
+  },
+  "Rover Cat": {
+    "order": 7,
+    "id": 376,
+    "rarity": 0
+  },
+  "Aer": {
+    "order": 8,
+    "id": 361,
+    "rarity": 2
+  },
+  "Mizli": {
+    "order": 9,
+    "id": 360,
+    "rarity": 2
+  },
+  "Bora": {
+    "order": 10,
+    "id": 359,
+    "rarity": 2
+  },
+  "Mighty Rekon Korps": {
+    "order": 11,
+    "id": 355,
+    "rarity": 2
+  },
+  "Twinstars": {
+    "order": 12,
+    "id": 351,
+    "rarity": 2
+  },
+  "Imagawa Yoshimoto": {
+    "order": 13,
+    "id": 338,
+    "rarity": 2
+  },
+  "Shadow Gao": {
+    "order": 14,
+    "id": 333,
+    "rarity": 2
+  },
+  "Welterweight Cat": {
+    "order": 15,
+    "id": 325,
+    "rarity": 0
+  },
+  "Sarukani": {
+    "order": 16,
+    "id": 322,
+    "rarity": 2
+  },
+  "Wrathful Poseidon": {
+    "order": 17,
+    "id": 316,
+    "rarity": 2
+  },
+  "Mighty Bomburr": {
+    "order": 18,
+    "id": 306,
+    "rarity": 2
+  },
+  "Mighty Drednot": {
+    "order": 19,
+    "id": 305,
+    "rarity": 2
+  },
+  "Mighty Kat-A-Pult": {
+    "order": 20,
+    "id": 304,
+    "rarity": 2
+  },
+  "Vaulter Cat": {
+    "order": 21,
+    "id": 307,
+    "rarity": 1
+  },
+  "Gardener Cat": {
+    "order": 22,
+    "id": 308,
+    "rarity": 0
+  },
+  "Splendid Ganesha": {
+    "order": 23,
+    "id": 272,
+    "rarity": 2
+  },
+  "Shining Amaterasu": {
+    "order": 24,
+    "id": 271,
+    "rarity": 2
+  },
+  "Nekoluga": {
+    "order": 25,
+    "id": 34,
+    "rarity": 2
+  },
+  "Ice Cat": {
+    "order": 26,
+    "id": 42,
+    "rarity": 2
+  },
+  "Cat Machine": {
+    "order": 27,
+    "id": 43,
+    "rarity": 2
+  },
+  "Lesser Demon Cat": {
+    "order": 28,
+    "id": 44,
+    "rarity": 2
+  },
+  "Marauder Cat": {
+    "order": 29,
+    "id": 57,
+    "rarity": 2
+  },
+  "Baby Cat": {
+    "order": 30,
+    "id": 59,
+    "rarity": 2
+  },
+  "Sanada Yukimura": {
+    "order": 31,
+    "id": 71,
+    "rarity": 2
+  },
+  "Maeda Keiji": {
+    "order": 32,
+    "id": 72,
+    "rarity": 2
+  },
+  "Oda Nobunaga": {
+    "order": 33,
+    "id": 73,
+    "rarity": 2
+  },
+  "Windy": {
+    "order": 34,
+    "id": 75,
+    "rarity": 2
+  },
+  "Thundia": {
+    "order": 35,
+    "id": 76,
+    "rarity": 2
+  },
+  "Sodom": {
+    "order": 36,
+    "id": 83,
+    "rarity": 2
+  },
+  "Megidora": {
+    "order": 37,
+    "id": 84,
+    "rarity": 2
+  },
+  "Vars": {
+    "order": 38,
+    "id": 85,
+    "rarity": 2
+  },
+  "Kamukura": {
+    "order": 39,
+    "id": 86,
+    "rarity": 2
+  },
+  "Raiden": {
+    "order": 40,
+    "id": 87,
+    "rarity": 2
+  },
+  "Kuu": {
+    "order": 41,
+    "id": 105,
+    "rarity": 2
+  },
+  "Kai": {
+    "order": 42,
+    "id": 106,
+    "rarity": 2
+  },
+  "Coppermine": {
+    "order": 43,
+    "id": 107,
+    "rarity": 2
+  },
+  "Date Masamune": {
+    "order": 44,
+    "id": 124,
+    "rarity": 2
+  },
+  "Takeda Shingen": {
+    "order": 45,
+    "id": 125,
+    "rarity": 2
+  },
+  "Urashima Taro": {
+    "order": 46,
+    "id": 134,
+    "rarity": 2
+  },
+  "The Grateful Crane": {
+    "order": 47,
+    "id": 135,
+    "rarity": 2
+  },
+  "Momotaro": {
+    "order": 48,
+    "id": 136,
+    "rarity": 2
+  },
+  "Kasa Jizo": {
+    "order": 49,
+    "id": 137,
+    "rarity": 2
+  },
+  "Princess Kaguya": {
+    "order": 50,
+    "id": 138,
+    "rarity": 2
+  },
+  "Nurse Cat": {
+    "order": 51,
+    "id": 143,
+    "rarity": 2
+  },
+  "Uesugi Kenshin": {
+    "order": 52,
+    "id": 158,
+    "rarity": 2
+  },
+  "Kalisa": {
+    "order": 53,
+    "id": 159,
+    "rarity": 2
+  },
+  "Asiluga": {
+    "order": 54,
+    "id": 168,
+    "rarity": 2
+  },
+  "Kubiluga": {
+    "order": 55,
+    "id": 169,
+    "rarity": 2
+  },
+  "Tecoluga": {
+    "order": 56,
+    "id": 170,
+    "rarity": 2
+  },
+  "Balaluga": {
+    "order": 57,
+    "id": 171,
+    "rarity": 2
+  },
+  "Dioramos": {
+    "order": 58,
+    "id": 177,
+    "rarity": 2
+  },
+  "Akira": {
+    "order": 59,
+    "id": 194,
+    "rarity": 2
+  },
+  "Mekako Saionji": {
+    "order": 60,
+    "id": 195,
+    "rarity": 2
+  },
+  "Catman": {
+    "order": 61,
+    "id": 196,
+    "rarity": 2
+  },
+  "Kachi-Kachi": {
+    "order": 62,
+    "id": 203,
+    "rarity": 2
+  },
+  "The White Rabbit": {
+    "order": 63,
+    "id": 212,
+    "rarity": 2
+  },
+  "Warlock and Pierre": {
+    "order": 64,
+    "id": 226,
+    "rarity": 2
+  },
+  "Hayabusa": {
+    "order": 65,
+    "id": 261,
+    "rarity": 2
+  },
+  "Togeluga": {
+    "order": 66,
+    "id": 240,
+    "rarity": 2
+  },
+  "Thunder God Zeus": {
+    "order": 67,
+    "id": 257,
+    "rarity": 2
+  },
+  "Anubis the Protector": {
+    "order": 68,
+    "id": 258,
+    "rarity": 2
+  },
+  "Radiant Aphrodite": {
+    "order": 69,
+    "id": 259,
+    "rarity": 2
+  },
+  "Metal Cat": {
+    "order": 70,
+    "id": 200,
+    "rarity": 1
+  },
+  "Cat Base Mini": {
+    "order": 71,
+    "id": 144,
+    "rarity": 1
+  },
+  "Neneko": {
+    "order": 72,
+    "id": 131,
+    "rarity": 1
+  },
+  "Gold Cat": {
+    "order": 73,
+    "id": 129,
+    "rarity": 1
+  },
+  "Freshman Cat Jobs": {
+    "order": 74,
+    "id": 237,
+    "rarity": 1
+  },
+  "Rich Cat III": {
+    "order": 75,
+    "id": 238,
+    "rarity": 1
+  },
+  "Sniper the Recruit": {
+    "order": 76,
+    "id": 239,
+    "rarity": 1
+  },
+  "Surfer Cat": {
+    "order": 77,
+    "id": 199,
+    "rarity": 1
+  },
+  "Onmyoji Cat": {
+    "order": 78,
+    "id": 198,
+    "rarity": 0
+  },
+  "Psychocat": {
+    "order": 79,
+    "id": 197,
+    "rarity": 0
+  },
+  "Cat Toaster": {
+    "order": 80,
+    "id": 153,
+    "rarity": 1
+  },
+  "Figure Skating Cats": {
+    "order": 81,
+    "id": 152,
+    "rarity": 1
+  },
+  "Weightlifter Cat": {
+    "order": 82,
+    "id": 151,
+    "rarity": 1
+  },
+  "Juliet Cat": {
+    "order": 83,
+    "id": 150,
+    "rarity": 1
+  },
+  "Mer-Cat": {
+    "order": 84,
+    "id": 149,
+    "rarity": 0
+  },
+  "Rocker Cat": {
+    "order": 85,
+    "id": 148,
+    "rarity": 0
+  },
+  "Tin Cat": {
+    "order": 86,
+    "id": 147,
+    "rarity": 0
+  },
+  "Stilts Cat": {
+    "order": 87,
+    "id": 146,
+    "rarity": 0
+  },
+  "Cat Gunslinger": {
+    "order": 88,
+    "id": 145,
+    "rarity": 0
+  },
+  "Sushi Cat": {
+    "order": 89,
+    "id": 61,
+    "rarity": 1
+  },
+  "Swordsman Cat": {
+    "order": 90,
+    "id": 58,
+    "rarity": 0
+  },
+  "Archer Cat": {
+    "order": 91,
+    "id": 56,
+    "rarity": 0
+  },
+  "Witch Cat": {
+    "order": 92,
+    "id": 55,
+    "rarity": 0
+  },
+  "Shaman Cat": {
+    "order": 93,
+    "id": 52,
+    "rarity": 0
+  },
+  "Fortune Teller Cat": {
+    "order": 94,
+    "id": 51,
+    "rarity": 0
+  },
+  "Bishop Cat": {
+    "order": 95,
+    "id": 50,
+    "rarity": 0
+  },
+  "Thief Cat": {
+    "order": 96,
+    "id": 49,
+    "rarity": 0
+  },
+  "Pirate Cat": {
+    "order": 97,
+    "id": 48,
+    "rarity": 0
+  },
+  "Viking Cat": {
+    "order": 98,
+    "id": 47,
+    "rarity": 0
+  },
+  "Jurassic Cat": {
+    "order": 99,
+    "id": 46,
+    "rarity": 0
+  },
+  "Salon Cat": {
+    "order": 100,
+    "id": 41,
+    "rarity": 0
+  },
+  "Bath Cat": {
+    "order": 101,
+    "id": 40,
+    "rarity": 1
+  },
+  "Apple Cat": {
+    "order": 102,
+    "id": 39,
+    "rarity": 1
+  },
+  "Wheel Cat": {
+    "order": 103,
+    "id": 38,
+    "rarity": 0
+  },
+  "Pogo Cat": {
+    "order": 104,
+    "id": 37,
+    "rarity": 0
+  },
+  "Swimmer Cat": {
+    "order": 105,
+    "id": 36,
+    "rarity": 1
+  },
+  "Nerd Cat": {
+    "order": 106,
+    "id": 35,
+    "rarity": 1
+  },
+  "Kotatsu Cat": {
+    "order": 107,
+    "id": 33,
+    "rarity": 1
+  },
+  "Hip Hop Cat": {
+    "order": 108,
+    "id": 32,
+    "rarity": 1
+  },
+  "Delinquent Cat": {
+    "order": 109,
+    "id": 31,
+    "rarity": 1
+  },
+  "Bodhisattva Cat": {
+    "order": 110,
+    "id": 30,
+    "rarity": 1
+  }
+}
