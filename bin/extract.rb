@@ -6,10 +6,10 @@ require 'fileutils'
 
 list_key = Digest::MD5.hexdigest('pack')[0, 16]
 pack_key = Digest::MD5.hexdigest('battlecats')[0, 16]
-list_file = ARGV.first || 'data/app/DataLocal.list'
+list_file = ARGV.first || 'data/7.1.0/app/DataLocal.list'
 pack_file = list_file[0...list_file.rindex('.')] + '.pack'
 pack_data = File.binread(pack_file)
-dir = "extract/#{File.basename(pack_file)}"
+dir = "extract/7.1.0/#{File.basename(pack_file)}"
 unpacker = BattleCatsRolls::Unpacker.new
 
 FileUtils.mkdir_p(dir)
