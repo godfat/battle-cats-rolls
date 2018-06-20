@@ -44,5 +44,5 @@ list.each do |row|
   # next unless name == 'GatyaDataSetR1.csv'
 
   data = unpacker.decrypt(pack_key, pack_data[offset.to_i, size.to_i])
-  File.binwrite("#{dir}/#{name}", data)
+  File.binwrite("extract/#{dir}/#{name}", data)
 end
