@@ -44,7 +44,7 @@ module BattleCatsRolls
 
         slots = line.split(',')
         id = slots.pop until slots.empty? || id == '-1'
-        result[index] = slots.map(&method(:Integer)).map(&:succ)
+        result[index] = slots.map { |s| Integer(s) + 1 }
         result
       end
     end
