@@ -1,8 +1,17 @@
 
 require 'openssl'
+require 'digest/md5'
 
 module BattleCatsRolls
   class Unpacker < Struct.new(:key, :bad_data)
+    def self.for_list
+      new(Digest::MD5.hexdigest('pack')[0, 16])
+    end
+
+    def self.for_pack
+      new(Digest::MD5.hexdigest('battlecats')[0, 16])
+    end
+
     def initialize(new_key)
       super(new_key, false)
     end
