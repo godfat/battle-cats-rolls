@@ -16,6 +16,7 @@
 ## Decrypting the app data
 
 * https://www.reddit.com/r/battlecats/comments/41e4l1/is_there_anyone_able_to_access_bc_files_your_help/cz3npr2
+* https://www.reddit.com/r/battlecats/comments/3em0bw/unit_upgrade_cost_spreadsheet/cthqo3f
 * https://play.google.com/store/apps/details?id=nextapp.fx
 
 ## Event data
