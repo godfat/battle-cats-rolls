@@ -10,19 +10,19 @@ list_file = ARGV.first || 'data/7.1.0/app/DataLocal.list'
 pack_file = list_file[0...list_file.rindex('.')] + '.pack'
 pack_data = File.binread(pack_file)
 dir = "extract/7.1.0/#{File.basename(pack_file)}"
-unpacker = BattleCatsRolls::Unpacker.new
+unpacker = BattleCatsRolls::Unpacker.new(pack_key)
 
 FileUtils.mkdir_p(dir)
 
 puts "Extracting #{pack_file}"
 
 # Drop first line for number of files
-list = unpacker.decrypt(list_key, File.binread(list_file)).lines.drop(1)
+list = BattleCatsRolls::Unpacker.new(list_key).
+  decrypt(File.binread(list_file)).lines.drop(1)
+
 list.each do |row|
   name, offset, size = row.split(',')
 
-  # next unless name == 'GatyaDataSetR1.csv'
-
-  data = unpacker.decrypt(pack_key, pack_data[offset.to_i, size.to_i])
+  data = unpacker.decrypt(pack_data[offset.to_i, size.to_i])
   File.binwrite("#{dir}/#{name}", data)
 end

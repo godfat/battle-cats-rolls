@@ -2,12 +2,12 @@
 require 'openssl'
 
 module BattleCatsRolls
-  class Unpacker < Struct.new(:bad_data)
-    def initialize
-      super(false)
+  class Unpacker < Struct.new(:key, :bad_data)
+    def initialize(new_key)
+      super(new_key, false)
     end
 
-    def decrypt key, data
+    def decrypt data
       if bad_data
         data
       else
