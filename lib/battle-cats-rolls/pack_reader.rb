@@ -23,22 +23,24 @@ module BattleCatsRolls
     def each
       if block_given?
         list_lines.each do |line|
-          filename, offset, size = line.split(',')
-          data = pack_unpacker.decrypt(
-            extractor.pack_data[offset.to_i, size.to_i])
-
-          yield(filename, data)
+          yield(*read(line))
         end
       else
         to_enum(__method__)
       end
     end
 
-    private
-
     def list_lines
       # Drop first line for number of files
-      list_unpacker.decrypt(extractor.list_data).lines.drop(1)
+      @list_lines ||= list_unpacker.decrypt(extractor.list_data).lines.drop(1)
+    end
+
+    def read line
+      filename, offset, size = line.split(',')
+      data = pack_unpacker.decrypt(
+        extractor.pack_data[offset.to_i, size.to_i])
+
+      [filename, data]
     end
   end
 end
