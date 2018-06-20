@@ -12,12 +12,12 @@ module BattleCatsRolls
 
     def_delegators :extractor, :list_path, :pack_path
 
-    def initialize list_path
+    def initialize new_list_path
       super(
-        Extractor.new(list_path),
+        Extractor.new(new_list_path),
         Unpacker.for_list,
         Unpacker.for_pack,
-        File.basename(list_path, '.list'))
+        File.basename(new_list_path, '.list'))
     end
 
     def each
