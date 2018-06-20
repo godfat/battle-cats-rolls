@@ -12,7 +12,7 @@ module BattleCatsRolls
       new(Digest::MD5.hexdigest('battlecats')[0, 16])
     end
 
-    def initialize(new_key)
+    def initialize new_key
       super(new_key, false)
     end
 

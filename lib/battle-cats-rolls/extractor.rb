@@ -1,7 +1,7 @@
 
 module BattleCatsRolls
   class Extractor < Struct.new(:list_path, :pack_path)
-    def initialize(new_list_path)
+    def initialize new_list_path
       name = new_list_path[0...new_list_path.rindex('.')]
 
       super(new_list_path, "#{name}.pack")
