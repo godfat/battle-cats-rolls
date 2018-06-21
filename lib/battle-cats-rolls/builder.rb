@@ -1,39 +1,16 @@
 
-require_relative 'pack_reader'
-
 module BattleCatsRolls
-  class Builder < Struct.new(:data_reader, :res_reader)
-
-    def initialize dir
-      super(
-        PackReader.new("#{dir}/DataLocal.list"),
-        PackReader.new("#{dir}/resLocal.list"))
+  class Builder < Struct.new(:provider)
+    def gacha
+      @gacha ||= store_gacha(provider.gacha)
     end
 
-    def data_local
-      @data_local ||= data_reader.list_lines.
-        grep(/\A(?:GatyaDataSetR1|unitbuy)\.csv,\d+,\d+$/).
-        inject({}) do |result, line|
-          filename, data = data_reader.read(line)
-
-          case filename
-          when 'GatyaDataSetR1.csv'
-            result[:gacha] = store_gacha(data)
-          when 'unitbuy.csv'
-            result[:rarity] = store_rarity(data)
-          end
-
-          result
-        end
+    def rarity
+      @rarity ||= store_rarity(provider.rarity)
     end
 
     def cat_names
-      @cat_names ||= res_reader.list_lines.
-        grep(/\AUnit_Explanation\d+_en\.csv,\d+,\d+$/).
-        inject({}) do |result, line|
-          result.store(*read_cat_name(line))
-          result
-        end.compact
+      @cat_names ||= store_cat_names(provider.res)
     end
 
     private
@@ -56,10 +33,11 @@ module BattleCatsRolls
       end
     end
 
-    def read_cat_name line
-      filename, data = res_reader.read(line)
-
-      [Integer(filename[/\d+/]), data[/\A[^\|]+/]]
+    def store_cat_names res_local
+      res_local.inject({}) do |result, (filename, data)|
+        result[Integer(filename[/\d+/])] = data[/\A[^\|]+/]
+        result
+      end
     end
   end
 end
