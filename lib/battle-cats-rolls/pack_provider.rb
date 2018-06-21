@@ -13,8 +13,8 @@ module BattleCatsRolls
       data[:gacha]
     end
 
-    def rarity
-      data[:rarity]
+    def unitbuy
+      data[:unitbuy]
     end
 
     def res
@@ -23,7 +23,7 @@ module BattleCatsRolls
         inject({}) do |result, line|
           result.store(*res_reader.read(line))
           result
-        end.compact
+        end
     end
 
     private
@@ -38,7 +38,7 @@ module BattleCatsRolls
           when 'GatyaDataSetR1.csv'
             result[:gacha] = data
           when 'unitbuy.csv'
-            result[:rarity] = data
+            result[:unitbuy] = data
           end
 
           result

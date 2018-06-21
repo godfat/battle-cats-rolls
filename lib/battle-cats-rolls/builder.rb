@@ -6,11 +6,17 @@ module BattleCatsRolls
     end
 
     def rarity
-      @rarity ||= store_rarity(provider.rarity)
+      @rarity ||= store_rarity(provider.unitbuy)
     end
 
     def cat_names
       @cat_names ||= store_cat_names(provider.res)
+    end
+
+    def == rhs
+      gacha == rhs.gacha &&
+        rarity == rhs.rarity &&
+        cat_names == cat_names
     end
 
     private
@@ -37,7 +43,7 @@ module BattleCatsRolls
       res_local.inject({}) do |result, (filename, data)|
         result[Integer(filename[/\d+/])] = data[/\A[^\|]+/]
         result
-      end
+      end.compact
     end
   end
 end
