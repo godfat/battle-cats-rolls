@@ -1,12 +1,16 @@
 
 module BattleCatsRolls
   class Builder < Struct.new(:provider)
+    def cats
+      @cats ||= build_cats
+    end
+
     def gacha
       @gacha ||= store_gacha(provider.gacha)
     end
 
-    def rarity
-      @rarity ||= store_rarity(provider.unitbuy)
+    def rarities
+      @rarities ||= store_rarities(provider.unitbuy)
     end
 
     def cat_names
@@ -15,11 +19,19 @@ module BattleCatsRolls
 
     def == rhs
       gacha == rhs.gacha &&
-        rarity == rhs.rarity &&
+        rarities == rhs.rarities &&
         cat_names == cat_names
     end
 
     private
+
+    def build_cats
+      rarities.inject(Hash.new{|h,k|h[k]={}}) do |result, (id, rarity)|
+        name = cat_names[id]
+        result[rarity].merge!(id => name) if name
+        result
+      end
+    end
 
     def store_gacha data
       data.lines.each.with_index.inject({}) do |result, (line, index)|
@@ -32,7 +44,7 @@ module BattleCatsRolls
       end
     end
 
-    def store_rarity data
+    def store_rarities data
       data.lines.each.with_index.inject({}) do |result, (line, index)|
         result[index + 1] = Integer(line.match(/\A(?:\d+,){13}(\d+)/)[1])
         result
