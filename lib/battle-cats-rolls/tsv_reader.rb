@@ -1,5 +1,7 @@
 # frozen_string_literal: true
 
+require 'date'
+
 module BattleCatsRolls
   class TsvReader < Struct.new(:tsv, :version)
     def self.current
@@ -54,34 +56,25 @@ module BattleCatsRolls
     end
 
     def convert_gacha data
-      convert_gacha_guaranteed(
-        data.transform_values do |value|
-          case value
-          when /\A(?:[1-9]\d*)|0\z/ # Avoid converting 010 to 10
-            value.to_i
-          else
-            value
-          end
-        end
-      )
-    end
-
-    def convert_gacha_guaranteed data
-      data[:guaranteed] =
-        case data[:guaranteed]
-        when 0
-          false
-        when 1
-          true
+      data.transform_values do |(key, value)|
+        case key
+        when :start_on, :end_on
+          Date.parse(value)
+        when :id, :rare, :sr, :ssr
+          value.to_i
+        when :guaranteed
+          value.to_i > 0
         else
-          data[:guaranteed]
+          value
         end
-
-      data
+      end
     end
 
     def read_row row, row_fields
-      Hash[row_fields.keys.zip(row.values_at(*row_fields.values))]
+      Hash[
+        row_fields.keys.zip(
+          row_fields.keys.zip(
+            row.values_at(*row_fields.values)))]
     end
 
     def parsed_data
