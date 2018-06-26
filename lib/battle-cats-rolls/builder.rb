@@ -27,7 +27,10 @@ module BattleCatsRolls
     end
 
     def dump dir
+      require 'fileutils'
       require 'yaml'
+
+      FileUtils.mkdir_p(dir)
       File.write("#{dir}/cats.yaml", YAML.dump(to_hash))
     end
 

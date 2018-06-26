@@ -7,7 +7,7 @@ pack_builder = BattleCatsRolls::Builder.new(pack_provider)
 
 p pack_builder.gacha[293].map(&pack_builder.cat_names.method(:[]))
 
-pack_builder.dump('build')
+pack_builder.dump('build/7.1.0')
 
 require_relative '../lib/battle-cats-rolls/extract_provider'
 
