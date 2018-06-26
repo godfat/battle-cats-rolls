@@ -2,13 +2,9 @@
 
 require_relative 'unpacker'
 
-require 'forwardable'
-
 module BattleCatsRolls
   class PackReader < Struct.new(
     :list_path, :pack_path, :list_unpacker, :pack_unpacker, :name)
-
-    extend Forwardable
 
     def initialize new_list_path
       pathname = new_list_path[0...new_list_path.rindex('.')]
