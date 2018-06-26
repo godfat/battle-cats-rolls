@@ -1,4 +1,8 @@
 
+# How to run:
+
+    ruby bin/build.rb
+
 # Thanks:
 
 ## The spreadsheet 2.0
