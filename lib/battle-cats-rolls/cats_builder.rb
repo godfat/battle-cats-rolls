@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 module BattleCatsRolls
-  class Builder < Struct.new(:provider)
+  class CatsBuilder < Struct.new(:provider)
     def cats
       @cats ||= Hash[build_cats.sort]
     end
