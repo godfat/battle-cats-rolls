@@ -18,6 +18,8 @@ p pack_builder == extract_builder
 
 require_relative '../lib/battle-cats-rolls/tsv_reader'
 
-reader = BattleCatsRolls::TsvReader.read('data/events/20180626.tsv')
+reader = BattleCatsRolls::TsvReader.read('data/events/20180707.tsv')
+current = BattleCatsRolls::TsvReader.current
 
 p reader.gacha
+p reader == current

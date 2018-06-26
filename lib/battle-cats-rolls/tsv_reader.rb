@@ -17,7 +17,7 @@ module BattleCatsRolls
     def self.download url, version=current_version
       require 'net/http'
 
-      new(Net::HTTP.get(URI.parse(url)), version)
+      new(Net::HTTP.get(URI.parse(url)).force_encoding('UTF-8'), version)
     end
 
     def self.read path, version=current_version
@@ -35,6 +35,10 @@ module BattleCatsRolls
 
     def initialize tsv, version=self.class.current_version
       super(tsv, version)
+    end
+
+    def == rhs
+      gacha == rhs.gacha
     end
 
     def gacha
