@@ -23,6 +23,11 @@ module BattleCatsRolls
         cat_names == cat_names
     end
 
+    def dump dir
+      require 'yaml'
+      File.write("#{dir}/cats.yaml", YAML.dump(Hash[cats.sort]))
+    end
+
     private
 
     def build_cats
