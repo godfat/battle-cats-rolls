@@ -23,6 +23,6 @@ p events == BattleCatsRolls::TsvReader.current
 
 require_relative '../lib/battle-cats-rolls/crystal_ball'
 
-ball = BattleCatsRolls::CrystalBall.new(cats_pack, events)
+ball = BattleCatsRolls::CrystalBall.from_pack_and_events(cats_pack, events)
 
 ball.dump('build/7.1.0')

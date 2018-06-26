@@ -2,6 +2,7 @@
 # How to run:
 
     ruby bin/build.rb
+    ruby bin/roll.rb SEED
 
 # Thanks:
 
