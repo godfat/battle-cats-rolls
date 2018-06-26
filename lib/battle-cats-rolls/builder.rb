@@ -3,30 +3,32 @@
 module BattleCatsRolls
   class Builder < Struct.new(:provider)
     def cats
-      @cats ||= build_cats
+      @cats ||= Hash[build_cats.sort]
     end
 
     def gacha
       @gacha ||= store_gacha(provider.gacha)
     end
 
-    def rarities
-      @rarities ||= store_rarities(provider.unitbuy)
-    end
-
     def cat_names
       @cat_names ||= store_cat_names(provider.res)
     end
 
+    def rarities
+      @rarities ||= store_rarities(provider.unitbuy)
+    end
+
     def == rhs
-      gacha == rhs.gacha &&
-        rarities == rhs.rarities &&
-        cat_names == cat_names
+      to_hash == rhs.to_hash
+    end
+
+    def to_hash
+      @to_hash ||= {'cats' => cats, 'gacha' => gacha}
     end
 
     def dump dir
       require 'yaml'
-      File.write("#{dir}/cats.yaml", YAML.dump(Hash[cats.sort]))
+      File.write("#{dir}/cats.yaml", YAML.dump(to_hash))
     end
 
     private
