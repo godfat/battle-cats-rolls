@@ -2,8 +2,14 @@
 
 require 'forwardable'
 
+require_relative 'gacha_pool'
+
 module BattleCatsRolls
   class Gacha < Struct.new(:pool, :seed)
+    def self.from_ball_and_event_id ball, event_id, seed
+      new(GachaPool.new(ball, event_id), seed)
+    end
+
     extend Forwardable
 
     def_delegators :pool, *%w[id start_on end_on name rare sr ssr]
