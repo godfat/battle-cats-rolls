@@ -15,3 +15,9 @@ extract_provider = BattleCatsRolls::ExtractProvider.new('extract/7.1.0')
 extract_builder = BattleCatsRolls::Builder.new(extract_provider)
 
 p pack_builder == extract_builder
+
+require_relative '../lib/battle-cats-rolls/tsv_reader'
+
+reader = BattleCatsRolls::TsvReader.read('data/events/20180626.tsv')
+
+p reader.gacha
