@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 
 module BattleCatsRolls
   class ExtractProvider < Struct.new(:dir)
