@@ -3,31 +3,40 @@
 require 'forwardable'
 
 module BattleCatsRolls
-  class GachaPool < Struct.new(:ball, :info, :slots)
+  class GachaPool < Struct.new(:cats, :gacha, :event)
     extend Forwardable
 
-    # def_delegators :info, :id, :start_on, :end_on, :name, :rare, :sr, :ssr
-    def_delegators :slots, :dig
+    def_delegator :cats, :dig, :dig_cat
+    def_delegator :slots, :dig, :dig_slot
+
+    %w[id start_on end_on name rare sr ssr].each do |name|
+      define_method(name) do
+        event[name]
+      end
+    end
 
     def initialize ball, event_id
       super(
-        ball,
-        ball.dig('events', event_id),
-        ball.dig('gacha', event_id).
-          inject(Hash.new{|h,k|h[k]=[]}) do |result, cat_id|
-            if rarity = find_rarity(ball, cat_id)
-              result[rarity] << cat_id
-              result
-            else
-              raise "Cannot find cat: #{cat_id}"
-            end
-          end)
+        ball.dig('cats'),
+        ball.dig('gacha', event_id),
+        ball.dig('events', event_id))
+    end
+
+    def slots
+      @slots ||= gacha.inject(Hash.new{|h,k|h[k]=[]}) do |result, cat_id|
+        if rarity = find_rarity(cat_id)
+          result[rarity] << cat_id
+          result
+        else
+          raise "Cannot find cat: #{cat_id}"
+        end
+      end
     end
 
     private
 
-    def find_rarity ball, cat_id
-      ball.dig('cats').find do |(rarity, cats)|
+    def find_rarity cat_id
+      cats.find do |(rarity, cats)|
         break rarity if cats.member?(cat_id)
       end
     end
