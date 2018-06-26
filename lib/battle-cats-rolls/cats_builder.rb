@@ -19,19 +19,7 @@ module BattleCatsRolls
     end
 
     def == rhs
-      to_hash == rhs.to_hash
-    end
-
-    def to_hash
-      @to_hash ||= {'cats' => cats, 'gacha' => gacha}
-    end
-
-    def dump dir
-      require 'fileutils'
-      require 'yaml'
-
-      FileUtils.mkdir_p(dir)
-      File.write("#{dir}/cats.yaml", YAML.dump(to_hash))
+      cats == rhs.cats && gacha == rhs.gacha
     end
 
     private

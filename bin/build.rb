@@ -2,24 +2,27 @@
 require_relative '../lib/battle-cats-rolls/pack_provider'
 require_relative '../lib/battle-cats-rolls/cats_builder'
 
-pack_provider = BattleCatsRolls::PackProvider.new('data/7.1.0/app')
-pack_builder = BattleCatsRolls::CatsBuilder.new(pack_provider)
+pack = BattleCatsRolls::PackProvider.new('data/7.1.0/app')
+cats_pack = BattleCatsRolls::CatsBuilder.new(pack)
 
-p pack_builder.gacha[293].map(&pack_builder.cat_names.method(:[]))
-
-pack_builder.dump('build/7.1.0')
+p cats_pack.gacha[293].map(&cats_pack.cat_names.method(:[]))
 
 require_relative '../lib/battle-cats-rolls/extract_provider'
 
-extract_provider = BattleCatsRolls::ExtractProvider.new('extract/7.1.0')
-extract_builder = BattleCatsRolls::CatsBuilder.new(extract_provider)
+extract = BattleCatsRolls::ExtractProvider.new('extract/7.1.0')
+cats_extract = BattleCatsRolls::CatsBuilder.new(extract)
 
-p pack_builder == extract_builder
+p cats_pack == cats_extract
 
 require_relative '../lib/battle-cats-rolls/tsv_reader'
 
-reader = BattleCatsRolls::TsvReader.read('data/events/20180707.tsv')
-current = BattleCatsRolls::TsvReader.current
+events = BattleCatsRolls::TsvReader.read('data/events/20180707.tsv')
 
-p reader.gacha
-p reader == current
+p events.gacha
+p events == BattleCatsRolls::TsvReader.current
+
+require_relative '../lib/battle-cats-rolls/crystal_ball'
+
+ball = BattleCatsRolls::CrystalBall.new(cats_pack, events)
+
+ball.dump('build/7.1.0')

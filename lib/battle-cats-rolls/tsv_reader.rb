@@ -28,8 +28,9 @@ module BattleCatsRolls
       case version
       when '7.1.0'
         {gacha:
-          {id: 10, start_on: 0, end_on: 2, version: 4,
-           rare: 16, sr: 18, ssr: 20, guaranteed: 21, name: 24}}
+          {'id' => 10, 'start_on' => 0, 'end_on' => 2, 'version' => 4,
+           'rare' => 16, 'sr' => 18, 'ssr' => 20, 'guaranteed' => 21,
+           'name' => 24}}
       end
     end
 
@@ -44,7 +45,7 @@ module BattleCatsRolls
     def gacha
       @gacha ||= parsed_data.inject({}) do |result, row|
         data = convert_gacha(read_row(row, gacha_fields))
-        result[data[:id]] = data
+        result[data['id']] = data if data['id']
         result
       end
     end
@@ -62,12 +63,15 @@ module BattleCatsRolls
     def convert_gacha data
       data.transform_values do |(key, value)|
         case key
-        when :start_on, :end_on
+        when 'start_on', 'end_on'
           Date.parse(value)
-        when :id, :rare, :sr, :ssr
-          value.to_i
-        when :guaranteed
+        when 'id', 'rare', 'sr', 'ssr'
+          id = value.to_i
+          id if id > 0
+        when 'guaranteed'
           value.to_i > 0
+        when 'name'
+          value.strip
         else
           value
         end
