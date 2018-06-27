@@ -12,6 +12,15 @@ cats_extract = BattleCatsRolls::CatsBuilder.new(extract)
 
 p cats_pack == cats_extract
 
+require_relative '../lib/battle-cats-rolls/tsv_reader'
+
+current = BattleCatsRolls::TsvReader.current
+last_date = current.gacha.
+  sort_by { |key, data| data['end_on'] }.
+  dig(-1, -1, 'end_on').
+  strftime('%Y%m%d')
+File.write("data/events/#{last_date}.tsv", current.tsv)
+
 require_relative '../lib/battle-cats-rolls/events_reader'
 require_relative '../lib/battle-cats-rolls/crystal_ball'
 
