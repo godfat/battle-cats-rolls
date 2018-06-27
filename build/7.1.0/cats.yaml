@@ -16361,6 +16361,66 @@ gacha:
   - 272
   - 273
 events:
+  11:
+    id: 11
+    start_on: 2018-05-31
+    end_on: 2018-06-15
+    version: '70000'
+    rare: 7400
+    sr: 2100
+    ssr: 500
+    guaranteed: false
+    name: "【Limited】 Collect Li'l Cats only during this event!★ Thru June 14th!"
+  245:
+    id: 245
+    start_on: 2018-06-06
+    end_on: 2018-06-08
+    version: '70000'
+    rare: 7000
+    sr: 2500
+    ssr: 500
+    guaranteed: false
+    name: "★ Red Busters w/ Pai-Pai! ★ Plus Increasing Capsules!"
+  266:
+    id: 266
+    start_on: 2018-06-11
+    end_on: 2018-06-14
+    version: '70100'
+    rare: 7000
+    sr: 2500
+    ssr: 500
+    guaranteed: false
+    name: "★ Dragon Emperors ★ Collect a mighty monstrous Uber Cat!"
+  221:
+    id: 221
+    start_on: 2018-06-14
+    end_on: 2018-06-16
+    version: '70100'
+    rare: 7000
+    sr: 2500
+    ssr: 500
+    guaranteed: false
+    name: "★ Vajiras Wargods! ★ Tactical master Uber Cats!"
+  293:
+    id: 293
+    start_on: 2018-06-16
+    end_on: 2018-06-19
+    version: '70100'
+    rare: 6500
+    sr: 2600
+    ssr: 900
+    guaranteed: false
+    name: "★ EPICFEST ★ Extra-high drop rates for Ubers, plus Dark Mitama!"
+  276:
+    id: 276
+    start_on: 2018-06-19
+    end_on: 2018-06-21
+    version: '70100'
+    rare: 7000
+    sr: 2500
+    ssr: 500
+    guaranteed: false
+    name: "★ Elemental Pixies ★ Cosmic powers brought to life as Uber Rare allies!"
   224:
     id: 224
     start_on: 2018-06-21
