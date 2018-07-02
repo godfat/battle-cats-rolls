@@ -16381,16 +16381,6 @@ events:
     ssr: 500
     guaranteed: false
     name: "★ Red Busters w/ Pai-Pai! ★ Plus Increasing Capsules!"
-  266:
-    id: 266
-    start_on: 2018-06-11
-    end_on: 2018-06-14
-    version: '70100'
-    rare: 7000
-    sr: 2500
-    ssr: 500
-    guaranteed: false
-    name: "★ Dragon Emperors ★ Collect a mighty monstrous Uber Cat!"
   221:
     id: 221
     start_on: 2018-06-14
@@ -16411,16 +16401,6 @@ events:
     ssr: 900
     guaranteed: false
     name: "★ EPICFEST ★ Extra-high drop rates for Ubers, plus Dark Mitama!"
-  276:
-    id: 276
-    start_on: 2018-06-19
-    end_on: 2018-06-21
-    version: '70100'
-    rare: 7000
-    sr: 2500
-    ssr: 500
-    guaranteed: false
-    name: "★ Elemental Pixies ★ Cosmic powers brought to life as Uber Rare allies!"
   224:
     id: 224
     start_on: 2018-06-21
@@ -16491,3 +16471,44 @@ events:
     ssr: 500
     guaranteed: false
     name: Metal Busters ★ With Increasing Capsule Discount!
+  298:
+    id: 298
+    start_on: 2018-07-07
+    end_on: 2018-07-10
+    version: '70100'
+    rare: 7000
+    sr: 2500
+    ssr: 500
+    guaranteed: true
+    name: 'NEW UNIT: Detective Vigler, cursed defender of justice! With 11-Capsule
+      Uber Guarantee!'
+  266:
+    id: 266
+    start_on: 2018-07-10
+    end_on: 2018-07-12
+    version: '70100'
+    rare: 7000
+    sr: 2500
+    ssr: 500
+    guaranteed: false
+    name: "★ Dragon Emperors ★ Collect a mighty monstrous Uber Cat!"
+  276:
+    id: 276
+    start_on: 2018-07-12
+    end_on: 2018-07-14
+    version: '70100'
+    rare: 7000
+    sr: 2500
+    ssr: 500
+    guaranteed: false
+    name: "★ Elemental Pixies ★ Cosmic powers brought to life as Uber Rare allies!"
+  302:
+    id: 302
+    start_on: 2018-07-14
+    end_on: 2018-07-17
+    version: '70100'
+    rare: 6500
+    sr: 2600
+    ssr: 900
+    guaranteed: false
+    name: "★ EPICFEST ★ Extra-high drop rates for Ubers, plus Dark Mitama!"

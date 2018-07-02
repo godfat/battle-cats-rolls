@@ -21,6 +21,10 @@ module BattleCatsRolls
       pool.dig_cat(rarity, pool.dig_slot(rarity, slot))
     end
 
+    def ubers
+      pool.dig_slot(4)
+    end
+
     private
 
     def roll_rarity
