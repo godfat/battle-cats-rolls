@@ -11,15 +11,15 @@ module BattleCatsRolls
     def color_sequence
       case score
       when 0...6500
-        '00'
+        '00;3'
       when 6500...7000
         '33;1'
       when 7000...9100
-        '33'
+        '33;3'
       when 9100...9500
         '32;1'
       else
-        '32'
+        '32;3'
       end
     end
   end
