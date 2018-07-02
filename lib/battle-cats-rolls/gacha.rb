@@ -14,6 +14,17 @@ module BattleCatsRolls
       super(GachaPool.new(crystal_ball, event_id), seed)
     end
 
+    def roll_both!
+      a_rarity = roll_rarity!
+      b_rarity = roll_rarity
+
+      a_slot = roll_slot!(a_rarity)
+      b_slot = roll_slot(b_rarity)
+
+      [dig_cat(a_rarity, a_slot),
+       dig_cat(b_rarity, b_slot)]
+    end
+
     def roll!
       rarity = roll_rarity!
       slot = roll_slot!(rarity)
@@ -31,10 +42,11 @@ module BattleCatsRolls
       pool.dig_cat(rarity, pool.dig_slot(rarity, slot))
     end
 
-    def roll_rarity!
+    def roll_rarity
       base = 10000
+      rolled = if block_given? then yield else roll_score end
 
-      case roll_score! % base
+      case rolled % base
       when 0...(base - sr - ssr)
         2
       when sr...(base - ssr)
@@ -44,14 +56,26 @@ module BattleCatsRolls
       end
     end
 
+    def roll_rarity!
+      roll_rarity{ roll_score! }
+    end
+
+    def roll_slot rarity
+      rolled = if block_given? then yield else roll_score end
+
+      rolled % pool.dig_slot(rarity).size
+    end
+
     def roll_slot! rarity
-      roll_score! % pool.dig_slot(rarity).size
+      roll_slot(rarity){ roll_score! }
+    end
+
+    def roll_score
+      seed.abs
     end
 
     def roll_score!
-      score = seed.abs
-      advance_seed!
-      score
+      roll_score.tap{ advance_seed! }
     end
 
     def advance_seed!

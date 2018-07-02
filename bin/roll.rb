@@ -9,8 +9,9 @@ ball = BattleCatsRolls::CrystalBall.load('build/7.1.0')
 
   puts "Rolling (#{gacha.ubers.size} ubers) #{gacha.name}"
 
-  10.times do
-    puts gacha.roll!
+  1.upto(100) do |i|
+    a, b = gacha.roll_both!
+    printf "%3d: %30s %30s\n", i, a, b
   end
 
   puts
