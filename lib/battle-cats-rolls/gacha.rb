@@ -2,6 +2,7 @@
 
 require 'forwardable'
 
+require_relative 'cat'
 require_relative 'gacha_pool'
 
 module BattleCatsRolls
@@ -39,7 +40,7 @@ module BattleCatsRolls
     private
 
     def dig_cat rarity, slot
-      pool.dig_cat(rarity, pool.dig_slot(rarity, slot))
+      Cat.new(rarity, pool.dig_cat(rarity, pool.dig_slot(rarity, slot)))
     end
 
     def roll_rarity

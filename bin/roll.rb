@@ -11,7 +11,7 @@ ball = BattleCatsRolls::CrystalBall.load('build/7.1.0')
 
   1.upto(100) do |i|
     a, b = gacha.roll_both!
-    printf "%3d: %30s %30s\n", i, a, b
+    printf "%3d: %35s %35s\n", i, a, b
   end
 
   puts
