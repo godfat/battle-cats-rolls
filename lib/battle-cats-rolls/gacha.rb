@@ -7,6 +7,8 @@ require_relative 'gacha_pool'
 
 module BattleCatsRolls
   class Gacha < Struct.new(:pool, :seed)
+    Base = 10000
+
     extend Forwardable
 
     def_delegators :pool, *%w[id start_on end_on name rare sr ssr]
@@ -16,21 +18,16 @@ module BattleCatsRolls
     end
 
     def roll_both!
-      a_rarity = roll_rarity!
-      b_rarity = roll_rarity
+      a_int = roll_int!
+      b_int = roll_int
+      a_cat = roll_cat!(a_int)
+      b_cat = roll_cat(b_int)
 
-      a_slot = roll_slot!(a_rarity)
-      b_slot = roll_slot(b_rarity)
-
-      [dig_cat(a_rarity, a_slot),
-       dig_cat(b_rarity, b_slot)]
+      [a_cat, b_cat]
     end
 
     def roll!
-      rarity = roll_rarity!
-      slot = roll_slot!(rarity)
-
-      dig_cat(rarity, slot)
+      roll_cat!(roll_int!)
     end
 
     def ubers
@@ -39,44 +36,38 @@ module BattleCatsRolls
 
     private
 
-    def dig_cat rarity, slot
-      Cat.new(rarity, pool.dig_cat(rarity, pool.dig_slot(rarity, slot)))
+    def roll_int
+      seed.abs
     end
 
-    def roll_rarity
-      base = 10000
-      rolled = if block_given? then yield else roll_score end
+    def roll_int!
+      roll_int.tap{ advance_seed! }
+    end
 
-      case rolled % base
-      when 0...(base - sr - ssr)
+    def roll_cat int_rarity
+      rarity = dig_rarity(int_rarity)
+      int = if block_given? then yield else roll_int end
+      slot = int % pool.dig_slot(rarity).size
+
+      Cat.new(
+        rarity,
+        pool.dig_cat(rarity, pool.dig_slot(rarity, slot)),
+        int_rarity % Base)
+    end
+
+    def roll_cat! int_rarity
+      roll_cat(int_rarity){ roll_int! }
+    end
+
+    def dig_rarity int
+      case int % Base
+      when 0...(Base - sr - ssr)
         2
-      when sr...(base - ssr)
+      when sr...(Base - ssr)
         3
       else
         4
       end
-    end
-
-    def roll_rarity!
-      roll_rarity{ roll_score! }
-    end
-
-    def roll_slot rarity
-      rolled = if block_given? then yield else roll_score end
-
-      rolled % pool.dig_slot(rarity).size
-    end
-
-    def roll_slot! rarity
-      roll_slot(rarity){ roll_score! }
-    end
-
-    def roll_score
-      seed.abs
-    end
-
-    def roll_score!
-      roll_score.tap{ advance_seed! }
     end
 
     def advance_seed!
