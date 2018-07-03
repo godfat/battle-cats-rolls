@@ -1,0 +1,23 @@
+<table>
+  <th>A No.</th>
+  <th>Seed</th>
+  <th>Result</th>
+  <th>Guaranteed</th>
+  <th>Alt. result</th>
+  <th>Alt. guaranteed</th>
+  <th>Seed</th>
+  <th>B No.</th>
+
+  <% arg.each.with_index do |(a, b), index| %>
+    <tr>
+      <td><%= index %></td>
+      <td>seed</td>
+      <td><%= a.name %></td>
+      <td>x</td>
+      <td><%= b.name %></td>
+      <td>x</td>
+      <td>seed</td>
+      <td><%= index %></td>
+    </tr>
+  <% end %>
+</table>
