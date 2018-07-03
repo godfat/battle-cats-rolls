@@ -45,22 +45,23 @@ module BattleCatsRolls
     end
 
     def roll_cat int_rarity
-      rarity = dig_rarity(int_rarity)
+      score = int_rarity % Base
+      rarity = dig_rarity(score)
       int = if block_given? then yield else roll_int end
       slot = int % pool.dig_slot(rarity).size
 
       Cat.new(
         rarity,
         pool.dig_cat(rarity, pool.dig_slot(rarity, slot)),
-        int_rarity % Base)
+        score)
     end
 
     def roll_cat! int_rarity
       roll_cat(int_rarity){ roll_int! }
     end
 
-    def dig_rarity int
-      case int % Base
+    def dig_rarity score
+      case score
       when 0...(Base - sr - ssr)
         2
       when sr...(Base - ssr)
