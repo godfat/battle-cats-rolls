@@ -12,5 +12,5 @@ FileUtils.mkdir_p(dir)
 puts "Extracting #{reader.pack_path}"
 
 reader.each do |filename, data|
-  File.binwrite("#{dir}/#{filename}", data)
+  File.binwrite("#{dir}/#{filename}", data.call)
 end

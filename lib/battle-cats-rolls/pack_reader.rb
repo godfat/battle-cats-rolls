@@ -6,6 +6,8 @@ module BattleCatsRolls
   class PackReader < Struct.new(
     :list_path, :pack_path, :list_unpacker, :pack_unpacker, :name)
 
+    include Enumerable
+
     def initialize new_list_path
       pathname = new_list_path[0...new_list_path.rindex('.')]
 
@@ -34,7 +36,9 @@ module BattleCatsRolls
 
     def read line
       filename, offset, size = line.split(',')
-      data = pack_unpacker.decrypt(pack_data[offset.to_i, size.to_i])
+      data = lambda do
+        pack_unpacker.decrypt(pack_data[offset.to_i, size.to_i])
+      end
 
       [filename, data]
     end
