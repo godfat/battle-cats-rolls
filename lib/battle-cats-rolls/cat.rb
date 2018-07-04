@@ -2,7 +2,7 @@
 
 module BattleCatsRolls
   class Cat < Struct.new(:name, :score, :rarity, :rarity_seed, :slot_seed)
-    def to_s
+    def to_ansi
       "\e[#{color_sequence}m#{name}\e[0m"
     end
 
