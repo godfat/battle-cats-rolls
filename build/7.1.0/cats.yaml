@@ -16361,7 +16361,7 @@ gacha:
   - 272
   - 273
 events:
-  11:
+  2018-05-31:11:
     id: 11
     start_on: 2018-05-31
     end_on: 2018-06-15
@@ -16371,7 +16371,7 @@ events:
     ssr: 500
     guaranteed: false
     name: "【Limited】 Collect Li'l Cats only during this event!★ Thru June 14th!"
-  245:
+  2018-06-06:245:
     id: 245
     start_on: 2018-06-06
     end_on: 2018-06-08
@@ -16381,7 +16381,27 @@ events:
     ssr: 500
     guaranteed: false
     name: "★ Red Busters w/ Pai-Pai! ★ Plus Increasing Capsules!"
-  221:
+  2018-06-08:289:
+    id: 289
+    start_on: 2018-06-08
+    end_on: 2018-06-11
+    version: '70100'
+    rare: 7000
+    sr: 2500
+    ssr: 500
+    guaranteed: true
+    name: Brave new adventurers join The Dynamites! ★ 11-Draw Uber Guarantee!
+  2018-06-11:266:
+    id: 266
+    start_on: 2018-06-11
+    end_on: 2018-06-14
+    version: '70100'
+    rare: 7000
+    sr: 2500
+    ssr: 500
+    guaranteed: false
+    name: "★ Dragon Emperors ★ Collect a mighty monstrous Uber Cat!"
+  2018-06-14:221:
     id: 221
     start_on: 2018-06-14
     end_on: 2018-06-16
@@ -16391,7 +16411,7 @@ events:
     ssr: 500
     guaranteed: false
     name: "★ Vajiras Wargods! ★ Tactical master Uber Cats!"
-  293:
+  2018-06-16:293:
     id: 293
     start_on: 2018-06-16
     end_on: 2018-06-19
@@ -16401,7 +16421,17 @@ events:
     ssr: 900
     guaranteed: false
     name: "★ EPICFEST ★ Extra-high drop rates for Ubers, plus Dark Mitama!"
-  224:
+  2018-06-19:276:
+    id: 276
+    start_on: 2018-06-19
+    end_on: 2018-06-21
+    version: '70100'
+    rare: 7000
+    sr: 2500
+    ssr: 500
+    guaranteed: false
+    name: "★ Elemental Pixies ★ Cosmic powers brought to life as Uber Rare allies!"
+  2018-06-21:224:
     id: 224
     start_on: 2018-06-21
     end_on: 2018-06-23
@@ -16411,7 +16441,7 @@ events:
     ssr: 500
     guaranteed: false
     name: "★ Galaxy Gals★ Cute 'n' tough Uber Cats!"
-  215:
+  2018-06-23:215:
     id: 215
     start_on: 2018-06-23
     end_on: 2018-06-26
@@ -16421,7 +16451,7 @@ events:
     ssr: 500
     guaranteed: true
     name: "★ Nekolugas ★  Super-creepy Uber Cats with 11-Draw Guarantee!"
-  230:
+  2018-06-26:230:
     id: 230
     start_on: 2018-06-26
     end_on: 2018-06-28
@@ -16431,7 +16461,7 @@ events:
     ssr: 500
     guaranteed: true
     name: "★ Ultra Souls★ Guaranteed 11-Draw for legendary Uber Rare Cats!"
-  283:
+  2018-06-28:283:
     id: 283
     start_on: 2018-06-28
     end_on: 2018-06-30
@@ -16441,7 +16471,7 @@ events:
     ssr: 500
     guaranteed: false
     name: "★ IRON LEGION ★ Heavy metal Uber Cats with Zombie-crushing powers!!"
-  292:
+  2018-06-30:292:
     id: 292
     start_on: 2018-06-30
     end_on: 2018-07-03
@@ -16451,7 +16481,7 @@ events:
     ssr: 900
     guaranteed: false
     name: New Uber "D'artanyan" is here! ★ Extra-high Uber drop rate for every draw!
-  289:
+  2018-07-03:289:
     id: 289
     start_on: 2018-07-03
     end_on: 2018-07-05
@@ -16461,7 +16491,7 @@ events:
     ssr: 500
     guaranteed: false
     name: The mighty Dynamites are here! Variety and power await you!
-  273:
+  2018-07-05:273:
     id: 273
     start_on: 2018-07-05
     end_on: 2018-07-07
@@ -16471,7 +16501,7 @@ events:
     ssr: 500
     guaranteed: false
     name: Metal Busters ★ With Increasing Capsule Discount!
-  298:
+  2018-07-07:298:
     id: 298
     start_on: 2018-07-07
     end_on: 2018-07-10
@@ -16482,7 +16512,7 @@ events:
     guaranteed: true
     name: 'NEW UNIT: Detective Vigler, cursed defender of justice! With 11-Capsule
       Uber Guarantee!'
-  266:
+  2018-07-10:266:
     id: 266
     start_on: 2018-07-10
     end_on: 2018-07-12
@@ -16492,7 +16522,7 @@ events:
     ssr: 500
     guaranteed: false
     name: "★ Dragon Emperors ★ Collect a mighty monstrous Uber Cat!"
-  276:
+  2018-07-12:276:
     id: 276
     start_on: 2018-07-12
     end_on: 2018-07-14
@@ -16502,7 +16532,7 @@ events:
     ssr: 500
     guaranteed: false
     name: "★ Elemental Pixies ★ Cosmic powers brought to life as Uber Rare allies!"
-  302:
+  2018-07-14:302:
     id: 302
     start_on: 2018-07-14
     end_on: 2018-07-17

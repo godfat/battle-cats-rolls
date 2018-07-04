@@ -15,11 +15,13 @@ module BattleCatsRolls
       end
     end
 
-    def initialize ball, event_id
+    def initialize ball, event_name
+      event_id = event_name[/(?<=\:)\d+\z/].to_i
+
       super(
         ball.dig('cats'),
         ball.dig('gacha', event_id),
-        ball.dig('events', event_id))
+        ball.dig('events', event_name))
     end
 
     def slots

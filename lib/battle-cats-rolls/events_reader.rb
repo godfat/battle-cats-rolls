@@ -27,7 +27,7 @@ module BattleCatsRolls
     end
 
     def sort!
-      @gacha = Hash[gacha.sort_by { |id, data| data['start_on'] }]
+      @gacha = Hash[gacha.sort]
 
       self
     end

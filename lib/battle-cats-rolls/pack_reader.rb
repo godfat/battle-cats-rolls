@@ -43,6 +43,12 @@ module BattleCatsRolls
       [filename, data]
     end
 
+    def read_eagerly line
+      filename, data = read(line)
+
+      [filename, data.call]
+    end
+
     private
 
     def list_data

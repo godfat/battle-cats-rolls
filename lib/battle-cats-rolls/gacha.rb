@@ -13,8 +13,8 @@ module BattleCatsRolls
 
     def_delegators :pool, *%w[id start_on end_on name rare sr ssr]
 
-    def initialize crystal_ball, event_id, seed
-      super(GachaPool.new(crystal_ball, event_id), seed)
+    def initialize crystal_ball, event_name, seed
+      super(GachaPool.new(crystal_ball, event_name), seed)
     end
 
     def roll_both!

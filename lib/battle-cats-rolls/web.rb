@@ -38,11 +38,11 @@ module BattleCatsRolls
 
     module Imp
       def gacha
-        @gacha ||= Gacha.new(Web.ball, event_id, seed)
+        @gacha ||= Gacha.new(Web.ball, event, seed)
       end
 
-      def event_id
-        @event_id ||= request.GET['event_id'].to_i
+      def event
+        @event ||= request.GET['event']
       end
 
       def seed

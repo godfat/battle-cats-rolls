@@ -22,7 +22,7 @@ module BattleCatsRolls
       @res ||= res_reader.list_lines.
         grep(/\AUnit_Explanation\d+_en\.csv,\d+,\d+$/).
         inject({}) do |result, line|
-          result.store(*res_reader.read(line))
+          result.store(*res_reader.read_eagerly(line))
           result
         end
     end
@@ -33,13 +33,13 @@ module BattleCatsRolls
       @data ||= data_reader.list_lines.
         grep(/\A(?:GatyaDataSetR1|unitbuy)\.csv,\d+,\d+$/).
         inject({}) do |result, line|
-          filename, data = data_reader.read(line)
+          filename, csv = data_reader.read_eagerly(line)
 
           case filename
           when 'GatyaDataSetR1.csv'
-            result[:gacha] = data
+            result[:gacha] = csv
           when 'unitbuy.csv'
-            result[:unitbuy] = data
+            result[:unitbuy] = csv
           end
 
           result
