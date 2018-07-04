@@ -17,6 +17,14 @@ module BattleCatsRolls
         erb(:layout){ erb(name, arg) }
       end
 
+      def each_ab_cat arg
+        arg.each.with_index.inject(nil) do |prev_b, (ab, index)|
+          yield(prev_b, ab, index)
+
+          ab.last
+        end
+      end
+
       private
 
       def erb name, arg=nil, &block

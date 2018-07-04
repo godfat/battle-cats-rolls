@@ -37,23 +37,25 @@ module BattleCatsRolls
     private
 
     def roll_int
-      seed.abs
+      seed
     end
 
     def roll_int!
       roll_int.tap{ advance_seed! }
     end
 
-    def roll_cat int_rarity
-      score = int_rarity % Base
+    def roll_cat rarity_seed
+      score = rarity_seed.abs % Base
       rarity = dig_rarity(score)
-      int = if block_given? then yield else roll_int end
-      slot = int % pool.dig_slot(rarity).size
+      slot_seed = if block_given? then yield else roll_int end
+      slot = slot_seed.abs % pool.dig_slot(rarity).size
 
       Cat.new(
-        rarity,
         pool.dig_cat(rarity, pool.dig_slot(rarity, slot)),
-        score)
+        score,
+        rarity,
+        rarity_seed,
+        slot_seed)
     end
 
     def roll_cat! int_rarity

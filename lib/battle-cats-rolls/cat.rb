@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 module BattleCatsRolls
-  class Cat < Struct.new(:rarity, :name, :score)
+  class Cat < Struct.new(:name, :score, :rarity, :rarity_seed, :slot_seed)
     def to_s
       "\e[#{color_sequence}m#{name}\e[0m"
     end

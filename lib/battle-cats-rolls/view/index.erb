@@ -8,16 +8,37 @@
   <th>Seed</th>
   <th>B No.</th>
 
-  <% arg.each.with_index do |(a, b), index| %>
+  <% each_ab_cat(arg) do |prev_b, (a, b), index| %>
     <tr>
-      <td><%= index %></td>
-      <td>seed</td>
+      <td rowspan="2"><%= index %></td>
+      <td><%= a.rarity_seed %></td>
+      <td><%= a.score %></td>
+      <td rowspan="2">x</td>
+
+      <% if prev_b %>
+        <td><%= prev_b.name %></td>
+        <td><%= prev_b.slot_seed %></td>
+      <% else %>
+        <td colspan="4"></td>
+      <% end %>
+    </tr>
+
+    <tr>
+      <td><%= a.slot_seed %></td>
       <td><%= a.name %></td>
-      <td>x</td>
-      <td><%= b.name %></td>
-      <td>x</td>
-      <td>seed</td>
-      <td><%= index %></td>
+
+      <td><%= b.score %></td>
+      <td rowspan="2">x</td>
+      <td><%= b.rarity_seed %></td>
+      <td rowspan="2"><%= index %></td>
     </tr>
   <% end %>
+
+  <tr>
+    <td colspan="4"></td>
+
+    <% last_b = arg.dig(-1, -1) %>
+    <td><%= last_b.name %></td>
+    <td><%= last_b.slot_seed %></td>
+  </tr>
 </table>
