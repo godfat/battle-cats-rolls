@@ -19,7 +19,7 @@ module BattleCatsRolls
 
       def each_ab_cat arg
         arg.each.with_index.inject(nil) do |prev_b, (ab, index)|
-          yield(prev_b, ab, index)
+          yield(prev_b, ab, index + 1)
 
           ab.last
         end
