@@ -49,6 +49,10 @@ module BattleCatsRolls
         @seed ||= request.GET['seed'].to_i
       end
 
+      def count
+        @count ||= [1, [(request.GET['count'] || 100).to_i, 999].min].max
+      end
+
       def render *args
         view.render(*args)
       end
@@ -62,7 +66,7 @@ module BattleCatsRolls
     controller_include NormalizedPath, Imp
 
     get '/' do
-      cats = 1.upto(100).map do |i|
+      cats = 1.upto(count).map do |i|
         gacha.roll_both!
       end
 
