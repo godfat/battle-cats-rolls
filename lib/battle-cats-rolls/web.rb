@@ -12,22 +12,34 @@ module BattleCatsRolls
       @ball ||= CrystalBall.load('build/7.1.0')
     end
 
-    class View < Struct.new(:request)
-      def render name, arg=nil
-        erb(:layout){ erb(name, arg) }
+    class View < Struct.new(:arg)
+      def render name
+        erb(:layout){ erb(name) }
       end
 
-      def each_ab_cat arg
-        arg.each.with_index.inject(nil) do |prev_b, (ab, index)|
+      def each_ab_cat
+        arg[:cats].each.with_index.inject(nil) do |prev_b, (ab, index)|
           yield(prev_b, ab, index + 1)
 
           ab.last
         end
       end
 
+      def guaranteed_cat cat, sequence, offset
+        if name = cat.guaranteed
+          step = sequence + arg[:guaranteed_rolls] + offset
+
+          if offset < 0
+            "#{name}<br>-&gt; #{step}"
+          else
+            "#{name}<br>&lt;- #{step}"
+          end
+        end
+      end
+
       private
 
-      def erb name, arg=nil, &block
+      def erb name, &block
         ERB.new(views(name)).result(binding, &block)
       end
 
@@ -53,12 +65,8 @@ module BattleCatsRolls
         @count ||= [1, [(request.GET['count'] || 100).to_i, 999].min].max
       end
 
-      def render *args
-        view.render(*args)
-      end
-
-      def view
-        @view ||= View.new(request)
+      def render name, arg
+        View.new(arg).render(name)
       end
     end
 
@@ -70,9 +78,9 @@ module BattleCatsRolls
         gacha.roll_both!
       end
 
-      gacha.fill_guaranteed(cats)
+      guaranteed_rolls = gacha.fill_guaranteed(cats)
 
-      render :index, cats
+      render :index, cats: cats, guaranteed_rolls: guaranteed_rolls
     end
   end
 end

@@ -8,12 +8,12 @@
   <th>Seed</th>
   <th>Alt. No.</th>
 
-  <% each_ab_cat(arg) do |prev_b, (a, b), sequence| %>
+  <% each_ab_cat do |prev_b, (a, b), sequence| %>
     <tr>
       <td rowspan="2"><%= sequence %></td>
       <td><%= a.rarity_seed %></td>
       <td class="<%= a.color_label %>"><%= a.score %></td>
-      <td rowspan="2"><%= a.guaranteed %></td>
+      <td rowspan="2"><%= guaranteed_cat(a, sequence, -1) %></td>
 
       <% if prev_b %>
         <td class="<%= prev_b.color_label %>"><%= prev_b.name %></td>
@@ -28,7 +28,7 @@
       <td class="<%= a.color_label %>"><%= a.name %></td>
 
       <td class="<%= b.color_label %>"><%= b.score %></td>
-      <td rowspan="2"><%= b.guaranteed %></td>
+      <td rowspan="2"><%= guaranteed_cat(b, sequence, 0) %></td>
       <td><%= b.rarity_seed %></td>
       <td rowspan="2"><%= sequence %></td>
     </tr>
@@ -37,7 +37,7 @@
   <tr>
     <td colspan="4"></td>
 
-    <% last_b = arg.dig(-1, -1) %>
+    <% last_b = arg.dig(:cats, -1, -1) %>
     <td><%= last_b.name %></td>
     <td><%= last_b.slot_seed %></td>
   </tr>
