@@ -16,7 +16,7 @@ module BattleCatsRolls
     end
 
     def initialize ball, event_name
-      event_id = event_name[/(?<=\:)\d+\z/].to_i
+      event_id = event_name[/(?<=_)\d+\z/].to_i
 
       super(
         ball.dig('cats'),

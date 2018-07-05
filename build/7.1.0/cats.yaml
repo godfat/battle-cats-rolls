@@ -16361,7 +16361,7 @@ gacha:
   - 272
   - 273
 events:
-  2018-05-31:11:
+  2018-05-31_11:
     id: 11
     start_on: 2018-05-31
     end_on: 2018-06-15
@@ -16372,7 +16372,7 @@ events:
     guaranteed: false
     step_up: false
     name: "【Limited】 Collect Li'l Cats only during this event!★ Thru June 14th!"
-  2018-06-06:245:
+  2018-06-06_245:
     id: 245
     start_on: 2018-06-06
     end_on: 2018-06-08
@@ -16383,7 +16383,7 @@ events:
     guaranteed: false
     step_up: true
     name: "★ Red Busters w/ Pai-Pai! ★ Plus Increasing Capsules!"
-  2018-06-08:289:
+  2018-06-08_289:
     id: 289
     start_on: 2018-06-08
     end_on: 2018-06-11
@@ -16394,7 +16394,7 @@ events:
     guaranteed: true
     step_up: false
     name: Brave new adventurers join The Dynamites! ★ 11-Draw Uber Guarantee!
-  2018-06-11:266:
+  2018-06-11_266:
     id: 266
     start_on: 2018-06-11
     end_on: 2018-06-14
@@ -16405,7 +16405,7 @@ events:
     guaranteed: false
     step_up: false
     name: "★ Dragon Emperors ★ Collect a mighty monstrous Uber Cat!"
-  2018-06-14:221:
+  2018-06-14_221:
     id: 221
     start_on: 2018-06-14
     end_on: 2018-06-16
@@ -16416,7 +16416,7 @@ events:
     guaranteed: false
     step_up: false
     name: "★ Vajiras Wargods! ★ Tactical master Uber Cats!"
-  2018-06-16:293:
+  2018-06-16_293:
     id: 293
     start_on: 2018-06-16
     end_on: 2018-06-19
@@ -16427,7 +16427,7 @@ events:
     guaranteed: false
     step_up: false
     name: "★ EPICFEST ★ Extra-high drop rates for Ubers, plus Dark Mitama!"
-  2018-06-19:276:
+  2018-06-19_276:
     id: 276
     start_on: 2018-06-19
     end_on: 2018-06-21
@@ -16438,7 +16438,7 @@ events:
     guaranteed: false
     step_up: false
     name: "★ Elemental Pixies ★ Cosmic powers brought to life as Uber Rare allies!"
-  2018-06-21:224:
+  2018-06-21_224:
     id: 224
     start_on: 2018-06-21
     end_on: 2018-06-23
@@ -16449,7 +16449,7 @@ events:
     guaranteed: false
     step_up: false
     name: "★ Galaxy Gals★ Cute 'n' tough Uber Cats!"
-  2018-06-23:215:
+  2018-06-23_215:
     id: 215
     start_on: 2018-06-23
     end_on: 2018-06-26
@@ -16460,7 +16460,7 @@ events:
     guaranteed: true
     step_up: false
     name: "★ Nekolugas ★  Super-creepy Uber Cats with 11-Draw Guarantee!"
-  2018-06-26:230:
+  2018-06-26_230:
     id: 230
     start_on: 2018-06-26
     end_on: 2018-06-28
@@ -16471,7 +16471,7 @@ events:
     guaranteed: true
     step_up: false
     name: "★ Ultra Souls★ Guaranteed 11-Draw for legendary Uber Rare Cats!"
-  2018-06-28:283:
+  2018-06-28_283:
     id: 283
     start_on: 2018-06-28
     end_on: 2018-06-30
@@ -16482,7 +16482,7 @@ events:
     guaranteed: false
     step_up: false
     name: "★ IRON LEGION ★ Heavy metal Uber Cats with Zombie-crushing powers!!"
-  2018-06-30:292:
+  2018-06-30_292:
     id: 292
     start_on: 2018-06-30
     end_on: 2018-07-03
@@ -16493,7 +16493,7 @@ events:
     guaranteed: false
     step_up: false
     name: New Uber "D'artanyan" is here! ★ Extra-high Uber drop rate for every draw!
-  2018-07-03:289:
+  2018-07-03_289:
     id: 289
     start_on: 2018-07-03
     end_on: 2018-07-05
@@ -16504,7 +16504,7 @@ events:
     guaranteed: false
     step_up: false
     name: The mighty Dynamites are here! Variety and power await you!
-  2018-07-05:273:
+  2018-07-05_273:
     id: 273
     start_on: 2018-07-05
     end_on: 2018-07-07
@@ -16515,7 +16515,7 @@ events:
     guaranteed: false
     step_up: true
     name: Metal Busters ★ With Increasing Capsule Discount!
-  2018-07-07:298:
+  2018-07-07_298:
     id: 298
     start_on: 2018-07-07
     end_on: 2018-07-10
@@ -16527,7 +16527,7 @@ events:
     step_up: false
     name: 'NEW UNIT: Detective Vigler, cursed defender of justice! With 11-Capsule
       Uber Guarantee!'
-  2018-07-10:266:
+  2018-07-10_266:
     id: 266
     start_on: 2018-07-10
     end_on: 2018-07-12
@@ -16538,7 +16538,7 @@ events:
     guaranteed: false
     step_up: false
     name: "★ Dragon Emperors ★ Collect a mighty monstrous Uber Cat!"
-  2018-07-12:276:
+  2018-07-12_276:
     id: 276
     start_on: 2018-07-12
     end_on: 2018-07-14
@@ -16549,7 +16549,7 @@ events:
     guaranteed: false
     step_up: false
     name: "★ Elemental Pixies ★ Cosmic powers brought to life as Uber Rare allies!"
-  2018-07-14:302:
+  2018-07-14_302:
     id: 302
     start_on: 2018-07-14
     end_on: 2018-07-17

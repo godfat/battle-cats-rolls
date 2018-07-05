@@ -47,7 +47,7 @@ module BattleCatsRolls
       @gacha ||= parsed_data.inject({}) do |result, row|
         data = convert_gacha(read_row(row, gacha_fields))
         id = data['id']
-        result["#{data['start_on']}:#{id}"] = data if id
+        result["#{data['start_on']}_#{id}"] = data if id
         result
       end
     end
