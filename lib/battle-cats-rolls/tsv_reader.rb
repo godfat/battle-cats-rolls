@@ -31,7 +31,7 @@ module BattleCatsRolls
           {'id' => 10, 'start_on' => 0, 'end_on' => 2, 'version' => 4,
            'rare' => 16, 'sr' => 18, 'ssr' => 20,
            'guaranteed' => 21, 'step_up' => 13,
-           'name' => 24}}
+           'name' => 24, 'type' => 8}}
       end
     end
 
@@ -46,7 +46,7 @@ module BattleCatsRolls
     def gacha
       @gacha ||= parsed_data.inject({}) do |result, row|
         data = convert_gacha(read_row(row, gacha_fields))
-        id = data['id']
+        id = data.delete('type') == 1 && data['id']
         result["#{data['start_on']}_#{id}"] = data if id
         result
       end
@@ -76,6 +76,8 @@ module BattleCatsRolls
           value.to_i > 0
         when 'name'
           value.strip
+        when 'type'
+          value.to_i
         else
           value
         end

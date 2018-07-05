@@ -16361,17 +16361,6 @@ gacha:
   - 272
   - 273
 events:
-  2018-05-31_11:
-    id: 11
-    start_on: 2018-05-31
-    end_on: 2018-06-15
-    version: '70000'
-    rare: 7400
-    sr: 2100
-    ssr: 500
-    guaranteed: false
-    step_up: false
-    name: "【Limited】 Collect Li'l Cats only during this event!★ Thru June 14th!"
   2018-06-06_245:
     id: 245
     start_on: 2018-06-06
