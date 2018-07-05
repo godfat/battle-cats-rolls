@@ -16366,10 +16366,10 @@ events:
     start_on: 2018-05-31
     end_on: 2018-06-15
     version: '70000'
-    step-up: false
     rare: 7400
     sr: 2100
     ssr: 500
+    step_up: false
     guaranteed: false
     name: "【Limited】 Collect Li'l Cats only during this event!★ Thru June 14th!"
   2018-06-06:245:
@@ -16377,10 +16377,10 @@ events:
     start_on: 2018-06-06
     end_on: 2018-06-08
     version: '70000'
-    step-up: true
     rare: 7000
     sr: 2500
     ssr: 500
+    step_up: true
     guaranteed: false
     name: "★ Red Busters w/ Pai-Pai! ★ Plus Increasing Capsules!"
   2018-06-08:289:
@@ -16388,10 +16388,10 @@ events:
     start_on: 2018-06-08
     end_on: 2018-06-11
     version: '70100'
-    step-up: false
     rare: 7000
     sr: 2500
     ssr: 500
+    step_up: false
     guaranteed: true
     name: Brave new adventurers join The Dynamites! ★ 11-Draw Uber Guarantee!
   2018-06-11:266:
@@ -16399,10 +16399,10 @@ events:
     start_on: 2018-06-11
     end_on: 2018-06-14
     version: '70100'
-    step-up: false
     rare: 7000
     sr: 2500
     ssr: 500
+    step_up: false
     guaranteed: false
     name: "★ Dragon Emperors ★ Collect a mighty monstrous Uber Cat!"
   2018-06-14:221:
@@ -16410,10 +16410,10 @@ events:
     start_on: 2018-06-14
     end_on: 2018-06-16
     version: '70100'
-    step-up: false
     rare: 7000
     sr: 2500
     ssr: 500
+    step_up: false
     guaranteed: false
     name: "★ Vajiras Wargods! ★ Tactical master Uber Cats!"
   2018-06-16:293:
@@ -16421,10 +16421,10 @@ events:
     start_on: 2018-06-16
     end_on: 2018-06-19
     version: '70100'
-    step-up: false
     rare: 6500
     sr: 2600
     ssr: 900
+    step_up: false
     guaranteed: false
     name: "★ EPICFEST ★ Extra-high drop rates for Ubers, plus Dark Mitama!"
   2018-06-19:276:
@@ -16432,10 +16432,10 @@ events:
     start_on: 2018-06-19
     end_on: 2018-06-21
     version: '70100'
-    step-up: false
     rare: 7000
     sr: 2500
     ssr: 500
+    step_up: false
     guaranteed: false
     name: "★ Elemental Pixies ★ Cosmic powers brought to life as Uber Rare allies!"
   2018-06-21:224:
@@ -16443,10 +16443,10 @@ events:
     start_on: 2018-06-21
     end_on: 2018-06-23
     version: '70100'
-    step-up: false
     rare: 7000
     sr: 2500
     ssr: 500
+    step_up: false
     guaranteed: false
     name: "★ Galaxy Gals★ Cute 'n' tough Uber Cats!"
   2018-06-23:215:
@@ -16454,10 +16454,10 @@ events:
     start_on: 2018-06-23
     end_on: 2018-06-26
     version: '70100'
-    step-up: false
     rare: 7000
     sr: 2500
     ssr: 500
+    step_up: false
     guaranteed: true
     name: "★ Nekolugas ★  Super-creepy Uber Cats with 11-Draw Guarantee!"
   2018-06-26:230:
@@ -16465,10 +16465,10 @@ events:
     start_on: 2018-06-26
     end_on: 2018-06-28
     version: '70100'
-    step-up: false
     rare: 7000
     sr: 2500
     ssr: 500
+    step_up: false
     guaranteed: true
     name: "★ Ultra Souls★ Guaranteed 11-Draw for legendary Uber Rare Cats!"
   2018-06-28:283:
@@ -16476,10 +16476,10 @@ events:
     start_on: 2018-06-28
     end_on: 2018-06-30
     version: '70100'
-    step-up: false
     rare: 7000
     sr: 2500
     ssr: 500
+    step_up: false
     guaranteed: false
     name: "★ IRON LEGION ★ Heavy metal Uber Cats with Zombie-crushing powers!!"
   2018-06-30:292:
@@ -16487,10 +16487,10 @@ events:
     start_on: 2018-06-30
     end_on: 2018-07-03
     version: '70100'
-    step-up: false
     rare: 6500
     sr: 2600
     ssr: 900
+    step_up: false
     guaranteed: false
     name: New Uber "D'artanyan" is here! ★ Extra-high Uber drop rate for every draw!
   2018-07-03:289:
@@ -16498,10 +16498,10 @@ events:
     start_on: 2018-07-03
     end_on: 2018-07-05
     version: '70100'
-    step-up: false
     rare: 7000
     sr: 2500
     ssr: 500
+    step_up: false
     guaranteed: false
     name: The mighty Dynamites are here! Variety and power await you!
   2018-07-05:273:
@@ -16509,10 +16509,10 @@ events:
     start_on: 2018-07-05
     end_on: 2018-07-07
     version: '70100'
-    step-up: true
     rare: 7000
     sr: 2500
     ssr: 500
+    step_up: true
     guaranteed: false
     name: Metal Busters ★ With Increasing Capsule Discount!
   2018-07-07:298:
@@ -16520,10 +16520,10 @@ events:
     start_on: 2018-07-07
     end_on: 2018-07-10
     version: '70100'
-    step-up: false
     rare: 7000
     sr: 2500
     ssr: 500
+    step_up: false
     guaranteed: true
     name: 'NEW UNIT: Detective Vigler, cursed defender of justice! With 11-Capsule
       Uber Guarantee!'
@@ -16532,10 +16532,10 @@ events:
     start_on: 2018-07-10
     end_on: 2018-07-12
     version: '70100'
-    step-up: false
     rare: 7000
     sr: 2500
     ssr: 500
+    step_up: false
     guaranteed: false
     name: "★ Dragon Emperors ★ Collect a mighty monstrous Uber Cat!"
   2018-07-12:276:
@@ -16543,10 +16543,10 @@ events:
     start_on: 2018-07-12
     end_on: 2018-07-14
     version: '70100'
-    step-up: false
     rare: 7000
     sr: 2500
     ssr: 500
+    step_up: false
     guaranteed: false
     name: "★ Elemental Pixies ★ Cosmic powers brought to life as Uber Rare allies!"
   2018-07-14:302:
@@ -16554,9 +16554,9 @@ events:
     start_on: 2018-07-14
     end_on: 2018-07-17
     version: '70100'
-    step-up: false
     rare: 6500
     sr: 2600
     ssr: 900
+    step_up: false
     guaranteed: false
     name: "★ EPICFEST ★ Extra-high drop rates for Ubers, plus Dark Mitama!"
