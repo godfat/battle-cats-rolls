@@ -30,6 +30,24 @@ module BattleCatsRolls
       roll_cat!(roll_int!)
     end
 
+    def fill_guaranteed cats
+      guaranteed_rolls = pool.guaranteed_rolls
+
+      if guaranteed_rolls > 0
+        cats.each.with_index do |ab, index|
+          ab.each.with_index do |rolled_cat, a_or_b|
+            guaranteed_slot_seed =
+              cats.dig(index + guaranteed_rolls - 1, a_or_b, :rarity_seed)
+
+            rolled_cat.guaranteed = dig_cat(guaranteed_slot_seed, 4) if
+              guaranteed_slot_seed
+          end
+        end
+      end
+
+      guaranteed_rolls
+    end
+
     def ubers
       pool.dig_slot(4)
     end
@@ -48,10 +66,10 @@ module BattleCatsRolls
       score = rarity_seed.abs % Base
       rarity = dig_rarity(score)
       slot_seed = if block_given? then yield else roll_int end
-      slot = slot_seed.abs % pool.dig_slot(rarity).size
+      cat = dig_cat(slot_seed, rarity)
 
       Cat.new(
-        pool.dig_cat(rarity, pool.dig_slot(rarity, slot)),
+        cat,
         score,
         rarity,
         rarity_seed,
@@ -71,6 +89,12 @@ module BattleCatsRolls
       else
         4
       end
+    end
+
+    def dig_cat slot_seed, rarity
+      slot = slot_seed.abs % pool.dig_slot(rarity).size
+
+      pool.dig_cat(rarity, pool.dig_slot(rarity, slot))
     end
 
     def advance_seed!

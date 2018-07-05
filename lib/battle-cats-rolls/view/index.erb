@@ -13,7 +13,7 @@
       <td rowspan="2"><%= sequence %></td>
       <td><%= a.rarity_seed %></td>
       <td class="<%= a.color_label %>"><%= a.score %></td>
-      <td rowspan="2">x</td>
+      <td rowspan="2"><%= a.guaranteed %></td>
 
       <% if prev_b %>
         <td class="<%= prev_b.color_label %>"><%= prev_b.name %></td>
@@ -28,7 +28,7 @@
       <td class="<%= a.color_label %>"><%= a.name %></td>
 
       <td class="<%= b.color_label %>"><%= b.score %></td>
-      <td rowspan="2">x</td>
+      <td rowspan="2"><%= b.guaranteed %></td>
       <td><%= b.rarity_seed %></td>
       <td rowspan="2"><%= sequence %></td>
     </tr>

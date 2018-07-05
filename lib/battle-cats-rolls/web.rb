@@ -70,6 +70,8 @@ module BattleCatsRolls
         gacha.roll_both!
       end
 
+      gacha.fill_guaranteed(cats)
+
       render :index, cats
     end
   end

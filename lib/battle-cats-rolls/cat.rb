@@ -1,7 +1,9 @@
 # frozen_string_literal: true
 
 module BattleCatsRolls
-  class Cat < Struct.new(:name, :score, :rarity, :rarity_seed, :slot_seed)
+  class Cat < Struct.new(
+    :name, :score, :rarity, :rarity_seed, :slot_seed, :guaranteed)
+
     def color_label
       case score
       when 0...6500

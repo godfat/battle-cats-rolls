@@ -35,6 +35,18 @@ module BattleCatsRolls
       end
     end
 
+    def guaranteed_rolls
+      @guaranteed_rolls ||=
+        case
+        when event['guaranteed']
+          11
+        when event['step_up']
+          15
+        else
+          0
+        end
+    end
+
     private
 
     def find_rarity cat_id
