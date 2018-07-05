@@ -30,7 +30,7 @@ module BattleCatsRolls
         {gacha:
           {'id' => 10, 'start_on' => 0, 'end_on' => 2, 'version' => 4,
            'rare' => 16, 'sr' => 18, 'ssr' => 20,
-           'step_up' => 13, 'guaranteed' => 21,
+           'guaranteed' => 21, 'step_up' => 13,
            'name' => 24}}
       end
     end
