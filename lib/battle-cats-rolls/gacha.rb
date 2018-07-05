@@ -8,6 +8,9 @@ require_relative 'gacha_pool'
 module BattleCatsRolls
   class Gacha < Struct.new(:pool, :seed)
     Base = 10000
+    Rare = 2
+    SR   = 3
+    Uber = 4
 
     extend Forwardable
 
@@ -39,7 +42,7 @@ module BattleCatsRolls
             guaranteed_slot_seed =
               cats.dig(index + guaranteed_rolls - 1, a_or_b, :rarity_seed)
 
-            rolled_cat.guaranteed = dig_cat(guaranteed_slot_seed, 4) if
+            rolled_cat.guaranteed = dig_cat(guaranteed_slot_seed, Uber) if
               guaranteed_slot_seed
           end
         end
@@ -49,7 +52,7 @@ module BattleCatsRolls
     end
 
     def ubers
-      pool.dig_slot(4)
+      pool.dig_slot(Uber)
     end
 
     private
@@ -83,11 +86,11 @@ module BattleCatsRolls
     def dig_rarity score
       case score
       when 0...(Base - sr - ssr)
-        2
+        Rare
       when sr...(Base - ssr)
-        3
+        SR
       else
-        4
+        Uber
       end
     end
 
