@@ -1,45 +1,49 @@
-<table>
-  <th>No.</th>
-  <th>Seed</th>
-  <th>Result</th>
-  <th>Guaranteed</th>
-  <th>Alt. result</th>
-  <th>Alt. guaranteed</th>
-  <th>Seed</th>
-  <th>Alt. No.</th>
+<%= erb :menu %>
 
-  <% each_ab_cat do |prev_b, (a, b), next_a, sequence| %>
+<div>
+  <table>
+    <th>No.</th>
+    <th>Seed</th>
+    <th>Result</th>
+    <th>Guaranteed</th>
+    <th>Alt. result</th>
+    <th>Alt. guaranteed</th>
+    <th>Seed</th>
+    <th>Alt. No.</th>
+
+    <% each_ab_cat do |prev_b, (a, b), next_a, sequence| %>
+      <tr>
+        <td rowspan="2"><%= sequence %></td>
+        <td><%= a.rarity_seed %></td>
+        <td class="<%= a.color_label %>"><%= a.score %></td>
+        <td rowspan="2"><%= guaranteed_cat(a, sequence, -1) %></td>
+
+        <% if prev_b %>
+          <td class="<%= prev_b.color_label %>">
+            <%= link_to_roll(prev_b.name, b) %></td>
+          <td><%= prev_b.slot_seed %></td>
+        <% else %>
+          <td colspan="4"></td>
+        <% end %>
+      </tr>
+
+      <tr>
+        <td><%= a.slot_seed %></td>
+        <td class="<%= a.color_label %>">
+          <%= link_to_roll(a.name, next_a) %></td>
+        <td class="<%= b.color_label %>"><%= b.score %></td>
+        <td rowspan="2"><%= guaranteed_cat(b, sequence, 0) %></td>
+        <td><%= b.rarity_seed %></td>
+        <td rowspan="2"><%= sequence %></td>
+      </tr>
+    <% end %>
+
     <tr>
-      <td rowspan="2"><%= sequence %></td>
-      <td><%= a.rarity_seed %></td>
-      <td class="<%= a.color_label %>"><%= a.score %></td>
-      <td rowspan="2"><%= guaranteed_cat(a, sequence, -1) %></td>
+      <td colspan="4"></td>
 
-      <% if prev_b %>
-        <td class="<%= prev_b.color_label %>">
-          <%= link_to_roll(prev_b.name, b) %></td>
-        <td><%= prev_b.slot_seed %></td>
-      <% else %>
-        <td colspan="4"></td>
-      <% end %>
+      <% last_b = arg.dig(:cats, -1, -1) %>
+      <td><%= h last_b.name %></td>
+      <td><%= last_b.slot_seed %></td>
     </tr>
-
-    <tr>
-      <td><%= a.slot_seed %></td>
-      <td class="<%= a.color_label %>"><%= link_to_roll(a.name, next_a) %></td>
-
-      <td class="<%= b.color_label %>"><%= b.score %></td>
-      <td rowspan="2"><%= guaranteed_cat(b, sequence, 0) %></td>
-      <td><%= b.rarity_seed %></td>
-      <td rowspan="2"><%= sequence %></td>
-    </tr>
-  <% end %>
-
-  <tr>
-    <td colspan="4"></td>
-
-    <% last_b = arg.dig(:cats, -1, -1) %>
-    <td><%= h last_b.name %></td>
-    <td><%= last_b.slot_seed %></td>
-  </tr>
-</table>
+  </table>
+</div>

@@ -7,6 +7,7 @@ require 'jellyfish'
 
 require 'cgi'
 require 'erb'
+require 'date'
 require 'forwardable'
 
 module BattleCatsRolls
@@ -58,6 +59,38 @@ module BattleCatsRolls
         end
       end
 
+      def selected_current_event event_name
+        if controller.event == event_name
+          'selected="selected"'
+        end
+      end
+
+      def show_event info
+        h "#{info['start_on']} ~ #{info['end_on']}: #{info['name']}"
+      end
+
+      def onchange_event
+        h "window.location.href='#{uri_without_event}&event='+this.value"
+      end
+
+      def upcoming_events
+        @upcoming_events ||= all_events[true]
+      end
+
+      def past_events
+        @past_events ||= all_events[false]
+      end
+
+      def all_events
+        @all_events ||= begin
+          today = Date.today
+
+          Web.ball.dig('events').group_by do |key, value|
+            today <= value['end_on']
+          end
+        end
+      end
+
       def h str
         CGI.escape_html(str)
       end
@@ -71,6 +104,11 @@ module BattleCatsRolls
       def uri_to_roll cat
         uri(seed: cat.rarity_seed,
             event: controller.event,
+            count: controller.count)
+      end
+
+      def uri_without_event
+        uri(seed: controller.seed,
             count: controller.count)
       end
 

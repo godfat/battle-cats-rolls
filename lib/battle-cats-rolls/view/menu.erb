@@ -1,0 +1,23 @@
+
+<div>
+  <label for="upcoming">Events:</label>
+  <select id="upcoming" onchange="<%= onchange_event %>">
+    <optgroup label="Upcoming:">
+      <% upcoming_events.each do |(event_name, info)| %>
+        <option
+          value="<%= event_name %>"
+          <%= selected_current_event(event_name) %>>
+            <%= show_event(info) %></option>
+      <% end %>
+    </optgroup>
+
+    <optgroup label="Past:">
+      <% past_events.reverse_each do |(event_name, info)| %>
+        <option
+          value="<%= event_name %>"
+          <%= selected_current_event(event_name) %>>
+            <%= show_event(info) %></option>
+      <% end %>
+    </optgroup>
+  </select>
+</div>
