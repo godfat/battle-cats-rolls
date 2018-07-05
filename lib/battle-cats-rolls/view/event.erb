@@ -1,7 +1,6 @@
-
-<div>
-  <label for="upcoming">Events:</label>
-  <select id="upcoming" onchange="<%= onchange_event %>">
+<div id="event">
+  <label for="event_select">Events:</label>
+  <select id="event_select" onchange="<%= onchange_event %>">
     <optgroup label="Upcoming:">
       <% upcoming_events.each do |(event_name, info)| %>
         <option

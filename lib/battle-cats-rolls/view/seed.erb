@@ -1,0 +1,11 @@
+<div id="seed">
+  <form method="get" enctype="application/x-www-form-urlencoded"
+    onsubmit="document.getElementById('event_input').value = document.getElementById('event_select').value">
+    Seed:
+    <input
+      type="text" id="seed_input" name="seed"
+      value="<%= controller.seed %>"
+      onclick="this.select()"/>
+    <input type="hidden" id="event_input" name="event">
+  </form>
+</div>

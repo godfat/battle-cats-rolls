@@ -152,7 +152,7 @@ module BattleCatsRolls
         @count ||= [1, [(request.GET['count'] || 100).to_i, 999].min].max
       end
 
-      def render name, arg
+      def render name, arg=nil
         View.new(self, arg).render(name)
       end
     end
@@ -161,13 +161,17 @@ module BattleCatsRolls
     controller_include NormalizedPath, Imp
 
     get '/' do
-      cats = 1.upto(count).map do |i|
-        gacha.roll_both!
+      if event && seed != 0
+        cats = 1.upto(count).map do |i|
+          gacha.roll_both!
+        end
+
+        guaranteed_rolls = gacha.fill_guaranteed(cats)
+
+        render :index, cats: cats, guaranteed_rolls: guaranteed_rolls
+      else
+        render :index
       end
-
-      guaranteed_rolls = gacha.fill_guaranteed(cats)
-
-      render :index, cats: cats, guaranteed_rolls: guaranteed_rolls
     end
   end
 end
