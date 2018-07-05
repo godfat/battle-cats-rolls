@@ -26,9 +26,10 @@ module BattleCatsRolls
 
       def each_ab_cat
         arg[:cats].each.with_index.inject(nil) do |prev_b, (ab, index)|
-          sequence = index + 1
+          sequence = index + 1 # Human counts from 1
+          next_a = arg.dig(:cats, sequence, 0)
 
-          yield(prev_b, ab, arg.dig(:cats, sequence, 0), sequence)
+          yield(prev_b, ab, next_a, sequence)
 
           ab.last
         end
@@ -36,21 +37,24 @@ module BattleCatsRolls
 
       def guaranteed_cat cat, sequence, offset
         if name = cat.guaranteed
-          step = sequence + arg[:guaranteed_rolls] + offset
+          next_sequence = sequence + arg[:guaranteed_rolls] + offset
+          next_cat = arg.dig(:cats, next_sequence - 1, offset)
+                               # Back to count from 0, ^ Swap track!
+          link = link_to_roll(name, next_cat)
 
           if offset < 0
-            "#{h name}<br>-&gt; #{step}"
+            "#{link}<br>-&gt; #{next_sequence}"
           else
-            "#{h name}<br>&lt;- #{step}"
+            "#{link}<br>&lt;- #{next_sequence}"
           end
         end
       end
 
-      def link_to_roll cat, next_cat
+      def link_to_roll name, next_cat
         if next_cat
-          %Q{<a href="#{uri_to_roll(next_cat)}">#{h cat.name}</a>}
+          %Q{<a href="#{uri_to_roll(next_cat)}">#{h name}</a>}
         else
-          cat.name
+          name
         end
       end
 

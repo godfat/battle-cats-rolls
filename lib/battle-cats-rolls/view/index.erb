@@ -17,7 +17,7 @@
 
       <% if prev_b %>
         <td class="<%= prev_b.color_label %>">
-          <%= link_to_roll(prev_b, b) %></td>
+          <%= link_to_roll(prev_b.name, b) %></td>
         <td><%= prev_b.slot_seed %></td>
       <% else %>
         <td colspan="4"></td>
@@ -26,7 +26,7 @@
 
     <tr>
       <td><%= a.slot_seed %></td>
-      <td class="<%= a.color_label %>"><%= link_to_roll(a, next_a) %></td>
+      <td class="<%= a.color_label %>"><%= link_to_roll(a.name, next_a) %></td>
 
       <td class="<%= b.color_label %>"><%= b.score %></td>
       <td rowspan="2"><%= guaranteed_cat(b, sequence, 0) %></td>
