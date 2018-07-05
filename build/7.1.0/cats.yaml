@@ -16366,6 +16366,7 @@ events:
     start_on: 2018-05-31
     end_on: 2018-06-15
     version: '70000'
+    step-up: false
     rare: 7400
     sr: 2100
     ssr: 500
@@ -16376,6 +16377,7 @@ events:
     start_on: 2018-06-06
     end_on: 2018-06-08
     version: '70000'
+    step-up: true
     rare: 7000
     sr: 2500
     ssr: 500
@@ -16386,6 +16388,7 @@ events:
     start_on: 2018-06-08
     end_on: 2018-06-11
     version: '70100'
+    step-up: false
     rare: 7000
     sr: 2500
     ssr: 500
@@ -16396,6 +16399,7 @@ events:
     start_on: 2018-06-11
     end_on: 2018-06-14
     version: '70100'
+    step-up: false
     rare: 7000
     sr: 2500
     ssr: 500
@@ -16406,6 +16410,7 @@ events:
     start_on: 2018-06-14
     end_on: 2018-06-16
     version: '70100'
+    step-up: false
     rare: 7000
     sr: 2500
     ssr: 500
@@ -16416,6 +16421,7 @@ events:
     start_on: 2018-06-16
     end_on: 2018-06-19
     version: '70100'
+    step-up: false
     rare: 6500
     sr: 2600
     ssr: 900
@@ -16426,6 +16432,7 @@ events:
     start_on: 2018-06-19
     end_on: 2018-06-21
     version: '70100'
+    step-up: false
     rare: 7000
     sr: 2500
     ssr: 500
@@ -16436,6 +16443,7 @@ events:
     start_on: 2018-06-21
     end_on: 2018-06-23
     version: '70100'
+    step-up: false
     rare: 7000
     sr: 2500
     ssr: 500
@@ -16446,6 +16454,7 @@ events:
     start_on: 2018-06-23
     end_on: 2018-06-26
     version: '70100'
+    step-up: false
     rare: 7000
     sr: 2500
     ssr: 500
@@ -16456,6 +16465,7 @@ events:
     start_on: 2018-06-26
     end_on: 2018-06-28
     version: '70100'
+    step-up: false
     rare: 7000
     sr: 2500
     ssr: 500
@@ -16466,6 +16476,7 @@ events:
     start_on: 2018-06-28
     end_on: 2018-06-30
     version: '70100'
+    step-up: false
     rare: 7000
     sr: 2500
     ssr: 500
@@ -16476,6 +16487,7 @@ events:
     start_on: 2018-06-30
     end_on: 2018-07-03
     version: '70100'
+    step-up: false
     rare: 6500
     sr: 2600
     ssr: 900
@@ -16486,6 +16498,7 @@ events:
     start_on: 2018-07-03
     end_on: 2018-07-05
     version: '70100'
+    step-up: false
     rare: 7000
     sr: 2500
     ssr: 500
@@ -16496,6 +16509,7 @@ events:
     start_on: 2018-07-05
     end_on: 2018-07-07
     version: '70100'
+    step-up: true
     rare: 7000
     sr: 2500
     ssr: 500
@@ -16506,6 +16520,7 @@ events:
     start_on: 2018-07-07
     end_on: 2018-07-10
     version: '70100'
+    step-up: false
     rare: 7000
     sr: 2500
     ssr: 500
@@ -16517,6 +16532,7 @@ events:
     start_on: 2018-07-10
     end_on: 2018-07-12
     version: '70100'
+    step-up: false
     rare: 7000
     sr: 2500
     ssr: 500
@@ -16527,6 +16543,7 @@ events:
     start_on: 2018-07-12
     end_on: 2018-07-14
     version: '70100'
+    step-up: false
     rare: 7000
     sr: 2500
     ssr: 500
@@ -16537,6 +16554,7 @@ events:
     start_on: 2018-07-14
     end_on: 2018-07-17
     version: '70100'
+    step-up: false
     rare: 6500
     sr: 2600
     ssr: 900

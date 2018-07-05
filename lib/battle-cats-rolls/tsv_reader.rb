@@ -29,8 +29,8 @@ module BattleCatsRolls
       when '7.1.0'
         {gacha:
           {'id' => 10, 'start_on' => 0, 'end_on' => 2, 'version' => 4,
-           'rare' => 16, 'sr' => 18, 'ssr' => 20, 'guaranteed' => 21,
-           'name' => 24}}
+           'step-up' => 13, 'rare' => 16, 'sr' => 18, 'ssr' => 20,
+           'guaranteed' => 21, 'name' => 24}}
       end
     end
 
@@ -69,6 +69,8 @@ module BattleCatsRolls
         when 'id', 'rare', 'sr', 'ssr'
           id = value.to_i
           id if id > 0
+        when 'step-up'
+          value.to_i & 4 == 4
         when 'guaranteed'
           value.to_i > 0
         when 'name'
