@@ -16,6 +16,7 @@ require_relative '../lib/battle-cats-rolls/tsv_reader'
 
 current = BattleCatsRolls::TsvReader.current
 last_date = current.gacha.
+  delete_if { |_, data| data['platinum'] }.
   sort_by { |key, data| data['end_on'] }.
   dig(-1, -1, 'end_on').
   strftime('%Y%m%d')

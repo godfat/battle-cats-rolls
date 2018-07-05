@@ -19,7 +19,7 @@ module BattleCatsRolls
     class View < Struct.new(:controller, :arg)
       extend Forwardable
 
-      def_delegator :controller, :request
+      def_delegators :controller, *%w[request upcoming_events past_events]
 
       def render name
         erb(:layout){ erb(name) }
@@ -71,24 +71,6 @@ module BattleCatsRolls
 
       def onchange_event
         h "window.location.href='#{uri_without_event}&event='+this.value"
-      end
-
-      def upcoming_events
-        @upcoming_events ||= all_events[true]
-      end
-
-      def past_events
-        @past_events ||= all_events[false]
-      end
-
-      def all_events
-        @all_events ||= begin
-          today = Date.today
-
-          Web.ball.dig('events').group_by do |key, value|
-            today <= value['end_on']
-          end
-        end
       end
 
       def h str
@@ -145,11 +127,34 @@ module BattleCatsRolls
       end
 
       def event
-        @event ||= request.GET['event']
+        @event ||= request.GET['event'] || current_event
       end
 
       def count
         @count ||= [1, [(request.GET['count'] || 100).to_i, 999].min].max
+      end
+
+      def current_event
+        @current_event ||=
+          upcoming_events.find{ |_, info| info['platinum'].nil? }&.first
+      end
+
+      def upcoming_events
+        @upcoming_events ||= all_events[true]
+      end
+
+      def past_events
+        @past_events ||= all_events[false]
+      end
+
+      def all_events
+        @all_events ||= begin
+          today = Date.today
+
+          Web.ball.dig('events').group_by do |key, value|
+            today <= value['end_on']
+          end
+        end
       end
 
       def render name, arg=nil

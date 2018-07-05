@@ -67,7 +67,7 @@ module BattleCatsRolls
 
     def roll_cat rarity_seed
       score = rarity_seed.abs % Base
-      rarity = dig_rarity(score)
+      rarity = if pool.platinum then Uber else dig_rarity(score) end
       slot_seed = if block_given? then yield else roll_int end
       cat = dig_cat(slot_seed, rarity)
 

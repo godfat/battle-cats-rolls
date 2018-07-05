@@ -16394,6 +16394,18 @@ events:
     guaranteed: false
     step_up: false
     name: "★ Dragon Emperors ★ Collect a mighty monstrous Uber Cat!"
+  2018-06-12_294:
+    id: 294
+    start_on: 2018-06-12
+    end_on: 2030-07-07
+    version: '70100'
+    rare: 7500
+    sr: 2000
+    ssr: 500
+    guaranteed: false
+    step_up: false
+    name: Get an Uber Rare Cat!! 100% Uber drop Rate in the PLATINUM CAPSULES!
+    platinum: true
   2018-06-14_221:
     id: 221
     start_on: 2018-06-14

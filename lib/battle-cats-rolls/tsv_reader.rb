@@ -31,7 +31,7 @@ module BattleCatsRolls
           {'id' => 10, 'start_on' => 0, 'end_on' => 2, 'version' => 4,
            'rare' => 16, 'sr' => 18, 'ssr' => 20,
            'guaranteed' => 21, 'step_up' => 13,
-           'name' => 24, 'type' => 8}}
+           'type' => 8, 'platinum' => 55}}
       end
     end
 
@@ -46,8 +46,18 @@ module BattleCatsRolls
     def gacha
       @gacha ||= parsed_data.inject({}) do |result, row|
         data = convert_gacha(read_row(row, gacha_fields))
-        id = data.delete('type') == 1 && data['id']
-        result["#{data['start_on']}_#{id}"] = data if id
+        id = data.delete('type') == 1 &&
+          (data.delete('platinum') || data['id'])
+
+        if id
+          if data['id'].nil?
+            data['id'] = id
+            data['platinum'] = true
+          end
+
+          result["#{data['start_on']}_#{id}"] = data
+        end
+
         result
       end
     end
@@ -67,15 +77,13 @@ module BattleCatsRolls
         case key
         when 'start_on', 'end_on'
           Date.parse(value)
-        when 'id', 'rare', 'sr', 'ssr'
+        when 'id', 'rare', 'sr', 'ssr', 'platinum'
           id = value.to_i
           id if id > 0
         when 'step_up'
           value.to_i & 4 == 4
         when 'guaranteed'
           value.to_i > 0
-        when 'name'
-          value.strip
         when 'type'
           value.to_i
         else
@@ -85,10 +93,14 @@ module BattleCatsRolls
     end
 
     def read_row row, row_fields
-      Hash[
-        row_fields.keys.zip(
+      result =
+        Hash[
           row_fields.keys.zip(
-            row.values_at(*row_fields.values)))]
+            row_fields.keys.zip(
+              row.values_at(*row_fields.values)))]
+
+      result['name'] = ['name', row.last.strip]
+      result
     end
 
     def parsed_data
