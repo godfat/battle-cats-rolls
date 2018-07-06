@@ -1,4 +1,4 @@
-# Rolling Battle Cats Gacha
+# Rolling Battle Cats Gacha <https://bc.godfat.org/>
 
 ## How to install:
 
