@@ -1,3 +1,5 @@
+# Rolling Battle Cats Gacha
+
 ## How to install:
 
     gem install bundler
