@@ -71,12 +71,12 @@ module BattleCatsRolls
       slot_seed = if block_given? then yield else roll_int end
       cat = dig_cat(slot_seed, rarity)
 
-      Cat.new(
-        cat,
-        score,
-        rarity,
-        rarity_seed,
-        slot_seed)
+      cat.score = score
+      cat.rarity = rarity
+      cat.rarity_seed = rarity_seed
+      cat.slot_seed = slot_seed
+
+      cat
     end
 
     def roll_cat! int_rarity
@@ -96,8 +96,9 @@ module BattleCatsRolls
 
     def dig_cat slot_seed, rarity
       slot = slot_seed.abs % pool.dig_slot(rarity).size
+      id = pool.dig_slot(rarity, slot)
 
-      pool.dig_cat(rarity, pool.dig_slot(rarity, slot))
+      Cat.new(id, pool.dig_cat(rarity, id))
     end
 
     def advance_seed!

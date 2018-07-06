@@ -37,11 +37,11 @@ module BattleCatsRolls
       end
 
       def guaranteed_cat cat, sequence, offset
-        if name = cat.guaranteed
+        if guaranteed = cat.guaranteed
           next_sequence = sequence + arg[:guaranteed_rolls] + offset
           next_cat = arg.dig(:cats, next_sequence - 1, offset)
                                # Back to count from 0, ^ Swap track!
-          link = link_to_roll(name, next_cat)
+          link = link_to_roll(guaranteed, next_cat)
 
           if offset < 0
             "#{link}<br>-&gt; #{next_sequence}"
@@ -51,11 +51,12 @@ module BattleCatsRolls
         end
       end
 
-      def link_to_roll name, next_cat
+      def link_to_roll cat, next_cat
         if next_cat
-          %Q{<a href="#{uri_to_roll(next_cat)}">#{h name}</a>}
+          %Q{<a href="#{uri_to_roll(next_cat)}">#{h cat.name}</a>} +
+          %Q{<a href="#{uri_to_cat_db(cat)}">&#128062;</a>}
         else
-          name
+          h cat.name
         end
       end
 
@@ -92,6 +93,10 @@ module BattleCatsRolls
       def uri_without_event
         uri(seed: controller.seed,
             count: controller.count)
+      end
+
+      def uri_to_cat_db cat
+        "https://battlecats-db.com/unit/#{'%03d' % cat.id}.html"
       end
 
       def uri query={}

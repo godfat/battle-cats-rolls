@@ -2,7 +2,7 @@
 
 module BattleCatsRolls
   class Cat < Struct.new(
-    :name, :score, :rarity, :rarity_seed, :slot_seed, :guaranteed)
+    :id, :name, :score, :rarity, :rarity_seed, :slot_seed, :guaranteed)
 
     def color_label
       case score
