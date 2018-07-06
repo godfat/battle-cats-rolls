@@ -36,6 +36,7 @@
 ### Event data
 
 * [[BCEN] New Event Data - Last Half of October 2017](https://www.reddit.com/r/battlecats/comments/75w399/bcen_new_event_data_last_half_of_october_2017/dostwfb)
+* [[BCEN] New Event Data - First Half of July 2018](https://www.reddit.com/r/battlecats/comments/8vikts/bcen_new_event_data_first_half_of_july_2018/e1sc33v/)
 * [[Cheating] Rare Ticket Forecasting - Seed Request Thread](https://www.reddit.com/r/battlecats/comments/7t2dlb/cheating_rare_ticket_forecasting_seed_request/dtb3q0w/)
 * [How to retrieve and decipher Battle Cats event data](https://www.reddit.com/r/battlecats/comments/3tf03s/how_to_retrieve_and_decipher_battle_cats_event/)
 
