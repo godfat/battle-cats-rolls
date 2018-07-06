@@ -27,6 +27,25 @@
       <%= yield %>
     </div>
 
+    <div id="note">
+      <ul>
+        <li>Data was pulled from the app and
+          <a href="https://ponos.s3.dualstack.ap-northeast-1.amazonaws.com/appli/battlecats/event_data/battlecatsen_production/gatya.tsv">event data</a>.</li>
+        <li>Data was completely based on <a href="https://github.com/godfat/battle-cats-rolls/blob/master/build/7.1.0/cats.yaml">cats.yaml</a>.</li>
+        <li>Clicking on the cat's name simulates rolling to that cat.</li>
+        <li>Clicking on &#128062; leads to the cat data.</li>
+        <li>Guaranteed cat will only show if the event has guaranteed cat.</li>
+        <li>Track A or B is purely perspective. Roll a guaranteed cat will swap the track, not jump. You're always on track A, and the other track is the alternative track.</li>
+        <li>Step-up counts as 15 rolls by summing 3, 5, and 7.</li>
+        <li>
+          Always <span class="ssr">Super Rare</span>,
+          <span class="ssr_fest">Super Rare</span> in Uberfest or Epicfest only,
+          Always <span class="uber">Uber</span>,
+          <span class="uber_fest">Uber</span> in Uberfest or Epicfest only,
+        </li>
+      </ul>
+    </div>
+
     <div id="footer">
       <a href="https://github.com/godfat/battle-cats-rolls">Source</a>
       /

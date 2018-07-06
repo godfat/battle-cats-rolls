@@ -1,8 +1,16 @@
 
-# How to run:
+# How to install:
+
+    gem install bundler
+    bundle install
+
+# How to run the server:
+
+    unicorn -Ilib -N
+
+# How to populate data:
 
     ruby bin/build.rb
-    ruby bin/roll.rb SEED
 
 # Thanks:
 
