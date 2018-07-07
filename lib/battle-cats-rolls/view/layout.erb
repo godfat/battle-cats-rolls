@@ -25,6 +25,11 @@
       function onchange_event(option) {
         window.location.href='<%= j uri_without_event %>&event='+option.value;
       };
+
+      function onsubmit_seed() {
+        document.getElementById('event_input').value =
+          document.getElementById('event_select').value;
+      };
     </script>
   </head>
   <body>
