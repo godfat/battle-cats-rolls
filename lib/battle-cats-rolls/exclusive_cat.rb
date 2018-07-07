@@ -38,16 +38,7 @@ module BattleCatsRolls
       found = search_from_cats(cats, ids)
 
       if found.size < ids.size
-        cats.size.succ.upto(max).inject(found) do |result, sequence|
-          if result.size == ids.size
-            break result
-          else
-            new_ab = gacha.roll_both_with_sequence!(sequence)
-
-            next result.merge(
-              search_from_cats([new_ab], ids - result.keys))
-          end
-        end
+        search_from_rolling(found, cats, max)
       else
         found
       end
@@ -65,6 +56,19 @@ module BattleCatsRolls
           break result
         else
           next result
+        end
+      end
+    end
+
+    def search_from_rolling found, cats, max
+      cats.size.succ.upto(max).inject(found) do |result, sequence|
+        if result.size == ids.size
+          break result
+        else
+          new_ab = gacha.roll_both_with_sequence!(sequence)
+
+          next result.merge(
+            search_from_cats([new_ab], ids - result.keys))
         end
       end
     end
