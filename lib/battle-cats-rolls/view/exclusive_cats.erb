@@ -3,7 +3,7 @@
     <p>Next exclusive festival cats:</p>
   <% end %>
   <ul>
-    <% arg[:exclusive_cats].each do |cat, a_or_b| %>
+    <% arg[:exclusive_cats].each do |(cat, a_or_b)| %>
       <li><%= "#{link_to_roll(cat)}: #{cat.sequence}#{(65 + a_or_b).chr}" %></li>
     <% end %>
   </ul>

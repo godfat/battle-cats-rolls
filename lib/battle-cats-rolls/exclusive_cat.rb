@@ -1,5 +1,8 @@
 # frozen_string_literal: true
 
+require_relative 'gacha'
+require_relative 'cat'
+
 module BattleCatsRolls
   class ExclusiveCat < Struct.new(:gacha, :ids)
     def self.ids
@@ -28,7 +31,21 @@ module BattleCatsRolls
       if ids.empty?
         []
       else
-        search_deep(cats, max).values
+        found = search_deep(cats, max)
+
+        if found.size < ids.size
+          track_name = '+'.ord - 'A'.ord
+
+          found.values + (ids - found.keys).map do |missing_id|
+            cat =
+              Cat.new(missing_id, gacha.pool.dig_cat(Gacha::Uber, missing_id))
+            cat.sequence = max
+
+            [cat, track_name]
+          end
+        else
+          found.values
+        end
       end
     end
 
