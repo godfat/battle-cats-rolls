@@ -70,10 +70,6 @@ module BattleCatsRolls
         h "#{info['start_on']} ~ #{info['end_on']}: #{info['name']}"
       end
 
-      def onchange_event
-        h "window.location.href='#{uri_without_event}&event='+this.value"
-      end
-
       def h str
         CGI.escape_html(str)
       end

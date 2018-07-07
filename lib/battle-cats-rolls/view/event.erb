@@ -1,6 +1,6 @@
 <div id="event">
   <label for="event_select">Events:</label>
-  <select id="event_select" onchange="<%= onchange_event %>">
+  <select id="event_select" onchange="onchange_event(this)">
     <optgroup label="Upcoming:">
       <% upcoming_events.each do |(event_name, info)| %>
         <option
