@@ -40,7 +40,8 @@
       <td colspan="4"></td>
 
       <% last_b = arg.dig(:cats, -1, -1) %>
-      <td><%= h last_b.name %></td>
+      <td class="<%= last_b.color_label %>">
+        <%= link_to_roll(last_b) %></td>
       <td><%= last_b.slot_seed %></td>
     </tr>
   </table>
