@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 module BattleCatsRolls
-  module ExclusiveCat
+  class ExclusiveCat < Struct.new(:gacha, :ids)
     def self.ids
       [
         270, # "Baby Gao",
@@ -12,44 +12,56 @@ module BattleCatsRolls
       ]
     end
 
-    def self.search gacha, cats: [], max: 999
-      target_ids = ids
+    def self.search gacha, **args
+      new(gacha, ids).search(**args)
+    end
 
-      potential_exclusives = gacha.ubers.select do |id|
+    def initialize new_gacha, target_ids
+      new_ids = new_gacha.ubers.select do |id|
         target_ids.include?(id)
       end
 
-      if potential_exclusives.empty?
+      super(new_gacha, new_ids)
+    end
+
+    def search cats: [], max: 999
+      if ids.empty?
         []
       else
-        found = search_from_ids(potential_exclusives, cats)
-
-        if found.size < potential_exclusives.size
-          cats.size.succ.upto(max).inject(found) do |result, sequence|
-            if result.size == potential_exclusives.size
-              break result
-            else
-              new_ab = gacha.roll_both_with_sequence!(sequence)
-
-              next result.merge(
-                search_from_ids(potential_exclusives - result.keys, [new_ab]))
-            end
-          end
-        else
-          found
-        end.values
+        search_deep(cats, max).values
       end
     end
 
-    def self.search_from_ids ids, cats
+    private
+
+    def search_deep cats, max
+      found = search_from_cats(cats, ids)
+
+      if found.size < ids.size
+        cats.size.succ.upto(max).inject(found) do |result, sequence|
+          if result.size == ids.size
+            break result
+          else
+            new_ab = gacha.roll_both_with_sequence!(sequence)
+
+            next result.merge(
+              search_from_cats([new_ab], ids - result.keys))
+          end
+        end
+      else
+        found
+      end
+    end
+
+    def search_from_cats cats, remaining_ids
       cats.each.inject({}) do |result, ab|
-        (ids - result.keys).each do |remaining_id|
+        (remaining_ids - result.keys).each do |id|
           ab.each.with_index do |cat, a_or_b|
-            result[remaining_id] = [cat, a_or_b] if remaining_id == cat.id
+            result[id] = [cat, a_or_b] if id == cat.id
           end
         end
 
-        if result.size == ids.size
+        if result.size == remaining_ids.size
           break result
         else
           next result
