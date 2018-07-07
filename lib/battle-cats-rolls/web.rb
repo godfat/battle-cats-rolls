@@ -81,23 +81,6 @@ module BattleCatsRolls
         CGI.escape(str)
       end
 
-      # Copied from ActionView
-      def j str
-        map = {
-          '\\' => '\\\\',
-          "</" => '<\/',
-          "\r\n" => '\n',
-          "\n" => '\n',
-          "\r" => '\n',
-          '"' => '\\"',
-          "'" => "\\'"
-        }
-
-        target = /(\\|<\/|\r\n|\342\200\250|\342\200\251|[\n\r"'])/u
-
-        str.gsub(target){ |match| map[match] }
-      end
-
       private
 
       def seed_column
@@ -113,12 +96,6 @@ module BattleCatsRolls
       def uri_to_roll cat
         uri(seed: cat.rarity_seed,
             event: controller.event,
-            count: controller.count,
-            show_seeds: show_seeds)
-      end
-
-      def uri_without_event
-        uri(seed: controller.seed,
             count: controller.count,
             show_seeds: show_seeds)
       end
