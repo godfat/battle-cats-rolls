@@ -53,8 +53,8 @@ module BattleCatsRolls
 
       def link_to_roll cat, next_cat=nil
         if next_cat
-          %Q{<a href="#{uri_to_roll(next_cat)}">#{h cat.name}</a>} +
-          %Q{<a href="#{uri_to_cat_db(cat)}">&#128062;</a>}
+          %Q{<a href="#{h uri_to_roll(next_cat)}">#{h cat.name}</a>} +
+          %Q{<a href="#{h uri_to_cat_db(cat)}">&#128062;</a>}
         else
           h cat.name
         end
