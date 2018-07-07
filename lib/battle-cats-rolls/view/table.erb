@@ -22,8 +22,10 @@
           <td class="<%= prev_b.color_label %>">
             <%= link_to_roll(prev_b, b) %></td>
           <% seed_column do %><td><%= prev_b.slot_seed %></td><% end %>
-        <% else %>
+        <% elsif show_seed %>
           <td colspan="4"></td>
+        <% else %>
+          <td colspan="3"></td>
         <% end %>
       </tr>
 
@@ -39,7 +41,11 @@
     <% end %>
 
     <tr>
-      <td colspan="4"></td>
+      <% if show_seed %>
+        <td colspan="4"></td>
+      <% else %>
+        <td colspan="3"></td>
+      <% end %>
 
       <% last_b = arg.dig(:cats, -1, -1) %>
       <td class="<%= last_b.color_label %>">
