@@ -1,4 +1,6 @@
 <%= erb :form %>
-<%= erb :event %>
-<%= erb :exclusive_cats if arg %>
-<%= erb :table if arg %>
+
+<% if arg %>
+  <%= erb :exclusive_cats %>
+  <%= erb :table %>
+<% end %>

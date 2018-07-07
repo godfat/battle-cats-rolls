@@ -20,20 +20,12 @@
       .ssr { background-color: gold; }
       .uber_fest { background-color: salmon; }
       .uber { background-color: red; }
+      #seed_input { width: 10em; }
+      #count_input { width: 3em; }
     </style>
     <script type="text/javascript">
-      function onchange_event(option) {
-        window.location.href='<%= j uri_without_event %>&event='+option.value;
-      };
-
-      function onsubmit_seed() {
-        document.getElementById('event_input').value =
-          document.getElementById('event_select').value;
-      };
-
-      function onchange_show_seeds(checkbox) {
-        onsubmit_seed();
-        checkbox.form.submit();
+      function roll(element) {
+        element.form.submit();
       }
     </script>
   </head>

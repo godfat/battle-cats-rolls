@@ -1,19 +1,45 @@
 <div id="form">
-  <form method="get" enctype="application/x-www-form-urlencoded"
-    onsubmit="onsubmit_seed()">
+  <form method="get" enctype="application/x-www-form-urlencoded">
     <label for="seed_input">Seed:</label>
     <input
-      type="text" id="seed_input" name="seed"
+      type="number" id="seed_input" name="seed"
       value="<%= controller.seed %>"
-      onclick="this.select()"/>
+      onclick="this.select()">
 
     <label for="show_seeds_input">Show seeds:</label>
     <input type="checkbox" id="show_seeds_input" name="show_seeds"
       <%= checked_show_seeds %>
-      onchange="onchange_show_seeds(this)">
+      onchange="roll(this)">
 
-    <input type="hidden" id="count_input" name="count"
-      value="<%= controller.count %>">
-    <input type="hidden" id="event_input" name="event">
+    <label for="count_input">Count:</label>
+    <input
+      type="number" id="count_input" name="count"
+      min="1" max="999" value="<%= controller.count %>"
+      onclick="this.select()">
+
+    <input type="submit" value="Roll">
+
+    <div id="event">
+      <label for="event_select">Events:</label>
+      <select id="event_select" name="event" onchange="roll(this)">
+        <optgroup label="Upcoming:">
+          <% upcoming_events.each do |(event_name, info)| %>
+            <option
+              value="<%= event_name %>"
+              <%= selected_current_event(event_name) %>>
+                <%= show_event(info) %></option>
+          <% end %>
+        </optgroup>
+
+        <optgroup label="Past:">
+          <% past_events.reverse_each do |(event_name, info)| %>
+            <option
+              value="<%= event_name %>"
+              <%= selected_current_event(event_name) %>>
+                <%= show_event(info) %></option>
+          <% end %>
+        </optgroup>
+      </select>
+    </div>
   </form>
 </div>
