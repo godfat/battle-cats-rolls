@@ -6,6 +6,10 @@ module BattleCatsRolls
     :score, :rarity, :rarity_seed, :slot_seed,
     :sequence, :guaranteed)
 
+    def == rhs
+      id == rhs.id
+    end
+
     def color_label
       case score
       when 0...6500

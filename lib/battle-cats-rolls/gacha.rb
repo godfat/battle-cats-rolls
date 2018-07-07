@@ -20,6 +20,12 @@ module BattleCatsRolls
       super(GachaPool.new(crystal_ball, event_name), seed)
     end
 
+    def roll_both_with_sequence! sequence
+      roll_both!.each do |cat|
+        cat.sequence = sequence
+      end
+    end
+
     def roll_both!
       a_int = roll_int!
       b_int = roll_int

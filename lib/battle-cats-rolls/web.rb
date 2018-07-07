@@ -2,6 +2,7 @@
 
 require_relative 'crystal_ball'
 require_relative 'gacha'
+require_relative 'exclusive_cat'
 
 require 'jellyfish'
 
@@ -12,6 +13,8 @@ require 'forwardable'
 
 module BattleCatsRolls
   class Web
+    Max = 999
+
     def self.ball
       @ball ||= CrystalBall.load('build/7.1.0')
     end
@@ -52,11 +55,10 @@ module BattleCatsRolls
 
       def link_to_roll cat, next_cat=nil
         if next_cat
-          %Q{<a href="#{h uri_to_roll(next_cat)}">#{h cat.name}</a>} +
-          %Q{<a href="#{h uri_to_cat_db(cat)}">&#128062;</a>}
+          %Q{<a href="#{h uri_to_roll(next_cat)}">#{h cat.name}</a>}
         else
           h cat.name
-        end
+        end + %Q{<a href="#{h uri_to_cat_db(cat)}">&#128062;</a>}
       end
 
       def selected_current_event event_name
@@ -162,7 +164,7 @@ module BattleCatsRolls
       end
 
       def count
-        @count ||= [1, [(request.GET['count'] || 100).to_i, 999].min].max
+        @count ||= [1, [(request.GET['count'] || 100).to_i, Max].min].max
       end
 
       def current_event
@@ -200,14 +202,16 @@ module BattleCatsRolls
       if event && seed != 0
         # Human counts from 1
         cats = 1.upto(count).map do |sequence|
-          gacha.roll_both!.each do |cat|
-            cat.sequence = sequence
-          end
+          gacha.roll_both_with_sequence!(sequence)
         end
 
         guaranteed_rolls = gacha.fill_guaranteed(cats)
+        exclusive_cats = ExclusiveCat.search(gacha, cats: cats, max: Max)
 
-        render :index, cats: cats, guaranteed_rolls: guaranteed_rolls
+        render :index,
+          cats: cats,
+          guaranteed_rolls: guaranteed_rolls,
+          exclusive_cats: exclusive_cats
       else
         render :index
       end
