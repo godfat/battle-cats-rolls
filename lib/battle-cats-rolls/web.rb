@@ -78,6 +78,23 @@ module BattleCatsRolls
         CGI.escape(str)
       end
 
+      # Copied from ActionView
+      def j str
+        map = {
+          '\\' => '\\\\',
+          "</" => '<\/',
+          "\r\n" => '\n',
+          "\n" => '\n',
+          "\r" => '\n',
+          '"' => '\\"',
+          "'" => "\\'"
+        }
+
+        target = /(\\|<\/|\r\n|\342\200\250|\342\200\251|[\n\r"'])/u
+
+        str.gsub(target){ |match| map[match] }
+      end
+
       private
 
       def uri_to_roll cat
