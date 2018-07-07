@@ -11,12 +11,12 @@
       <th>Alt. No.</th>
     </tr>
 
-    <% each_ab_cat do |prev_b, (a, b), next_a, sequence| %>
+    <% each_ab_cat do |prev_b, (a, b), next_a| %>
       <tr>
-        <td rowspan="2"><%= sequence %></td>
+        <td rowspan="2"><%= a.sequence %></td>
         <% seed_column do %><td><%= a.rarity_seed %></td><% end %>
         <td class="<%= a.color_label %>"><%= a.score %></td>
-        <td rowspan="2"><%= guaranteed_cat(a, sequence, -1) %></td>
+        <td rowspan="2"><%= guaranteed_cat(a, -1) %></td>
 
         <% if prev_b %>
           <td class="<%= prev_b.color_label %>">
@@ -34,9 +34,9 @@
         <td class="<%= a.color_label %>">
           <%= link_to_roll(a, next_a) %></td>
         <td class="<%= b.color_label %>"><%= b.score %></td>
-        <td rowspan="2"><%= guaranteed_cat(b, sequence, 0) %></td>
+        <td rowspan="2"><%= guaranteed_cat(b, 0) %></td>
         <% seed_column do %><td><%= b.rarity_seed %></td><% end %>
-        <td rowspan="2"><%= sequence %></td>
+        <td rowspan="2"><%= b.sequence %></td>
       </tr>
     <% end %>
 

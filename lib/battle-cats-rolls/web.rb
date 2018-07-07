@@ -26,19 +26,18 @@ module BattleCatsRolls
       end
 
       def each_ab_cat
-        arg[:cats].each.with_index.inject(nil) do |prev_b, (ab, index)|
-          sequence = index + 1 # Human counts from 1
-          next_a = arg.dig(:cats, sequence, 0)
+        arg[:cats].each.inject(nil) do |prev_b, ab|
+          next_a = arg.dig(:cats, ab.dig(0, :sequence), 0)
 
-          yield(prev_b, ab, next_a, sequence)
+          yield(prev_b, ab, next_a)
 
           ab.last
         end
       end
 
-      def guaranteed_cat cat, sequence, offset
+      def guaranteed_cat cat, offset
         if guaranteed = cat.guaranteed
-          next_sequence = sequence + arg[:guaranteed_rolls] + offset
+          next_sequence = cat.sequence + arg[:guaranteed_rolls] + offset
           next_cat = arg.dig(:cats, next_sequence - 1, offset)
                                # Back to count from 0, ^ Swap track!
           link = link_to_roll(guaranteed, next_cat)
@@ -199,8 +198,11 @@ module BattleCatsRolls
 
     get '/' do
       if event && seed != 0
-        cats = 1.upto(count).map do |i|
-          gacha.roll_both!
+        # Human counts from 1
+        cats = 1.upto(count).map do |sequence|
+          gacha.roll_both!.each do |cat|
+            cat.sequence = sequence
+          end
         end
 
         guaranteed_rolls = gacha.fill_guaranteed(cats)
