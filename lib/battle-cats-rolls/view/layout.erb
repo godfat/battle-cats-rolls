@@ -20,12 +20,6 @@
       .ssr { background-color: gold; }
       .uber_fest { background-color: salmon; }
       .uber { background-color: red; }
-
-      /* Change to collapse after Firefox fixed their bugs and
-         Chrome supports it. See:
-         https://stackoverflow.com/questions/48492867/table-visibilitycollapse-does-not-work-with-border-collapse#comment84062653_48492867 */
-      .seed { visibility: hidden; }
-      .show_seed { visibility: visible; }
     </style>
     <script type="text/javascript">
       function onchange_event(option) {
@@ -37,12 +31,9 @@
           document.getElementById('event_select').value;
       };
 
-      function onchange_show_seed() {
-        var columns = document.getElementsByClassName('seed');
-
-        Array.prototype.forEach.call(columns, function(col) {
-          col.classList.toggle('show_seed');
-        });
+      function onchange_show_seed(checkbox) {
+        onsubmit_seed();
+        checkbox.form.submit();
       }
     </script>
   </head>

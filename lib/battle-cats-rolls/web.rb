@@ -61,9 +61,11 @@ module BattleCatsRolls
       end
 
       def selected_current_event event_name
-        if controller.event == event_name
-          'selected="selected"'
-        end
+        'selected="selected"' if controller.event == event_name
+      end
+
+      def checked_show_seed
+        'checked="checked"' if show_seed
       end
 
       def show_event info
@@ -97,15 +99,27 @@ module BattleCatsRolls
 
       private
 
+      def seed_column
+        yield if show_seed
+      end
+
+      def show_seed
+        return @show_seed if instance_variable_defined?(:@show_seed)
+
+        @show_seed = !request.GET['show_seed'].to_s.strip.empty? || nil
+      end
+
       def uri_to_roll cat
         uri(seed: cat.rarity_seed,
             event: controller.event,
-            count: controller.count)
+            count: controller.count,
+            show_seed: show_seed)
       end
 
       def uri_without_event
         uri(seed: controller.seed,
-            count: controller.count)
+            count: controller.count,
+            show_seed: show_seed)
       end
 
       def uri_to_cat_db cat

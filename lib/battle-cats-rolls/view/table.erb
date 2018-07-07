@@ -1,51 +1,39 @@
 <div id="table">
-  <label for="show_seed">Show seed</label>
-  <input type="checkbox" id="show_seed" onchange="onchange_show_seed()">
-
   <table>
-    <col>
-    <col class="seed">
-    <col>
-    <col>
-    <col>
-    <col>
-    <col class="seed">
-    <col>
-
     <tr>
       <th>No.</th>
-      <th class="seed">Seed</th>
+      <% seed_column do %><th>Seed</th><% end %>
       <th>Result</th>
       <th>Guaranteed</th>
       <th>Alt. result</th>
       <th>Alt. guaranteed</th>
-      <th class="seed">Seed</th>
+      <% seed_column do %><th>Seed</th><% end %>
       <th>Alt. No.</th>
     </tr>
 
     <% each_ab_cat do |prev_b, (a, b), next_a, sequence| %>
       <tr>
         <td rowspan="2"><%= sequence %></td>
-        <td class="seed"><%= a.rarity_seed %></td>
+        <% seed_column do %><td><%= a.rarity_seed %></td><% end %>
         <td class="<%= a.color_label %>"><%= a.score %></td>
         <td rowspan="2"><%= guaranteed_cat(a, sequence, -1) %></td>
 
         <% if prev_b %>
           <td class="<%= prev_b.color_label %>">
             <%= link_to_roll(prev_b, b) %></td>
-          <td class="seed"><%= prev_b.slot_seed %></td>
+          <% seed_column do %><td><%= prev_b.slot_seed %></td><% end %>
         <% else %>
           <td colspan="4"></td>
         <% end %>
       </tr>
 
       <tr>
-        <td class="seed"><%= a.slot_seed %></td>
+        <% seed_column do %><td><%= a.slot_seed %></td><% end %>
         <td class="<%= a.color_label %>">
           <%= link_to_roll(a, next_a) %></td>
         <td class="<%= b.color_label %>"><%= b.score %></td>
         <td rowspan="2"><%= guaranteed_cat(b, sequence, 0) %></td>
-        <td class="seed"><%= b.rarity_seed %></td>
+        <% seed_column do %><td><%= b.rarity_seed %></td><% end %>
         <td rowspan="2"><%= sequence %></td>
       </tr>
     <% end %>
@@ -56,7 +44,7 @@
       <% last_b = arg.dig(:cats, -1, -1) %>
       <td class="<%= last_b.color_label %>">
         <%= link_to_roll(last_b) %></td>
-      <td class="seed"><%= last_b.slot_seed %></td>
+      <% seed_column do %><td><%= last_b.slot_seed %></td><% end %>
     </tr>
   </table>
 </div>

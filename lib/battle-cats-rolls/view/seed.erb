@@ -1,11 +1,17 @@
 <div id="seed">
   <form method="get" enctype="application/x-www-form-urlencoded"
     onsubmit="onsubmit_seed()">
-    Seed:
+    <label for="seed_input">Seed:</label>
     <input
       type="text" id="seed_input" name="seed"
       value="<%= controller.seed %>"
       onclick="this.select()"/>
+
+    <label for="show_seed_input">Show seed:</label>
+    <input type="checkbox" id="show_seed_input" name="show_seed"
+      <%= checked_show_seed %>
+      onchange="onchange_show_seed(this)">
+
     <input type="hidden" id="count_input" name="count"
       value="<%= controller.count %>">
     <input type="hidden" id="event_input" name="event">
