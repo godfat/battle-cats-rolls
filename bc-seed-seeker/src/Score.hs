@@ -9,4 +9,4 @@ scoreBase = 10000
 data Score =
   Rarity { begin :: Int32, end :: Int32 }
   | Slot { n :: Int32, count :: Int32 }
-  deriving (Show)
+  deriving (Show, Eq)

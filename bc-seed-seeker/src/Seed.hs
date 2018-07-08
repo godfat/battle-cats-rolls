@@ -3,6 +3,7 @@ module Seed(Seed(Seed), toInt32, advance, matchRoll) where
 
 import Data.Bits (xor, shiftL, shiftR)
 import Data.Int (Int32)
+import Data.Set (Set, empty)
 
 import Score
 
@@ -28,11 +29,14 @@ matchRoll (Seed seed) (Slot n count) =
 step :: (Int32 -> Int32) -> Int32 -> Int32
 step direction seed = seed `xor` (direction seed)
 
-cycle :: [Seed]
-cycle = undefined
+from :: Seed
+from = Seed minBound
 
-allCycles :: [[Seed]]
-allCycles = undefined
+to :: Seed
+to = Seed maxBound
+
+initSet :: Set Seed
+initSet = empty
 
 rolls :: [Score]
 rolls = undefined
