@@ -5,4 +5,4 @@ import Seeker
 
 main = do
   putStrLn "Seeking..."
-  putStrLn $ show $ seekStart rolls
+  putStrLn $ show $ seekStart rollsB
