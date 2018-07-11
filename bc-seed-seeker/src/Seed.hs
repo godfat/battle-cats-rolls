@@ -1,11 +1,10 @@
 
-module Seed(Seed(Seed), toInt32, advance, matchRoll) where
+module Seed(Seed, toInt32, advance, matchRoll) where
 
 import Data.Bits (xor, shiftL, shiftR)
 import Data.Int (Int32)
-import Data.Set (Set, empty)
 
-import Score
+import Roll
 
 newtype Seed = Seed { toInt32 :: Int32 } deriving (Show, Eq)
 
@@ -17,37 +16,31 @@ advance =
   (step (`shiftL` 13)) .
   toInt32
 
-matchRoll :: Seed -> Score -> Bool
-matchRoll (Seed seed) (Rarity begin end) =
+matchRoll :: Seed -> Roll -> Bool
+matchRoll seed (Roll rarity@(Rarity _ _ count) slot) =
+  matchRarity seed rarity && matchSlot (advance seed) count slot
+
+matchRarity :: Seed -> Rarity -> Bool
+matchRarity (Seed seed) (Rarity begin end _) =
   score >= begin && score < end where
   score = seed `mod` scoreBase
 
-matchRoll (Seed seed) (Slot n count) =
+matchSlot :: Seed -> Int32 -> Slot -> Bool
+matchSlot (Seed seed) count (Slot n) =
   slot == n where
   slot = seed `mod` count
 
 step :: (Int32 -> Int32) -> Int32 -> Int32
 step direction seed = seed `xor` (direction seed)
 
-from :: Seed
-from = Seed minBound
-
-to :: Seed
-to = Seed maxBound
-
-initSet :: Set Seed
-initSet = empty
-
-rolls :: [Score]
-rolls = undefined
-
 seed = Seed 1745107336
 tests = [
   advance seed == Seed 2009320978,
-  matchRoll seed (Rarity 7000 9000),
-  not $ matchRoll seed (Rarity 0 7000),
-  matchRoll seed (Slot 6 10),
-  not $ matchRoll seed (Slot 7 10)
+  matchRarity seed (Rarity 7000 9000 1),
+  not $ matchRarity seed (Rarity 0 7000 1),
+  matchSlot seed 10 (Slot 6),
+  not $ matchSlot seed 10 (Slot 7),
+  matchRoll seed (Roll (Rarity 7000 9000 100) (Slot 78))
   ]
 
 test = foldr (&&) True tests
