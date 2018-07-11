@@ -1,5 +1,9 @@
 
-module Roll(Roll(Roll), Rarity(Rarity), Slot(Slot), scoreBase) where
+module Roll(
+  Roll(Roll),
+  Rarity(Rarity, begin, end, count),
+  Slot(Slot),
+  scoreBase) where
 
 import Data.Int (Int32)
 
