@@ -57,7 +57,15 @@ module BattleCatsRolls
       guaranteed_rolls
     end
 
-    def ubers
+    def rare_cats
+      pool.dig_slot(Rare)
+    end
+
+    def sr_cats
+      pool.dig_slot(SR)
+    end
+
+    def uber_cats
       pool.dig_slot(Uber)
     end
 

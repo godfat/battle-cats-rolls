@@ -22,7 +22,8 @@ module BattleCatsRolls
     class View < Struct.new(:controller, :arg)
       extend Forwardable
 
-      def_delegators :controller, *%w[request upcoming_events past_events]
+      def_delegators :controller,
+        *%w[request gacha upcoming_events past_events]
 
       def render name
         erb(:layout){ erb(name) }

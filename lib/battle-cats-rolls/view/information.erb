@@ -1,0 +1,11 @@
+<div id="information">
+  <% seed_column do %>
+    <p>Gacha information:</p>
+
+    <ul>
+      <li>Rare: <%= gacha.rare / 100 %>% (<%= gacha.rare_cats.size %> cats)</li>
+      <li>SR: <%= gacha.sr / 100 %>% (<%= gacha.sr_cats.size %> cats)</li>
+      <li>Uber: <%= gacha.ssr / 100 %>% (<%= gacha.uber_cats.size %> cats)</li>
+    </ul>
+  <% end %>
+</div>
