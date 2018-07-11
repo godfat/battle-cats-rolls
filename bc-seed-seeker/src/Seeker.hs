@@ -1,16 +1,26 @@
 
-module Seeker(seekStart) where
-
-import Data.Set (Set, empty)
+module Seeker(seekStart, rolls) where
 
 import Seed
 import Roll
 
 seekStart :: [Roll] -> Maybe Seed
-seekStart = seek startSeed empty
+seekStart = seek startSeed
 
-seek :: Seed -> Set Seed -> [Roll] -> Maybe Seed
-seek seed track input = undefined
+seek :: Seed -> [Roll] -> Maybe Seed
+seek seed@(Seed value) rolls =
+  if seed == endSeed then
+    matchSeed (Just endSeed) rolls
+  else if value == 0 then
+    seekNext
+  else
+    found $ matchSeed (Just seed) rolls
+  where
+    nextSeed = Seed (succ value)
+    seekNext = seek nextSeed rolls
+
+    found Nothing = seek nextSeed rolls
+    found theSeed = theSeed
 
 matchSeed :: Maybe Seed -> [Roll] -> Maybe Seed
 matchSeed currentSeed [] = currentSeed
