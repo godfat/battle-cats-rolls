@@ -1,12 +1,12 @@
 
-module Seed(Seed(Seed), toInt32, advanceSeed, matchRoll) where
+module Seed(Seed(Seed), fromSeed, advanceSeed, matchRoll) where
 
 import Data.Bits (xor, shiftL, shiftR)
 import Data.Int (Int32)
 
 import Roll
 
-newtype Seed = Seed { toInt32 :: Int32 } deriving (Show, Eq)
+newtype Seed = Seed { fromSeed :: Int32 } deriving (Show, Eq)
 
 advanceSeed :: Seed -> Seed
 advanceSeed =
@@ -14,7 +14,7 @@ advanceSeed =
   (step (`shiftL` 15)) .
   (step (`shiftR` 17)) .
   (step (`shiftL` 13)) .
-  toInt32
+  fromSeed
 
 matchRoll :: Seed -> Roll -> Bool
 matchRoll seed (Roll rarity@(Rarity _ _ count) slot) =

@@ -1,14 +1,14 @@
 
-module Seeker(seekStart, rollsB) where
+module Seeker(seekStart, seekRange, minSeed, maxSeed, rollsB) where
 
 import Seed
 import Roll
 
 seekStart :: [Roll] -> Maybe Seed
-seekStart = seek startSeed
+seekStart = seekRange minSeed maxSeed
 
-seek :: Seed -> [Roll] -> Maybe Seed
-seek seed@(Seed value) rolls =
+seekRange :: Seed -> Seed -> [Roll] -> Maybe Seed
+seekRange seed@(Seed value) endSeed rolls =
   if seed == endSeed then
     matchSeed (Just endSeed) rolls
   else if value == 0 then
@@ -17,9 +17,9 @@ seek seed@(Seed value) rolls =
     found $ matchSeed (Just seed) rolls
   where
     nextSeed = Seed (succ value)
-    seekNext = seek nextSeed rolls
+    seekNext = seekRange nextSeed endSeed rolls
 
-    found Nothing = seek nextSeed rolls
+    found Nothing = seekNext
     found theSeed = theSeed
 
 matchSeed :: Maybe Seed -> [Roll] -> Maybe Seed
@@ -32,11 +32,11 @@ matchSeed currentSeed (roll:nextRolls) = do
   else
     Nothing
 
-startSeed :: Seed
-startSeed = Seed minBound
+minSeed :: Seed
+minSeed = Seed minBound
 
-endSeed :: Seed
-endSeed = Seed maxBound
+maxSeed :: Seed
+maxSeed = Seed maxBound
 
 ------------------------------------------------
 

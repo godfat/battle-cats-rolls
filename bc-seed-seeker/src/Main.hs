@@ -2,7 +2,8 @@
 module Main where
 
 import Seeker
+import Worker
 
 main = do
   putStrLn "Seeking..."
-  putStrLn $ show $ seekStart rollsB
+  workStart rollsB 8 >>= putStrLn . show
