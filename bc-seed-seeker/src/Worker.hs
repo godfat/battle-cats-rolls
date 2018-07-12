@@ -23,10 +23,10 @@ workStart rolls n = do
 
 seedRanges :: Int -> [Seed]
 seedRanges n =
-  map Seed $ [min, min + step .. max] ++ [max] where
+  map Seed $ [min, min + step .. (max - step)] ++ [max] where
   min = fromSeed minSeed
   max = fromSeed maxSeed
-  step = round $ toRational max / (toRational n / 2)
+  step = floor $ toRational max / (toRational n / 2)
 
 dispatch :: [Roll] -> [Seed] -> MVar (Maybe Seed) -> [IO (MVar ())]
 dispatch rolls ranges result =
