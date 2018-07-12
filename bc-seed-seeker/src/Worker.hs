@@ -29,9 +29,10 @@ seedRanges n =
   step = round $ toRational max / (toRational n / 2)
 
 dispatch :: [Roll] -> [Seed] -> MVar (Maybe Seed) -> [IO (MVar ())]
-dispatch _ (_:[]) _ = []
-dispatch rolls (start:end:rest) result =
-  work rolls start end result : dispatch rolls (end:rest) result
+dispatch rolls ranges result =
+  map dispatchOne allRanges where
+  allRanges = zip ranges (tail ranges)
+  dispatchOne (start, end) = work rolls start end result
 
 work :: [Roll] -> Seed -> Seed -> MVar (Maybe Seed) -> IO (MVar ())
 work rolls startSeed endSeed result =
