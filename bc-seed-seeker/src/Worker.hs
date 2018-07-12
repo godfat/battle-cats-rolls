@@ -34,7 +34,7 @@ dispatch rolls (start:end:rest) result =
   work rolls start end result : dispatch rolls (end:rest) result
 
 work :: [Roll] -> Seed -> Seed -> MVar (Maybe Seed) -> IO (MVar ())
-work rolls startSeed endSeed result = do
+work rolls startSeed endSeed result =
   forkWithMVar $ do
     case seekRange startSeed endSeed rolls of
       Nothing -> return ()
