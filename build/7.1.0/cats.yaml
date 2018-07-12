@@ -16550,6 +16550,18 @@ events:
     guaranteed: false
     step_up: false
     name: "★ Elemental Pixies ★ Cosmic powers brought to life as Uber Rare allies!"
+  2018-07-13_303:
+    id: 303
+    start_on: 2018-07-13
+    end_on: 2030-08-03
+    version: '70100'
+    rare: 7500
+    sr: 2000
+    ssr: 500
+    guaranteed: false
+    step_up: false
+    name: Get an Uber Rare Cat!! 100% Uber drop Rate in the PLATINUM CAPSULES!
+    platinum: true
   2018-07-14_302:
     id: 302
     start_on: 2018-07-14
