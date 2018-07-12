@@ -2,11 +2,12 @@
 
 ## How to build:
 
-    ghc -Odph -threaded Main.hs -o Seeker
+    ./bin/build.sh
 
 ## How to run:
 
-    ./Seeker +RTS -N8 # Assuming you have 8 cores
+    ./Seeker -- Use all cores
+    ./Seeker +RTS -N1 -- Use only one core
 
 ## CONTRIBUTORS:
 

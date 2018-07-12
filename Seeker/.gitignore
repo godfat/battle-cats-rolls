@@ -1,3 +1,2 @@
-*.hi
-*.o
-Seeker
+/build
+/Seeker
