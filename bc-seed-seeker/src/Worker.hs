@@ -10,7 +10,7 @@ import Seeker
 workStart :: [Roll] -> Int -> IO (Maybe Seed)
 workStart rolls n = do
   result <- newEmptyMVar
-  threads <- mapM (>>= return) $ dispatch rolls (seedRanges n) result
+  threads <- sequence $ dispatch rolls (seedRanges n) result
   putStrLn $ show $ length threads
   forkIO $ do
     wait threads
