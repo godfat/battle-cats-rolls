@@ -7,7 +7,7 @@ import Roll
 import Seed
 import Seeker
 
-workStart :: [Roll] -> Rational -> IO (Maybe Seed)
+workStart :: [Roll] -> Int -> IO (Maybe Seed)
 workStart rolls n = do
   result <- newEmptyMVar
   threads <- mapM (>>= return) $ dispatch rolls (seedRanges n) result
@@ -21,12 +21,12 @@ workStart rolls n = do
     wait :: [MVar ()] -> IO ()
     wait = mapM_ takeMVar
 
-seedRanges :: Rational -> [Seed]
+seedRanges :: Int -> [Seed]
 seedRanges n =
   map Seed $ [min, min + step .. max] ++ [max] where
   min = fromSeed minSeed
   max = fromSeed maxSeed
-  step = round $ toRational max / (n / 2)
+  step = round $ toRational max / (toRational n / 2)
 
 dispatch :: [Roll] -> [Seed] -> MVar (Maybe Seed) -> [IO (MVar ())]
 dispatch _ (_:[]) _ = []
