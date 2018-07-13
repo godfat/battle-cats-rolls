@@ -16573,3 +16573,69 @@ events:
     guaranteed: false
     step_up: false
     name: "★ EPICFEST ★ Extra-high drop rates for Ubers, plus Dark Mitama!"
+  2018-07-17_224:
+    id: 224
+    start_on: 2018-07-17
+    end_on: 2018-07-19
+    version: '70100'
+    rare: 7000
+    sr: 2500
+    ssr: 500
+    guaranteed: false
+    step_up: false
+    name: "★ Galaxy Gals★ Cute 'n' tough Uber Cats!"
+  2018-07-19_246:
+    id: 246
+    start_on: 2018-07-19
+    end_on: 2018-07-21
+    version: '70100'
+    rare: 7000
+    sr: 2500
+    ssr: 500
+    guaranteed: false
+    step_up: true
+    name: AIR BUSTERS plus R.E.I ★ With Increasing Capsules discount!
+  2018-07-21_221:
+    id: 221
+    start_on: 2018-07-21
+    end_on: 2018-07-24
+    version: '70100'
+    rare: 7000
+    sr: 2500
+    ssr: 500
+    guaranteed: false
+    step_up: false
+    name: "★ Vajiras Wargods! ★ Tactical master Uber Cats!"
+  2018-07-24_283:
+    id: 283
+    start_on: 2018-07-24
+    end_on: 2018-07-26
+    version: '70200'
+    rare: 7000
+    sr: 2500
+    ssr: 500
+    guaranteed: false
+    step_up: false
+    name: "★ IRON LEGION ★ Heavy metal Uber Cats with Zombie-crushing powers!!"
+  2018-07-26_230:
+    id: 230
+    start_on: 2018-07-26
+    end_on: 2018-07-28
+    version: '70200'
+    rare: 7000
+    sr: 2500
+    ssr: 500
+    guaranteed: false
+    step_up: false
+    name: "★ Ultra Souls★ Top-class Ubers of legendary might!"
+  2018-07-28_236:
+    id: 236
+    start_on: 2018-07-28
+    end_on: 2018-07-31
+    version: '70200'
+    rare: 7000
+    sr: 2500
+    ssr: 500
+    guaranteed: true
+    step_up: false
+    name: "★ The Almighties! ★ Legendary Uber Cats with 11-Draw Guarantee!"
