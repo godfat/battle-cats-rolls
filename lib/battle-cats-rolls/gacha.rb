@@ -99,9 +99,9 @@ module BattleCatsRolls
 
     def dig_rarity score
       case score
-      when 0...(Base - sr - ssr)
+      when 0...rare
         Rare
-      when sr...(Base - ssr)
+      when rare...(Base - ssr)
         SR
       else
         Uber
