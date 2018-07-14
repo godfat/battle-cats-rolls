@@ -1,0 +1,25 @@
+<div id="form">
+  <form method="get" enctype="application/x-www-form-urlencoded">
+    <%= erb :events %>
+
+    <select name="cat">
+      <optgroup label="Rare:">
+        <% arg[:rare_cats].each do |(id, name)| %>
+          <option value="<%= id %>"><%= name %></option>
+        <% end %>
+      </optgroup>
+
+      <optgroup label="Super Rare:">
+        <% arg[:sr_cats].each do |(id, name)| %>
+          <option value="<%= id %>"><%= name %></option>
+        <% end %>
+      </optgroup>
+
+      <optgroup label="Uber:">
+        <% arg[:uber_cats].each do |(id, name)| %>
+          <option value="<%= id %>"><%= name %></option>
+        <% end %>
+      </optgroup>
+    </select>
+  </form>
+</div>

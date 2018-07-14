@@ -20,7 +20,7 @@ module BattleCatsRolls
     end
 
     def initialize new_gacha, target_ids
-      new_ids = new_gacha.uber_cats.select do |id|
+      new_ids = new_gacha.uber_slots.select do |id|
         target_ids.include?(id)
       end
 

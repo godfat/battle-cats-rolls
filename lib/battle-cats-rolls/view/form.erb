@@ -1,5 +1,7 @@
 <div id="form">
   <form method="get" enctype="application/x-www-form-urlencoded">
+    <%= erb :events %>
+
     <label for="seed_input">Seed:</label>
     <input
       type="number" id="seed_input" name="seed"
@@ -18,28 +20,5 @@
       onclick="this.select()">
 
     <input type="submit" value="Roll">
-
-    <div id="event">
-      <label for="event_select">Events:</label>
-      <select id="event_select" name="event" onchange="roll(this)">
-        <optgroup label="Upcoming:">
-          <% upcoming_events.each do |(event_name, info)| %>
-            <option
-              value="<%= event_name %>"
-              <%= selected_current_event(event_name) %>>
-                <%= show_event(info) %></option>
-          <% end %>
-        </optgroup>
-
-        <optgroup label="Past:">
-          <% past_events.reverse_each do |(event_name, info)| %>
-            <option
-              value="<%= event_name %>"
-              <%= selected_current_event(event_name) %>>
-                <%= show_event(info) %></option>
-          <% end %>
-        </optgroup>
-      </select>
-    </div>
   </form>
 </div>
