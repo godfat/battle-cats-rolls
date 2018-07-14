@@ -2,10 +2,14 @@
 module Main where
 
 import GHC.Conc (numCapabilities)
+import Data.Int (Int32)
 
+import Roll
 import Seeker
 import Worker
 
 main = do
   putStrLn $ "Seeking in " ++ show numCapabilities ++ " cores..."
-  workStart rollsB numCapabilities >>= putStrLn . show
+  result <- map read <$> words <$> getContents :: IO [Int32]
+  let rolls = sourceRolls (buildSource result)
+  workStart rolls numCapabilities >>= putStrLn . show
