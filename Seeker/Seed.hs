@@ -35,14 +35,14 @@ step direction seed = seed `xor` (direction seed)
 
 ------------------------------------------------
 
-seed = Seed 1745107336
-tests =
-  [ advanceSeed seed == Seed 2009320978
-  , matchRarity seed (Rarity 7000 9000 1)
-  , not $ matchRarity seed (Rarity 0 7000 1)
-  , matchSlot seed 10 (Slot 6)
-  , not $ matchSlot seed 10 (Slot 7)
-  , matchRoll seed (Roll (Rarity 7000 9000 100) (Slot 78))
-  ]
+-- seed = Seed 1745107336
+-- tests =
+--   [ advanceSeed seed == Seed 2009320978
+--   , matchRarity seed (Rarity 7000 9000 1)
+--   , not $ matchRarity seed (Rarity 0 7000 1)
+--   , matchSlot seed 10 (Slot 6)
+--   , not $ matchSlot seed 10 (Slot 7)
+--   , matchRoll seed (Roll (Rarity 7000 9000 100) (Slot 78))
+--   ]
 
-test = foldr (&&) True tests
+-- test = foldr (&&) True tests
