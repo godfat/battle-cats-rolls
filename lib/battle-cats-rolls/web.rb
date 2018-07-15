@@ -197,9 +197,9 @@ module BattleCatsRolls
 
     get '/seek' do
       render :seek,
-        rare_cats: gacha.rare_cats,
-        sr_cats: gacha.sr_cats,
-        uber_cats: gacha.uber_cats
+        rare_names: gacha.rare_names,
+        sr_names: gacha.sr_names,
+        uber_names: gacha.uber_names
     end
   end
 end

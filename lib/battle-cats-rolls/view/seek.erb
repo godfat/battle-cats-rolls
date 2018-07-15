@@ -9,19 +9,19 @@
             <option selected="selected">Pick your roll</option>
 
             <optgroup label="Rare:">
-              <% arg[:rare_cats].each.with_index do |name, slot| %>
+              <% arg[:rare_names].each.with_index do |name, slot| %>
                 <option value="0-<%= slot %>"><%= name %></option>
               <% end %>
             </optgroup>
 
             <optgroup label="Super Rare:">
-              <% arg[:sr_cats].each.with_index do |name, slot| %>
+              <% arg[:sr_names].each.with_index do |name, slot| %>
                 <option value="1-<%= slot %>"><%= name %></option>
               <% end %>
             </optgroup>
 
             <optgroup label="Uber:">
-              <% arg[:uber_cats].each.with_index do |name, slot| %>
+              <% arg[:uber_names].each.with_index do |name, slot| %>
                 <option value="2-<%= slot %>"><%= name %></option>
               <% end %>
             </optgroup>
