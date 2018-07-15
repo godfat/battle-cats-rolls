@@ -85,7 +85,7 @@ module BattleCatsRolls
 
     def pick_cats rarity
       pool.dig_slot(rarity).map do |id|
-        [id, pool.dig_cat(rarity, id)]
+        pool.dig_cat(rarity, id)
       end
     end
 
