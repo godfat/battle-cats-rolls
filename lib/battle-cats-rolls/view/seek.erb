@@ -3,7 +3,7 @@
     <%= erb :events %>
   </form>
 
-  <form method="post" action="/seek/result"
+  <form method="post" action="//<%= seek_host %>/seek/result"
     enctype="application/x-www-form-urlencoded">
     <ol>
       <% 10.times do %>

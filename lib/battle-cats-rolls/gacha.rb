@@ -1,9 +1,9 @@
 # frozen_string_literal: true
 
-require 'forwardable'
-
 require_relative 'cat'
 require_relative 'gacha_pool'
+
+require 'forwardable'
 
 module BattleCatsRolls
   class Gacha < Struct.new(:pool, :seed)

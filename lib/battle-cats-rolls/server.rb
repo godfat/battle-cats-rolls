@@ -17,8 +17,14 @@ module BattleCatsRolls
       run Rack::Directory.new(File.expand_path('asset', __dir__))
     end
 
-    map '/' do
-      run Web.new
+    web = Web.new
+
+    map '/seek/result', to: '/seek/result', host: ENV['SEEK_HOST'] do
+      run web
+    end
+
+    map '/', host: ENV['WEB_HOST'] do
+      run web
     end
   end
 end

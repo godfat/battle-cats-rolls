@@ -5,5 +5,5 @@ gem 'jellyfish'
 gem 'rack'
 
 platforms :ruby do
-  gem 'unicorn'
+  gem 'yahns'
 end

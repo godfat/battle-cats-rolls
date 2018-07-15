@@ -7,7 +7,13 @@
 
 ## How to run the server:
 
-    unicorn -Ilib -N
+Locally:
+
+    unicorn -N
+
+Production with Nginx:
+
+    env WEB_YAHNS=... SEEK_YAHNS=... WEB_HOST=... SEEK_HOST=... yahns -c yahns.rb
 
 ## How to populate data:
 
