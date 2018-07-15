@@ -138,7 +138,7 @@ module BattleCatsRolls
       end
 
       def event
-        @event ||= request.GET['event'] || current_event
+        @event ||= request.params['event'] || current_event
       end
 
       def count
@@ -166,6 +166,13 @@ module BattleCatsRolls
             today <= value['end_on']
           end
         end
+      end
+
+      def rolls_meta
+        @rolls_meta ||=
+          [gacha.rare, gacha.sr, gacha.ssr,
+           gacha.rare_ids.size, gacha.sr_ids.size, gacha.uber_ids.size,
+           *request.POST['rolls']].join(' ').squeeze(' ')
       end
 
       def render name, arg=nil
@@ -200,6 +207,14 @@ module BattleCatsRolls
         rare_names: gacha.rare_names,
         sr_names: gacha.sr_names,
         uber_names: gacha.uber_names
+    end
+
+    post '/seek/result' do
+      IO.popen(['Seeker/Seeker', err: %i[child out]], 'r+') do |io|
+        io.puts rolls_meta
+        io.close_write
+        io.read
+      end
     end
   end
 end
