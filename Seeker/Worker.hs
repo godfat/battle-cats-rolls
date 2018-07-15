@@ -11,7 +11,7 @@ workStart :: [Roll] -> Int -> IO (Maybe Seed)
 workStart rolls n = do
   result <- newEmptyMVar
   threads <- sequence $ dispatch rolls (seedRanges n) result
-  putStrLn $ show $ length threads
+  -- putStrLn $ show $ length threads
   forkIO $ do
     wait threads
     tryPutMVar result Nothing >> return ()
