@@ -214,7 +214,10 @@ module BattleCatsRolls
     end
 
     post '/seek/result' do
-      IO.popen(['Seeker/Seeker', err: %i[child out]], 'r+') do |io|
+      IO.popen([
+        'Seeker/Seeker',
+        *ENV['SEEKER_OPT'].to_s.split(' '),
+        err: %i[child out]], 'r+') do |io|
         io.puts rolls_meta
         io.close_write
         io.read
