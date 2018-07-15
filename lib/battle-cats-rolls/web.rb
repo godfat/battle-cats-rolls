@@ -23,7 +23,7 @@ module BattleCatsRolls
       extend Forwardable
 
       def_delegators :controller,
-        *%w[request gacha upcoming_events past_events]
+        *%w[request gacha event upcoming_events past_events]
 
       def render name
         erb(:layout){ erb(name) }
@@ -63,7 +63,7 @@ module BattleCatsRolls
       end
 
       def selected_current_event event_name
-        'selected="selected"' if controller.event == event_name
+        'selected="selected"' if event == event_name
       end
 
       def checked_show_seeds
@@ -96,7 +96,7 @@ module BattleCatsRolls
 
       def uri_to_roll cat
         uri(seed: cat.rarity_seed,
-            event: controller.event,
+            event: event,
             count: controller.count,
             show_seeds: show_seeds)
       end
