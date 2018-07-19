@@ -16,7 +16,7 @@ module BattleCatsRolls
     Max = 999
 
     def self.ball
-      @ball ||= CrystalBall.load('build/7.1.0')
+      @ball ||= CrystalBall.load('build')
     end
 
     class View < Struct.new(:controller, :arg)
