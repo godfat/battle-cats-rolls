@@ -172,8 +172,8 @@ module BattleCatsRolls
         end
       end
 
-      def rolls_meta
-        @rolls_meta ||=
+      def seek_source
+        @seek_source ||=
           [gacha.rare, gacha.sr, gacha.ssr,
            gacha.rare_ids.size, gacha.sr_ids.size, gacha.uber_ids.size,
            *request.POST['rolls']].join(' ').squeeze(' ')
@@ -214,14 +214,10 @@ module BattleCatsRolls
     end
 
     post '/seek/result' do
-      IO.popen([
-        'Seeker/Seeker',
-        *ENV['SEEKER_OPT'].to_s.split(' '),
-        err: %i[child out]], 'r+') do |io|
-        io.puts rolls_meta
-        io.close_write
-        io.read
-      end
+      seek = Seek.new(seek_source)
+      seek.start
+
+      found
     end
   end
 end
