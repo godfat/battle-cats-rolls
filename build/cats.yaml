@@ -17157,3 +17157,103 @@ events:
     guaranteed: true
     step_up: false
     name: "★ The Almighties! ★ Legendary Uber Cats with 11-Draw Guarantee!"
+  2018-07-31_301:
+    id: 301
+    start_on: 2018-07-31
+    end_on: 2018-08-03
+    version: '70200'
+    rare: 6500
+    sr: 2600
+    ssr: 900
+    guaranteed: false
+    step_up: false
+    name: New Uber "D'artanyan" is here! ★ Extra-high Uber drop rate for every draw!
+  2018-08-03_304:
+    id: 304
+    start_on: 2018-08-03
+    end_on: 2018-08-06
+    version: '70200'
+    rare: 7000
+    sr: 2500
+    ssr: 500
+    guaranteed: true
+    step_up: false
+    name: NOBILUGA is here! A new weirdo Cat(?)!★With 11-Draw Uber Guarantee!
+  2018-08-03_310:
+    id: 310
+    start_on: 2018-08-03
+    end_on: 2030-09-07
+    version: '70200'
+    rare: 7500
+    sr: 2000
+    ssr: 500
+    guaranteed: false
+    step_up: false
+    name: Get an Uber Rare Cat!! 100% Uber drop Rate in the PLATINUM CAPSULES!
+    platinum: true
+  2018-08-06_289:
+    id: 289
+    start_on: 2018-08-06
+    end_on: 2018-08-08
+    version: '70200'
+    rare: 7000
+    sr: 2500
+    ssr: 500
+    guaranteed: false
+    step_up: false
+    name: The mighty Dynamites are here! Variety and power await you!
+  2018-08-08_245:
+    id: 245
+    start_on: 2018-08-08
+    end_on: 2018-08-10
+    version: '70200'
+    rare: 7000
+    sr: 2500
+    ssr: 500
+    guaranteed: false
+    step_up: true
+    name: "★ Red Busters w/ Pai-Pai! ★ Plus Increasing Capsules!"
+  2018-08-10_298:
+    id: 298
+    start_on: 2018-08-10
+    end_on: 2018-08-12
+    version: '70200'
+    rare: 7000
+    sr: 2500
+    ssr: 500
+    guaranteed: false
+    step_up: false
+    name: "★ Dark Heroes ★ Defend justice with for superpowered Uber Cats!"
+  2018-08-12_266:
+    id: 266
+    start_on: 2018-08-12
+    end_on: 2018-08-14
+    version: '70200'
+    rare: 7000
+    sr: 2500
+    ssr: 500
+    guaranteed: false
+    step_up: false
+    name: "★ Dragon Emperors ★ Collect a mighty monstrous Uber Cat!"
+  2018-08-14_276:
+    id: 276
+    start_on: 2018-08-14
+    end_on: 2018-08-16
+    version: '70200'
+    rare: 7000
+    sr: 2500
+    ssr: 500
+    guaranteed: false
+    step_up: false
+    name: "★ Elemental Pixies ★ Cosmic powers brought to life as Uber Rare allies!"
+  2018-08-16_230:
+    id: 230
+    start_on: 2018-08-16
+    end_on: 2018-08-18
+    version: '70200'
+    rare: 7000
+    sr: 2500
+    ssr: 500
+    guaranteed: false
+    step_up: false
+    name: "★ Ultra Souls★ Top-class Ubers of legendary might!"
