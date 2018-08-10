@@ -17257,3 +17257,80 @@ events:
     guaranteed: false
     step_up: false
     name: "★ Ultra Souls★ Top-class Ubers of legendary might!"
+  2018-08-18_309:
+    id: 309
+    start_on: 2018-08-18
+    end_on: 2018-08-21
+    version: '70200'
+    rare: 6500
+    sr: 2600
+    ssr: 900
+    guaranteed: false
+    step_up: false
+    name: "★ EPICFEST ★ Extra-high drop rates for Ubers, plus Dark Mitama!"
+  2018-08-21_246:
+    id: 246
+    start_on: 2018-08-21
+    end_on: 2018-08-23
+    version: '70200'
+    rare: 7000
+    sr: 2500
+    ssr: 500
+    guaranteed: false
+    step_up: true
+    name: AIR BUSTERS plus R.E.I ★ With Increasing Capsules discount!
+  2018-08-23_221:
+    id: 221
+    start_on: 2018-08-23
+    end_on: 2018-08-25
+    version: '70200'
+    rare: 7000
+    sr: 2500
+    ssr: 500
+    guaranteed: false
+    step_up: false
+    name: "★ Vajiras Wargods! ★ Tactical master Uber Cats!"
+  2018-08-25_224:
+    id: 224
+    start_on: 2018-08-25
+    end_on: 2018-08-28
+    version: '70200'
+    rare: 7000
+    sr: 2500
+    ssr: 500
+    guaranteed: true
+    step_up: false
+    name: "★ Galaxy Gals★ Cute 'n' tough Uber Cats with 11-Draw Guarantee!"
+  2018-08-28_283:
+    id: 283
+    start_on: 2018-08-28
+    end_on: 2018-08-30
+    version: '70200'
+    rare: 7000
+    sr: 2500
+    ssr: 500
+    guaranteed: false
+    step_up: false
+    name: "★ IRON LEGION ★ Heavy metal Uber Cats with Zombie-crushing powers!!"
+  2018-08-30_248:
+    id: 248
+    start_on: 2018-08-30
+    end_on: 2018-09-01
+    version: '70200'
+    rare: 7000
+    sr: 2500
+    ssr: 500
+    guaranteed: false
+    step_up: false
+    name: Spooky beauties from the netherworld! It's the GIRLS & MONSTERS!
+  2018-09-01_308:
+    id: 308
+    start_on: 2018-09-01
+    end_on: 2018-09-04
+    version: '70200'
+    rare: 6500
+    sr: 2600
+    ssr: 900
+    guaranteed: false
+    step_up: false
+    name: New Uber "D'artanyan" is here! ★ Extra-high Uber drop rate for every draw!
