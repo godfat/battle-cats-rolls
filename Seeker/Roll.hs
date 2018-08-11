@@ -36,8 +36,8 @@ buildSource (r:sr:ssr:rCount:srCount:ssrCount:rolls) = Source
   , sourceRolls = buildRolls [rare, superRare, uber] rolls
   } where
   rare = Rarity { begin = 0, end = r, count = rCount }
-  superRare = Rarity { begin = r, end = scoreBase - ssr, count = srCount }
-  uber = Rarity { begin = scoreBase - ssr, end = scoreBase, count = ssrCount }
+  superRare = Rarity { begin = r, end = r + sr, count = srCount }
+  uber = Rarity { begin = r + sr, end = scoreBase, count = ssrCount }
 
 buildRolls :: [Rarity] -> [Int32] -> [Roll]
 buildRolls rarities [] = []

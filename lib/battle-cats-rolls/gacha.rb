@@ -119,7 +119,7 @@ module BattleCatsRolls
       case score
       when 0...rare
         Rare
-      when rare...(Base - ssr)
+      when rare...(rare + sr)
         SR
       else
         Uber
