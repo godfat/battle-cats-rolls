@@ -2,12 +2,12 @@
 require_relative '../lib/battle-cats-rolls/pack_provider'
 require_relative '../lib/battle-cats-rolls/cats_builder'
 
-pack = BattleCatsRolls::PackProvider.new('data/7.2.0/app')
+pack = BattleCatsRolls::PackProvider.new('data/7.3.0/app')
 cats_pack = BattleCatsRolls::CatsBuilder.new(pack)
 
 require_relative '../lib/battle-cats-rolls/extract_provider'
 
-extract = BattleCatsRolls::ExtractProvider.new('extract/7.2.0')
+extract = BattleCatsRolls::ExtractProvider.new('extract/7.3.0')
 cats_extract = BattleCatsRolls::CatsBuilder.new(extract)
 
 p cats_pack == cats_extract

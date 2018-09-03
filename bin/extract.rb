@@ -4,9 +4,9 @@ require_relative '../lib/battle-cats-rolls/pack_reader'
 require 'fileutils'
 
 reader = BattleCatsRolls::PackReader.new(
-  ARGV.first || 'data/7.2.0/app/DataLocal.list')
+  ARGV.first || 'data/7.3.0/app/DataLocal.list')
 
-dir = "extract/7.2.0/#{reader.name}.pack"
+dir = "extract/7.3.0/#{reader.name}.pack"
 FileUtils.mkdir_p(dir)
 
 puts "Extracting #{reader.pack_path}"
