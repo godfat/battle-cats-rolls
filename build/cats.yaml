@@ -17334,3 +17334,70 @@ events:
     guaranteed: false
     step_up: false
     name: New Uber "D'artanyan" is here! ★ Extra-high Uber drop rate for every draw!
+  2018-09-04_289:
+    id: 289
+    start_on: 2018-09-04
+    end_on: 2018-09-07
+    version: '70200'
+    rare: 7500
+    sr: 2000
+    ssr: 500
+    guaranteed: false
+    step_up: false
+    name: The mighty Dynamites are here! Variety and power await you!
+  2018-09-07_311:
+    id: 311
+    start_on: 2018-09-07
+    end_on: 2018-09-10
+    version: '70300'
+    rare: 7500
+    sr: 2000
+    ssr: 500
+    guaranteed: true
+    step_up: false
+    name: The almighty titaness Empress Chronos arrives, w/ 11-Draw Guarantee!
+  2018-09-07_317:
+    id: 317
+    start_on: 2018-09-07
+    end_on: 2030-01-01
+    version: '70300'
+    rare: 7500
+    sr: 2000
+    ssr: 500
+    guaranteed: false
+    step_up: false
+    name: Get an Uber Rare Cat!! 100% Uber drop Rate in the PLATINUM CAPSULES!
+    platinum: true
+  2018-09-10_305:
+    id: 305
+    start_on: 2018-09-10
+    end_on: 2018-09-12
+    version: '70300'
+    rare: 7500
+    sr: 2000
+    ssr: 500
+    guaranteed: false
+    step_up: false
+    name: "★ Nekolugas ★  Super-creepy Uber Cats!"
+  2018-09-12_232:
+    id: 232
+    start_on: 2018-09-12
+    end_on: 2018-09-14
+    version: '70300'
+    rare: 7500
+    sr: 2000
+    ssr: 500
+    guaranteed: false
+    step_up: false
+    name: "★ Ultra Souls★ Top-class Ubers of legendary might!"
+  2018-09-14_316:
+    id: 316
+    start_on: 2018-09-14
+    end_on: 2018-09-17
+    version: '70300'
+    rare: 6500
+    sr: 2600
+    ssr: 900
+    guaranteed: false
+    step_up: false
+    name: "★ EPICFEST ★ Extra-high drop rates for Ubers, plus Dark Mitama!"
