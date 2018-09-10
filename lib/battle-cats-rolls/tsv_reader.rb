@@ -11,7 +11,7 @@ module BattleCatsRolls
     end
 
     def self.current_version
-      '7.1.0'
+      '7.3.0'
     end
 
     def self.download url, version=current_version
@@ -26,12 +26,12 @@ module BattleCatsRolls
 
     def self.fields version
       case version
-      when '7.1.0'
+      when '7.3.0'
         {gacha:
           {'id' => 10, 'start_on' => 0, 'end_on' => 2, 'version' => 4,
            'rare' => 16, 'sr' => 18, 'ssr' => 20,
            'guaranteed' => 21, 'step_up' => 13,
-           'type' => 8, 'platinum' => 55}}
+           'type' => 8, 'platinum' => 55, 'seasonal' => 25}}
       end
     end
 
@@ -46,13 +46,14 @@ module BattleCatsRolls
     def gacha
       @gacha ||= parsed_data.inject({}) do |result, row|
         data = convert_gacha(read_row(row, gacha_fields))
-        id = data.delete('type') == 1 &&
-          (data.delete('platinum') || data['id'])
+        platinum = data.delete('platinum')
+        seasonal = data.delete('seasonal')
+        id = data.delete('type') == 1 && (platinum || data['id'] || seasonal)
 
         if id
           if data['id'].nil?
             data['id'] = id
-            data['platinum'] = true
+            data['platinum'] = !!platinum
           end
 
           result["#{data['start_on']}_#{id}"] = data
@@ -77,7 +78,7 @@ module BattleCatsRolls
         case key
         when 'start_on', 'end_on'
           Date.parse(value)
-        when 'id', 'rare', 'sr', 'ssr', 'platinum'
+        when 'id', 'rare', 'sr', 'ssr', 'platinum', 'seasonal'
           id = value.to_i
           id if id > 0
         when 'step_up'

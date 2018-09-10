@@ -17877,6 +17877,18 @@ events:
     guaranteed: false
     step_up: false
     name: "★ Nekolugas ★  Super-creepy Uber Cats!"
+  2018-09-10_314:
+    id: 314
+    start_on: 2018-09-10
+    end_on: 2018-09-24
+    version: '70300'
+    rare: 7500
+    sr: 2000
+    ssr: 500
+    guaranteed: false
+    step_up: false
+    name: Summer Gals are here with a new member!★Tap banner for more info!
+    platinum: false
   2018-09-12_232:
     id: 232
     start_on: 2018-09-12
