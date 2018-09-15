@@ -22,7 +22,7 @@
           <td class="<%= prev_b.color_label %>">
             <%= link_to_roll(prev_b, b) %></td>
           <% seed_column do %><td><%= prev_b.slot_seed %></td><% end %>
-        <% elsif show_seeds %>
+        <% elsif show_details %>
           <td colspan="4"></td>
         <% else %>
           <td colspan="3"></td>
@@ -41,7 +41,7 @@
     <% end %>
 
     <tr>
-      <% if show_seeds %>
+      <% if show_details %>
         <td colspan="4"></td>
       <% else %>
         <td colspan="3"></td>
