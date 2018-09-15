@@ -17911,3 +17911,93 @@ events:
     guaranteed: false
     step_up: false
     name: "★ EPICFEST ★ Extra-high drop rates for Ubers, plus Dark Mitama!"
+  2018-09-17_299:
+    id: 299
+    start_on: 2018-09-17
+    end_on: 2018-09-19
+    version: '70300'
+    rare: 7000
+    sr: 2500
+    ssr: 500
+    guaranteed: false
+    step_up: false
+    name: "★ Dark Heroes ★ Defend justice with for superpowered Uber Cats!"
+  2018-09-19_223:
+    id: 223
+    start_on: 2018-09-19
+    end_on: 2018-09-21
+    version: '70300'
+    rare: 7000
+    sr: 2500
+    ssr: 500
+    guaranteed: false
+    step_up: false
+    name: "★ Vajiras Wargods! ★ Tactical master Uber Cats!"
+  2018-09-21_267:
+    id: 267
+    start_on: 2018-09-21
+    end_on: 2018-09-24
+    version: '70300'
+    rare: 7000
+    sr: 2500
+    ssr: 500
+    guaranteed: true
+    step_up: false
+    name: "★ Dragon Emperors ★ Mighty monstrous Ubers with 11-Draw Guarantee!"
+  2018-09-21_314:
+    id: 314
+    start_on: 2018-09-21
+    end_on: 2018-09-24
+    version: '70300'
+    rare: 7500
+    sr: 2000
+    ssr: 500
+    guaranteed: true
+    step_up: false
+    name: "★ Gals of Summer ★ Last chance, with 11-Draw Uber Guarantee!"
+    platinum: false
+  2018-09-24_283:
+    id: 283
+    start_on: 2018-09-24
+    end_on: 2018-09-26
+    version: '70300'
+    rare: 7000
+    sr: 2500
+    ssr: 500
+    guaranteed: false
+    step_up: false
+    name: "★ IRON LEGION ★ Heavy metal Uber Cats with Zombie-crushing powers!!"
+  2018-09-26_224:
+    id: 224
+    start_on: 2018-09-26
+    end_on: 2018-09-28
+    version: '70300'
+    rare: 7000
+    sr: 2500
+    ssr: 500
+    guaranteed: false
+    step_up: false
+    name: "★ Galaxy Gals★ Cute 'n' tough Uber Cats!"
+  2018-09-28_276:
+    id: 276
+    start_on: 2018-09-28
+    end_on: 2018-10-01
+    version: '70300'
+    rare: 7000
+    sr: 2500
+    ssr: 500
+    guaranteed: true
+    step_up: false
+    name: Cosmic powers brought to life! Plus a Guaranteed Uber with 11-Draw!
+  2018-09-28_307:
+    id: 307
+    start_on: 2018-09-28
+    end_on: 2018-10-01
+    version: '70300'
+    rare: 7500
+    sr: 2000
+    ssr: 500
+    guaranteed: true
+    step_up: false
+    name: NEW limited anniversary Uber! ★ With 11-Draw Uber Guarantee!
+    platinum: false

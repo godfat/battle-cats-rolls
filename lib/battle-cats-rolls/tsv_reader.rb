@@ -31,7 +31,8 @@ module BattleCatsRolls
           {'id' => 10, 'start_on' => 0, 'end_on' => 2, 'version' => 4,
            'rare' => 16, 'sr' => 18, 'ssr' => 20,
            'guaranteed' => 21, 'step_up' => 13,
-           'type' => 8, 'platinum' => 55, 'seasonal' => 25}}
+           'type' => 8, 'platinum' => 55,
+           'seasonal' => 25, 'seasonal_guaranteed' => 36}}
       end
     end
 
@@ -46,8 +47,12 @@ module BattleCatsRolls
     def gacha
       @gacha ||= parsed_data.inject({}) do |result, row|
         data = convert_gacha(read_row(row, gacha_fields))
+
         platinum = data.delete('platinum')
         seasonal = data.delete('seasonal')
+        seasonal_guaranteed = data.delete('seasonal_guaranteed')
+
+        data['guaranteed'] = seasonal_guaranteed if seasonal
         id = data.delete('type') == 1 && (platinum || data['id'] || seasonal)
 
         if id
@@ -83,7 +88,7 @@ module BattleCatsRolls
           id if id > 0
         when 'step_up'
           value.to_i & 4 == 4
-        when 'guaranteed'
+        when 'guaranteed', 'seasonal_guaranteed'
           value.to_i > 0
         when 'type'
           value.to_i
