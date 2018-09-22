@@ -1,5 +1,5 @@
 
-module Seed(Seed(Seed), fromSeed, advanceSeed, matchRoll, getScore, alternativeSeed) where
+module Seed(Seed(Seed), fromSeed, advanceSeed, matchRoll) where
 
 import Data.Bits (xor, shiftL, shiftR)
 import Data.Word (Word32)
