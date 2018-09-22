@@ -1,12 +1,12 @@
 
-module Seed(Seed(Seed), fromSeed, advanceSeed, matchRoll) where
+module Seed(Seed(Seed), fromSeed, advanceSeed, matchRoll, getScore, alternativeSeed) where
 
 import Data.Bits (xor, shiftL, shiftR)
-import Data.Int (Int32)
+import Data.Word (Word32)
 
 import Roll
 
-newtype Seed = Seed { fromSeed :: Int32 } deriving (Show, Eq)
+newtype Seed = Seed { fromSeed :: Word32 } deriving (Show, Eq)
 
 advanceSeed :: Seed -> Seed
 advanceSeed =
@@ -23,15 +23,22 @@ matchRoll seed (Roll rarity@(Rarity _ _ count) slot) =
 matchRarity :: Seed -> Rarity -> Bool
 matchRarity (Seed seed) (Rarity begin end _) =
   score >= begin && score < end where
-  score = abs seed `mod` scoreBase
+  score = (getScore seed) `mod` scoreBase
 
-matchSlot :: Seed -> Int32 -> Slot -> Bool
+matchSlot :: Seed -> Word32 -> Slot -> Bool
 matchSlot (Seed seed) count (Slot n) =
   slot == n where
-  slot = abs seed `mod` count
+  slot = (getScore seed) `mod` count
 
-step :: (Int32 -> Int32) -> Int32 -> Int32
+step :: (Word32 -> Word32) -> Word32 -> Word32
 step direction seed = seed `xor` (direction seed)
+
+getScore :: Word32 -> Word32
+getScore seed = min seed (alternativeSeed seed)
+
+alternativeSeed :: Word32 -> Word32
+alternativeSeed seed = 0xffffffff - alt + 1 where
+  alt = if seed < 0x80000000 then 0x80000000 - seed else seed
 
 ------------------------------------------------
 

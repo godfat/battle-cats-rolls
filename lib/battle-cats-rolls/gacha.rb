@@ -90,7 +90,7 @@ module BattleCatsRolls
     end
 
     def roll_int
-      seed
+      [seed, alternative_seed].min
     end
 
     def roll_int!
@@ -98,7 +98,7 @@ module BattleCatsRolls
     end
 
     def roll_cat rarity_seed
-      score = rarity_seed.abs % Base
+      score = rarity_seed % Base
       rarity = if pool.platinum then Uber else dig_rarity(score) end
       slot_seed = if block_given? then yield else roll_int end
       cat = dig_cat(slot_seed, rarity)
@@ -127,10 +127,15 @@ module BattleCatsRolls
     end
 
     def dig_cat slot_seed, rarity
-      slot = slot_seed.abs % pool.dig_slot(rarity).size
+      slot = slot_seed % pool.dig_slot(rarity).size
       id = pool.dig_slot(rarity, slot)
 
       Cat.new(id, pool.dig_cat(rarity, id))
+    end
+
+    def alternative_seed
+      alt = if seed < 0x80000000 then 0x80000000 - seed else seed end
+      0x100000000 - alt
     end
 
     def advance_seed!
@@ -144,8 +149,7 @@ module BattleCatsRolls
     end
 
     def shift direction, bits, base_seed=seed
-      base_seed ^= base_seed.public_send(direction, bits)
-      (base_seed + 0x80000000) % (0x100000000) - (0x80000000)
+      base_seed ^= base_seed.public_send(direction, bits) % 0x100000000
     end
   end
 end

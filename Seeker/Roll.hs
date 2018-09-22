@@ -7,18 +7,18 @@ module Roll
   , scoreBase
   , buildSource) where
 
-import Data.Int (Int32)
+import Data.Word (Word32)
 
 data Roll = Roll Rarity Slot
   deriving (Show, Eq)
 
-data Rarity = Rarity { begin :: Int32, end :: Int32, count :: Int32 }
+data Rarity = Rarity { begin :: Word32, end :: Word32, count :: Word32 }
   deriving (Show, Eq)
 
-newtype Slot = Slot Int32
+newtype Slot = Slot Word32
   deriving (Show, Eq)
 
-scoreBase :: Int32
+scoreBase :: Word32
 scoreBase = 10000
 
 data Source = Source
@@ -28,7 +28,7 @@ data Source = Source
   , sourceRolls :: [Roll]
   } deriving (Show, Eq)
 
-buildSource :: [Int32] -> Source
+buildSource :: [Word32] -> Source
 buildSource (r:sr:ssr:rCount:srCount:ssrCount:rolls) = Source
   { rare = rare
   , superRare = superRare
@@ -39,7 +39,7 @@ buildSource (r:sr:ssr:rCount:srCount:ssrCount:rolls) = Source
   superRare = Rarity { begin = r, end = r + sr, count = srCount }
   uber = Rarity { begin = r + sr, end = scoreBase, count = ssrCount }
 
-buildRolls :: [Rarity] -> [Int32] -> [Roll]
+buildRolls :: [Rarity] -> [Word32] -> [Roll]
 buildRolls rarities [] = []
 buildRolls rarities (rarity:slot:restRolls) =
   Roll (rarities !! fromEnum rarity) (Slot slot) : rest
