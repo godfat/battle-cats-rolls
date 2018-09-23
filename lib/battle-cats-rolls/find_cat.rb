@@ -96,6 +96,11 @@ module BattleCatsRolls
           break result
         else
           new_ab = gacha.roll_both_with_sequence!(sequence)
+          # TODO: gacha.fill_guaranteed([new_ab])
+          # will not work here because it's trying to fill guaranteed cats
+          # with existing information, yet we're rolling one by one here,
+          # thus guaranteed information doesn't exist.
+          # We could fix this by rolling 11 times for each attempt
 
           next result.merge(
             search_from_cats([new_ab], ids - result.keys))
