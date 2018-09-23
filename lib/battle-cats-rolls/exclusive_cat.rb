@@ -18,14 +18,14 @@ module BattleCatsRolls
       ]
     end
 
-    def self.search gacha, **args
-      new(gacha, ids).search(**args)
+    def self.search gacha, extra, **args
+      new(gacha, ids << extra).search(**args)
     end
 
     def initialize new_gacha, target_ids
-      new_ids = new_gacha.uber_ids.select do |id|
-        target_ids.include?(id)
-      end
+      new_ids = new_gacha.uber_cats.select do |cat|
+        target_ids.include?(cat.id)
+      end.map(&:id)
 
       super(new_gacha, new_ids)
     end

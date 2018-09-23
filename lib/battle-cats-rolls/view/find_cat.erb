@@ -1,0 +1,25 @@
+<div class="find">
+  <label for="find_select">Find next:</label>
+  <select id="find_select" name="find" onchange="roll(this)">
+    <optgroup label="Uber:">
+      <% gacha.uber_cats.uniq(&:name).each do |cat| %>
+        <option value="<%= cat.id %>"
+          <%= selected_find(cat) %>><%= cat.name %></option>
+      <% end %>
+    </optgroup>
+
+    <optgroup label="Super Rare:">
+      <% gacha.sr_cats.uniq(&:name).each do |cat| %>
+        <option value="<%= cat.id %>"
+          <%= selected_find(cat) %>><%= cat.name %></option>
+      <% end %>
+    </optgroup>
+
+    <optgroup label="Rare:">
+      <% gacha.rare_cats.uniq(&:name).each do |cat| %>
+        <option value="<%= cat.id %>"
+          <%= selected_find(cat) %>><%= cat.name %></option>
+      <% end %>
+    </optgroup>
+  </select>
+</div>

@@ -12,20 +12,20 @@
             <option value="" selected="selected">Pick your roll</option>
 
             <optgroup label="Rare:">
-              <% arg[:rare_names].each.with_index do |name, slot| %>
-                <option value="0 <%= slot %>"><%= name %></option>
+              <% gacha.rare_cats.each.with_index do |cat, slot| %>
+                <option value="0 <%= slot %>"><%= cat.name %></option>
               <% end %>
             </optgroup>
 
             <optgroup label="Super Rare:">
-              <% arg[:sr_names].each.with_index do |name, slot| %>
-                <option value="1 <%= slot %>"><%= name %></option>
+              <% gacha.sr_cats.each.with_index do |cat, slot| %>
+                <option value="1 <%= slot %>"><%= cat.name %></option>
               <% end %>
             </optgroup>
 
             <optgroup label="Uber:">
-              <% arg[:uber_names].each.with_index do |name, slot| %>
-                <option value="2 <%= slot %>"><%= name %></option>
+              <% gacha.uber_cats.each.with_index do |cat, slot| %>
+                <option value="2 <%= slot %>"><%= cat.name %></option>
               <% end %>
             </optgroup>
           </select>

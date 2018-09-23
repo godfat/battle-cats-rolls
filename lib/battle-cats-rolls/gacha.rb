@@ -58,35 +58,23 @@ module BattleCatsRolls
       guaranteed_rolls
     end
 
-    def rare_ids
-      pool.dig_slot(Rare)
+    def rare_cats
+      @rare_cats ||= pick_cats(Rare)
     end
 
-    def sr_ids
-      pool.dig_slot(SR)
+    def sr_cats
+      @sr_cats ||= pick_cats(SR)
     end
 
-    def uber_ids
-      pool.dig_slot(Uber)
-    end
-
-    def rare_names
-      pick_cats(Rare)
-    end
-
-    def sr_names
-      pick_cats(SR)
-    end
-
-    def uber_names
-      pick_cats(Uber)
+    def uber_cats
+      @uber_cats ||= pick_cats(Uber)
     end
 
     private
 
     def pick_cats rarity
       pool.dig_slot(rarity).map do |id|
-        pool.dig_cat(rarity, id)
+        Cat.new(id, pool.dig_cat(rarity, id))
       end
     end
 

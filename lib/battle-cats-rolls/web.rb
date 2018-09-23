@@ -25,7 +25,7 @@ module BattleCatsRolls
       extend Forwardable
 
       def_delegators :controller,
-        *%w[request gacha event upcoming_events past_events]
+        *%w[request gacha event find upcoming_events past_events]
 
       def render name
         erb(:layout){ erb(name) }
@@ -68,6 +68,10 @@ module BattleCatsRolls
         'selected="selected"' if event == event_name
       end
 
+      def selected_find cat
+        'selected="selected"' if find == cat.id
+      end
+
       def checked_details
         'checked="checked"' if details
       end
@@ -76,8 +80,8 @@ module BattleCatsRolls
         h "#{info['start_on']} ~ #{info['end_on']}: #{info['name']}"
       end
 
-      def show_gacha_slots names
-        names.map.with_index{ |n, i| "#{i} #{n}" }.join(', ')
+      def show_gacha_slots cats
+        cats.map.with_index{ |cat, i| "#{i} #{cat.name}" }.join(', ')
       end
 
       def h str
@@ -109,7 +113,8 @@ module BattleCatsRolls
         uri(seed: cat.rarity_fruit.seed,
             event: event,
             count: controller.count,
-            details: details)
+            details: details,
+            find: find)
       end
 
       def uri_to_cat_db cat
@@ -164,6 +169,14 @@ module BattleCatsRolls
         @count ||= [1, [(request.GET['count'] || 100).to_i, Max].min].max
       end
 
+      def find
+        return @find if instance_variable_defined?(:@find)
+
+        id = request.GET['find'].to_i
+
+        @find = id.nonzero? && id || nil
+      end
+
       def current_event
         @current_event ||=
           upcoming_events.find{ |_, info| info['platinum'].nil? }&.first
@@ -208,7 +221,7 @@ module BattleCatsRolls
       def seek_source
         @seek_source ||=
           [gacha.rare, gacha.sr, gacha.ssr,
-           gacha.rare_ids.size, gacha.sr_ids.size, gacha.uber_ids.size,
+           gacha.rare_cats.size, gacha.sr_cats.size, gacha.uber_cats.size,
            *request.POST['rolls']].join(' ').squeeze(' ')
       end
 
@@ -239,7 +252,8 @@ module BattleCatsRolls
         end
 
         guaranteed_rolls = gacha.fill_guaranteed(cats)
-        exclusive_cats = ExclusiveCat.search(gacha, cats: cats, max: Max)
+        exclusive_cats =
+          ExclusiveCat.search(gacha, find, cats: cats, max: Max)
 
         render :index,
           cats: cats,
@@ -255,10 +269,7 @@ module BattleCatsRolls
       controller_include NormalizedPath, Imp
 
       get '/seek' do
-        render :seek,
-          rare_names: gacha.rare_names,
-          sr_names: gacha.sr_names,
-          uber_names: gacha.uber_names
+        render :seek
       end
 
       post '/seek/enqueue' do
