@@ -105,7 +105,6 @@ module BattleCatsRolls
       cat = dig_cat(slot_fruit, rarity)
 
       cat.score = score
-      cat.rarity = rarity
       cat.rarity_fruit = rarity_fruit
       cat.slot_fruit = slot_fruit
 
@@ -131,7 +130,7 @@ module BattleCatsRolls
       slot = slot_fruit.value % pool.dig_slot(rarity).size
       id = pool.dig_slot(rarity, slot)
 
-      Cat.new(id, pool.dig_cat(rarity, id))
+      Cat.new(id, pool.dig_cat(rarity, id), rarity, slot)
     end
 
     def advance_seed!
