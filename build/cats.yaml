@@ -17888,7 +17888,6 @@ events:
     guaranteed: false
     step_up: false
     name: Summer Gals are here with a new member!★Tap banner for more info!
-    platinum: false
   2018-09-12_232:
     id: 232
     start_on: 2018-09-12
@@ -17955,7 +17954,6 @@ events:
     guaranteed: true
     step_up: false
     name: "★ Gals of Summer ★ Last chance, with 11-Draw Uber Guarantee!"
-    platinum: false
   2018-09-24_283:
     id: 283
     start_on: 2018-09-24
@@ -18000,4 +17998,3 @@ events:
     guaranteed: true
     step_up: false
     name: NEW limited anniversary Uber! ★ With 11-Draw Uber Guarantee!
-    platinum: false

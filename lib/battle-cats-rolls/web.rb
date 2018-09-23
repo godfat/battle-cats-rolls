@@ -162,21 +162,39 @@ module BattleCatsRolls
       end
 
       def upcoming_events
-        @upcoming_events ||= all_events[true]
+        @upcoming_events ||= grouped_events[true]
       end
 
       def past_events
-        @past_events ||= all_events[false]
+        @past_events ||= grouped_events[false]
+      end
+
+      def grouped_events
+        @grouped_events ||= begin
+          today = Date.today
+
+          all_events.group_by do |_, value|
+            if value['platinum']
+              current_platinum['id'] == value['id']
+            else
+              today <= value['end_on']
+            end
+          end
+        end
+      end
+
+      def current_platinum
+        @current_platinum ||= begin
+          past = Date.new
+
+          all_events.max_by do |_, value|
+            if value['platinum'] then value['start_on'] else past end
+          end.last
+        end
       end
 
       def all_events
-        @all_events ||= begin
-          today = Date.today
-
-          Web.ball.dig('events').group_by do |key, value|
-            today <= value['end_on']
-          end
-        end
+        @all_events ||= Web.ball.dig('events')
       end
 
       def seek_source

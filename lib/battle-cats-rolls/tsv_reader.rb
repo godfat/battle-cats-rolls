@@ -58,7 +58,11 @@ module BattleCatsRolls
         if id
           if data['id'].nil?
             data['id'] = id
-            data['platinum'] = !!platinum
+            if platinum
+              data['platinum'] = true
+            else
+              data.delete('platinum')
+            end
           end
 
           result["#{data['start_on']}_#{id}"] = data
