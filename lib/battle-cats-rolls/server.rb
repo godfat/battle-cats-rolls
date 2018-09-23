@@ -19,7 +19,7 @@ module BattleCatsRolls
 
     web = Web.new
 
-    map '/seek/result', to: '/seek/result', host: ENV['SEEK_HOST'] do
+    map '/seek', to: '/seek', host: ENV['SEEK_HOST'] do
       run web
     end
 

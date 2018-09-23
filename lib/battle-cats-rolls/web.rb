@@ -3,6 +3,8 @@
 require_relative 'crystal_ball'
 require_relative 'gacha'
 require_relative 'exclusive_cat'
+require_relative 'seek'
+require_relative 'cache'
 
 require 'jellyfish'
 
@@ -184,6 +186,17 @@ module BattleCatsRolls
            *request.POST['rolls']].join(' ').squeeze(' ')
       end
 
+      def cache
+        @cache ||= Cache.default(logger(env))
+      end
+
+      def logger env
+        env['rack.logger'] || begin
+          require 'logger'
+          Logger.new(env['rack.errors'])
+        end
+      end
+
       def render name, arg=nil
         View.new(self, arg).render(name)
       end
@@ -218,11 +231,19 @@ module BattleCatsRolls
         uber_names: gacha.uber_names
     end
 
-    post '/seek/result' do
-      seek = Seek.new(seek_source)
-      seek.start
+    post '/seek/enqueue' do
+      key = Seek.enqueue(seek_source, cache)
 
-      found
+      found "/seek/result/#{key}"
+    end
+
+    get %r{^/seek/result/(?<key>\w+)} do |m|
+      seed = cache[m[:key]]
+      seek = Seek.queue.dig(m[:key], :seek)
+
+      seek.yield if seek&.ended?
+
+      render :seek_result, seed: seed, seek: seek
     end
   end
 end

@@ -1,0 +1,16 @@
+<p>
+  <% if arg[:seed] %>
+    Your current seed is: <%= arg[:seed] %>
+  <% elsif arg[:seek] %>
+    <% if arg[:seek].started? %>
+      Now seeking your seed...
+    <% else %>
+      You're <%= arg[:seek].position %> in the queue.
+    <% end %>
+    <script type="text/javascript">
+      window.setTimeout(function(){ window.location.reload(true) }, 5000);
+    </script>
+  <% else %>
+    Are you <a href="/seek">seeking</a> the seed?
+  <% end %>
+</p>
