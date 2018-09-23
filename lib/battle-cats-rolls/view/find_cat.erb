@@ -24,4 +24,9 @@
       <% end %>
     </optgroup>
   </select>
+
+  <label for="no_guaranteed_input">Exclude guaranteed:</label>
+  <input type="checkbox" id="no_guaranteed_input" name="no_guaranteed"
+    <%= checked_no_guaranteed %>
+    onchange="roll(this)">
 </div>

@@ -31,11 +31,11 @@ module BattleCatsRolls
       super(new_gacha, new_ids)
     end
 
-    def search cats: [], max: 999
+    def search cats: [], guaranteed: true, max: 999
       if ids.empty?
         []
       else
-        found = search_deep(cats, max)
+        found = search_deep(cats, guaranteed, max)
 
         if found.size < ids.size
           track_name = '+'.ord - 'A'.ord
@@ -59,17 +59,17 @@ module BattleCatsRolls
 
     private
 
-    def search_deep cats, max
-      found = search_from_cats(cats, ids)
+    def search_deep cats, guaranteed, max
+      found = search_from_cats(cats, guaranteed, ids)
 
       if found.size < ids.size
-        search_from_rolling(found, cats, max)
+        search_from_rolling(found, cats, guaranteed, max)
       else
         found
       end
     end
 
-    def search_from_cats cats, remaining_ids
+    def search_from_cats cats, guaranteed, remaining_ids
       cats.each.inject({}) do |result, ab|
         (remaining_ids - result.keys).each do |id|
           ab.each.with_index do |cat, a_or_b|
@@ -77,7 +77,7 @@ module BattleCatsRolls
             when cat.id
               result[id] = [cat, a_or_b]
             when cat.guaranteed&.id
-              result[id] = [cat.guaranteed, a_or_b, 'G']
+              result[id] = [cat.guaranteed, a_or_b, 'G'] if guaranteed
             end
           end
         end
@@ -90,7 +90,7 @@ module BattleCatsRolls
       end
     end
 
-    def search_from_rolling found, cats, max
+    def search_from_rolling found, cats, guaranteed, max
       cats.size.succ.upto(max).inject(found) do |result, sequence|
         if result.size == ids.size
           break result
@@ -103,7 +103,7 @@ module BattleCatsRolls
           # We could fix this by rolling 11 times for each attempt
 
           next result.merge(
-            search_from_cats([new_ab], ids - result.keys))
+            search_from_cats([new_ab], guaranteed, ids - result.keys))
         end
       end
     end

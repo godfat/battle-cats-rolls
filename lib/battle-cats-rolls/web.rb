@@ -25,7 +25,8 @@ module BattleCatsRolls
       extend Forwardable
 
       def_delegators :controller,
-        *%w[request gacha event find upcoming_events past_events]
+        *%w[request gacha event upcoming_events past_events
+            find no_guaranteed]
 
       def render name
         erb(:layout){ erb(name) }
@@ -70,6 +71,10 @@ module BattleCatsRolls
 
       def selected_find cat
         'selected="selected"' if find == cat.id
+      end
+
+      def checked_no_guaranteed
+        'checked="checked"' if no_guaranteed
       end
 
       def checked_details
@@ -177,6 +182,13 @@ module BattleCatsRolls
         @find = id.nonzero? && id || nil
       end
 
+      def no_guaranteed
+        return @no_guaranteed if instance_variable_defined?(:@no_guaranteed)
+
+        @no_guaranteed =
+          !request.GET['no_guaranteed'].to_s.strip.empty? || nil
+      end
+
       def current_event
         @current_event ||=
           upcoming_events.find{ |_, info| info['platinum'].nil? }&.first
@@ -252,7 +264,10 @@ module BattleCatsRolls
         end
 
         guaranteed_rolls = gacha.fill_guaranteed(cats)
-        found_cats = FindCat.search(gacha, find, cats: cats, max: Max)
+
+        found_cats =
+          FindCat.search(gacha, find,
+            cats: cats, guaranteed: !no_guaranteed, max: Max)
 
         render :index,
           cats: cats,
