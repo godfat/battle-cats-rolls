@@ -6,17 +6,17 @@
       <li>
         Rare: <%= gacha.rare / 100 %>%
         (<%= gacha.rare_ids.size %> cats)
-        <details><%= gacha.rare_names.join(', ') %></details>
+        <%= show_gacha_slots(gacha.rare_names) %>
       </li>
       <li>
         SR: <%= gacha.sr / 100 %>%
         (<%= gacha.sr_ids.size %> cats)
-        <details><%= gacha.sr_names.join(', ') %></details>
+        <%= show_gacha_slots(gacha.sr_names) %>
       </li>
       <li>
         Uber: <%= gacha.ssr / 100 %>%
         (<%= gacha.uber_ids.size %> cats)
-        <details><%= gacha.uber_names.join(', ') %></details>
+        <%= show_gacha_slots(gacha.uber_names) %>
       </li>
     </ul>
   <% end %>

@@ -76,6 +76,10 @@ module BattleCatsRolls
         h "#{info['start_on']} ~ #{info['end_on']}: #{info['name']}"
       end
 
+      def show_gacha_slots names
+        names.map.with_index{ |n, i| "#{i} #{n}" }.join(', ')
+      end
+
       def h str
         CGI.escape_html(str)
       end
