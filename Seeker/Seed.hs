@@ -21,20 +21,20 @@ matchRoll seed (Roll rarity@(Rarity _ _ count) slot) =
   matchRarity seed rarity && matchSlot (advanceSeed seed) count slot
 
 matchRarity :: Seed -> Rarity -> Bool
-matchRarity (Seed seed) (Rarity begin end _) =
+matchRarity seed (Rarity begin end _) =
   score >= begin && score < end where
   score = (seedValue seed) `mod` scoreBase
 
 matchSlot :: Seed -> Word32 -> Slot -> Bool
-matchSlot (Seed seed) count (Slot n) =
+matchSlot seed count (Slot n) =
   slot == n where
   slot = (seedValue seed) `mod` count
 
 step :: (Word32 -> Word32) -> Word32 -> Word32
 step direction seed = seed `xor` (direction seed)
 
-seedValue :: Word32 -> Word32
-seedValue seed = min seed (alternativeSeed seed)
+seedValue :: Seed -> Word32
+seedValue (Seed seed) = min seed (alternativeSeed seed)
 
 alternativeSeed :: Word32 -> Word32
 alternativeSeed seed = 0xffffffff - alt + 1 where
