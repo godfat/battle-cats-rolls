@@ -2,7 +2,7 @@
   <table>
     <tr>
       <th>No.</th>
-      <% if show_details %>
+      <% if details %>
         <th>Seed</th>
         <th>Value</th>
       <% end %>
@@ -10,7 +10,7 @@
       <th>Guaranteed</th>
       <th>Alt. score, slot</th>
       <th>Alt. guaranteed</th>
-      <% if show_details %>
+      <% if details %>
         <th>Seed</th>
         <th>Value</th>
       <% end %>
@@ -28,7 +28,7 @@
           <td class="<%= prev_b.color_label %>">
             <%= link_to_roll(prev_b, b) %></td>
           <%= seed_column(prev_b.slot_fruit) %>
-        <% elsif show_details %>
+        <% elsif details %>
           <td colspan="5"></td>
         <% else %>
           <td colspan="3"></td>
@@ -47,7 +47,7 @@
     <% end %>
 
     <tr>
-      <% if show_details %>
+      <% if details %>
         <td colspan="5"></td>
       <% else %>
         <td colspan="3"></td>
