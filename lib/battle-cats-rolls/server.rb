@@ -18,7 +18,7 @@ module BattleCatsRolls
     end
 
     map '/seek', to: '/seek', host: ENV['SEEK_HOST'] do
-      run Web::SeekWeb.new
+      run Web::Seek.new
     end
 
     map '/', host: ENV['WEB_HOST'] do

@@ -4,7 +4,7 @@ require 'promise_pool'
 require 'digest/sha1'
 
 module BattleCatsRolls
-  class Seek < Struct.new(:source, :key, :promise, :seed, :previous_count)
+  class SeekSeed < Struct.new(:source, :key, :promise, :seed, :previous_count)
     Pool = PromisePool::ThreadPool.new(1)
     Mutex = Mutex.new
 

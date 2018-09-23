@@ -3,7 +3,7 @@
 require_relative 'crystal_ball'
 require_relative 'gacha'
 require_relative 'find_cat'
-require_relative 'seek'
+require_relative 'seek_seed'
 require_relative 'cache'
 
 require 'jellyfish'
@@ -263,7 +263,7 @@ module BattleCatsRolls
       end
     end
 
-    class SeekWeb
+    class Seek
       include Jellyfish
       controller_include NormalizedPath, Imp
 
@@ -272,7 +272,7 @@ module BattleCatsRolls
       end
 
       post '/seek/enqueue' do
-        key = Seek.enqueue(seek_source, cache)
+        key = SeekSeed.enqueue(seek_source, cache)
 
         found "/seek/result/#{key}"
       end
@@ -280,7 +280,7 @@ module BattleCatsRolls
       get %r{^/seek/result/?(?<key>\w*)} do |m|
         key = m[:key]
         seed = cache[key] if /./.match?(key)
-        seek = Seek.queue.dig(key, :seek)
+        seek = SeekSeed.queue.dig(key, :seek)
 
         seek.yield if seek&.ended?
 
