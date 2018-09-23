@@ -8,10 +8,13 @@ module BattleCatsRolls
     def self.ids
       [
         270, # "Baby Gao",
+        284, # "Pai-Pai",
+        287, # "Strike Unit R.E.I.",
         319, # "Miko Mitama",
         381, # "D'artanyan",
         334, # "Shadow Gao",
         379, # "Dark Mitama",
+        398, # "Sakura Sonic",
       ]
     end
 
