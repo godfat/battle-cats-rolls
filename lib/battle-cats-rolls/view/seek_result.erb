@@ -1,6 +1,7 @@
 <p>
   <% if arg[:seed] %>
-    Your current seed is: <%= arg[:seed] %>
+    Your current seed is:
+    <a href="<%= "//#{web_host}/?seed=#{arg[:seed]}" %>"><%= arg[:seed] %></a>
   <% elsif arg[:seek] %>
     <% if arg[:seek].started? %>
       Now seeking your seed...

@@ -134,6 +134,10 @@ module BattleCatsRolls
         ENV['SEEK_HOST'] || request.host_with_port
       end
 
+      def web_host
+        ENV['WEB_HOST'] || request.host_with_port
+      end
+
       def erb name, &block
         ERB.new(views(name)).result(binding, &block)
       end
