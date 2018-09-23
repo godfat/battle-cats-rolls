@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 require_relative 'cat'
+require_relative 'fruit'
 require_relative 'gacha_pool'
 
 require 'forwardable'
@@ -27,16 +28,16 @@ module BattleCatsRolls
     end
 
     def roll_both!
-      a_int = roll_int!
-      b_int = roll_int
-      a_cat = roll_cat!(a_int)
-      b_cat = roll_cat(b_int)
+      a_fruit = roll_fruit!
+      b_fruit = roll_fruit
+      a_cat = roll_cat!(a_fruit)
+      b_cat = roll_cat(b_fruit)
 
       [a_cat, b_cat]
     end
 
     def roll!
-      roll_cat!(roll_int!)
+      roll_cat!(roll_fruit!)
     end
 
     def fill_guaranteed cats
@@ -45,11 +46,11 @@ module BattleCatsRolls
       if guaranteed_rolls > 0
         cats.each.with_index do |ab, index|
           ab.each.with_index do |rolled_cat, a_or_b|
-            guaranteed_slot_seed =
-              cats.dig(index + guaranteed_rolls - 1, a_or_b, :rarity_seed)
+            guaranteed_slot_fruit =
+              cats.dig(index + guaranteed_rolls - 1, a_or_b, :rarity_fruit)
 
-            rolled_cat.guaranteed = dig_cat(guaranteed_slot_seed, Uber) if
-              guaranteed_slot_seed
+            rolled_cat.guaranteed = dig_cat(guaranteed_slot_fruit, Uber) if
+              guaranteed_slot_fruit
           end
         end
       end
@@ -89,30 +90,30 @@ module BattleCatsRolls
       end
     end
 
-    def roll_int
-      [seed, alternative_seed].min
+    def roll_fruit
+      Fruit.new(seed)
     end
 
-    def roll_int!
-      roll_int.tap{ advance_seed! }
+    def roll_fruit!
+      roll_fruit.tap{ advance_seed! }
     end
 
-    def roll_cat rarity_seed
-      score = rarity_seed % Base
+    def roll_cat rarity_fruit
+      score = rarity_fruit.value % Base
       rarity = if pool.platinum then Uber else dig_rarity(score) end
-      slot_seed = if block_given? then yield else roll_int end
-      cat = dig_cat(slot_seed, rarity)
+      slot_fruit = if block_given? then yield else roll_fruit end
+      cat = dig_cat(slot_fruit, rarity)
 
       cat.score = score
       cat.rarity = rarity
-      cat.rarity_seed = rarity_seed
-      cat.slot_seed = slot_seed
+      cat.rarity_fruit = rarity_fruit
+      cat.slot_fruit = slot_fruit
 
       cat
     end
 
-    def roll_cat! int_rarity
-      roll_cat(int_rarity){ roll_int! }
+    def roll_cat! rarity_fruit
+      roll_cat(rarity_fruit){ roll_fruit! }
     end
 
     def dig_rarity score
@@ -126,16 +127,11 @@ module BattleCatsRolls
       end
     end
 
-    def dig_cat slot_seed, rarity
-      slot = slot_seed % pool.dig_slot(rarity).size
+    def dig_cat slot_fruit, rarity
+      slot = slot_fruit.value % pool.dig_slot(rarity).size
       id = pool.dig_slot(rarity, slot)
 
       Cat.new(id, pool.dig_cat(rarity, id))
-    end
-
-    def alternative_seed
-      alt = if seed < 0x80000000 then 0x80000000 - seed else seed end
-      0x100000000 - alt
     end
 
     def advance_seed!

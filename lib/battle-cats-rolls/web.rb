@@ -84,8 +84,13 @@ module BattleCatsRolls
 
       private
 
-      def seed_column
-        yield if show_details
+      def seed_column fruit
+        return unless show_details
+
+        <<~HTML
+          <td>#{fruit.seed}</td>
+          <td>#{if fruit.seed == fruit.value then '-' else fruit.value end}</td>
+        HTML
       end
 
       def show_details
@@ -95,7 +100,7 @@ module BattleCatsRolls
       end
 
       def uri_to_roll cat
-        uri(seed: cat.rarity_seed,
+        uri(seed: cat.rarity_fruit.seed,
             event: event,
             count: controller.count,
             show_details: show_details)
