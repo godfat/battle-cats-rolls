@@ -23,9 +23,10 @@ module BattleCatsRolls
     end
 
     def initialize new_gacha, target_ids
-      new_ids = new_gacha.uber_cats.select do |cat|
-        target_ids.include?(cat.id)
-      end.map(&:id)
+      new_ids = %i[rare_cats sr_cats uber_cats].
+        flat_map(&new_gacha.method(:public_send)).select do |cat|
+          target_ids.include?(cat.id)
+        end.map(&:id)
 
       super(new_gacha, new_ids)
     end
