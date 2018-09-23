@@ -237,7 +237,7 @@ module BattleCatsRolls
       found "/seek/result/#{key}"
     end
 
-    get %r{^/seek/result/(?<key>\w+)} do |m|
+    get %r{^/seek/result/(?<key>\w*)} do |m|
       seed = cache[m[:key]]
       seek = Seek.queue.dig(m[:key], :seek)
 

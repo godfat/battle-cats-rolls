@@ -4,6 +4,20 @@ module BattleCatsRolls
     EXPIRES_IN = 86400
     LRU_SIZE = 8192
 
+    module DalliExtension
+      def [] *args
+        get(*args)
+      end
+
+      def []= *args
+        set(*args)
+      end
+
+      def store key, value, expires_in: nil
+        set(key, value, expires_in)
+      end
+    end
+
     module_function
     def default logger
       @cache ||= Cache.pick(logger)
@@ -22,7 +36,7 @@ module BattleCatsRolls
         Dalli.logger = logger
       end
       logger.info("Memcached connected to #{client.version.keys.join(', ')}")
-      client.extend(RestCore::DalliExtension)
+      client.extend(DalliExtension)
       client
     rescue LoadError, Dalli::RingError => e
       logger.debug("Skip memcached because: #{e}")
