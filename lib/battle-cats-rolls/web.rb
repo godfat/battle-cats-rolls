@@ -224,26 +224,32 @@ module BattleCatsRolls
       end
     end
 
-    get '/seek' do
-      render :seek,
-        rare_names: gacha.rare_names,
-        sr_names: gacha.sr_names,
-        uber_names: gacha.uber_names
-    end
+    class SeekWeb
+      include Jellyfish
+      controller_include NormalizedPath, Imp
 
-    post '/seek/enqueue' do
-      key = Seek.enqueue(seek_source, cache)
+      get '/seek' do
+        render :seek,
+          rare_names: gacha.rare_names,
+          sr_names: gacha.sr_names,
+          uber_names: gacha.uber_names
+      end
 
-      found "/seek/result/#{key}"
-    end
+      post '/seek/enqueue' do
+        key = Seek.enqueue(seek_source, cache)
 
-    get %r{^/seek/result/(?<key>\w*)} do |m|
-      seed = cache[m[:key]]
-      seek = Seek.queue.dig(m[:key], :seek)
+        found "/seek/result/#{key}"
+      end
 
-      seek.yield if seek&.ended?
+      get %r{^/seek/result/?(?<key>\w*)} do |m|
+        key = m[:key]
+        seed = cache[key] if /./.match?(key)
+        seek = Seek.queue.dig(key, :seek)
 
-      render :seek_result, seed: seed, seek: seek
+        seek.yield if seek&.ended?
+
+        render :seek_result, seed: seed, seek: seek
+      end
     end
   end
 end
