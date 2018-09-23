@@ -49,8 +49,10 @@ module BattleCatsRolls
             guaranteed_slot_fruit =
               cats.dig(index + guaranteed_rolls - 1, a_or_b, :rarity_fruit)
 
-            rolled_cat.guaranteed = dig_cat(guaranteed_slot_fruit, Uber) if
-              guaranteed_slot_fruit
+            if guaranteed_slot_fruit
+              rolled_cat.guaranteed = dig_cat(guaranteed_slot_fruit, Uber)
+              rolled_cat.guaranteed.sequence = rolled_cat.sequence
+            end
           end
         end
       end

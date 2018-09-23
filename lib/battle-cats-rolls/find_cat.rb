@@ -73,7 +73,12 @@ module BattleCatsRolls
       cats.each.inject({}) do |result, ab|
         (remaining_ids - result.keys).each do |id|
           ab.each.with_index do |cat, a_or_b|
-            result[id] = [cat, a_or_b] if id == cat.id
+            case id
+            when cat.id
+              result[id] = [cat, a_or_b]
+            when cat.guaranteed&.id
+              result[id] = [cat.guaranteed, a_or_b, 'G']
+            end
           end
         end
 
