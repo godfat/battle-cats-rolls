@@ -10,11 +10,11 @@ seekStart = seekRange minSeed maxSeed
 seekRange :: Seed -> Seed -> [Roll] -> Maybe Seed
 seekRange seed@(Seed value) endSeed rolls =
   if seed == endSeed then
-    matchSeed (Just endSeed) rolls
+    matchSeed endSeed rolls
   else if value == 0 then
     seekNext
   else
-    found $ matchSeed (Just seed) rolls
+    found $ matchSeed seed rolls
   where
     nextSeed = Seed (succ value)
     seekNext = seekRange nextSeed endSeed rolls
@@ -22,13 +22,11 @@ seekRange seed@(Seed value) endSeed rolls =
     found Nothing = seekNext
     found theSeed = theSeed
 
-matchSeed :: Maybe Seed -> [Roll] -> Maybe Seed
-matchSeed currentSeed [] = currentSeed
-matchSeed currentSeed (roll:nextRolls) = do
-  seed <- currentSeed
-
+matchSeed :: Seed -> [Roll] -> Maybe Seed
+matchSeed seed [] = return seed
+matchSeed seed (roll:nextRolls) = do
   if matchRoll seed roll then
-    matchSeed (Just (advanceSeed (advanceSeed seed))) nextRolls
+    matchSeed (advanceSeed (advanceSeed seed)) nextRolls
   else
     Nothing
 
