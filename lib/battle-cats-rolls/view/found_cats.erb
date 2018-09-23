@@ -1,0 +1,10 @@
+<div id="found">
+  <% if arg[:found_cats].any? %>
+    <p>Found cats:</p>
+  <% end %>
+  <ul>
+    <% arg[:found_cats].each do |(cat, a_or_b)| %>
+      <li><%= "#{link_to_roll(cat)}: #{cat.sequence}#{(65 + a_or_b).chr}" %></li>
+    <% end %>
+  </ul>
+</div>

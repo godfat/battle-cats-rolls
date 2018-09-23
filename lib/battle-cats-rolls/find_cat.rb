@@ -4,7 +4,7 @@ require_relative 'gacha'
 require_relative 'cat'
 
 module BattleCatsRolls
-  class ExclusiveCat < Struct.new(:gacha, :ids)
+  class FindCat < Struct.new(:gacha, :ids)
     def self.ids
       [
         270, # "Baby Gao",

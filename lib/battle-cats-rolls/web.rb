@@ -2,7 +2,7 @@
 
 require_relative 'crystal_ball'
 require_relative 'gacha'
-require_relative 'exclusive_cat'
+require_relative 'find_cat'
 require_relative 'seek'
 require_relative 'cache'
 
@@ -252,13 +252,12 @@ module BattleCatsRolls
         end
 
         guaranteed_rolls = gacha.fill_guaranteed(cats)
-        exclusive_cats =
-          ExclusiveCat.search(gacha, find, cats: cats, max: Max)
+        found_cats = FindCat.search(gacha, find, cats: cats, max: Max)
 
         render :index,
           cats: cats,
           guaranteed_rolls: guaranteed_rolls,
-          exclusive_cats: exclusive_cats
+          found_cats: found_cats
       else
         render :index
       end
