@@ -22,6 +22,16 @@
       .uber { background-color: red; }
       #seed_input { width: 10em; }
       #count_input { width: 3em; }
+
+      <% unless details %>
+        .score {
+          border-bottom-style: none;
+          text-indent: 100%;
+          white-space: nowrap;
+          overflow: hidden;
+        }
+        .cat { border-top-style: none; }
+      <% end %>
     </style>
     <script type="text/javascript">
       function roll(element) {
