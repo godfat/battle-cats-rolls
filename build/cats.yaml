@@ -17998,3 +17998,69 @@ events:
     guaranteed: true
     step_up: false
     name: NEW limited anniversary Uber! ★ With 11-Draw Uber Guarantee!
+  2018-10-01_315:
+    id: 315
+    start_on: 2018-10-01
+    end_on: 2018-10-04
+    version: '70300'
+    rare: 6500
+    sr: 2600
+    ssr: 900
+    guaranteed: false
+    step_up: false
+    name: New Uber "D'artanyan" is here! ★ Extra-high Uber drop rate for every draw!
+  2018-10-04_289:
+    id: 289
+    start_on: 2018-10-04
+    end_on: 2018-10-07
+    version: '70300'
+    rare: 7000
+    sr: 2500
+    ssr: 500
+    guaranteed: false
+    step_up: false
+    name: The mighty Dynamites are here! Variety and power await you!
+  2018-10-05_289:
+    id: 289
+    start_on: 2018-10-05
+    end_on: 2018-10-07
+    version: '70300'
+    rare: 7000
+    sr: 2500
+    ssr: 500
+    guaranteed: false
+    step_up: false
+    name: The mighty Dynamites are here! Variety and power await you!
+  2018-10-07_245:
+    id: 245
+    start_on: 2018-10-07
+    end_on: 2018-10-09
+    version: '70300'
+    rare: 7000
+    sr: 2500
+    ssr: 500
+    guaranteed: false
+    step_up: true
+    name: "★ Red Busters w/ Pai-Pai! ★ Plus Increasing Capsules!"
+  2018-10-09_311:
+    id: 311
+    start_on: 2018-10-09
+    end_on: 2018-10-11
+    version: '70300'
+    rare: 7000
+    sr: 2500
+    ssr: 500
+    guaranteed: false
+    step_up: false
+    name: "★ The Almighties! ★ All-powerful Uber Cats, ready to be recruited!"
+  2018-10-11_304:
+    id: 304
+    start_on: 2018-10-11
+    end_on: 2018-10-13
+    version: '70300'
+    rare: 7000
+    sr: 2500
+    ssr: 500
+    guaranteed: false
+    step_up: false
+    name: "★ Nekolugas ★  Super-creepy Uber Cats!"
