@@ -25,10 +25,8 @@ seekRange seed@(Seed value) endSeed rolls =
 matchSeed :: Seed -> [Roll] -> Maybe Seed
 matchSeed seed [] = return seed
 matchSeed seed (roll:nextRolls) = do
-  if matchRoll seed roll then
-    matchSeed (advanceSeed (advanceSeed seed)) nextRolls
-  else
-    Nothing
+  nextSeed <- matchRoll seed roll
+  matchSeed nextSeed nextRolls
 
 minSeed :: Seed
 minSeed = Seed minBound

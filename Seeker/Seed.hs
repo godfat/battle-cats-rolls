@@ -3,6 +3,7 @@ module Seed(Seed(Seed), fromSeed, advanceSeed, matchRoll) where
 
 import Data.Bits (xor, shiftL, shiftR)
 import Data.Word (Word32)
+import Control.Monad (guard)
 
 import Roll
 
@@ -16,19 +17,24 @@ advanceSeed =
   (step (`shiftL` 13)) .
   fromSeed
 
-matchRoll :: Seed -> Roll -> Bool
-matchRoll seed (Roll rarity@(Rarity _ _ count) slot) =
-  matchRarity seed rarity && matchSlot (advanceSeed seed) count slot
+matchRoll :: Seed -> Roll -> Maybe Seed
+matchRoll seed (Roll rarity@(Rarity _ _ count) slot) = do
+  nextSeed <- matchRarity seed rarity
+  matchSlot nextSeed count slot
 
-matchRarity :: Seed -> Rarity -> Bool
-matchRarity seed (Rarity begin end _) =
-  score >= begin && score < end where
-  score = (seedValue seed) `mod` scoreBase
+matchRarity :: Seed -> Rarity -> Maybe Seed
+matchRarity seed (Rarity begin end _) = do
+  guard $ score >= begin && score < end
+  return $ advanceSeed seed
+  where
+    score = (seedValue seed) `mod` scoreBase
 
-matchSlot :: Seed -> Word32 -> Slot -> Bool
-matchSlot seed count (Slot n) =
-  slot == n where
-  slot = (seedValue seed) `mod` count
+matchSlot :: Seed -> Word32 -> Slot -> Maybe Seed
+matchSlot seed count (Slot n) = do
+  guard $ slot == n
+  return $ advanceSeed seed
+  where
+    slot = (seedValue seed) `mod` count
 
 step :: (Word32 -> Word32) -> Word32 -> Word32
 step direction seed = seed `xor` (direction seed)
