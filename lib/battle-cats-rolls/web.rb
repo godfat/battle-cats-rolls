@@ -44,7 +44,7 @@ module BattleCatsRolls
 
       def guaranteed_cat cat, offset
         if guaranteed = cat.guaranteed
-          next_sequence = cat.sequence + arg[:guaranteed_rolls] + offset
+          next_sequence = cat.sequence + gacha.pool.guaranteed_rolls + offset
           next_cat = arg.dig(:cats, next_sequence - 1, offset)
                                # Back to count from 0, ^ Swap track!
           link = link_to_roll(guaranteed, next_cat)
@@ -263,16 +263,13 @@ module BattleCatsRolls
           gacha.roll_both_with_sequence!(sequence)
         end
 
-        guaranteed_rolls = gacha.fill_guaranteed(cats)
+        gacha.fill_guaranteed(cats)
 
         found_cats =
           FindCat.search(gacha, find,
             cats: cats, guaranteed: !no_guaranteed, max: Max)
 
-        render :index,
-          cats: cats,
-          guaranteed_rolls: guaranteed_rolls,
-          found_cats: found_cats
+        render :index, cats: cats, found_cats: found_cats
       else
         render :index
       end
