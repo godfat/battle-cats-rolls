@@ -43,8 +43,7 @@ seedValue :: Seed -> Word32
 seedValue (Seed seed) = min seed (alternativeSeed seed)
 
 alternativeSeed :: Word32 -> Word32
-alternativeSeed seed = 0xffffffff - alt + 1 where
-  alt = if seed < 0x80000000 then 0x80000000 - seed else seed
+alternativeSeed seed = 0xffffffff - seed + 1
 
 ------------------------------------------------
 

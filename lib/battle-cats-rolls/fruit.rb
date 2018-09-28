@@ -8,11 +8,8 @@ module BattleCatsRolls
 
     private
 
-    # This could just be `0xffffffff - seed + 1`
     def alternative_seed
-      alt = if seed < 0x80000000 then 0x80000000 - seed else seed end
-
-      0x100000000 - alt
+      0x100000000 - seed
     end
   end
 end
