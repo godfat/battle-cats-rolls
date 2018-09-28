@@ -2,9 +2,10 @@
 
 module BattleCatsRolls
   class Cat < Struct.new(
-    :id, :name, :rarity, :slot,
-    :score, :rarity_fruit, :slot_fruit,
-    :sequence, :guaranteed)
+    :id, :name,
+    :slot, :slot_fruit,
+    :rarity, :rarity_fruit,
+    :score, :sequence, :guaranteed)
 
     def == rhs
       id == rhs.id

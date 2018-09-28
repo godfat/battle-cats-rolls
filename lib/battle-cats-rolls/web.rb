@@ -34,9 +34,7 @@ module BattleCatsRolls
 
       def each_ab_cat
         arg[:cats].each.inject(nil) do |prev_b, ab|
-          next_a = arg.dig(:cats, ab.dig(0, :sequence), 0)
-
-          yield(prev_b, ab, next_a)
+          yield(prev_b, ab)
 
           ab.last
         end
@@ -44,10 +42,8 @@ module BattleCatsRolls
 
       def guaranteed_cat cat, offset
         if guaranteed = cat.guaranteed
+          link = link_to_roll(guaranteed)
           next_sequence = cat.sequence + gacha.pool.guaranteed_rolls + offset
-          next_cat = arg.dig(:cats, next_sequence - 1, offset)
-                               # Back to count from 0, ^ Swap track!
-          link = link_to_roll(guaranteed, next_cat)
 
           if offset < 0
             "#{link}<br>-&gt; #{next_sequence}"
@@ -57,12 +53,9 @@ module BattleCatsRolls
         end
       end
 
-      def link_to_roll cat, next_cat=nil
-        if next_cat
-          %Q{<a href="#{h uri_to_roll(next_cat)}">#{h cat.name}</a>}
-        else
-          h cat.name
-        end + %Q{<a href="#{h uri_to_cat_db(cat)}">&#128062;</a>}
+      def link_to_roll cat
+        %Q{<a href="#{h uri_to_roll(cat)}">#{h cat.name}</a>} +
+          %Q{<a href="#{h uri_to_cat_db(cat)}">&#128062;</a>}
       end
 
       def selected_current_event event_name
@@ -115,7 +108,7 @@ module BattleCatsRolls
       end
 
       def uri_to_roll cat
-        uri(seed: cat.rarity_fruit.seed,
+        uri(seed: cat.slot_fruit.seed,
             event: event,
             count: controller.count,
             details: details,

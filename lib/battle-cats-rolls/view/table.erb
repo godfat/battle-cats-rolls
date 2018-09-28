@@ -25,7 +25,7 @@
       <th>Alt. No.</th>
     </tr>
 
-    <% each_ab_cat do |prev_b, (a, b), next_a| %>
+    <% each_ab_cat do |prev_b, (a, b)| %>
       <tr>
         <td rowspan="2"><%= a.sequence %></td>
         <%= seed_column(a.rarity_fruit) %>
@@ -34,7 +34,7 @@
 
         <% if prev_b %>
           <td class="cat <%= prev_b.color_label %>">
-            <%= link_to_roll(prev_b, b) %></td>
+            <%= link_to_roll(prev_b) %></td>
           <%= seed_column(prev_b.slot_fruit) %>
         <% elsif details %>
           <td colspan="5"></td>
@@ -46,7 +46,7 @@
       <tr>
         <%= seed_column(a.slot_fruit) %>
         <td class="cat <%= a.color_label %>">
-          <%= link_to_roll(a, next_a) %></td>
+          <%= link_to_roll(a) %></td>
         <td class="score <%= b.color_label %>"><%= b.score %>, <%= b.slot %></td>
         <td rowspan="2"><%= guaranteed_cat(b, 0) %></td>
         <%= seed_column(b.rarity_fruit) %>

@@ -23,10 +23,12 @@ seekRange seed@(Seed value) endSeed rolls =
     found theSeed = theSeed
 
 matchSeed :: Seed -> [Roll] -> Maybe Seed
-matchSeed seed [] = return seed
+matchSeed seed [] = Nothing
+-- We want the seed from last roll, not the advanced one
+matchSeed seed (lastRoll:[]) = matchRoll seed lastRoll
 matchSeed seed (roll:nextRolls) = do
-  nextSeed <- matchRoll seed roll
-  matchSeed nextSeed nextRolls
+  lastSeed <- matchRoll seed roll
+  matchSeed (advanceSeed lastSeed) nextRolls
 
 minSeed :: Seed
 minSeed = Seed minBound

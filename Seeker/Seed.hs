@@ -19,20 +19,20 @@ advanceSeed =
 
 matchRoll :: Seed -> Roll -> Maybe Seed
 matchRoll seed (Roll rarity@(Rarity _ _ count) slot) = do
-  nextSeed <- matchRarity seed rarity
-  matchSlot nextSeed count slot
+  matchRarity seed rarity
+  matchSlot (advanceSeed seed) count slot
 
 matchRarity :: Seed -> Rarity -> Maybe Seed
 matchRarity seed (Rarity begin end _) = do
   guard $ score >= begin && score < end
-  return $ advanceSeed seed
+  return seed
   where
     score = (seedValue seed) `mod` scoreBase
 
 matchSlot :: Seed -> Word32 -> Slot -> Maybe Seed
 matchSlot seed count (Slot n) = do
   guard $ slot == n
-  return $ advanceSeed seed
+  return seed
   where
     slot = (seedValue seed) `mod` count
 

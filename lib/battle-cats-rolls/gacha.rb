@@ -19,6 +19,8 @@ module BattleCatsRolls
 
     def initialize crystal_ball, event_name, seed
       super(GachaPool.new(crystal_ball, event_name), seed)
+
+      advance_seed!
     end
 
     def roll_both_with_sequence! sequence
@@ -94,9 +96,8 @@ module BattleCatsRolls
       slot_fruit = if block_given? then yield else roll_fruit end
       cat = dig_cat(slot_fruit, rarity)
 
-      cat.score = score
       cat.rarity_fruit = rarity_fruit
-      cat.slot_fruit = slot_fruit
+      cat.score = score
 
       cat
     end
@@ -120,7 +121,7 @@ module BattleCatsRolls
       slot = slot_fruit.value % pool.dig_slot(rarity).size
       id = pool.dig_slot(rarity, slot)
 
-      Cat.new(id, pool.dig_cat(rarity, id), rarity, slot)
+      Cat.new(id, pool.dig_cat(rarity, id), slot, slot_fruit, rarity)
     end
 
     def advance_seed!
