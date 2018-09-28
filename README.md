@@ -1,22 +1,37 @@
 # Rolling Battle Cats Gacha <https://bc.godfat.org/>
 
-## How to install:
+## How to install the Ruby server:
 
+    # At project root
     gem install bundler
     bundle install
+
+## How to build the Haskell seed seeker:
+
+First install [GHC](https://www.haskell.org/ghc/), then:
+
+    # At project root
+    cd Seeker
+    ./bin/build.sh
+
+This should build the seed seeker at: `Seeker/Seeker`, which will be used
+by the Ruby server.
 
 ## How to run the server:
 
 Locally:
 
+    # At project root
     unicorn -N
 
 Production with Nginx:
 
+    # At project root
     env WEB_YAHNS=... SEEK_YAHNS=... WEB_HOST=... SEEK_HOST=... yahns -c yahns.rb
 
-## How to populate data:
+## How to populate event data:
 
+    # At project root
     ruby bin/build.rb
 
 ## Thanks:
