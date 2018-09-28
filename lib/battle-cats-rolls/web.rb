@@ -54,8 +54,11 @@ module BattleCatsRolls
       end
 
       def link_to_roll cat
-        %Q{<a href="#{h uri_to_roll(cat)}">#{h cat.name}</a>} +
-          %Q{<a href="#{h uri_to_cat_db(cat)}">&#128062;</a>}
+        if cat.slot_fruit
+          %Q{<a href="#{h uri_to_roll(cat)}">#{h cat.name}</a>}
+        else
+          h cat.name
+        end + %Q{<a href="#{h uri_to_cat_db(cat)}">&#128062;</a>}
       end
 
       def selected_current_event event_name
