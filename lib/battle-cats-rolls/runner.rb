@@ -5,7 +5,7 @@ module BattleCatsRolls
     module_function
 
     def version
-      '7.3.0'
+      '7.4.0'
     end
 
     def build
@@ -20,7 +20,7 @@ module BattleCatsRolls
       each_list(dir) do |file|
         reader = PackReader.new(file)
 
-        dir = "extract/#{version}/#{reader.name}.pack"
+        dir = "#{extract_path}/#{reader.name}.pack"
         FileUtils.mkdir_p(dir)
 
         puts "Extracting #{reader.pack_path}"
@@ -44,7 +44,7 @@ module BattleCatsRolls
     end
 
     def write_events
-      current = load_current_event_data
+      current = download_current_event_data
 
       last_date = current.gacha.
         delete_if { |_, data| data['platinum'] }.
@@ -55,7 +55,7 @@ module BattleCatsRolls
       File.write("data/events/#{last_date}.tsv", current.tsv)
     end
 
-    def load_current_event_data
+    def download_current_event_data
       puts "Downloading event data..."
 
       require_relative 'tsv_reader'
@@ -82,19 +82,43 @@ module BattleCatsRolls
     end
 
     def provider
-      if File.exist?("extract/#{version}")
-        puts "Loading from extract..."
-
-        require_relative 'extract_provider'
-
-        ExtractProvider.new("extract/#{version}")
+      if File.exist?(extract_path)
+        load_extract
+      elsif File.exist?(app_data_path)
+        load_pack
       else
-        puts "Loading from pack..."
-
-        require_relative 'pack_provider'
-
-        PackProvider.new("data/#{version}/app")
+        download_apk unless File.exist?(apk_path)
+        write_pack
+        load_pack
       end
+    end
+
+    def download_apk
+      puts "Downloading APK..."
+
+      require 'fileutils'
+      FileUtils.mkdir_p(app_data_path)
+
+      system(
+        'wget',
+        '--user-agent=Mozilla/5.0',
+        '-O', apk_path,
+        "https://www.apkmirror.com/wp-content/themes/APKMirror/download.php?id=505303")
+    end
+
+    def write_pack
+      paths =
+        %w[DataLocal resLocal ImageLocal].product(
+          ['.list', '.pack']).map(&:join).map do |name|
+          "assets/#{name}"
+        end
+
+      system('unzip', apk_path, *paths, '-d', app_data_path)
+
+      require 'fileutils'
+      assets = Dir["#{app_data_path}/assets/*"]
+      FileUtils.mv(assets, app_data_path, verbose: true)
+      FileUtils.rmdir("#{app_data_path}/assets", verbose: true)
     end
 
     def each_list dir=nil
@@ -103,6 +127,34 @@ module BattleCatsRolls
       Dir["#{root}/**/*.list"].each do |file|
         yield(file)
       end
+    end
+
+    def load_extract
+      puts "Loading from extract..."
+
+      require_relative 'extract_provider'
+
+      ExtractProvider.new(extract_path)
+    end
+
+    def load_pack
+      puts "Loading from pack..."
+
+      require_relative 'pack_provider'
+
+      PackProvider.new(app_data_path)
+    end
+
+    def extract_path
+      @extract_path ||= "extract/#{version}"
+    end
+
+    def app_data_path
+      @data_path ||= "data/#{version}/app"
+    end
+
+    def apk_path
+      @apk_path ||= "data/#{version}/bcen.apk"
     end
   end
 end
