@@ -15,6 +15,7 @@ module BattleCatsRolls
         334, # "Shadow Gao",
         379, # "Dark Mitama",
         398, # "Sakura Sonic",
+        442, # "D'arktanyan",
       ]
     end
 
