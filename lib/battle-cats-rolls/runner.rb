@@ -8,6 +8,15 @@ module BattleCatsRolls
       '7.4.0'
     end
 
+    def event_url
+      'https://ponos.s3.dualstack.ap-northeast-1.amazonaws.com/appli/battlecats/event_data/battlecatsen_production/gatya.tsv'
+    end
+
+    def apk_url
+      # https://www.apkmirror.com/apk/ponos/the-battle-cats/
+      'https://www.apkmirror.com/wp-content/themes/APKMirror/download.php?id=505303'
+    end
+
     def build
       write_events
       write_data
@@ -87,7 +96,7 @@ module BattleCatsRolls
 
       require_relative 'tsv_reader'
 
-      TsvReader.current
+      TsvReader.download(event_url)
     end
 
     def write_data
@@ -130,7 +139,7 @@ module BattleCatsRolls
         'wget',
         '--user-agent=Mozilla/5.0',
         '-O', apk_path,
-        "https://www.apkmirror.com/wp-content/themes/APKMirror/download.php?id=505303")
+        apk_url)
     end
 
     def write_pack

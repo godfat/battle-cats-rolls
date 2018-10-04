@@ -3,41 +3,25 @@
 require 'date'
 
 module BattleCatsRolls
-  class TsvReader < Struct.new(:tsv, :version)
-    def self.current
-      download(
-        'https://ponos.s3.dualstack.ap-northeast-1.amazonaws.com/' \
-        'appli/battlecats/event_data/battlecatsen_production/gatya.tsv')
-    end
-
-    def self.current_version
-      '7.3.0'
-    end
-
-    def self.download url, version=current_version
+  class TsvReader < Struct.new(:tsv)
+    def self.download url
       require 'net/http'
 
-      new(Net::HTTP.get(URI.parse(url)).force_encoding('UTF-8'), version)
+      new(Net::HTTP.get(URI.parse(url)).force_encoding('UTF-8'))
     end
 
-    def self.read path, version=current_version
-      new(File.read(path), version)
+    def self.read path
+      new(File.read(path))
     end
 
-    def self.fields version
-      case version
-      when '7.3.0'
-        {gacha:
-          {'id' => 10, 'start_on' => 0, 'end_on' => 2, 'version' => 4,
-           'rare' => 16, 'sr' => 18, 'ssr' => 20,
-           'guaranteed' => 21, 'step_up' => 13,
-           'type' => 8, 'platinum' => 55,
-           'seasonal' => 25, 'seasonal_guaranteed' => 36}}
-      end
-    end
-
-    def initialize tsv, version=self.class.current_version
-      super(tsv, version)
+    def self.gacha_fields
+      @gacha_fields ||= {
+        'id' => 10, 'start_on' => 0, 'end_on' => 2, 'version' => 4,
+        'rare' => 16, 'sr' => 18, 'ssr' => 20,
+        'guaranteed' => 21, 'step_up' => 13,
+        'type' => 8, 'platinum' => 55,
+        'seasonal' => 25, 'seasonal_guaranteed' => 36
+      }
     end
 
     def == rhs
@@ -46,7 +30,7 @@ module BattleCatsRolls
 
     def gacha
       @gacha ||= parsed_data.inject({}) do |result, row|
-        data = convert_gacha(read_row(row, gacha_fields))
+        data = convert_gacha(read_row(row, self.class.gacha_fields))
 
         platinum = data.delete('platinum')
         seasonal = data.delete('seasonal')
@@ -73,14 +57,6 @@ module BattleCatsRolls
     end
 
     private
-
-    def gacha_fields
-      @gacha_fields ||= fields[:gacha]
-    end
-
-    def fields
-      @fields ||= self.class.fields(version)
-    end
 
     def convert_gacha data
       data.transform_values do |(key, value)|
