@@ -44,17 +44,23 @@ module BattleCatsRolls
     end
 
     def write_events
-      puts "Downloading event data..."
+      current = load_current_event_data
 
-      require_relative 'tsv_reader'
-
-      current = TsvReader.current
       last_date = current.gacha.
         delete_if { |_, data| data['platinum'] }.
         sort_by { |key, data| data['end_on'] }.
         dig(-1, -1, 'end_on').
         strftime('%Y%m%d')
+
       File.write("data/events/#{last_date}.tsv", current.tsv)
+    end
+
+    def load_current_event_data
+      puts "Downloading event data..."
+
+      require_relative 'tsv_reader'
+
+      TsvReader.current
     end
 
     def write_data
