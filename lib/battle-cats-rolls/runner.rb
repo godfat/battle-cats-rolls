@@ -108,7 +108,7 @@ module BattleCatsRolls
 
       puts "Writing data..."
 
-      ball.dump('build')
+      ball.dump('build', 'en')
     end
 
     def cats_pack
@@ -190,7 +190,7 @@ module BattleCatsRolls
     end
 
     def apk_path
-      @apk_path ||= "data/#{version}/bcen.apk"
+      @apk_path ||= "data/#{version}/bc-en.apk"
     end
   end
 end

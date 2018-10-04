@@ -17,15 +17,19 @@ module BattleCatsRolls
   class Web
     Max = 999
 
-    def self.ball
-      @ball ||= CrystalBall.load('build')
+    def self.ball_en
+      @ball_en ||= CrystalBall.load('build', 'en')
+    end
+
+    def self.ball_jp
+      @ball_jp ||= CrystalBall.load('build', 'jp')
     end
 
     class View < Struct.new(:controller, :arg)
       extend Forwardable
 
       def_delegators :controller,
-        *%w[request gacha event upcoming_events past_events
+        *%w[request lang gacha event upcoming_events past_events
             find no_guaranteed]
 
       def render name
@@ -154,8 +158,22 @@ module BattleCatsRolls
     end
 
     module Imp
+      def lang
+        @lang ||=
+          case request.GET['lang']
+          when 'jp'
+            'jp'
+          else
+            'en'
+          end
+      end
+
+      def ball
+        @ball ||= Web.public_send("ball_#{lang}")
+      end
+
       def gacha
-        @gacha ||= Gacha.new(Web.ball, event, seed)
+        @gacha ||= Gacha.new(ball, event, seed)
       end
 
       def seed
@@ -223,7 +241,7 @@ module BattleCatsRolls
       end
 
       def all_events
-        @all_events ||= Web.ball.dig('events')
+        @all_events ||= ball.dig('events')
       end
 
       def seek_source

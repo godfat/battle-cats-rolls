@@ -11,22 +11,22 @@ module BattleCatsRolls
         'events' => events.gacha)
     end
 
-    def self.load dir
+    def self.load dir, lang
       require 'yaml'
 
-      new(YAML.load_file("#{dir}/cats.yaml"))
+      new(YAML.load_file("#{dir}/bc-#{lang}.yaml"))
     end
 
     extend Forwardable
 
     def_delegators :data, :dig
 
-    def dump dir
+    def dump dir, lang
       require 'fileutils'
       require 'yaml'
 
       FileUtils.mkdir_p(dir)
-      File.write("#{dir}/cats.yaml", YAML.dump(data))
+      File.write("#{dir}/bc-#{lang}.yaml", YAML.dump(data))
     end
   end
 end
