@@ -43,6 +43,33 @@ module BattleCatsRolls
       end
     end
 
+    def favicon
+      require_relative 'pack_reader'
+      require 'fileutils'
+
+      reader = PackReader.new("#{app_data_path}/ImageLocal.list")
+
+      dir = "#{extract_path}/#{reader.name}.pack"
+      asset = "lib/battle-cats-rolls/asset/image"
+      FileUtils.mkdir_p(dir)
+      FileUtils.mkdir_p(asset)
+
+      puts "Extracting #{reader.pack_path}"
+
+      mapicon, data = reader.find do |filename, _|
+        filename == 'mapicon.png'
+      end
+
+      path = "#{dir}/#{mapicon}"
+
+      File.binwrite(path, data.call)
+
+      puts "Cropping #{path}"
+
+      # Install ImageMagick for this
+      system('convert', '-crop', '60x60+60+0', path, "#{asset}/treasure.png")
+    end
+
     def write_events
       current = download_current_event_data
 
