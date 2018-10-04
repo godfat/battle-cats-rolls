@@ -125,6 +125,7 @@ module BattleCatsRolls
       def uri_to_roll cat
         uri(seed: cat.slot_fruit.seed,
             event: event,
+            lang: lang,
             count: controller.count,
             details: details,
             find: find)
