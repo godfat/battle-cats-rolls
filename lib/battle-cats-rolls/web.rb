@@ -217,11 +217,11 @@ module BattleCatsRolls
       end
 
       def upcoming_events
-        @upcoming_events ||= grouped_events[true]
+        @upcoming_events ||= grouped_events[true] || []
       end
 
       def past_events
-        @past_events ||= grouped_events[false]
+        @past_events ||= grouped_events[false] || []
       end
 
       def grouped_events
