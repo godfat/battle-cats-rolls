@@ -1,25 +1,48 @@
 # frozen_string_literal: true
 
 module BattleCatsRolls
-  module Runner
-    module_function
-
-    def version
-      '7.4.0'
+  class Runner < Struct.new(:lang, :version, :event_url, :apk_url)
+    def self.en
+      @en ||= [
+        __method__,
+        '7.4.0',
+        'https://ponos.s3.dualstack.ap-northeast-1.amazonaws.com/appli/battlecats/event_data/battlecatsen_production/gatya.tsv',
+        # https://www.apkmirror.com/apk/ponos/the-battle-cats/
+        'https://www.apkmirror.com/wp-content/themes/APKMirror/download.php?id=505303'
+      ]
     end
 
-    def event_url
-      'https://ponos.s3.dualstack.ap-northeast-1.amazonaws.com/appli/battlecats/event_data/battlecatsen_production/gatya.tsv'
+    def self.tw
+      @tw ||= [
+        __method__,
+        '7.4.0',
+        'https://ponos.s3.dualstack.ap-northeast-1.amazonaws.com/appli/battlecats/event_data/battlecatstw_production/gatya.tsv',
+        # https://apkpure.com/a/jp.co.ponos.battlecatstw
+        'https://download.apkpure.com/b/apk/anAuY28ucG9ub3MuYmF0dGxlY2F0c3R3XzcwNDAwMF82OWZiOGJiYw?_fn=6LKT5ZKq5aSn5oiw54itX3Y3LjQuMF9hcGtwdXJlLmNvbS5hcGs&k=f57df15a9baefc727d13528fbbf8fd005bb8f8d8&as=3d399c8dd956bb27731555744d5d4d145bb65650&_p=anAuY28ucG9ub3MuYmF0dGxlY2F0c3R3&c=2%7CGAME_CASUAL%7CZGV2PVBPTk9TJnQ9YXBrJnZuPTcuNC4wJnZjPTcwNDAwMA'
+      ]
     end
 
-    def apk_url
-      # https://www.apkmirror.com/apk/ponos/the-battle-cats/
-      'https://www.apkmirror.com/wp-content/themes/APKMirror/download.php?id=505303'
+    def self.locale lang
+      public_send(lang || :en)
     end
 
-    def build
-      write_events
-      write_data
+    def self.build lang=nil
+      runner = new(*locale(lang))
+
+      runner.write_events
+      runner.write_data
+    end
+
+    def self.extract lang=nil, dir=nil
+      new(*locale(lang)).extract(dir)
+    end
+
+    def self.list lang=nil, dir=nil
+      new(*locale(lang)).list(dir)
+    end
+
+    def self.favicon lang=nil
+      new(*locale(lang)).favicon
     end
 
     def extract dir=nil
@@ -88,7 +111,10 @@ module BattleCatsRolls
         dig(-1, -1, 'end_on').
         strftime('%Y%m%d')
 
-      File.write("data/events/#{last_date}.tsv", current.tsv)
+      require 'fileutils'
+      FileUtils.mkdir_p(event_path)
+
+      File.write("#{event_path}/#{last_date}.tsv", current.tsv)
     end
 
     def download_current_event_data
@@ -103,12 +129,12 @@ module BattleCatsRolls
       require_relative 'events_reader'
       require_relative 'crystal_ball'
 
-      events = EventsReader.read('data/events')
+      events = EventsReader.read(event_path)
       ball = CrystalBall.from_pack_and_events(cats_pack, events)
 
       puts "Writing data..."
 
-      ball.dump('build', 'en')
+      ball.dump('build', lang)
     end
 
     def cats_pack
@@ -158,7 +184,7 @@ module BattleCatsRolls
     end
 
     def each_list dir=nil
-      root = dir || "data/#{version}"
+      root = dir || app_data_path
 
       Dir["#{root}/**/*.list"].each do |file|
         yield(file)
@@ -181,16 +207,20 @@ module BattleCatsRolls
       PackProvider.new(app_data_path)
     end
 
+    def event_path
+      @event_path ||= "data/#{lang}/events"
+    end
+
     def extract_path
-      @extract_path ||= "extract/#{version}"
+      @extract_path ||= "extract/#{lang}/#{version}"
     end
 
     def app_data_path
-      @data_path ||= "data/#{version}/app"
+      @data_path ||= "data/#{lang}/#{version}/app"
     end
 
     def apk_path
-      @apk_path ||= "data/#{version}/bc-en.apk"
+      @apk_path ||= "data/#{lang}/#{version}/bc-#{lang}.apk"
     end
   end
 end

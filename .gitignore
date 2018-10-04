@@ -1,3 +1,4 @@
-/data/*
-!/data/events
+*.pack
+*.list
+*.apk
 /extract

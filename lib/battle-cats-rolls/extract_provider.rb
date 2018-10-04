@@ -11,9 +11,9 @@ module BattleCatsRolls
     end
 
     def res
-      @res ||= Dir["#{dir}/resLocal.pack/Unit_Explanation*_en.csv"].
+      @res ||= Dir["#{dir}/resLocal.pack/Unit_Explanation*_*.csv"].
         inject({}) do |result, path|
-          result[File.basename(path)] = File.binread(path)
+          result[File.basename(path)] = File.read(path)
           result
         end
     end

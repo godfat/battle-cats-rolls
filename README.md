@@ -31,8 +31,20 @@ Production with Nginx:
 
 ## How to populate event data:
 
+Populate BCEN data:
+
     # At project root
     ruby bin/build.rb
+
+Populate BCTW data:
+
+    # At project root
+    ruby bin/build.rb tw
+
+Populate BCJP data:
+
+    # At project root
+    ruby bin/build.rb jp
 
 ## Thanks:
 

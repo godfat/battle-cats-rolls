@@ -21,6 +21,10 @@ module BattleCatsRolls
       @ball_en ||= CrystalBall.load('build', 'en')
     end
 
+    def self.ball_tw
+      @ball_tw ||= CrystalBall.load('build', 'tw')
+    end
+
     def self.ball_jp
       @ball_jp ||= CrystalBall.load('build', 'jp')
     end
@@ -63,6 +67,10 @@ module BattleCatsRolls
         else
           h cat.name
         end + %Q{<a href="#{h uri_to_cat_db(cat)}">&#128062;</a>}
+      end
+
+      def selected_lang lang_name
+        'selected="selected"' if lang == lang_name
       end
 
       def selected_current_event event_name
@@ -160,9 +168,9 @@ module BattleCatsRolls
     module Imp
       def lang
         @lang ||=
-          case request.GET['lang']
-          when 'jp'
-            'jp'
+          case value = request.GET['lang']
+          when 'tw', 'jp'
+            value
           else
             'en'
           end

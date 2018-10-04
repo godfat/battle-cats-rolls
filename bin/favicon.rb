@@ -1,4 +1,4 @@
 
 require_relative '../lib/battle-cats-rolls/runner'
 
-BattleCatsRolls::Runner.favicon
+BattleCatsRolls::Runner.favicon(*ARGV)
