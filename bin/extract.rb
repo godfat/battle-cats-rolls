@@ -1,16 +1,4 @@
 
-require_relative '../lib/battle-cats-rolls/pack_reader'
+require_relative '../lib/battle-cats-rolls/runner'
 
-require 'fileutils'
-
-reader = BattleCatsRolls::PackReader.new(
-  ARGV.first || 'data/7.3.0/app/DataLocal.list')
-
-dir = "extract/7.3.0/#{reader.name}.pack"
-FileUtils.mkdir_p(dir)
-
-puts "Extracting #{reader.pack_path}"
-
-reader.each do |filename, data|
-  File.binwrite("#{dir}/#{filename}", data.call)
-end
+BattleCatsRolls::Runner.extract(ARGV.first)
