@@ -52,7 +52,7 @@ module BattleCatsRolls
 
     def store_cat_names res_local
       res_local.inject({}) do |result, (filename, data)|
-        result[Integer(filename[/\d+/])] = data[/\A[^\|]+/]
+        result[Integer(filename[/\d+/])] = data[/\A[^\|,]+/]
         result
       end.compact
     end

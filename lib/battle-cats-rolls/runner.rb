@@ -22,6 +22,16 @@ module BattleCatsRolls
       ]
     end
 
+    def self.jp
+      @jp ||= [
+        __method__,
+        '7.4.1',
+        'https://ponos.s3.dualstack.ap-northeast-1.amazonaws.com/appli/battlecats/event_data/battlecats_production/gatya.tsv',
+        # https://apkpure.com/a/jp.co.ponos.battlecats
+        'https://download.apkpure.com/b/apk/anAuY28ucG9ub3MuYmF0dGxlY2F0c183MDQwMTBfODgwZDEzZGI?_fn=44Gr44KD44KT44GT5aSn5oim5LqJX3Y3LjQuMV9hcGtwdXJlLmNvbS5hcGs&k=51d4de0a271045430160a9defa8f3afc5bb90169&as=f753812d3947386ce9a880bdc3c883c15bb65ee1&_p=anAuY28ucG9ub3MuYmF0dGxlY2F0cw&c=2%7CGAME_CASUAL%7CZGV2PVBPTk9TJnQ9YXBrJnZuPTcuNC4xJnZjPTcwNDAxMA'
+      ]
+    end
+
     def self.locale lang
       public_send(lang || :en)
     end
