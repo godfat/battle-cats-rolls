@@ -5,3 +5,4 @@
 * Update event data for each 11 hours automatically
 * Tracking history (by recording rolls we click)
 * Verify APK checksum
+* Consider a dupe rare in a row in Seeker
