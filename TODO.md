@@ -4,6 +4,7 @@
 * Use browser timezone offset to calculate local time
 * Update event data for each 11 hours automatically
 * Tracking history (by recording rolls we click)
+* Shutting down gracefully
 * Verify APK checksum
 * An idea to speed up seeking process. We could pre-process the seeds, and
   create 10 rarity patterns saved in files. Say, starting with seed 1,
