@@ -1,34 +1,43 @@
 
 module Seeker(seekStart, seekRange, minSeed, maxSeed) where
 
+import Control.Applicative
+
 import Seed
 import Roll
 
-seekStart :: [Roll] -> Maybe Seed
+seekStart :: [Pick] -> Maybe Seed
 seekStart = seekRange minSeed maxSeed
 
-seekRange :: Seed -> Seed -> [Roll] -> Maybe Seed
-seekRange seed@(Seed value) endSeed rolls =
+seekRange :: Seed -> Seed -> [Pick] -> Maybe Seed
+seekRange seed@(Seed value) endSeed picks =
   if seed == endSeed then
-    matchSeed endSeed rolls
+    matchSeed endSeed picks
   else if value == 0 then
     seekNext
   else
-    found $ matchSeed seed rolls
+    found $ matchSeed seed picks
   where
     nextSeed = Seed (succ value)
-    seekNext = seekRange nextSeed endSeed rolls
+    seekNext = seekRange nextSeed endSeed picks
 
     found Nothing = seekNext
     found theSeed = theSeed
 
-matchSeed :: Seed -> [Roll] -> Maybe Seed
+matchSeed :: Seed -> [Pick] -> Maybe Seed
 matchSeed seed [] = Nothing
 -- We want the seed from last roll, not the advanced one
-matchSeed seed (lastRoll:[]) = matchRoll seed lastRoll
-matchSeed seed (roll:nextRolls) = do
-  lastSeed <- matchRoll seed roll
-  matchSeed (advanceSeed lastSeed) nextRolls
+matchSeed seed ([lastPick]) = matchPick seed lastPick
+matchSeed seed (pick:nextPicks) = do
+  lastSeed <- matchPick seed pick
+  matchSeed (advanceSeed lastSeed) nextPicks
+
+matchPick :: Seed -> Pick -> Maybe Seed
+matchPick seed pick = either (matchDual seed) (matchRoll seed) pick
+
+matchDual :: Seed -> Dual -> Maybe Seed
+matchDual seed (picked, duped) =
+  matchRoll seed picked <|> matchRoll seed duped
 
 minSeed :: Seed
 minSeed = Seed minBound

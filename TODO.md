@@ -5,7 +5,6 @@
 * Update event data for each 11 hours automatically
 * Tracking history (by recording rolls we click)
 * Verify APK checksum
-* Consider a dupe rare in a row in Seeker
 * An idea to speed up seeking process. We could pre-process the seeds, and
   create 10 rarity patterns saved in files. Say, starting with seed 1,
   the following rarity will be: R, S, R, R, U, R, and so on, we append the

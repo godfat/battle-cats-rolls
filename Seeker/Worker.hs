@@ -7,10 +7,10 @@ import Roll
 import Seed
 import Seeker
 
-workStart :: [Roll] -> Int -> IO (Maybe Seed)
-workStart rolls n = do
+workStart :: [Pick] -> Int -> IO (Maybe Seed)
+workStart picks n = do
   result <- newEmptyMVar
-  threads <- sequence $ dispatch rolls (seedRanges n) result
+  threads <- sequence $ dispatch picks (seedRanges n) result
   -- putStrLn $ show $ length threads
   forkIO $ do
     wait threads
@@ -28,16 +28,16 @@ seedRanges n =
   max = fromSeed maxSeed
   step = floor $ toRational max / (toRational n / 2)
 
-dispatch :: [Roll] -> [Seed] -> MVar (Maybe Seed) -> [IO (MVar ())]
-dispatch rolls ranges result =
+dispatch :: [Pick] -> [Seed] -> MVar (Maybe Seed) -> [IO (MVar ())]
+dispatch picks ranges result =
   map dispatchOne allRanges where
   allRanges = zip ranges (tail ranges)
-  dispatchOne (start, end) = work rolls start end result
+  dispatchOne (start, end) = work picks start end result
 
-work :: [Roll] -> Seed -> Seed -> MVar (Maybe Seed) -> IO (MVar ())
-work rolls startSeed endSeed result =
+work :: [Pick] -> Seed -> Seed -> MVar (Maybe Seed) -> IO (MVar ())
+work picks startSeed endSeed result =
   forkWithMVar $ do
-    case seekRange startSeed endSeed rolls of
+    case seekRange startSeed endSeed picks of
       Nothing -> return ()
       seed@(Just _) -> tryPutMVar result seed >> return ()
 
