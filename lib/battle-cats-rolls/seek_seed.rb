@@ -4,7 +4,9 @@ require 'promise_pool'
 require 'digest/sha1'
 
 module BattleCatsRolls
-  class SeekSeed < Struct.new(:source, :key, :promise, :seed, :previous_count)
+  class SeekSeed < Struct.new(
+    :source, :key, :logger,
+    :promise, :seed, :previous_count)
     Pool = PromisePool::ThreadPool.new(1)
     Mutex = Mutex.new
 
@@ -21,10 +23,11 @@ module BattleCatsRolls
       end
     end
 
-    def self.enqueue source, cache
+    def self.enqueue source, cache, logger
       key = Digest::SHA1.hexdigest(source)
 
-      cache[key] || queue[key] = {seek: new(source, key).start, cache: cache}
+      cache[key] ||
+        queue[key] = {seek: new(source, key, logger).start, cache: cache}
 
       key
     end
@@ -72,6 +75,7 @@ module BattleCatsRolls
         'Seeker/Seeker',
         *ENV['SEEKER_OPT'].to_s.split(' '),
         err: %i[child out]], 'r+') do |io|
+        logger.info("Seeking seed with #{source}")
         io.puts source
         io.close_write
         io.read.to_i

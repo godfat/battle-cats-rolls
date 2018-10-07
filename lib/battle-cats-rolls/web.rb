@@ -261,11 +261,11 @@ module BattleCatsRolls
       end
 
       def cache
-        @cache ||= Cache.default(logger(env))
+        @cache ||= Cache.default(logger)
       end
 
-      def logger env
-        env['rack.logger'] || begin
+      def logger
+        @logger ||= env['rack.logger'] || begin
           require 'logger'
           Logger.new(env['rack.errors'])
         end
@@ -307,7 +307,7 @@ module BattleCatsRolls
       end
 
       post '/seek/enqueue' do
-        key = SeekSeed.enqueue(seek_source, cache)
+        key = SeekSeed.enqueue(seek_source, cache, logger)
 
         found "/seek/result/#{key}"
       end
