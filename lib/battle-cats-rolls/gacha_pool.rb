@@ -16,13 +16,14 @@ module BattleCatsRolls
     end
 
     def initialize ball, event_name
-      event_id = event_name[/(?<=_)\d+\z/].to_i
       events = ball.dig('events')
+      picked = events[event_name] || events.first.last
+      # If there's no such event, pick the first active one
 
       super(
         ball.dig('cats'),
-        ball.dig('gacha', event_id),
-        events[event_name] || events.first.last)
+        ball.dig('gacha', picked['id']),
+        picked)
     end
 
     def slots
