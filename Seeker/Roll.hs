@@ -1,26 +1,25 @@
 
 module Roll
   ( Pick
-  , Dual
   , Roll(Roll)
   , Rarity(Rarity, begin, end, count)
-  , Slot(Slot)
+  , Slot(Slot, DualSlot)
   , Source(Source, sourcePicks)
   , scoreBase
   , buildSource) where
 
 import Data.Word (Word32)
 
-type Pick = Either Dual Roll
-type Dual = (Roll, Slot)
-
+type Pick = Roll
 data Roll = Roll Rarity Slot
   deriving (Show, Eq)
 
 data Rarity = Rarity { begin :: Word32, end :: Word32, count :: Word32 }
   deriving (Show, Eq)
 
-newtype Slot = Slot Word32
+data Slot =
+  Slot Word32 |
+  DualSlot Word32 Word32
   deriving (Show, Eq)
 
 scoreBase :: Word32
@@ -75,7 +74,10 @@ buildPicksTail chance (prevRoll:rest@(currentRoll:_)) =
     couldDupe = detectDupe chance prevRoll currentRoll
 
     detectDupe :: Chance -> Roll -> Roll -> Bool
-    detectDupe chance (Roll prevRarity prevSlot) (Roll currRarity currSlot) =
+    detectDupe
+      chance
+      (Roll prevRarity (Slot prevSlot))
+      (Roll currRarity (Slot currSlot)) =
       prevRarity == currRarity &&
         rare chance == prevRarity &&
         prevSlot == dupeSlot currRarity currSlot
@@ -83,14 +85,14 @@ buildPicksTail chance (prevRoll:rest@(currentRoll:_)) =
 buildPicksTail _ _ = []
 
 buildSinglePick :: Bool -> Roll -> Pick
-buildSinglePick couldDupe roll@(Roll rarity slot) =
+buildSinglePick couldDupe roll@(Roll rarity (Slot slotCode)) =
   if couldDupe then
-    Left (roll, dupeSlot rarity slot)
+    Roll rarity (DualSlot slotCode (dupeSlot rarity slotCode))
   else
-    Right roll
+    roll
 
-dupeSlot :: Rarity -> Slot -> Slot
-dupeSlot rarity (Slot slot) =
-  Slot $ if slot < maxSlot then slot + 1 else 0
+dupeSlot :: Rarity -> Word32 -> Word32
+dupeSlot rarity slotCode =
+  if slotCode < maxSlot then slotCode + 1 else 0
   where
     maxSlot = count rarity - 1

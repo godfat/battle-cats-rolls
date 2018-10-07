@@ -1,8 +1,6 @@
 
 module Seeker(seekStart, seekRange, minSeed, maxSeed) where
 
-import Control.Monad (liftM2)
-
 import Seed
 import Roll
 
@@ -33,7 +31,7 @@ matchSeed seed (pick:nextPicks) = do
   matchSeed (advanceSeed lastSeed) nextPicks
 
 matchPick :: Seed -> Pick -> Maybe Seed
-matchPick = liftM2 either matchDual matchRoll
+matchPick = matchRoll
 
 minSeed :: Seed
 minSeed = Seed minBound
