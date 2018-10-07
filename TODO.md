@@ -1,11 +1,22 @@
-* Use server-sent event to pull seek result
-* Make fetching APK optional as long as the YAML is built already
-* Only show the languages which are built, no need to force all of them
+## Features and utilities
+
 * Use browser timezone offset to calculate local time
 * Update event data for each 11 hours automatically
 * Tracking history (by recording rolls we click)
-* Shutting down gracefully
+
+## Architecture
+
+* Use server-sent event to pull seek result
+* Shutting down gracefully (seems to be pretty tough)
+
+## Build script, language and APK
+
+* Make fetching APK optional as long as the YAML is built already
 * Verify APK checksum
+* Only show the languages which are built, no need to force all of them
+
+## Seed seeker
+
 * An idea to speed up seeking process. We could pre-process the seeds, and
   create 10 rarity patterns saved in files. Say, starting with seed 1,
   the following rarity will be: R, S, R, R, U, R, and so on, we append the
