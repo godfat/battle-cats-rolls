@@ -12,7 +12,7 @@ module Roll
 import Data.Word (Word32)
 
 type Pick = Either Dual Roll
-type Dual = (Roll, Roll)
+type Dual = (Roll, Slot)
 
 data Roll = Roll Rarity Slot
   deriving (Show, Eq)
@@ -85,12 +85,9 @@ buildPicksTail _ _ = []
 buildSinglePick :: Bool -> Roll -> Pick
 buildSinglePick couldDupe roll@(Roll rarity slot) =
   if couldDupe then
-    Left dual
+    Left (roll, dupeSlot rarity slot)
   else
     Right roll
-  where
-    dual = (roll, dupe)
-    dupe = Roll rarity (dupeSlot rarity slot)
 
 dupeSlot :: Rarity -> Slot -> Slot
 dupeSlot rarity (Slot slot) =

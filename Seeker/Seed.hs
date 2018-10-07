@@ -1,9 +1,9 @@
 
-module Seed(Seed(Seed), fromSeed, advanceSeed, matchRoll) where
+module Seed(Seed(Seed), fromSeed, advanceSeed, matchRoll, matchDual) where
 
 import Data.Bits (xor, shiftL, shiftR)
 import Data.Word (Word32)
-import Control.Monad (guard)
+import Control.Monad (guard, liftM2)
 
 import Roll
 
@@ -18,9 +18,16 @@ advanceSeed =
   fromSeed
 
 matchRoll :: Seed -> Roll -> Maybe Seed
-matchRoll seed (Roll rarity@(Rarity _ _ count) slot) = do
+matchRoll seed (Roll rarity@(Rarity _ _ count) (Slot slot)) = do
   matchRarity seed rarity
-  matchSlot (advanceSeed seed) count slot
+  matchSlot (advanceSeed seed) count (slot ==)
+
+matchDual :: Seed -> Dual -> Maybe Seed
+matchDual
+  seed
+  dual@(Roll rarity@(Rarity _ _ count) (Slot slot), (Slot dupedSlot)) = do
+  matchRarity seed rarity
+  matchSlot (advanceSeed seed) count (liftM2 (||) (slot ==) (dupedSlot ==))
 
 matchRarity :: Seed -> Rarity -> Maybe Seed
 matchRarity seed (Rarity begin end _) = do
@@ -29,9 +36,9 @@ matchRarity seed (Rarity begin end _) = do
   where
     score = (seedValue seed) `mod` scoreBase
 
-matchSlot :: Seed -> Word32 -> Slot -> Maybe Seed
-matchSlot seed count (Slot n) = do
-  guard $ slot == n
+matchSlot :: Seed -> Word32 -> (Word32 -> Bool) -> Maybe Seed
+matchSlot seed count acceptSlot = do
+  guard $ acceptSlot slot
   return seed
   where
     slot = (seedValue seed) `mod` count
