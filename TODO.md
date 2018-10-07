@@ -15,6 +15,13 @@
 * Verify APK checksum
 * Only show the languages which are built, no need to force all of them
 
+## Tests
+
+* Check 2160402177
+* echo 7000 2500 500 23 16 7 0 7 0 0 0 22 0 15 0 6 2 4 0 19 1 2 0 1 1 10 | time ./Seeker
+* Above is 1027349002
+* Picking an invalid event
+
 ## Seed seeker
 
 * An idea to speed up seeking process. We could pre-process the seeds, and
