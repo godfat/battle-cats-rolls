@@ -9,6 +9,7 @@ module Roll
   , buildSource) where
 
 import Data.Word (Word32)
+import Control.Monad (guard)
 
 type Pick = Roll
 data Roll = Roll Rarity Slot
@@ -63,36 +64,34 @@ buildPicks chance rolls@(firstRoll:_) =
   (buildfirstPick chance firstRoll) : (buildPicksTail chance rolls)
 
 buildfirstPick :: Chance -> Roll -> Pick
-buildfirstPick chance roll@(Roll rarity _) =
-  buildSinglePick (rare chance == rarity) roll
-
-buildPicksTail :: Chance -> [Roll] -> [Pick]
-buildPicksTail chance (prevRoll:rest@(currentRoll:_)) =
-  pick : buildPicksTail chance rest
-  where
-    pick = buildSinglePick couldDupe currentRoll
-    couldDupe = detectDupe chance prevRoll currentRoll
-
-    detectDupe :: Chance -> Roll -> Roll -> Bool
-    detectDupe
-      chance
-      (Roll prevRarity (Slot prevSlot))
-      (Roll currRarity (Slot currSlot)) =
-      prevRarity == currRarity &&
-        rare chance == prevRarity &&
-        prevSlot == dupeSlot currRarity currSlot
-
-buildPicksTail _ _ = []
-
-buildSinglePick :: Bool -> Roll -> Pick
-buildSinglePick couldDupe roll@(Roll rarity (Slot slotCode)) =
-  if couldDupe then
-    Roll rarity (DualSlot slotCode (dupeSlot rarity slotCode))
+buildfirstPick chance roll@(Roll rarity (Slot slotCode)) =
+  if rare chance == rarity then
+    buildSinglePick (Just $ dupeCode rarity slotCode) roll
   else
     roll
 
-dupeSlot :: Rarity -> Word32 -> Word32
-dupeSlot rarity slotCode =
+buildPicksTail :: Chance -> [Roll] -> [Pick]
+buildPicksTail chance (previousRoll:rest@(currentRoll:_)) =
+  pick : buildPicksTail chance rest
+  where
+    pick = buildSinglePick maybeDupe currentRoll
+    maybeDupe = do
+      guard $ currRarity == prevRarity &&
+        currRarity == rare chance &&
+        prevCode == dupeCode currRarity currCode
+      return prevCode
+    Roll prevRarity (Slot prevCode) = previousRoll
+    Roll currRarity (Slot currCode) = currentRoll
+
+buildPicksTail _ _ = []
+
+buildSinglePick :: Maybe Word32 -> Roll -> Pick
+buildSinglePick Nothing roll = roll
+buildSinglePick (Just dupeCode) (Roll rarity (Slot slotCode)) =
+  Roll rarity (DualSlot slotCode dupeCode)
+
+dupeCode :: Rarity -> Word32 -> Word32
+dupeCode rarity slotCode =
   if slotCode < maxSlot then slotCode + 1 else 0
   where
     maxSlot = count rarity - 1
