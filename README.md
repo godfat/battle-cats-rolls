@@ -29,12 +29,17 @@ Production with Nginx:
     # At project root
     env WEB_YAHNS=... SEEK_YAHNS=... WEB_HOST=... SEEK_HOST=... yahns -c yahns.rb
 
-## How to populate event data:
+## How to populate data:
+
+Populate everything:
+
+    # At project root
+    ruby bin/build.rb
 
 Populate BCEN data:
 
     # At project root
-    ruby bin/build.rb
+    ruby bin/build.rb en
 
 Populate BCTW data:
 
