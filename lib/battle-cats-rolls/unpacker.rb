@@ -25,7 +25,7 @@ module BattleCatsRolls
         cipher.decrypt
         cipher.key = key
         cipher.update(data) + cipher.final
-      end
+      end.force_encoding('UTF-8')
     rescue OpenSSL::Cipher::CipherError => e
       warn "#{e.class}:#{e}, turning off decryption"
       self.bad_data = true

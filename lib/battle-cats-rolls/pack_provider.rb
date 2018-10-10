@@ -20,7 +20,7 @@ module BattleCatsRolls
 
     def res
       @res ||= res_reader.list_lines.
-        grep(/\AUnit_Explanation\d+_en\.csv,\d+,\d+$/).
+        grep(/\AUnit_Explanation\d+_\w+\.csv,\d+,\d+$/).
         inject({}) do |result, line|
           result.store(*res_reader.read_eagerly(line))
           result
