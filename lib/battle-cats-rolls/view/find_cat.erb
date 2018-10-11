@@ -1,7 +1,7 @@
 <div class="find">
   <label for="find_select">Find next:</label>
   <select id="find_select" name="find" onchange="roll(this)">
-    <option style="display:none;"></option>
+    <option></option>
 
     <optgroup label="Uber:">
       <% gacha.uber_cats.uniq(&:name).each do |cat| %>

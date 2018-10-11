@@ -50,8 +50,10 @@ module BattleCatsRolls
     end
 
     def add_future_ubers amount
-      slots[Gacha::Uber].unshift(*Array.new(amount, 0))
-      cats[Gacha::Uber][0] ||= '(?)'
+      -1.downto(-amount).each do |n|
+        slots[Gacha::Uber].unshift(n)
+        cats[Gacha::Uber][n] = "(#{n}?)"
+      end
     end
 
     private
