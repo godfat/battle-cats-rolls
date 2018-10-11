@@ -34,7 +34,7 @@ module BattleCatsRolls
 
       def_delegators :controller,
         *%w[request lang gacha event upcoming_events past_events
-            find no_guaranteed]
+            find no_guaranteed ubers]
 
       def render name
         erb(:layout){ erb(name) }
@@ -66,7 +66,12 @@ module BattleCatsRolls
           %Q{<a href="#{h uri_to_roll(cat)}">#{h cat.name}</a>}
         else
           h cat.name
-        end + %Q{<a href="#{h uri_to_cat_db(cat)}">&#128062;</a>}
+        end +
+          if cat.id > 0
+            %Q{<a href="#{h uri_to_cat_db(cat)}">&#128062;</a>}
+          else
+            ''
+          end
       end
 
       def selected_lang lang_name
@@ -83,6 +88,10 @@ module BattleCatsRolls
 
       def checked_no_guaranteed
         'checked="checked"' if no_guaranteed
+      end
+
+      def selected_ubers n
+        'selected="selected"' if ubers == n
       end
 
       def checked_details
@@ -128,7 +137,8 @@ module BattleCatsRolls
             lang: lang,
             count: controller.count,
             details: details,
-            find: find)
+            find: find,
+            ubers: ubers)
       end
 
       def uri_to_cat_db cat
@@ -136,7 +146,7 @@ module BattleCatsRolls
       end
 
       def uri query={}
-        query_string = query.map do |key, value|
+        query_string = query.compact.map do |key, value|
           "#{u key.to_s}=#{u value.to_s}"
         end.join('&')
 
@@ -212,6 +222,10 @@ module BattleCatsRolls
           !request.GET['no_guaranteed'].to_s.strip.empty? || nil
       end
 
+      def ubers
+        @ubers ||= request.GET['ubers'].to_i
+      end
+
       def current_event
         @current_event ||=
           upcoming_events.find{ |_, info| info['platinum'].nil? }&.first
@@ -281,6 +295,8 @@ module BattleCatsRolls
 
     get '/' do
       if event && seed != 0
+        gacha.pool.add_future_ubers(ubers) if ubers > 0
+
         # Human counts from 1
         cats = 1.upto(count).map do |sequence|
           gacha.roll_both_with_sequence!(sequence)

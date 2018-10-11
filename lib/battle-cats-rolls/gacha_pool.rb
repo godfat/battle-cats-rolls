@@ -49,6 +49,11 @@ module BattleCatsRolls
         end
     end
 
+    def add_future_ubers amount
+      slots[Gacha::Uber].unshift(*Array.new(amount, 0))
+      cats[Gacha::Uber][0] ||= '(?)'
+    end
+
     private
 
     def find_rarity cat_id
