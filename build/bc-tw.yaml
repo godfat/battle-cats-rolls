@@ -17989,3 +17989,136 @@ events:
     guaranteed: false
     step_up: false
     name: 噁心又可愛的神秘生物！★點圖可以看詳細內容喔！
+  2018-10-13_319:
+    id: 319
+    start_on: 2018-10-13
+    end_on: 2018-10-16
+    version: '70400'
+    rare: 6500
+    sr: 2600
+    ssr: 900
+    guaranteed: false
+    step_up: false
+    name: 超強的限定角色「影傑漆黑達太貓」登場！★超激出現率大幅上升！
+  2018-10-13_320:
+    id: 320
+    start_on: 2018-10-13
+    end_on: 2030-01-01
+    version: '70400'
+    rare: 7500
+    sr: 2000
+    ssr: 500
+    guaranteed: false
+    step_up: false
+    name: 必出超激稀有角色的白金轉蛋！快來獲得心儀的貓咪吧！
+    platinum: true
+  2018-10-16_283:
+    id: 283
+    start_on: 2018-10-16
+    end_on: 2018-10-18
+    version: '70400'
+    rare: 7500
+    sr: 2000
+    ssr: 500
+    guaranteed: false
+    step_up: false
+    name: 貓咪軍團對抗不死生物的超級武器！★點圖可以看詳細內容喔！
+  2018-10-18_257:
+    id: 257
+    start_on: 2018-10-18
+    end_on: 2018-11-01
+    version: '70400'
+    rare: 7500
+    sr: 2000
+    ssr: 500
+    guaranteed: false
+    step_up: false
+    name: 限時開放！快來獲得萬聖節變裝的可愛角色吧！★點圖可以看詳細內容喔！
+  2018-10-18_298:
+    id: 298
+    start_on: 2018-10-18
+    end_on: 2018-10-21
+    version: '70400'
+    rare: 7500
+    sr: 2000
+    ssr: 500
+    guaranteed: false
+    step_up: false
+    name: 正義的暗黑英雄，貓咪軍團的異星戰士剋星！★點圖可以看詳細內容喔！
+  2018-10-19_257:
+    id: 257
+    start_on: 2018-10-19
+    end_on: 2018-11-01
+    version: '70400'
+    rare: 7500
+    sr: 2000
+    ssr: 500
+    guaranteed: false
+    step_up: false
+    name: 限時開放！快來獲得萬聖節變裝的可愛角色吧！★點圖可以看詳細內容喔！
+  2018-10-19_298:
+    id: 298
+    start_on: 2018-10-19
+    end_on: 2018-10-21
+    version: '70400'
+    rare: 7500
+    sr: 2000
+    ssr: 500
+    guaranteed: false
+    step_up: false
+    name: 正義的暗黑英雄，貓咪軍團的異星戰士剋星！★點圖可以看詳細內容喔！
+  2018-10-21_266:
+    id: 266
+    start_on: 2018-10-21
+    end_on: 2018-10-24
+    version: '70400'
+    rare: 7500
+    sr: 2000
+    ssr: 500
+    guaranteed: false
+    step_up: false
+    name: 破壞力強大，勇猛可靠的龍皇們降臨啦！★點圖可以看詳細內容喔！
+  2018-10-24_276:
+    id: 276
+    start_on: 2018-10-24
+    end_on: 2018-10-27
+    version: '70400'
+    rare: 7500
+    sr: 2000
+    ssr: 500
+    guaranteed: false
+    step_up: false
+    name: 來自宇宙盡頭的各種精靈們！★點圖可以看詳細內容喔！
+  2018-10-27_230:
+    id: 230
+    start_on: 2018-10-27
+    end_on: 2018-10-30
+    version: '70400'
+    rare: 7500
+    sr: 2000
+    ssr: 500
+    guaranteed: true
+    step_up: false
+    name: 超古代勇者！！對抗天使敵人的最佳選擇！★11連轉超激確定活動中！
+  2018-10-27_257:
+    id: 257
+    start_on: 2018-10-27
+    end_on: 2018-11-01
+    version: '70400'
+    rare: 7500
+    sr: 2000
+    ssr: 500
+    guaranteed: true
+    step_up: false
+    name: 限時開放！快來獲得萬聖節變裝的可愛角色吧！★11連轉超激確定活動中！
+  2018-10-30_221:
+    id: 221
+    start_on: 2018-10-30
+    end_on: 2018-11-01
+    version: '70400'
+    rare: 7500
+    sr: 2000
+    ssr: 500
+    guaranteed: true
+    step_up: false
+    name: 快來獲得掃黑專家的戰國武將吧！★11連轉超激確定活動中！

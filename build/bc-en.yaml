@@ -18569,6 +18569,28 @@ events:
     guaranteed: false
     step_up: false
     name: "★ Dark Heroes ★ Defend justice with for superpowered Uber Cats!"
+  2018-10-19_257:
+    id: 257
+    start_on: 2018-10-19
+    end_on: 2018-11-01
+    version: '70400'
+    rare: 7500
+    sr: 2000
+    ssr: 500
+    guaranteed: false
+    step_up: false
+    name: Limited Halloween Units! Get spooky special editions of Uber Cats!
+  2018-10-19_298:
+    id: 298
+    start_on: 2018-10-19
+    end_on: 2018-10-21
+    version: '70400'
+    rare: 7500
+    sr: 2000
+    ssr: 500
+    guaranteed: false
+    step_up: false
+    name: "★ Dark Heroes ★ Defend justice with for superpowered Uber Cats!"
   2018-10-21_266:
     id: 266
     start_on: 2018-10-21
