@@ -18513,3 +18513,114 @@ events:
     guaranteed: false
     step_up: false
     name: "★ Nekolugas ★  Super-creepy Uber Cats!"
+  2018-10-13_319:
+    id: 319
+    start_on: 2018-10-13
+    end_on: 2018-10-16
+    version: '70400'
+    rare: 6500
+    sr: 2600
+    ssr: 900
+    guaranteed: false
+    step_up: false
+    name: D'arktanyan is here! ★ Plus higher drop rate for Uber Rares!
+  2018-10-13_320:
+    id: 320
+    start_on: 2018-10-13
+    end_on: 2030-01-01
+    version: '70400'
+    rare: 7500
+    sr: 2000
+    ssr: 500
+    guaranteed: false
+    step_up: false
+    name: Get an Uber Rare Cat!! 100% Uber drop Rate in the PLATINUM CAPSULES!
+    platinum: true
+  2018-10-16_283:
+    id: 283
+    start_on: 2018-10-16
+    end_on: 2018-10-18
+    version: '70400'
+    rare: 7500
+    sr: 2000
+    ssr: 500
+    guaranteed: false
+    step_up: false
+    name: "★ IRON LEGION ★ Heavy metal Uber Cats with Zombie-crushing powers!!"
+  2018-10-18_257:
+    id: 257
+    start_on: 2018-10-18
+    end_on: 2018-11-01
+    version: '70400'
+    rare: 7500
+    sr: 2000
+    ssr: 500
+    guaranteed: false
+    step_up: false
+    name: Limited Halloween Units! Get spooky special editions of Uber Cats!
+  2018-10-18_298:
+    id: 298
+    start_on: 2018-10-18
+    end_on: 2018-10-21
+    version: '70400'
+    rare: 7500
+    sr: 2000
+    ssr: 500
+    guaranteed: false
+    step_up: false
+    name: "★ Dark Heroes ★ Defend justice with for superpowered Uber Cats!"
+  2018-10-21_266:
+    id: 266
+    start_on: 2018-10-21
+    end_on: 2018-10-24
+    version: '70400'
+    rare: 7500
+    sr: 2000
+    ssr: 500
+    guaranteed: false
+    step_up: false
+    name: "★ Dragon Emperors ★ Collect a mighty monstrous Uber Cat!"
+  2018-10-24_276:
+    id: 276
+    start_on: 2018-10-24
+    end_on: 2018-10-27
+    version: '70400'
+    rare: 7500
+    sr: 2000
+    ssr: 500
+    guaranteed: false
+    step_up: false
+    name: "★ Elemental Pixies ★ Cosmic powers brought to life as Uber Rare allies!"
+  2018-10-27_230:
+    id: 230
+    start_on: 2018-10-27
+    end_on: 2018-10-30
+    version: '70400'
+    rare: 7500
+    sr: 2000
+    ssr: 500
+    guaranteed: true
+    step_up: false
+    name: "★ Ultra Souls★ Guaranteed 11-Draw for legendary Uber Rare Cats!"
+  2018-10-27_257:
+    id: 257
+    start_on: 2018-10-27
+    end_on: 2018-11-01
+    version: '70400'
+    rare: 7500
+    sr: 2000
+    ssr: 500
+    guaranteed: true
+    step_up: false
+    name: "★ Halloween Gals ★  Guaranteed Uber with any 11-Capsule Draw!"
+  2018-10-30_221:
+    id: 221
+    start_on: 2018-10-30
+    end_on: 2018-11-01
+    version: '70400'
+    rare: 7500
+    sr: 2000
+    ssr: 500
+    guaranteed: true
+    step_up: false
+    name: "★ Vajiras Wargods! ★  Superpowered Uber Cats with 11-Draw Guarantee!"
