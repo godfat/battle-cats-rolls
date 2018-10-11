@@ -32,9 +32,7 @@ module BattleCatsRolls
     class View < Struct.new(:controller, :arg)
       extend Forwardable
 
-      def_delegators :controller,
-        *%w[request lang gacha event upcoming_events past_events
-            find no_guaranteed ubers]
+      def_delegators :controller, *%w[request gacha]
 
       def render name
         erb(:layout){ erb(name) }
@@ -75,23 +73,23 @@ module BattleCatsRolls
       end
 
       def selected_lang lang_name
-        'selected="selected"' if lang == lang_name
+        'selected="selected"' if controller.lang == lang_name
       end
 
       def selected_current_event event_name
-        'selected="selected"' if event == event_name
+        'selected="selected"' if controller.event == event_name
       end
 
       def selected_find cat
-        'selected="selected"' if find == cat.id
+        'selected="selected"' if controller.find == cat.id
       end
 
       def checked_no_guaranteed
-        'checked="checked"' if no_guaranteed
+        'checked="checked"' if controller.no_guaranteed
       end
 
       def selected_ubers n
-        'selected="selected"' if ubers == n
+        'selected="selected"' if controller.ubers == n
       end
 
       def checked_details
@@ -133,12 +131,12 @@ module BattleCatsRolls
 
       def uri_to_roll cat
         uri(seed: cat.slot_fruit.seed,
-            event: event,
-            lang: lang,
+            event: controller.event,
+            lang: controller.lang,
             count: controller.count,
-            details: details,
-            find: find,
-            ubers: ubers)
+            find: controller.find,
+            ubers: controller.ubers,
+            details: details)
       end
 
       def uri_to_cat_db cat
