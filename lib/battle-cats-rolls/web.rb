@@ -146,7 +146,7 @@ module BattleCatsRolls
       end
 
       def uri query={}
-        query_string = query.compact.map do |key, value|
+        query_string = cleanup_query(query).map do |key, value|
           "#{u key.to_s}=#{u value.to_s}"
         end.join('&')
 
@@ -156,6 +156,19 @@ module BattleCatsRolls
           path
         else
           "#{path}?#{query_string}"
+        end
+      end
+
+      def cleanup_query query
+        query.compact.select do |key, value|
+          if (key == :count && value == 100) ||
+             (key == :lang && value == 'en') ||
+             (key == :find && value == 0) ||
+             (key == :ubers && value == 0)
+            false
+          else
+            true
+          end
         end
       end
 
@@ -208,11 +221,7 @@ module BattleCatsRolls
       end
 
       def find
-        return @find if instance_variable_defined?(:@find)
-
-        id = request.GET['find'].to_i
-
-        @find = id.nonzero? && id || nil
+        @find ||= request.GET['find'].to_i
       end
 
       def no_guaranteed

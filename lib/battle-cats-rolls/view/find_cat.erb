@@ -25,10 +25,13 @@
     </optgroup>
   </select>
 
-  <label for="no_guaranteed_input">Exclude guaranteed:</label>
-  <input type="checkbox" id="no_guaranteed_input" name="no_guaranteed"
-    <%= checked_no_guaranteed %>
-    onchange="roll(this)">
+  <% if gacha.pool.guaranteed_rolls > 0 %>
+    <label for="no_guaranteed_input">Exclude guaranteed:</label>
+    <input type="checkbox" id="no_guaranteed_input"
+      name="no_guaranteed" value="true"
+      <%= checked_no_guaranteed %>
+      onchange="roll(this)">
+  <% end %>
 
   <label for="add_future_ubers">Add future ubers:</label>
   <select id="add_future_ubers" name="ubers" onchange="roll(this)">
