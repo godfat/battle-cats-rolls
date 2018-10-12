@@ -92,7 +92,7 @@ module BattleCatsRolls
 
     def roll_cat rarity_fruit
       score = rarity_fruit.value % Base
-      rarity = if pool.platinum then Uber else dig_rarity(score) end
+      rarity = dig_rarity(score)
       slot_fruit = if block_given? then yield else roll_fruit end
       cat = dig_cat(slot_fruit, rarity)
 

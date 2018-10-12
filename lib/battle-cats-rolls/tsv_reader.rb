@@ -2,8 +2,12 @@
 
 require 'date'
 
+require_relative 'gacha'
+
 module BattleCatsRolls
   class TsvReader < Struct.new(:tsv)
+    OffsetIndex = 9
+
     def self.download url
       require 'net/http'
 
@@ -14,13 +18,18 @@ module BattleCatsRolls
       new(File.read(path))
     end
 
-    def self.gacha_fields
-      @gacha_fields ||= {
-        'id' => 10, 'start_on' => 0, 'end_on' => 2, 'version' => 4,
-        'rare' => 16, 'sr' => 18, 'ssr' => 20,
-        'guaranteed' => 21, 'step_up' => 13,
-        'type' => 8, 'platinum' => 55,
-        'seasonal' => 25, 'seasonal_guaranteed' => 36
+    def self.event_fields
+      @event_fields ||= {
+        'start_on' => 0, 'end_on' => 2, 'version' => 4,
+        'type' => 8, 'offset' => OffsetIndex
+      }
+    end
+
+    def self.pool_fields
+      @pool_fields ||= {
+        'id' => 0, 'step_up' => 3,
+        'rare' => 6, 'sr' => 8, 'ssr' => 10,
+        'guaranteed' => 11
       }
     end
 
@@ -30,26 +39,33 @@ module BattleCatsRolls
 
     def gacha
       @gacha ||= parsed_data.inject({}) do |result, row|
-        data = convert_gacha(read_row(row, self.class.gacha_fields))
+        data = convert_event(read_event(row, self.class.event_fields))
 
-        platinum = data.delete('platinum')
-        seasonal = data.delete('seasonal')
-        seasonal_guaranteed = data.delete('seasonal_guaranteed')
+        if data.delete('type') == 1
+          pool = data.delete('pool')[data.delete('offset') - 1]
 
-        data['guaranteed'] = seasonal_guaranteed if seasonal
-        id = data.delete('type') == 1 && (platinum || data['id'] || seasonal)
+          if pool['id'] > 0
+            data.merge!(pool)
+            data['platinum'] = true if data['ssr'] == Gacha::Base
 
-        if id
-          if data['id'].nil?
-            data['id'] = id
-            if platinum
-              data['platinum'] = true
-            else
-              data.delete('platinum')
-            end
+            # TODO: Remove me, this is only here to reduce diff for YAML
+            data = {
+              'id' => data['id'],
+              'start_on' => data['start_on'],
+              'end_on' => data['end_on'],
+              'version' => data['version'],
+              'rare' => data['rare'],
+              'sr' => data['sr'],
+              'ssr' => data['ssr'],
+              'guaranteed' => data['guaranteed'],
+              'step_up' => data['step_up'],
+              'name' => data['name'],
+              'platinum' => data['platinum']
+            }
+            data.delete('platinum') unless data['platinum']
+
+            result["#{data['start_on']}_#{data['id']}"] = data
           end
-
-          result["#{data['start_on']}_#{id}"] = data
         end
 
         result
@@ -58,41 +74,65 @@ module BattleCatsRolls
 
     private
 
-    def convert_gacha data
+    def convert_event data
       data.transform_values do |(key, value)|
         case key
         when 'start_on', 'end_on'
           Date.parse(value)
-        when 'id', 'rare', 'sr', 'ssr', 'platinum', 'seasonal'
-          id = value.to_i
-          id if id > 0
-        when 'step_up'
-          value.to_i & 4 == 4
-        when 'guaranteed', 'seasonal_guaranteed'
-          value.to_i > 0
-        when 'type'
+        when 'type', 'offset'
           value.to_i
+        when 'pool'
+          convert_pool(value)
         else
           value
         end
       end
     end
 
-    def read_row row, row_fields
-      result =
-        Hash[
-          row_fields.keys.zip(
-            row_fields.keys.zip(
-              row.values_at(*row_fields.values)))]
+    def convert_pool data
+      data.map do |pool|
+        pool.transform_values do |(key, value)|
+          case key
+          when 'id', 'rare', 'sr', 'ssr'
+            value.to_i
+          when 'step_up'
+            value.to_i & 4 == 4
+          when 'guaranteed'
+            value.to_i > 0
+          else
+            value
+          end
+        end
+      end
+    end
+
+    def read_event row, event_fields
+      result = read_row(row, event_fields)
 
       result['name'] = ['name', row.last.strip]
+
+      result['pool'] = ['pool', extract_pool(row).map do |pool_row|
+        read_row(pool_row, self.class.pool_fields)
+      end]
+
       result
+    end
+
+    def read_row row, row_fields
+      Hash[
+        row_fields.keys.zip(
+          row_fields.keys.zip(
+            row.values_at(*row_fields.values)))]
+    end
+
+    def extract_pool row
+      row.drop(OffsetIndex + 1).each_slice(14).to_a[0...-1]
     end
 
     def parsed_data
       @parsed_data ||= tsv.lines.inject([]) do |result, line|
         if line.include?("\t")
-          result << line.split("\t")
+          result << line.split(/\t+/)
         else
           result
         end

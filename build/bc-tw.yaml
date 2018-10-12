@@ -17882,9 +17882,9 @@ events:
     start_on: 2018-08-03
     end_on: 2030-09-07
     version: '70200'
-    rare: 7500
-    sr: 2000
-    ssr: 500
+    rare: 0
+    sr: 0
+    ssr: 10000
     guaranteed: false
     step_up: false
     name: 必出超激稀有角色的白金轉蛋！快來獲得心儀的貓咪吧！
@@ -17894,9 +17894,9 @@ events:
     start_on: 2018-09-07
     end_on: 2030-01-01
     version: '70300'
-    rare: 7500
-    sr: 2000
-    ssr: 500
+    rare: 0
+    sr: 0
+    ssr: 10000
     guaranteed: false
     step_up: false
     name: 必出超激稀有角色的白金轉蛋！快來獲得心儀的貓咪吧！
@@ -18005,9 +18005,9 @@ events:
     start_on: 2018-10-13
     end_on: 2030-01-01
     version: '70400'
-    rare: 7500
-    sr: 2000
-    ssr: 500
+    rare: 0
+    sr: 0
+    ssr: 10000
     guaranteed: false
     step_up: false
     name: 必出超激稀有角色的白金轉蛋！快來獲得心儀的貓咪吧！

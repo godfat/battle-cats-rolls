@@ -17864,9 +17864,9 @@ events:
     start_on: 2018-06-12
     end_on: 2030-07-07
     version: '70100'
-    rare: 7500
-    sr: 2000
-    ssr: 500
+    rare: 0
+    sr: 0
+    ssr: 10000
     guaranteed: false
     step_up: false
     name: Get an Uber Rare Cat!! 100% Uber drop Rate in the PLATINUM CAPSULES!
@@ -18020,9 +18020,9 @@ events:
     start_on: 2018-07-13
     end_on: 2030-08-03
     version: '70100'
-    rare: 7500
-    sr: 2000
-    ssr: 500
+    rare: 0
+    sr: 0
+    ssr: 10000
     guaranteed: false
     step_up: false
     name: Get an Uber Rare Cat!! 100% Uber drop Rate in the PLATINUM CAPSULES!
@@ -18131,9 +18131,9 @@ events:
     start_on: 2018-08-03
     end_on: 2030-09-07
     version: '70200'
-    rare: 7500
-    sr: 2000
-    ssr: 500
+    rare: 0
+    sr: 0
+    ssr: 10000
     guaranteed: false
     step_up: false
     name: Get an Uber Rare Cat!! 100% Uber drop Rate in the PLATINUM CAPSULES!
@@ -18308,9 +18308,9 @@ events:
     start_on: 2018-09-07
     end_on: 2030-01-01
     version: '70300'
-    rare: 7500
-    sr: 2000
-    ssr: 500
+    rare: 0
+    sr: 0
+    ssr: 10000
     guaranteed: false
     step_up: false
     name: Get an Uber Rare Cat!! 100% Uber drop Rate in the PLATINUM CAPSULES!
@@ -18529,9 +18529,9 @@ events:
     start_on: 2018-10-13
     end_on: 2030-01-01
     version: '70400'
-    rare: 7500
-    sr: 2000
-    ssr: 500
+    rare: 0
+    sr: 0
+    ssr: 10000
     guaranteed: false
     step_up: false
     name: Get an Uber Rare Cat!! 100% Uber drop Rate in the PLATINUM CAPSULES!

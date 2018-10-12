@@ -17964,9 +17964,9 @@ events:
     start_on: 2018-09-15
     end_on: 2030-01-01
     version: '70400'
-    rare: 7500
-    sr: 2000
-    ssr: 500
+    rare: 0
+    sr: 0
+    ssr: 10000
     guaranteed: false
     step_up: false
     name: 超激レアのキャラクターが必ず１体手に入る「プラチナガチャ」！
@@ -17998,11 +17998,11 @@ events:
     start_on: 2018-10-01
     end_on: 2018-10-04
     version: '70400'
-    rare: 7500
-    sr: 2000
+    rare: 7000
+    sr: 2500
     ssr: 500
     guaranteed: false
-    step_up: false
+    step_up: true
     name: 宇宙の果てからやって来た、個性的で楽しい精霊達！★詳細はバナーをタップ!!
   2018-10-01_323:
     id: 323
@@ -18031,8 +18031,8 @@ events:
     start_on: 2018-10-05
     end_on: 2018-10-08
     version: '70400'
-    rare: 7500
-    sr: 2000
+    rare: 7000
+    sr: 2500
     ssr: 500
     guaranteed: false
     step_up: false
@@ -18053,8 +18053,8 @@ events:
     start_on: 2018-10-08
     end_on: 2018-10-10
     version: '70400'
-    rare: 7500
-    sr: 2000
+    rare: 7000
+    sr: 2500
     ssr: 500
     guaranteed: false
     step_up: false
@@ -18064,8 +18064,8 @@ events:
     start_on: 2018-10-10
     end_on: 2018-10-12
     version: '70400'
-    rare: 7500
-    sr: 2000
+    rare: 7000
+    sr: 2500
     ssr: 500
     guaranteed: false
     step_up: false
@@ -18075,9 +18075,9 @@ events:
     start_on: 2018-10-12
     end_on: 2018-10-15
     version: '70400'
-    rare: 7500
-    sr: 2000
-    ssr: 500
+    rare: 6500
+    sr: 2600
+    ssr: 900
     guaranteed: false
     step_up: false
     name: 限定キャラ「影傑ダークダルターニャ」も参戦！★超激レア出現率が今だけ超アップ!!
@@ -18097,8 +18097,8 @@ events:
     start_on: 2018-10-15
     end_on: 2018-10-17
     version: '70500'
-    rare: 7500
-    sr: 2000
+    rare: 7000
+    sr: 2500
     ssr: 500
     guaranteed: true
     step_up: false
@@ -18119,8 +18119,8 @@ events:
     start_on: 2018-10-17
     end_on: 2018-10-19
     version: '70500'
-    rare: 7500
-    sr: 2000
+    rare: 7000
+    sr: 2500
     ssr: 500
     guaranteed: true
     step_up: false
@@ -18130,8 +18130,8 @@ events:
     start_on: 2018-10-19
     end_on: 2018-11-01
     version: '70500'
-    rare: 7500
-    sr: 2000
+    rare: 7000
+    sr: 2500
     ssr: 500
     guaranteed: false
     step_up: false
