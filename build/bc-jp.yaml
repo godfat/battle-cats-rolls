@@ -18092,3 +18092,91 @@ events:
     guaranteed: false
     step_up: false
     name: "【期間限定】『クラッシュフィーバー』コラボガチャ登場！★詳細はバナーをタップ!!"
+  2018-10-15_230:
+    id: 230
+    start_on: 2018-10-15
+    end_on: 2018-10-17
+    version: '70500'
+    rare: 7500
+    sr: 2000
+    ssr: 500
+    guaranteed: true
+    step_up: false
+    name: にゃんこ最大級の仰天進化、とくと見よ！★11連で超激レア確定!!
+  2018-10-15_322:
+    id: 322
+    start_on: 2018-10-15
+    end_on: 2018-10-19
+    version: '70500'
+    rare: 7000
+    sr: 2500
+    ssr: 500
+    guaranteed: true
+    step_up: false
+    name: "【終了間近】『クラッシュフィーバー』コラボガチャ！★11連で超激レア確定!!"
+  2018-10-17_248:
+    id: 248
+    start_on: 2018-10-17
+    end_on: 2018-10-19
+    version: '70500'
+    rare: 7500
+    sr: 2000
+    ssr: 500
+    guaranteed: true
+    step_up: false
+    name: 異世界より召喚された愉快なモンスター美少女達！★11連で超激レア確定!!
+  2018-10-19_257:
+    id: 257
+    start_on: 2018-10-19
+    end_on: 2018-11-01
+    version: '70500'
+    rare: 7500
+    sr: 2000
+    ssr: 500
+    guaranteed: false
+    step_up: false
+    name: ハロウィン限定のコスプレキャラを手に入れよう！★詳細はバナーをタップ!!
+  2018-10-19_289:
+    id: 289
+    start_on: 2018-10-19
+    end_on: 2018-10-22
+    version: '70500'
+    rare: 7000
+    sr: 2500
+    ssr: 500
+    guaranteed: false
+    step_up: false
+    name: 愉快痛快！世界一即戦力になるにゃんこ達！★詳細はバナーをタップ!!
+  2018-10-22_283:
+    id: 283
+    start_on: 2018-10-22
+    end_on: 2018-10-24
+    version: '70500'
+    rare: 7000
+    sr: 2500
+    ssr: 500
+    guaranteed: false
+    step_up: false
+    name: 超ド級！ゾンビを蹴散らすにゃんこ軍団の超兵器達！★詳細はバナーをタップ!!
+  2018-10-24_304:
+    id: 304
+    start_on: 2018-10-24
+    end_on: 2018-10-26
+    version: '70500'
+    rare: 7000
+    sr: 2500
+    ssr: 500
+    guaranteed: false
+    step_up: false
+    name: ノビルガ参戦！謎に包まれたキモかわ生命体！★詳細はバナーをタップ!!
+  2018-10-26_315:
+    id: 315
+    start_on: 2018-10-26
+    end_on: 2018-10-29
+    version: '70500'
+    rare: 6500
+    sr: 2600
+    ssr: 900
+    guaranteed: false
+    step_up: false
+    name: 強力な限定キャラ「幼傑ダルターニャ」も参戦！★超激レア出現率が今だけ超アップ!!
