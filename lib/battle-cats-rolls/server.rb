@@ -13,8 +13,10 @@ module BattleCatsRolls
     use Rack::Deflater
     use Rack::ContentType, 'text/html; charset=utf-8'
 
-    map '/asset' do
-      run Rack::Directory.new(File.expand_path('asset', __dir__))
+    rewrite \
+      '/asset' => '',
+      '/robots.txt' => '/robots.txt' do
+      run Rack::File.new(File.expand_path('asset', __dir__))
     end
 
     map '/seek', to: '/seek', host: ENV['SEEK_HOST'] do
