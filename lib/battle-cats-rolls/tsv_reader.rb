@@ -46,23 +46,8 @@ module BattleCatsRolls
 
           if pool['id'] > 0
             data.merge!(pool)
+            data['step_up'] = true if data.delete('step_up') # reorder
             data['platinum'] = true if data['ssr'] == Gacha::Base
-
-            # TODO: Remove me, this is only here to reduce diff for YAML
-            data = {
-              'id' => data['id'],
-              'start_on' => data['start_on'],
-              'end_on' => data['end_on'],
-              'version' => data['version'],
-              'rare' => data['rare'],
-              'sr' => data['sr'],
-              'ssr' => data['ssr'],
-              'guaranteed' => data['guaranteed'],
-              'step_up' => data['step_up'],
-              'name' => data['name'],
-              'platinum' => data['platinum']
-            }
-            data.delete('platinum') unless data['platinum']
 
             result["#{data['start_on']}_#{data['id']}"] = data
           end
@@ -85,8 +70,8 @@ module BattleCatsRolls
           convert_pool(value)
         else
           value
-        end
-      end
+        end || nil
+      end.compact
     end
 
     def convert_pool data
@@ -101,8 +86,8 @@ module BattleCatsRolls
             value.to_i > 0
           else
             value
-          end
-        end
+          end || nil
+        end.compact
       end
     end
 

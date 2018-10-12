@@ -17960,223 +17960,188 @@ gacha:
   - 31
 events:
   2018-09-15_320:
-    id: 320
     start_on: 2018-09-15
     end_on: 2030-01-01
     version: '70400'
+    name: 超激レアのキャラクターが必ず１体手に入る「プラチナガチャ」！
+    id: 320
     rare: 0
     sr: 0
     ssr: 10000
-    guaranteed: false
-    step_up: false
-    name: 超激レアのキャラクターが必ず１体手に入る「プラチナガチャ」！
     platinum: true
   2018-09-20_323:
-    id: 323
     start_on: 2018-09-20
     end_on: 2018-10-04
     version: '70400'
+    name: 新キャラも登場、劇場版『魔法少女まどか☆マギカ』ガチャ！★詳細はバナーをタップ!!
+    id: 323
     rare: 7000
     sr: 2500
     ssr: 500
-    guaranteed: false
-    step_up: false
-    name: 新キャラも登場、劇場版『魔法少女まどか☆マギカ』ガチャ！★詳細はバナーをタップ!!
   2018-09-27_323:
-    id: 323
     start_on: 2018-09-27
     end_on: 2018-10-04
     version: '70400'
-    rare: 7000
-    sr: 2500
-    ssr: 500
-    guaranteed: false
-    step_up: false
     name: 新キャラも登場、劇場版『魔法少女まどか☆マギカ』ガチャ！★詳細はバナーをタップ!!
-  2018-10-01_276:
-    id: 276
-    start_on: 2018-10-01
-    end_on: 2018-10-04
-    version: '70400'
-    rare: 7000
-    sr: 2500
-    ssr: 500
-    guaranteed: false
-    step_up: true
-    name: 宇宙の果てからやって来た、個性的で楽しい精霊達！★詳細はバナーをタップ!!
-  2018-10-01_323:
     id: 323
-    start_on: 2018-10-01
-    end_on: 2018-10-04
-    version: '70400'
     rare: 7000
     sr: 2500
     ssr: 500
-    guaranteed: false
+  2018-10-01_276:
+    start_on: 2018-10-01
+    end_on: 2018-10-04
+    version: '70400'
+    name: 宇宙の果てからやって来た、個性的で楽しい精霊達！★詳細はバナーをタップ!!
+    id: 276
+    rare: 7000
+    sr: 2500
+    ssr: 500
     step_up: true
+  2018-10-01_323:
+    start_on: 2018-10-01
+    end_on: 2018-10-04
+    version: '70400'
     name: "【終了間近】劇場版『魔法少女まどか☆マギカ』ガチャ！★詳細はバナーをタップ!!"
+    id: 323
+    rare: 7000
+    sr: 2500
+    ssr: 500
+    step_up: true
   2018-10-04_224:
-    id: 224
     start_on: 2018-10-04
     end_on: 2018-10-05
     version: '70400'
+    name: パワフルでキュートな電脳少女達を手に入れよう！★詳細はバナーをタップ!!
+    id: 224
     rare: 7000
     sr: 2500
     ssr: 500
-    guaranteed: false
-    step_up: false
-    name: パワフルでキュートな電脳少女達を手に入れよう！★詳細はバナーをタップ!!
   2018-10-05_311:
-    id: 311
     start_on: 2018-10-05
     end_on: 2018-10-08
     version: '70400'
+    name: 時空神クロノス参戦！偉大なる神々、ここに集結！★詳細はバナーをタップ!!
+    id: 311
     rare: 7000
     sr: 2500
     ssr: 500
-    guaranteed: false
-    step_up: false
-    name: 時空神クロノス参戦！偉大なる神々、ここに集結！★詳細はバナーをタップ!!
   2018-10-05_321:
-    id: 321
     start_on: 2018-10-05
     end_on: 2018-10-19
     version: '70400'
+    name: "【期間限定】『クラッシュフィーバー』コラボガチャ登場！★詳細はバナーをタップ!!"
+    id: 321
     rare: 7000
     sr: 2500
     ssr: 500
-    guaranteed: false
-    step_up: false
-    name: "【期間限定】『クラッシュフィーバー』コラボガチャ登場！★詳細はバナーをタップ!!"
   2018-10-08_221:
-    id: 221
     start_on: 2018-10-08
     end_on: 2018-10-10
     version: '70400'
+    name: 黒い敵に強力効果を持つ、一騎当千の戦国武将達！★詳細はバナーをタップ!!
+    id: 221
     rare: 7000
     sr: 2500
     ssr: 500
-    guaranteed: false
-    step_up: false
-    name: 黒い敵に強力効果を持つ、一騎当千の戦国武将達！★詳細はバナーをタップ!!
   2018-10-10_266:
-    id: 266
     start_on: 2018-10-10
     end_on: 2018-10-12
     version: '70400'
+    name: 圧倒的破壊力のドラゴン達を手に入れよう！★詳細はバナーをタップ!!
+    id: 266
     rare: 7000
     sr: 2500
     ssr: 500
-    guaranteed: false
-    step_up: false
-    name: 圧倒的破壊力のドラゴン達を手に入れよう！★詳細はバナーをタップ!!
   2018-10-12_319:
-    id: 319
     start_on: 2018-10-12
     end_on: 2018-10-15
     version: '70400'
+    name: 限定キャラ「影傑ダークダルターニャ」も参戦！★超激レア出現率が今だけ超アップ!!
+    id: 319
     rare: 6500
     sr: 2600
     ssr: 900
-    guaranteed: false
-    step_up: false
-    name: 限定キャラ「影傑ダークダルターニャ」も参戦！★超激レア出現率が今だけ超アップ!!
   2018-10-12_322:
-    id: 322
     start_on: 2018-10-12
     end_on: 2018-10-19
     version: '70400'
+    name: "【期間限定】『クラッシュフィーバー』コラボガチャ登場！★詳細はバナーをタップ!!"
+    id: 322
     rare: 7000
     sr: 2500
     ssr: 500
-    guaranteed: false
-    step_up: false
-    name: "【期間限定】『クラッシュフィーバー』コラボガチャ登場！★詳細はバナーをタップ!!"
   2018-10-15_230:
-    id: 230
     start_on: 2018-10-15
     end_on: 2018-10-17
     version: '70500'
+    name: にゃんこ最大級の仰天進化、とくと見よ！★11連で超激レア確定!!
+    id: 230
     rare: 7000
     sr: 2500
     ssr: 500
     guaranteed: true
-    step_up: false
-    name: にゃんこ最大級の仰天進化、とくと見よ！★11連で超激レア確定!!
   2018-10-15_322:
-    id: 322
     start_on: 2018-10-15
     end_on: 2018-10-19
     version: '70500'
+    name: "【終了間近】『クラッシュフィーバー』コラボガチャ！★11連で超激レア確定!!"
+    id: 322
     rare: 7000
     sr: 2500
     ssr: 500
     guaranteed: true
-    step_up: false
-    name: "【終了間近】『クラッシュフィーバー』コラボガチャ！★11連で超激レア確定!!"
   2018-10-17_248:
-    id: 248
     start_on: 2018-10-17
     end_on: 2018-10-19
     version: '70500'
+    name: 異世界より召喚された愉快なモンスター美少女達！★11連で超激レア確定!!
+    id: 248
     rare: 7000
     sr: 2500
     ssr: 500
     guaranteed: true
-    step_up: false
-    name: 異世界より召喚された愉快なモンスター美少女達！★11連で超激レア確定!!
   2018-10-19_257:
-    id: 257
     start_on: 2018-10-19
     end_on: 2018-11-01
     version: '70500'
+    name: ハロウィン限定のコスプレキャラを手に入れよう！★詳細はバナーをタップ!!
+    id: 257
     rare: 7000
     sr: 2500
     ssr: 500
-    guaranteed: false
-    step_up: false
-    name: ハロウィン限定のコスプレキャラを手に入れよう！★詳細はバナーをタップ!!
   2018-10-19_289:
-    id: 289
     start_on: 2018-10-19
     end_on: 2018-10-22
     version: '70500'
+    name: 愉快痛快！世界一即戦力になるにゃんこ達！★詳細はバナーをタップ!!
+    id: 289
     rare: 7000
     sr: 2500
     ssr: 500
-    guaranteed: false
-    step_up: false
-    name: 愉快痛快！世界一即戦力になるにゃんこ達！★詳細はバナーをタップ!!
   2018-10-22_283:
-    id: 283
     start_on: 2018-10-22
     end_on: 2018-10-24
     version: '70500'
+    name: 超ド級！ゾンビを蹴散らすにゃんこ軍団の超兵器達！★詳細はバナーをタップ!!
+    id: 283
     rare: 7000
     sr: 2500
     ssr: 500
-    guaranteed: false
-    step_up: false
-    name: 超ド級！ゾンビを蹴散らすにゃんこ軍団の超兵器達！★詳細はバナーをタップ!!
   2018-10-24_304:
-    id: 304
     start_on: 2018-10-24
     end_on: 2018-10-26
     version: '70500'
+    name: ノビルガ参戦！謎に包まれたキモかわ生命体！★詳細はバナーをタップ!!
+    id: 304
     rare: 7000
     sr: 2500
     ssr: 500
-    guaranteed: false
-    step_up: false
-    name: ノビルガ参戦！謎に包まれたキモかわ生命体！★詳細はバナーをタップ!!
   2018-10-26_315:
-    id: 315
     start_on: 2018-10-26
     end_on: 2018-10-29
     version: '70500'
+    name: 強力な限定キャラ「幼傑ダルターニャ」も参戦！★超激レア出現率が今だけ超アップ!!
+    id: 315
     rare: 6500
     sr: 2600
     ssr: 900
-    guaranteed: false
-    step_up: false
-    name: 強力な限定キャラ「幼傑ダルターニャ」も参戦！★超激レア出現率が今だけ超アップ!!
