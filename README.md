@@ -53,6 +53,10 @@ Populate BCJP data:
 
 ## Thanks:
 
+### Tracking discovery for 7.2+
+
+* [Seed Tracking TBC 7.3 Public Release](https://www.reddit.com/r/BattleCatsCheats/comments/9jvdcg/seed_tracking_tbc_73_public_release/)
+
 ### The spreadsheet 2.0
 
 * [[Cheating] Rare Ticket Forecasting Spreadsheet v2.0](https://www.reddit.com/r/battlecats/comments/8mhun4/cheating_rare_ticket_forecasting_spreadsheet_v20/)
