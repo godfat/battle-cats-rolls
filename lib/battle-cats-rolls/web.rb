@@ -60,10 +60,13 @@ module BattleCatsRolls
       end
 
       def link_to_roll cat
+        name = h cat.name
+        full_name = h cat.all_names.join(' | ')
+
         if cat.slot_fruit
-          %Q{<a href="#{h uri_to_roll(cat)}">#{h cat.name}</a>}
+          %Q{<a href="#{h uri_to_roll(cat)}" title="#{full_name}">#{name}</a>}
         else
-          h cat.name
+          %Q{<span title="#{full_name}">#{name}</span>}
         end +
           if cat.id > 0
             %Q{<a href="#{h uri_to_cat_db(cat)}">&#128062;</a>}
