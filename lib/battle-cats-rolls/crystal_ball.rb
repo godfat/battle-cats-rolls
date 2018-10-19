@@ -26,7 +26,17 @@ module BattleCatsRolls
       require 'yaml'
 
       FileUtils.mkdir_p(dir)
-      File.write("#{dir}/bc-#{lang}.yaml", YAML.dump(data))
+      File.write("#{dir}/bc-#{lang}.yaml", dump_yaml)
+    end
+
+    def dump_yaml
+      visitor = Psych::Visitors::YAMLTree.create
+      visitor << data
+      visitor.tree.grep(Psych::Nodes::Sequence).each do |seq|
+        seq.style = Psych::Nodes::Sequence::FLOW
+      end
+
+      visitor.tree.yaml(nil, line_width: -1)
     end
   end
 end
