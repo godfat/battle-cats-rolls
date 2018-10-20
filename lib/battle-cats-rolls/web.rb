@@ -60,7 +60,7 @@ module BattleCatsRolls
       end
 
       def link_to_roll cat
-        name = h cat.name
+        name = h cat.pick_name(controller.name)
         full_name = h cat.all_names.join(' | ')
 
         if cat.slot_fruit
@@ -77,6 +77,10 @@ module BattleCatsRolls
 
       def selected_lang lang_name
         'selected="selected"' if controller.lang == lang_name
+      end
+
+      def selected_name name_name
+        'selected="selected"' if controller.name == name_name
       end
 
       def selected_current_event event_name
@@ -136,6 +140,7 @@ module BattleCatsRolls
         uri(seed: cat.slot_fruit.seed,
             event: controller.event,
             lang: controller.lang,
+            name: controller.name,
             count: controller.count,
             find: controller.find,
             ubers: controller.ubers,
@@ -162,8 +167,9 @@ module BattleCatsRolls
 
       def cleanup_query query
         query.compact.select do |key, value|
-          if (key == :count && value == 100) ||
-             (key == :lang && value == 'en') ||
+          if (key == :lang && value == 'en') ||
+             (key == :name && value == 0) ||
+             (key == :count && value == 100) ||
              (key == :find && value == 0) ||
              (key == :ubers && value == 0)
             false
@@ -198,6 +204,16 @@ module BattleCatsRolls
             value
           else
             'en'
+          end
+      end
+
+      def name
+        @name ||=
+          case value = request.GET['name'].to_i
+          when 1, 2
+            value
+          else
+            0
           end
       end
 

@@ -1,0 +1,22 @@
+<div id="control">
+  <label for="seed_input">Seed:</label>
+  <input
+    type="number" id="seed_input" name="seed"
+    value="<%= controller.seed %>"
+    onclick="this.select()">
+
+  <a href="//<%= seek_host %>/seek">Looking for your seed?</a>
+
+  <label for="details_input">Details:</label>
+  <input type="checkbox" id="details_input" name="details"
+    <%= checked_details %>
+    onchange="roll(this)">
+
+  <label for="count_input">Count:</label>
+  <input
+    type="number" id="count_input" name="count"
+    min="1" max="999" value="<%= controller.count %>"
+    onclick="this.select()">
+
+  <input type="submit" value="Roll">
+</div>

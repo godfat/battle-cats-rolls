@@ -11,6 +11,10 @@ module BattleCatsRolls
       all_names.first
     end
 
+    def pick_name index
+      all_names[index] || pick_name(index - 1) if index >= 0
+    end
+
     def == rhs
       id == rhs.id
     end
