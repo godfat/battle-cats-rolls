@@ -2,17 +2,28 @@
 
 module BattleCatsRolls
   class Cat < Struct.new(
-    :id, :all_names,
+    :id, :info,
     :slot, :slot_fruit,
     :rarity, :rarity_fruit,
     :score, :sequence, :guaranteed)
 
     def name
-      all_names.first
+      info.dig('name', 0)
     end
 
     def pick_name index
-      all_names[index] || pick_name(index - 1) if index >= 0
+      info.dig('name', index) || pick_name(index - 1) if index >= 0
+    end
+
+    def pick_title index
+      picked_name = pick_name(index)
+      names = info.dig('name').join(' | ').sub(picked_name, "*#{picked_name}")
+
+      "#{names}\n#{pick_description(index)}"
+    end
+
+    def pick_description index
+      info.dig('desc', index) || pick_description(index - 1) if index >= 0
     end
 
     def == rhs

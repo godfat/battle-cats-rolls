@@ -1,320 +1,940 @@
 ---
 cats:
   0:
-    1: [Cat, Macho Cat, Mohawk Cat]
-    2: [Tank Cat, Wall Cat, Eraser Cat]
-    3: [Axe Cat, Brave Cat, Dark Cat]
-    4: [Gross Cat, Sexy Legs Cat, Macho Leg Cat]
-    5: [Cow Cat, Giraffe Cat, Lion Cat]
-    6: [Bird Cat, UFO Cat, The Flying Cat]
-    7: [Fish Cat, Whale Cat, Island Cat]
-    8: [Lizard Cat, Dragon Cat, King Dragon Cat]
-    9: [Titan Cat, Mythical Titan Cat, Jamiera Cat]
+    1:
+      name: [Cat, Macho Cat, Mohawk Cat]
+      desc: [The Basic Cat, 'Charm point: muscle definition. Basic Cat.', 'Charm point: muscle definition. Added charm point: beautiful hair.']
+    2:
+      name: [Tank Cat, Wall Cat, Eraser Cat]
+      desc: [Tough. High health. (Area Attack) Strong enough to move a pebble., Rigid defense. Now with corners (Area Attack) Strong enough to move a small rock., Can take a beating thanks to elasticity. Really Good ™ Defense. (Area Attack) Strong enough to move two small rocks.]
+    3:
+      name: [Axe Cat, Brave Cat, Dark Cat]
+      desc: [Combat maniac. Strong against red enemies., Hero wannabe. Strong against red enemies., Dark Knight wannabe Decent Battle Cat Strong against red enemies.]
+    4:
+      name: [Gross Cat, Sexy Legs Cat, Macho Leg Cat]
+      desc: [Able to do very a powerful long range attack. Exceptional attack power and range., Has pride in his overly beautiful legs. Exceptional attack power and range., Every day is Leg Day. Mastered the Art of Leg. Exceptional attack power and range. Strong against Aliens!]
+    5:
+      name: [Cow Cat, Giraffe Cat, Lion Cat]
+      desc: ['Thinks quick, acts quick, and uses his head. Runs like the wind!', 'Thinks quick, acts quick, and uses his head. Headbangs only to Rock''n''Roll!', 'Thinks quick, acts quick, and uses his head. Uses his mane to clean the house.']
+    6:
+      name: [Bird Cat, UFO Cat, The Flying Cat]
+      desc: [Has the health of a pea. Exceptional attack power (Area Attack), Managed to overcome gravity. Good against multiple enemies (Area Attack), It is said that it destroyed a city once with its beams of light. Might weaken Angel attacks (Area Attack)]
+    7:
+      name: [Fish Cat, Whale Cat, Island Cat]
+      desc: [Exceptional melee capability. Strong against Red enemies., Managed to become a carnivorous whale. Strong against Red enemies., Perfected his form while on vacation. Might perform Critical attacks Strong against Red enemies.]
+    8:
+      name: [Lizard Cat, Dragon Cat, King Dragon Cat]
+      desc: [Able to attack enemies from a distance. Powerful single shot long range attack., Found its way here from a fantasy world. Powerful single shot long range attack., Don't ask how he made it into the Dragon Elite. Excellent long distance attacks. Powerful single shot long range attack.]
+    9:
+      name: [Titan Cat, Mythical Titan Cat, Jamiera Cat]
+      desc: [Blessed with extreme attack power and ridiculous amounts of health (Area Attack), 'Lord of Destruction (?) (Area Attack) Extreme attack power and health.', 'Might knockback enemies. (Area Attack) The Real Lord of Destruction? Don''t stretch your shirt like this.']
   1:
-    10: [Actress Cat, Mother Cat, Beefcake Cat]
-    11: [Kung Fu Cat, Drunken Master Cat, Dancer Cat]
-    12: [Mr., Super Mr., Hyper Mr.]
-    13: [Bondage Cat, Bondage CatNEO, Ultimate Bondage Cat]
-    14: [Dom Cat, Executioner, Dark Lazer]
-    15: [Cats in a Box, Cat Gang, Heavy Assault C.A.T.]
-    16: [Panties Cat, Leaf Cat, Lollycat]
-    17: [Moneko, Miss MONEKO]
-    18: [Tricycle Cat, Biker Cat, Unicycle Cat]
-    19: [Ninja Cat, Ninja Frog Cat, Flying Ninja Cat]
-    20: [Zombie Cat, Devil Cat, Skelecat]
-    21: [Samurai Cat, Knight Cat, Pastry Cat]
-    22: [Sumo Cat, Madame Sumo, Riceball Cat]
-    23: [Boogie Cat, Samba Cat, Gato Amigo]
-    24: [Skirt Cat, Tights Cat, Loincloth Cat]
-    25: [Valkyrie Cat, True Valkyrie Cat, Holy Valkyrie Cat]
-    26: [Bahamut Cat, Crazed Bahamut Cat, Awakened Bahamut Cat]
-    27: [Kerihime, Full color Kerihime]
-    28: [Cat Princess, Cat Princess beauty]
-    29: [Capsule Cat, Cramped Cats]
-    30: [Masked Cat, Luchador Cat]
-    46: [Maiko Cat, Geisha Cat]
-    63: [Capsule Cat, Vendor Cat]
-    83: [Blue Shinobi, Orange Shinobi]
-    109: [Cat Bros, Secret Base]
-    124: [Bean Cats, Brah Cats]
-    128: [Flower Cat, Cooldown Cat, Bombercat]
-    131: [Ururun Wolf, Ururun Cat, Awakened Ururun]
-    141: [Squish Ball Cat, Muscleman Cat]
-    142: [God, Secret God]
-    173: [Li'l Nyandam, Dark Emperor Catdam, Schoolbus Nyandam]
-    176: [Meowla Meowla, Catorpedo]
-    185: [Mr. Ninja, Mint]
-    203: [Baozi Cat, Big Baozi]
-    210: [Li'l Cat, Li'l Macho Cat, Li'l Mohawk Cat]
-    211: [Li'l Tank Cat, Li'l Wall Cat, Li'l Eraser Cat]
-    212: [Li'l Axe Cat, Li'l Brave Cat, Li'l Dark Cat]
-    214: [Catburger, Cat Royale, Value Meal Cat]
-    246: [Li'l Gross Cat, Li'l Sexy Legs Cat, Li'l Macho Legs Cat]
-    247: [Li'l Cow Cat, Li'l Giraffe Cat, Li'l Lion Cat]
-    248: [Li'l Bird Cat, Li'l UFO Cat, Li'l Flying Cat]
-    249: [Undead Cat, Bake-Nyanko]
-    269: [Red Riding Mina, Crimson Mina, Awakened Mina]
-    279: [Tanky, Tanky 'n' Cat]
-    280: [White Cat, Gross White Cat]
-    281: [Fortressy, Castley]
-    312: [Li'l Fish Cat, Li'l Whale Cat, Li'l Island Cat]
-    313: [Li'l Lizard Cat, Li'l Dragon Cat, Li'l King Dragon Cat]
-    314: [Li'l Titan Cat, Li'l Mythical Titan, Li'l Jamiera Cat]
-    318: [CPAC, PPAP]
-    324: [Miyamoku Musashi, Legendary Musashi, Awakened Musashi]
-    329: [Happy 100, Heartful Happy 100]
-    353: [Hermit Cat, Grandmaster Cat]
-    376: [Coin Cat, Macho Coin Cat]
-    382: [Farmer Cat, Harvest Cat]
-    384: [Masked Yulala, Mystic Yulala]
-    385: [Satori Hikami & Cat, Satori Hikami & Cat CC]
-    401: [Imoto, Imoto CC]
-    404: [Gendo & Fuyutsuki Cats, Moon Gendo & Fuyutsuki Cats]
-    406: [Kaworu & Cat, Plug Suit Kaworu, Moon Kaworu]
-    419: [Crazed Moneko, Corrupted Moneko]
-    427: [Mecha-Bun, Mecha-Bun Mk II, Ultimate Mecha-Bun]
-    434: [Nekokkuma, Killer Nekokkuma]
-    438: [Cat God the Great, Cat God the Awesome]
+    10:
+      name: [Actress Cat, Mother Cat, Beefcake Cat]
+      desc: [Maintains a high level of professionalism. Works very well with Sexy Legs Cat. Exceptional Area Attack power and range., Her love is limitless! Works very well with Sexy Legs Cat. Exceptional Area Attack power and range., 'Dominated the bareknuckle boxing circuit with long distance Area Attacks. Paired with legs that float like a butterfly, really stings like a bee!']
+    11:
+      name: [Kung Fu Cat, Drunken Master Cat, Dancer Cat]
+      desc: [Mid-range attack specialist. (Area Attack) Can fight off multiple enemies at once., 'Adopted Drunken Fist style ? … or just on a bender? (Area Attack)', A legendary dancer who infuses his strikes with fiery passion. So shy that he mastered walking backwards to avoid eye contact. (Area)]
+    12:
+      name: [Mr., Super Mr., Hyper Mr.]
+      desc: ['Mr. is here from the popular "Mr." series. The series has trained his legs for speed, and he can shoot down all the enemies. (Area)', 'Mr. is here from the popular "Mr." series. The series has trained his legs for speed, and now he has a bazooka. BAM. (Area)', 'Mr. from the world-famous "Mr." games! He surges towards enemies, beating them down with a homemade boxing-glove gun. (Area)']
+    13:
+      name: [Bondage Cat, Bondage CatNEO, Ultimate Bondage Cat]
+      desc: [Has extremely high stamina. Will happily take a beating from anyone. Strong against Red enemies., Wants more pain. Will happily take a beating from anyone. Strong against Red enemies., 'Offers himself up as a shield to achieve transcendant pleasure(?). Strong against Red, might survive a lethal attack.']
+    14:
+      name: [Dom Cat, Executioner, Dark Lazer]
+      desc: [A very caring office worker during the day. Bondage Cat is her after hours regular. A quick attacker and strong against red enemies., 'Might not be a Cat, loves violence. A quick attacker and strong against red enemies.', 'Ruthlessly striking down enemies with a flourescent bulb, this Dark Lord''s quick attacks are more than a match for any Red or Black.']
+    15:
+      name: [Cats in a Box, Cat Gang, Heavy Assault C.A.T.]
+      desc: [These poor guys have been abandoned. They are now fending for themselves with GREAT JUSTICE and speed (Area Attack), The hard life turned them towards the wild side. We should avoid them now. Who knows what they'll do (Area Attack), An elite unit who keep the peace by rushing at the enemies of society. Might weaken Black enemy attacks (Area Attack)]
+    16:
+      name: [Panties Cat, Leaf Cat, Lollycat]
+      desc: [The cold weather is nothing against the warm woolen material. Advanced variation of Sexy Legs Cat, Has the only important point covered. Not sure if it offers any protection. Advanced variation of Sexy Legs Cat, 'Used to be ashamed to go into battle exposed, but a kind cat came along and lent a hand… err… lollipop. Gained Area attacks!']
+    17:
+      name: [Moneko, Miss MONEKO]
+      desc: ['Hoping to become an idol. She sings on the streets everyday. You might see her around, please say hi.', 'Thanks to everyone, she made it to stardom! Now she''s everyone''s favorite star! Please support her! The future is still bright!']
+    18:
+      name: [Tricycle Cat, Biker Cat, Unicycle Cat]
+      desc: [The coolest Cat on the block. (Area Attack) Can't ride a real bike - parents said no., Born to be wild! (Area Attack) Moved out and finally got his motorcycle!, 'Was forced to scale down the number of wheels thanks to a recession, but still stays positive. Attacks groups of enemies (Area attack)']
+    19:
+      name: [Ninja Cat, Ninja Frog Cat, Flying Ninja Cat]
+      desc: ['One of the strongest fighters. Rivals with Axe Cat. 10 wins, 1 loss. Strong against Red enemies.', Learned how to summon animals. Rides a frog for better mobility. Strong against Red enemies., 'Dances across the sky, assaulting enemies using advanced ninjutsu. Cheap to produce, very strong against Red enemies!']
+    20:
+      name: [Zombie Cat, Devil Cat, Skelecat]
+      desc: [Studies at a certain film academy. Majors in special effects and makeup. Strong against Red enemies., Got an A in his makeup class with this. Argues that he does better than Fish Cat. Strong against Red enemies., 'Even a rusty nail can''t stop the love in his heart from beating. More versatile than Fish Cat: strong against Red/Zombies, with area attacks.']
+    21:
+      name: [Samurai Cat, Knight Cat, Pastry Cat]
+      desc: [Sincerity is the way of the warrior. Exceptional health and attack. A very well-rounded Cat., Added chivalry to his repertoire. Exceptional health and attack. A very well-rounded Cat., 'Who says you can''t love both cupcakes and carnage? A kitchen pro who flings powerful gobs of whipped cream to slow enemies.']
+    22:
+      name: [Sumo Cat, Madame Sumo, Riceball Cat]
+      desc: [Tank Cat didn't listen when they said that size doesn’t matter. Now with somewhat stronger attack (Area Attack), Found his calling feeding other Sumo Cats. Make sure you finish your food… or else. Has a somewhat stronger attack (Area Attack), 'Defense AND nutrition in a convenient hand-sized package. More durable than Tank Cat, with quickness from intense training (Area Attack)']
+    23:
+      name: [Boogie Cat, Samba Cat, Gato Amigo]
+      desc: [No one can stop the beats! Cheap to produce. Comes with bonus groove. It's boogie time! Go! Go! Cat!, Beats have brought this one to eleven! Cheap and fast to produce. Everybody dance! Dance til you drop! Sammmbaaaaa!!111one, 'Out to bring joy to the senoritas of the world. He''s never been to Mexico, he''s just a Mariachi nerd. Can send enemies flying!']
+    24:
+      name: [Skirt Cat, Tights Cat, Loincloth Cat]
+      desc: [Found a nicely fitting skirt at a boutique. Likes to wear it out… all the time. Advanced variation of Sexy Legs Cat, 'Looking for some variety, stumbled across a garter belt at the dollar store. Advanced variation of Sexy Legs Cat', 'Chose traditional undies to better show off shapely legs, and started a viral fashion trend. Rapid attacks with chance to break Barriers!']
+    25:
+      name: [Valkyrie Cat, True Valkyrie Cat, Holy Valkyrie Cat]
+      desc: [Descended from the fields of Valhalla to provide salvation for the Battle Cats! Uses the Heavenly Spear Meownir (Area Attack), Changed to her final form. Troubled because God keeps hitting on her. Uses the Heavenly Spear Meownir (Area Attack), 'The curse is broken, and the savior of Catkind has returned! The restored Meownir pierces foes, freezing them in their tracks. (Area Attack)']
+    26:
+      name: [Bahamut Cat, Crazed Bahamut Cat, Awakened Bahamut Cat]
+      desc: [An ancient Cat weapon that was rumored to have caused the first apocalypse. Has unearthly offensive power (Area Attack), Turns out the first apocalypse was actually caused by this one. You can see why… Has unearthly offensive power (Area Attack), 'They say the power to obliterate Earth is already his. Freed of the suit which shackled his power, his power and speed is unmatched (Area Attack)']
+    27:
+      name: [Kerihime, Full color Kerihime]
+      desc: ['Joined the war especially in order to seek "sweets". Her ultimate attack is unleashing her ferocious dash! Does joining the war stop her pursuit of hot guys?', Joined the war especially in order to seek "sweets". She turned from a tomboy into a sexy princess. Her ultimate attack is unleashing her ferocious dash!]
+    28:
+      name: [Cat Princess, Cat Princess beauty]
+      desc: [A cat who travels the world in order to seek true beauty. He admired a princess he has met in the middle of the journey and bought an item in a wig shop., A cat who travels the world in order to seek true beauty. He admired a princess he has met in the middle of the journey and spent an entire fortune on plastic surgery.]
+    29:
+      name: [Capsule Cat, Cramped Cats]
+      desc: ['An experimental weapon: one speedy Cat, protected by state-of-the-art gashapon plastic. Packs a punch, but definitely can''t take one.', 'Capsule Cat felt lonely and posted an ad for roommates. Overestimated the space in his flat. It''s always cuddle time, whether they like it or not!']
+    30:
+      name: [Masked Cat, Luchador Cat]
+      desc: [Wears the mask which he borrowed without permission from the adventurer Gamatoto who found the mask. His only capability is wearing the mask though., 'Finally became a wrestler. Due to his class change, his talents have increased considerably. (Area)']
+    46:
+      name: [Maiko Cat, Geisha Cat]
+      desc: ['A sweet rookie entertainer, allergic to green tea, better at keytar than shamisen.', Years of life in the floating world made her a cool cynic. Her distant attitude befits her long-distance attacking power.]
+    63:
+      name: [Capsule Cat, Vendor Cat]
+      desc: ['Plastic capsule toy machine. A Cat that got into a tank (Area attack). Shielded, so a bit more sturdy than Tank Cat.', 'Plastic capsule toy machine. Longer Cat that got into a tank (Area attack). Shielded, so a bit more sturdy than Tank Cat.']
+    83:
+      name: [Blue Shinobi, Orange Shinobi]
+      desc: ['Studied ninjutsu with manga. Stronger than Axe Cat - YES! Wanna fight, Red Enemies?', 'Deepened studies with anime. Stronger than Axe Cat - YES! Wanna fight, Red Enemies?']
+    109:
+      name: [Cat Bros, Secret Base]
+      desc: ['Living happily in a plastic bubble. No need for the outside world!!! (Don''t make them a role model, kids…)', 'A homemade fortress as resilient as the $0.75 budget allows. Tough against various attacks, except moisture… a bit weak against that.']
+    124:
+      name: [Bean Cats, Brah Cats]
+      desc: [Said to also have the "MeowMeow" alias. Always play nice with each other. Might knockback Red enemies., Earned the nickname "Sweater Brahs" when they traded their beanpod for fine French silk. Might knockback Red enemies.]
+    128:
+      name: [Flower Cat, Cooldown Cat, Bombercat]
+      desc: [Fascinated by pretty petals. Never forgets to water every day. Might stop Black enemies., Hogs the fan after getting out of a hot bath. Attack style shows his aggressive selfishness. Might stop Black enemies., 'Daily stress can cause you to want to explode, whether or not your job is carting cartoon bombs all day. Area attacks 100% freeze Black enemies.']
+    131:
+      name: [Ururun Wolf, Ururun Cat, Awakened Ururun]
+      desc: [I swear allegiance to those who defeated me! No one asked. Joined the Cat Army anyway. Might knockback enemies. (Area attack), A delusional young girl who finally got hold of a Cat-like creature. Dad's a school teacher. Might knockback enemies. (Area attack), Now feeling the stirrings of a first crush. It's not like she's doing it for you! B-baka! Might knockback enemies. (Area attack)]
+    141:
+      name: [Squish Ball Cat, Muscleman Cat]
+      desc: [Got hooked on new capsule material somehow managed to transform itself into something similar (Area Attack), See the truth inside. Macho Cat's trainer. Everyone is facsinated by its rippling triceps. Distant relative of the Titan Cat. (Area attack)]
+    142:
+      name: [God, Secret God]
+      desc: ['A deity who transcends time and space. The paradox has made it appear as a child despite its adult needs. ... Is it really him?', A deity who transcends time and space. With this body he's confident he can finally win the heart of the gorgeous Valkyrie.]
+    173:
+      name: [Li'l Nyandam, Dark Emperor Catdam, Schoolbus Nyandam]
+      desc: ['A quantum blip transformed Nyandam into a toddler with a super old face. Creeps everyone out, for real. Sometimes slows enemies (Area Attack)', 'Since rescuing a kitten from the drain of the school pool, it follows him to school each day. Sometimes slows enemies (Area Attack)', His nature won out and now he rules the kindergarten with an iron fist. ALL WILL KNEEL. Sometimes slows enemies (Area Attack)]
+    176:
+      name: [Meowla Meowla, Catorpedo]
+      desc: [A cat trained by Molas for marine combat. Still kinda wishes he became a meteorologist. Resistant to Red enemy attacks. (Area Atk), Evolved arms instead of legs… weird. Hates being stepped all over. Stop it!!! Resistant to Red enemy attacks. (Area Atk)]
+    185:
+      name: [Mr. Ninja, Mint]
+      desc: [Mr. Ninja!!Fever joins the fight! Leaps gracefully from planet to planet dicing up aliens. Massive damage to Alien enemies (Area Attack), A kunoichi from "Mr. Ninja!!Fever"! As bright and beautiful as her peerless swordplay. Massive damage to Alien enemies (Area Attack)]
+    203:
+      name: [Baozi Cat, Big Baozi]
+      desc: ['Celebrating The Battle Cats'' Taiwan version, this Cat got too excited and steamed itself in a basket. Is that meat inside, or PURE PASSION?!', 'Celebrating The Battle Cats'' Taiwan version, grew bigger to satisfy more hungry people. There''s no basis to rumors he''s got pizza filling inside.']
+    210:
+      name: [Li'l Cat, Li'l Macho Cat, Li'l Mohawk Cat]
+      desc: [A tiny guy with dreams of becoming that Cat famous for cost-efficiency., A tiny guy with dreams of becoming that Cat famous for glorious glistening biceps., A tiny guy with dreams of becoming that Cat famous for a totally sweet hairdo. Trimmed down for best cost performance.]
+    211:
+      name: [Li'l Tank Cat, Li'l Wall Cat, Li'l Eraser Cat]
+      desc: [A tiny guy with dreams of becoming that Cat strong enough to move a pebble. Tough. High health. (Area Attack), A tiny guy with dreams of becoming that Cat strong enough to move a small rock. Rigid defense. Now with corners (Area Attack), A tiny guy with dreams of becoming that Cat famous for Really Good™ Defense. Same attack power as always. (Area Attack)]
+    212:
+      name: [Li'l Axe Cat, Li'l Brave Cat, Li'l Dark Cat]
+      desc: [A tiny guy with dreams of becoming that combat maniac who's strong against Red., A tiny guy with dreams of becoming that hero wannabe who's strong against Red., A tiny guy with dreams of becoming that decent dark knight wannabe Cat. Mighty power against Angels.]
+    214:
+      name: [Catburger, Cat Royale, Value Meal Cat]
+      desc: ['A quarter pound of A-grade aggression! Perfect for a quick lunch or guerilla assaults. 100% beef! You didn''t think...?', 'Piled high with lettuce, cheese and fighting spirit! The deluxe set for those with true hunger for battle. Eat in moderation, and remember to exercise!', 'Celebrate 3 years of The Battle Cats! Time to feed your enemies 1000 KCal of hurt! Your choice of sides: fries... or fries... or fries.']
+    246:
+      name: [Li'l Gross Cat, Li'l Sexy Legs Cat, Li'l Macho Legs Cat]
+      desc: [A tiny guy with dreams of becoming that Cat with exceptional attack power and range., A tiny guy with dreams of becoming that Cat with overly beautiful legs., A tiny guy with dreams of becoming that Cat who mastered the Art of Leg. Might knockback Aliens and break Barriers.]
+    247:
+      name: [Li'l Cow Cat, Li'l Giraffe Cat, Li'l Lion Cat]
+      desc: [A tiny guy with dreams of becoming that Cat who thinks quick and uses his head!, A tiny guy with dreams of becoming that Cat who headbangs only to Rock'n'Roll!, A tiny guy with dreams of becoming that Cat who uses his mane to clean the house. Immune to wave damage.]
+    248:
+      name: [Li'l Bird Cat, Li'l UFO Cat, Li'l Flying Cat]
+      desc: [A tiny guy with dreams of becoming that Cat with the health of a pea and exceptional attack power (Area Atk.), A tiny guy with dreams of becoming that Cat who overcame gravity and is good against multiple enemies (Area Atk.), A tiny guy with dreams of becoming that Cat who destroyed a city with light once. Strong against Zombies (Area Atk.)]
+    249:
+      name: [Undead Cat, Bake-Nyanko]
+      desc: ['A cameo from GirlsMons! Hit by a car, but still gets by! Might slow down Zombie movement!', A cameo from GirlsMons! A ghostly Cat obsessed with the mortal realm. Might slow down Zombie movement.]
+    269:
+      name: [Red Riding Mina, Crimson Mina, Awakened Mina]
+      desc: ['Teacher Bear said "Girls are most cute with a Cat in hand!" So now she changed allegience. Her Bazooka broke, though… (Long distance)', 'Mina actually is more popular since she joined the Cats! Not quite to Valkyrie''s level, though. Bazooka still isn''t fixed… (Long distance)', A sweet killer who defends the cute creatures of the woods. Don't touch her babies or you're dead. Might weaken Relics with Long Range Area Attacks.]
+    279:
+      name: [Tanky, Tanky 'n' Cat]
+      desc: ['Thought about adding a harvester, but decided a tank was cooler. Great for long-distance combat.', A rowdy Cat took over the controls while no one was looking. Great for long-distance combat.]
+    280:
+      name: [White Cat, Gross White Cat]
+      desc: ['Loves long baths in miso soup, always barely escaping when served. Master of powerful single strikes.', A new brand of Cat Food caused some strange new growth patterns. Master of powerful single strikes.]
+    281:
+      name: [Fortressy, Castley]
+      desc: [A mobile fortress able to defend against attacks from any direction. Tough unit able to withstand siege., The fortress has been redesigned for extra appeal to the Internet. Tough unit able to withstand siege.]
+    312:
+      name: [Li'l Fish Cat, Li'l Whale Cat, Li'l Island Cat]
+      desc: [A tiny guy with dreams of becoming that Cat with exceptional melee capability. Strong against Red enemies., A tiny guy with dreams of becoming that Cat that managed to become a carnivorous whale. Strong against Red enemies., 'A tiny guy with dreams of becoming that Cat who can perfect his form while on vacation. Strong against Red enemies, might critical.']
+    313:
+      name: [Li'l Lizard Cat, Li'l Dragon Cat, Li'l King Dragon Cat]
+      desc: [A tiny guy with dreams of becoming that Cat able to attack enemies from a distance. Powerful single shot long range attack., A tiny guy with dreams of becoming that Cat that arrived here from a fantasy world. Powerful single shot long range attack., A tiny guy with dreams of becoming that Cat that makes it in the Dragon Elite. Powerful single shot long range attack.]
+    314:
+      name: [Li'l Titan Cat, Li'l Mythical Titan, Li'l Jamiera Cat]
+      desc: [A tiny guy with dreams of becoming that Cat blessed with extreme attack power and ridiculous amounts of health (Area Attack), 'A tiny guy with dreams of becoming that Lord of Destruction (?) (Area Attack) Extreme attack power and health.', 'A tiny guy with dreams of becoming that Lord of destruction with the stretched shirt. Extreme area attack, might knockback.']
+    318:
+      name: [CPAC, PPAP]
+      desc: [CPAC = "Cat-Pineapple-Apple-Cat" Just a couple of Cat bros dropping in from a YouTube video campaign!, PPAP = "Pen-Pineapple-Apple-Pen" A couple of trendy YouTuber Cats joining in on the party! Thanks!, PPAP = "Pen-Pineapple-Apple-Pen" A couple of trendy YouTuber Cats joining in on the party! Thanks!]
+    324:
+      name: [Miyamoku Musashi, Legendary Musashi, Awakened Musashi]
+      desc: ['Appearing in a cursed play, a handsome actor became possessed by ghostly samurai Cat. Unharmed by wave attacks. (Area Attack)', Powerful psychic energy overexposes any film near him; his movie career is officially over. Unharmed by wave attacks. (Area Attack), 'Made his big break as a cop with a ghost partner on the hit drama Karma Police (produced by Cat). Unharmed by wave attacks, might Freeze Relics.']
+    329:
+      name: [Happy 100, Heartful Happy 100]
+      desc: ['A chipper and bright computer virus, appearing as a guest from Crash Fever. Attacks have Area effect.', Her dream is to infect the world's systems with joy. Appearing as a guest from Crash Fever. Attacks have Area effect., Her dream is to infect the world's systems with joy. Appearing as a guest from Crash Fever. Attacks have Area effect.]
+    353:
+      name: [Hermit Cat, Grandmaster Cat]
+      desc: ['A legendary sage who infiltrated the Cat Base. Memory might be going, but true strength cannot be forgotten. Rapid area attacks fire powerful waves.', Captured an enemy base with nothing but one sweet rice cake. Imagine what happens when he gets angry. Rapid area attacks fire powerful waves.]
+    376:
+      name: [Coin Cat, Macho Coin Cat]
+      desc: [An invaluable collectors item! Only 9 billion were produced!, A memorial item imbued with Cat gratitude. Every third Coin Cat earns you... another Coin Cat.]
+    382:
+      name: [Farmer Cat, Harvest Cat]
+      desc: [A humble cat who grows tasty things to make others happy. Selected for the Cat Army from many others. Collects extra money when defeating enemies., Heard that the turnip market was booming. Time to profit off her crops! A respected Cat Army veteran. Collects extra money when defeating enemies.]
+    384:
+      name: [Masked Yulala, Mystic Yulala]
+      desc: ['Joined the Cat Army, saying "The law of my clan is to serve the strongest of warriors!" Cool story, bro. Powerful long-range area attacks!', Remade his holy mask in the image of his new Cat Army comrades. It really embarrasses his 12-year old daughter. Long-range area attacks.]
+    385:
+      name: [Satori Hikami & Cat, Satori Hikami & Cat CC]
+      desc: ['Dropping in from PowerPro Baseball! This manager plays it cool, but actually has a heart of gold. Chance to knockback Red enemies.', Dropping in from PowerPro Baseball! An aikido blackbelt with catlike reflexes. Chance to knockback Red enemies.]
+    401:
+      name: [Imoto, Imoto CC]
+      desc: [Dropping in from MENTORI! Mentori's sharp- tongued kid sis is never not macho! Chance of Critical attacks., Dropping in from MENTORI! Just at that age when it's all sarcasm all the time. Chance of Critical attacks.]
+    404:
+      name: [Gendo & Fuyutsuki Cats, Moon Gendo & Fuyutsuki Cats]
+      desc: [Leader and deputy commander of NERV. Out to complete their goal by any means. (Area Attack), On the moon for the final stage of their plan. They trust each other fully. (Area Attack)]
+    406:
+      name: [Kaworu & Cat, Plug Suit Kaworu, Moon Kaworu]
+      desc: [Recruited from Evangelion! A strange boy with a mysterious smirk. Massive damage to Black enemies., Recruited from Evangelion! Thought by others to be an Eva pilot. Massive damage to Black enemies., Recruited from Evangelion! Seems to have known Shinji for a long while. Massive area damage to Black.]
+    419:
+      name: [Crazed Moneko, Corrupted Moneko]
+      desc: [Everyone's favorite girl-next door popstar finally snapped under the stress of stardom. Even an evil idol has nothing but love for her fans., Global superstar who uses her charisma to whip her adoring audiences into a crazed fury. Her thankful bow delivers big critical damage!]
+    427:
+      name: [Mecha-Bun, Mecha-Bun Mk II, Ultimate Mecha-Bun]
+      desc: ['An ancient superweapon rented out from a mysterious lab. Cat only has a learner''s permit, so its true power is not yet realized (Area Attack)', Made some improvements without permission... Replacing the vintage armor with titanium definitely violates the rental agreement. (Area Atk), 'Even after the fine, Cat couldn''t resist more custom work. Now features experimental tech based on ancient prototype schematics (Area Attack)']
+    434:
+      name: [Nekokkuma, Killer Nekokkuma]
+      desc: ['Inspired by a weirdly cute white bear, has mastered those slick moves. Might knockback Black enemies.', 'Embracing its savage instincts, it rains rapid-fire blows on its enemy. Might knockback Black enemies.']
+    438:
+      name: [Cat God the Great, Cat God the Awesome]
+      desc: ['At long last, Cat God has joined the fight! His holy sneeze knocks back all but Metal enemies, and his Omni-strikes are pretty cool too.', 'Shining with glorious purpose and divine charisma. His holy sneeze knocks back all but Metal enemies, and his Omni-strikes are pretty cool too.']
   2:
-    38: [Pogo Cat, Masai Cat, Jiangshi Cat]
-    39: [Wheel Cat, Solar Cat, Chill Cat]
-    42: [Salon Cat, Paris Cat, Cyborg Cat]
-    47: [Jurassic Cat, Jurassic Cat Sitter, Catasaurus]
-    48: [Viking Cat, Thor Cat, Maximum the Fighter]
-    49: [Pirate Cat, Captain Cat, Dread Pirate Catley]
-    50: [Thief Cat, Phantom Thief Cat, Goemon Cat]
-    51: [Bishop Cat, Monk Cat, Sanzo Cat]
-    52: [Fortune Teller Cat, Fisherman Cat, Doctor Cat]
-    53: [Shaman Cat, Necromancer Cat, Necro-Dancer Cat]
-    56: [Witch Cat, Sorceress Cat, Enchantress Cat]
-    57: [Archer Cat, Cupid Cat, Cataur]
-    59: [Swordsman Cat, Sword Master Cat, Elemental Duelist Cat]
-    61: [Bronze Cat, Michelangelo Cat, Quizmaster Cat]
-    64: [Sports Day Cat, Kidnapper Cats, Rampage Cats]
-    71: [Salaryman Cat, Grudge Cat, Ritual Cat]
-    75: [Reindeer Fish Cat, Sashimi Cat, Xmas Pudding Cat]
-    78: [Droid Cat, Droid Cat Mk 2, SpringDroid]
-    79: [Space Cat, Major Space Cat, Space Marine Cat]
-    80: [Adult Cat, Sick Cat, Prisoner Cat]
-    81: [Evil Cat, Gentleman Cat, Gentleman Bros.]
-    82: [Doll Cats, Cat-o-tron, Nyalladin]
-    89: [Rope Jump Cat, Pair Rope Jump Cat]
-    101: [Maiden Cat, Sportsgirl Cat, Wrestling Cat]
-    105: [Koi Cat, Gross Koi Cat, Kiss and Koi]
-    110: [Madam Bride, Madam King, Madam the Savannah]
-    123: [Vacation Queen, Office Lady Cat, Call Center Cat]
-    127: [Clockwork Cat, Puppetmaster Cat]
-    129: [Vengeful Cat, Groucho Cat, Kite Cat]
-    133: [Kung Fu Cat X, Drunken Master Cat X, Iron Claw X]
-    146: [Cat Gunslinger, Cat Eastwood, Rodeo Cat]
-    147: [Stilts Cat, Totem Cat, Acrobat Cats]
-    148: [Tin Cat, Plane Cat, Robocat]
-    149: [Rocker Cat, Artist Cat, Ramen Cat]
-    150: [Mer-Cat, Commando Cat, Cameraman Cat]
-    155: [Hoop Cat, Showoff Cat]
-    177: [Marshmallow Cat, Creepmallow]
-    184: [Cat Kart R, Cat Kart G, Cat Kart P]
-    198: [Psychocat, Neo Psychocat, Corrupted Psychocat]
-    199: [Onmyoji Cat, Magica Cat, Thaumaturge Cat]
-    202: [Drumcorps Cat, Banner Cat]
-    215: [HYAKUTARO, HYAKUTARO CC]
-    216: [MARCO, MARCO CC]
-    217: [TARMA, TARMA CC]
-    218: [ERI, ERI CC]
-    219: [FIO, FIO CC]
-    222: [MARS PEOPLE, MARS PEOPLE CC]
-    228: [Pumpcat, Cat O'Lantern]
-    245: [A Gift of Cats, Cat's Gift]
-    278: [Funghi, Funghi 'n' Cat]
-    283: [Awa-Odori Cat, So-Ran Cat]
-    304: [Food Stall Cat, Delivery Cat]
-    309: [Gardener Cat, Lumbercat, Weedwacker Cat]
-    316: [PIKOTARO, NEKOTARO]
-    320: [Killer Cat, True Killer Cat]
-    325: [Curling Cat, Zamboney Cat]
-    326: [Welterweight Cat, Heavyweight Cat]
-    330: [Eggy Cat, Easter Cat]
-    344: [Slug Jockey Cat, Slugcat]
-    377: [Rover Cat, Rover Cat Mk II]
-    380: [Volley Cat, Ballet Cat]
-    383: [Glass Cat, Macho Glass Cat]
-    386: [Akio Yabe, Akio Yabe CC, Akio & Gunder CC]
-    387: [Sairi Nijitani, Sairi Nijitani CC]
-    388: [Misaki Konno, Misaki Konno CC]
-    389: [Ren Katagiri, Ren Katagiri CC]
-    390: [Karin Nekozuka, Karin Nekozuka CC]
-    400: [Mentori, Mentori CC]
-    403: [Shinji & Cat, Plug Suit Shinji]
-    405: [Giraffe Unit-01, Giraffe Unit-02]
-    407: [Rei Cat, Ayanami Cat (TBC)]
-    408: [Asuka Cat, Apron Asuka]
-    409: [Mari Cat, Special Ops Mari]
-    420: [Pokota, Pokota CC]
-    421: [Ovis, Ovis CC]
-    422: [Coco, Coco CC]
-    433: [Betakkuma, Black Betakkuma]
+    38:
+      name: [Pogo Cat, Masai Cat, Jiangshi Cat]
+      desc: ['Sucked in to the recent (?) trend of toys. Still, looks pretty fun. Cheap to produce, might survive being broken.', 'Volunteered overseas and experienced cultural exchange. Took home a costume. Cheap to produce, might survive lethal strikes.', 'Horror movie maniac, or real g-g-ghost? Mystic seal is just this month''s gas bill… Cheap to produce, 100% survives once!']
+    39:
+      name: [Wheel Cat, Solar Cat, Chill Cat]
+      desc: [Got tired of changing wheels of vehicles so became one instead. Spins so fast it burns. Massive damage against Aliens (Area Attack), Got tired of moving around so decided to become a galaxy instead. Massive damage against Aliens (Area Attack), An evolved Cat who is always calm and collected at the office. Massive area damage to Aliens.]
+    42:
+      name: [Salon Cat, Paris Cat, Cyborg Cat]
+      desc: [Has no limit when it comes to beauty care. Works very well with Sexy Legs Cat. Exceptional Range Attack (Area Attack), 'A very stylish cat that earned the name Jeanne. Might be French, not sure. Exceptional Range Attack (Area Attack)', The ultimate bionic battle angel. Perfect both aesthetically and technically. Long distance Area Attack specialist.]
+    47:
+      name: [Jurassic Cat, Jurassic Cat Sitter, Catasaurus]
+      desc: [Descendant of an Ancient Cat Race that existed during the Jurassic Age. Might perform Critical attacks, Descendant of an Ancient Cat Race that takes care of the young during the Jurassic Era. Might perform Critical attacks, Discovered a cute dinosaur in a magical land of fungi. Features extra seating for the kids! Might perform Critical attacks.]
+    48:
+      name: [Viking Cat, Thor Cat, Maximum the Fighter]
+      desc: [A combat-class Cat that has read too many fantasy novels. Strong against Red enemies., 'Having found the internet, this Cat had its armour and weapon order made. Strong against Red enemies.', Turns out his "order made" armor is a knockoff brand. Even the cheap stuff is still enough to hit Red for massive Area dmg.]
+    49:
+      name: [Pirate Cat, Captain Cat, Dread Pirate Catley]
+      desc: ['Influenced by a certain pirate cartoon, and dreams of being a Pirate King. Can''t swim. Might knockback Red enemies.', Still thinks Pirates are cool. Still can't swim. Doesn't get along with Ninja Cat anymore. Might knockback Red enemies., Just learned that there are movies about pirates too! Inspired him to upgrade his boat. Might knockback Red enemies.]
+    50:
+      name: [Thief Cat, Phantom Thief Cat, Goemon Cat]
+      desc: [Moves fast. Steals faster. More money earned when defeating an enemy., Moves too fast. Still steals the same. Has a large treasure collection now. More money earned when defeating an enemy., 'Bandit of legend, last seen in old Japan fighting against the shogun''s tyranny. Slips extra money out of enemy pockets with area attacks.']
+    51:
+      name: [Bishop Cat, Monk Cat, Sanzo Cat]
+      desc: [A merciful Cat that brings peace and love to all of its followers. Charges for confessions. Might slow Floating enemies., Envelopes the enemies in gracious serenity to allow them to move to the afterlife Might slow Floating enemies., 'On a journey to save souls through enlightenment. Mostly just beats up the local wildlife, though. Might slow Floating enemies (Area Attack)']
+    52:
+      name: [Fortune Teller Cat, Fisherman Cat, Doctor Cat]
+      desc: [A Cat that loves the idea of fortune telling. Has read one too many astrology books. Might knockback Floating enemies., Eldest son of a prominent Tuna fisherman. Gets seasick. Might knockback Floating enemies., 'His medical philosophy is "Hair of the Dog". If it doesn''t kill ya, it must be working, right?! Might knockback Floating enemies.']
+    53:
+      name: [Shaman Cat, Necromancer Cat, Necro-Dancer Cat]
+      desc: [Able to communicate with the supernatural. … is what it says on the Wiki. Might freeze Floating enemies., Turns out it was the supernatural that was controlling this Cat in the end. Might freeze Floating enemies., 'His bewitching dance is fueled by dark powers. Can you resist his devilish groove? Might freeze Floating enemies for longer.']
+    56:
+      name: [Witch Cat, Sorceress Cat, Enchantress Cat]
+      desc: [A Magical Cat that would rather be a Magical Girl than a Witch. Might slow Red enemies., Obtained magic skills from online courses. Really popular at parties but doesn't get paid. Might slow Red enemies., Used her clairvoyant powers to scry the best way to make it big on TV. Her star power might slow Red enemy movement.]
+    57:
+      name: [Archer Cat, Cupid Cat, Cataur]
+      desc: [Elite ranged Cat that can provide useful supporting fire. Bruises like a Tomato. Deals massive damage to Floating enemies., Rains arrows of love upon unsuspecting foes. Does not like to get hurt. Deals massive damage to Floating enemies., 'Once a glittering constellation, this demigod hides from heaven, firing powerful arrows at Floating enemies for massive damage.']
+    59:
+      name: [Swordsman Cat, Sword Master Cat, Elemental Duelist Cat]
+      desc: [Trained in a certain game to become a magic swordsman. Very effective Battle Cat. Fire sword does massive damage to Red enemies., Mastered the art of dual wielding. Also can use magic. Scary combination. Flame swords do massive damage to Red enemies., So in tune with his blades that he can now command the forces of nature themselves. Flames do massive damage to Red enemies.]
+    61:
+      name: [Bronze Cat, Michelangelo Cat, Quizmaster Cat]
+      desc: [A good defensive cat with ridiculous health and very decent offensive ability. Might knockback Metal enemies (Area Attack), Sucked into the world of art and mastered everything about sculpting Might knockback Metal enemies (Area Attack), 'Has the longest winning streak on a popular quiz show, although the questions are pretty easy. Might knockback Metal enemies (Area Attack)']
+    64:
+      name: [Sports Day Cat, Kidnapper Cats, Rampage Cats]
+      desc: ['The power of three Cats, and one Tank Cat. These cats love Sports Day and always strive for the top team (Area Attack)', 'The power of three Cats, and one Tank Cat. Though an effective team, the Tank Cat is the victim, apparently. (Area Attack)', 'No one wanted to pay the ransom, so they just made the Tank into a banner of victory. Morally ambiguous efficiency! (Area Atk)']
+    71:
+      name: [Salaryman Cat, Grudge Cat, Ritual Cat]
+      desc: [Let's not forget those who work hard everyday. These people pay Worker Cat's salary. Its last resort is an magnificent DoGeZa. Strong vs. Red, A Salaryman Cat who couldn't take the abuse from his boss and resorted to Anti-Red occultism. Curse them all! (Area Attack), 'This world is too brutal and unfair to tolerate! Primitive rage has overtaken him. Why flame on social media when you can flame IRL? (Area Atk)']
+    75:
+      name: [Reindeer Fish Cat, Sashimi Cat, Xmas Pudding Cat]
+      desc: [The Cats tried making the Fish Cat cuter. This one carries the gifts you dream of. More money earned when defeating an enemy., The Cats tried making the Fish Cat look tastier. Earned stars in hospitality for its sacrifice. More money earned when defeating an enemy., This unit built for fighting has been re- engineered to delight sweet tooths. Area attacks get extra money after defeating.]
+    78:
+      name: [Droid Cat, Droid Cat Mk 2, SpringDroid]
+      desc: ['A strong defensive cat modeled after a phone. A phone… really? Dances better than Tank Cat. Resistant to Metal attacks (Area Attack)', The Cats managed to use magic marker. So now it's water resistant too. Resistant to Metal attacks (Area Attack), A durable shield character in stylish seasonal colors. Made of all-new material for improved Resistance to metal enemies. (Area Attack)]
+    79:
+      name: [Space Cat, Major Space Cat, Space Marine Cat]
+      desc: ['Coming out of his shuttle to attack. Low health, but can break Barriers! Might perform critical attacks.', 'Recently promoted from Lieutenant. Low health, but can break Barriers! Might perform critical attacks.', 'The ultimate in zero-gravity combat tech, deployed to preserve the glory of the Cat Empire! Breaks Barriers, might perform critical attacks.']
+    80:
+      name: [Adult Cat, Sick Cat, Prisoner Cat]
+      desc: [This Cat reached legal age and started to drink. Don't mind the ropes. Strong against Red enemies., This Cat drank a little too much. Everything in moderation! Strong against Red enemies., 'After the 20th wine cooler, he had to be tied up for his own good! Somehow gained long distance attacks, strong against Red!']
+    81:
+      name: [Evil Cat, Gentleman Cat, Gentleman Bros.]
+      desc: [Hides his weakness by wearing the the mask of the demon. Might stop Red enemies., A very well clothed cat. Until… Just call the police. Might stop Red enemies., A gentleman's agreement makes life easier for everyone. But whoever's on bottom has it worse. Might stop Red and break Barriers!]
+    82:
+      name: [Doll Cats, Cat-o-tron, Nyalladin]
+      desc: [Cats that have dressed up as dolls. Don't have much health but shoots laser beams to take down many foes (Area Attack), 'This young Cat controls the Cat Robot, Cat-o-tron, to fire laser beams (Area Attack) Unforunately, it''s not wireless yet.', 'Always owns the latest model carpet, can call on his turbaned friend to fire powerful wave attacks. (Area Attack)']
+    89:
+      name: [Rope Jump Cat, Pair Rope Jump Cat]
+      desc: ['In Japanese, it''s Nawatobi This Cat is cheap to produce, with added fun. Might perform critical attacks', 'Well, Rope jump is more fun with two people. Still cheap and effective, with twice more fun. Might perform critical attacks']
+    101:
+      name: [Maiden Cat, Sportsgirl Cat, Wrestling Cat]
+      desc: [Her punches are messages to convey the pure emotions in her heart. Strong against Red Enemies (Area Attack), 'Finished with matters of the heart, she turned to sports, now no one can stop her. Strong against Red Enemies (Area Attack)', She's dedicated her life to sport. Her unmatched physical power has earned her 22 gold medals in crushing Red enemies (Area Atk.)]
+    105:
+      name: [Koi Cat, Gross Koi Cat, Kiss and Koi]
+      desc: [Distant relative of Fish Cat. A good long distance attacker. Strong against Red enemies., Koi Cat and Gross Cat's distant cousin Still wondering if it is Gross or Koi. Strong against Red enemies., 'Love… is it passion, or illusion? All I know is that I love to swim. Strong against Red (Area Atk)']
+    110:
+      name: [Madam Bride, Madam King, Madam the Savannah]
+      desc: [Bringing back those lost memories. Acts as a shield using her great health. She can also do some damage (Area Attack), 'Now that she''s captured her dream man, her rulership over the home has become indisputable. High resistance & good damage. (Area Attack)', 'Not content to rule the home, she now dominates a vast wilderness of beasts. Authority shields her well, even allows her to avoid death once (Area Atk)']
+    123:
+      name: [Vacation Queen, Office Lady Cat, Call Center Cat]
+      desc: [A timid office worker and midrange attacker. Likes to break bad while on vacation! Fast attack and strong against Red enemies., 'Just like it says - a typical office worker. But what happens after work…? Fast attack speed, strong against Red enemies.', 'Takes abuse from customers and bosses all day. After she clocks out, the story is very different… Strong against Red enemies, might knockback.']
+    127:
+      name: [Clockwork Cat, Puppetmaster Cat]
+      desc: ['Rushes the enemy with mechanical haste. No idea how it is moving... any ideas? Might slow Metal enemies.', Uses technical mastery to assault enemies. Not a bad ventiloquist either. Might slow Metal enemies.]
+    129:
+      name: [Vengeful Cat, Groucho Cat, Kite Cat]
+      desc: [Ranged attacker filled with hate for this world. Works very well with Sexy Legs Cat. Crushes all with her vengeful fist! (Area Attack), Hate solves nothing. Laughter however… Lookout! Dad Jokes and Ranged Attacks! Combines well with anything tall. (Area Attack), Her mission is to bring more smiles to the world. Sexy Legs complains about getting smacked in the face though… (Long Distance Area Attacks)]
+    133:
+      name: [Kung Fu Cat X, Drunken Master Cat X, Iron Claw X]
+      desc: [A Cat who has devoted his life to perfecting the mighty midrange attacks of kung fu. Improved destructive power in a single strike., A legendary kung-fu master whose age doesn't weaken his drinking prowess. Improved destructive power in a single strike., 'Mystical martial mastery has been achieved after sacrificing years to training in Iron Claw style. Mighty, focused single-target attacks.']
+    146:
+      name: [Cat Gunslinger, Cat Eastwood, Rodeo Cat]
+      desc: ['Nameless legend of the Western frontier. Today, he''s out bringing bandits to justice. Sometimes slows Black enemies.', 'A wandering gunman of legend, wielding his pistol for justice! Italian is his first language. Sometimes slows Black enemies.', Retired from the desperado life and now in training to win the big bullriding competition. Sometimes slows Black enemies.]
+    147:
+      name: [Stilts Cat, Totem Cat, Acrobat Cats]
+      desc: [A cat so ambitious that he built wooden stilts to better reach for the stars. Knocks back Angels every once in a while., 'Couldn''t cut it by himself, so he gathered some pals to work together. Naturally, he''s on top. Knocks back Angels every once in a while.', Hopefully this pair's choice of cheap Swedish furniture won't bring their dreams crashing to the ground. Sometimes knocks Angels back.]
+    148:
+      name: [Tin Cat, Plane Cat, Robocat]
+      desc: [Cutting-edge firepower masked by the soulful nostalgia of yesteryear. Knocks back Black enemies once in a while., 'Dreaming of the skies, he allowed the Cat Army engineers to install top-class tech in his body. Knocks back Black enemies once in a while.', 'Captured by an evil organization and remade to be an unstoppable, merciless android who knocks back Black. (So cute, though!)']
+    149:
+      name: [Rocker Cat, Artist Cat, Ramen Cat]
+      desc: ['A peanut farmer''s son, became a rocker to avoid coming out about his nut allergies to his family. Resistant to Angelic attacks.', 'After album number 2 flopped, tried to get into fine art. Can only draw peanuts, so didn''t sell. Resistant to Angelic attacks.', 'Noodles might seem like a simple dish, but they need an artist''s touch to master. Flashy prep style also boosts defense vs Angels.']
+    150:
+      name: [Mer-Cat, Commando Cat, Cameraman Cat]
+      desc: ['A mermaid who came onshore to meet a prince. Survives on land by taking long breaths. Strong vs floating, might survive a lethal strike.', 'Hearing her prince got kidnapped by terrorists, Mer-Cat joined the Green Berets to save him. Strong vs floating, might survive a lethal strike.', 'Putting her life on the line to tell the truth of the Great Cat War. Journalistic integrity causes huge area dmg vs Floating, might survive once.']
+    155:
+      name: [Hoop Cat, Showoff Cat]
+      desc: ['Started getting a bit pudgy, so he took up hula hooping as exercise. Might freeze Metal enemies.', 'Started out hoping to preserve his figure, but his figure changed in an unexpected way. Might freeze Metal enemies.']
+    177:
+      name: [Marshmallow Cat, Creepmallow]
+      desc: [A sugary treat who likes cuddling rough! Wraps his enemy in jet-puffed sweetness before viciously smashing them over and over., 'Quickly toasted over a roaring bonfire, his burning body brings back happy memories. Delivers powerful beatings with his soft body!']
+    184:
+      name: [Cat Kart R, Cat Kart G, Cat Kart P]
+      desc: ['Celebrate "The Battle Cats POP!" on 3DS! Other hobbies: Parties, Tennis, Medicine. Gets lots of money from defeated enemies!', Celebrate "The Battle Cats POP!" on 3DS! Has a complex thanks to his popular brother. Gets lots of money from defeated enemies!, Celebrate "The Battle Cats POP!" on 3DS! This Cat always seems to be in another castle. Gets lots of money from defeated enemies!]
+    198:
+      name: [Psychocat, Neo Psychocat, Corrupted Psychocat]
+      desc: ['Bends metal when excited. Loves cereal, but always ends up with a useless spoon before he can eat. Sometimes slows Alien movement.', His happiness opens up extradimensional portals. Don't accept his invitation to play catch-ball. Sometimes slows Alien movement., All will be consumed by the portals he creates. Soon he himself will be sucked into the dark realms. Sometimes slows Alien movement.]
+    199:
+      name: [Onmyoji Cat, Magica Cat, Thaumaturge Cat]
+      desc: [Exorcist who time travelled from the past. Always trying to purge sportscars of evil. Sometimes weakens non-Metal enemies., Magical Girl by Alien contract - the shiny staff came as a signing bonus. Sometimes weakens non-Metal enemies., The contract has been fulfilled. Ultimate power is within her grasp. But now she just works as a theme park villain. 100% weakens non-Metal.]
+    202:
+      name: [Drumcorps Cat, Banner Cat]
+      desc: ['Keeps the Cat Army marching to a lively beat. So strict about keeping time, he only performs solo. Might reduce Metal damage by half.', Heads an elite Cat Academy. Has inspired 40 years of students to conquer unknown lands for catkind. Might reduce Metal damage by half.]
+    215:
+      name: [HYAKUTARO, HYAKUTARO CC]
+      desc: [Recruited from Metal Slug Defense! An elite commando masked as a typical POW Might survive lethal attacks. (Area Atk), Recruited from Metal Slug Defense! Lays down cover fire for the Cats with gas bombs. Might survive lethal attacks. (Area Atk)]
+    216:
+      name: [MARCO, MARCO CC]
+      desc: [Recruited from Metal Slug Defense! This major excels at programming recruits. Might temporarily freeze Aliens., Recruited from Metal Slug Defense! A top intel officer who lets loose with artillery. Might temporarily freeze Aliens.]
+    217:
+      name: [TARMA, TARMA CC]
+      desc: [Recruited from Metal Slug Defense! This captain takes pride in his trademark shades. Might knockback Aliens (Area Atk), 'Recruited from Metal Slug Defense! Master of the shotgun, Marco''s best friend. Might knockback Aliens (Area Atk)']
+    218:
+      name: [ERI, ERI CC]
+      desc: [Recruited from Metal Slug Defense! Staff sergeant in the Intel division. Might cause massive damage to Aliens (Area Atk), 'Recruited from Metal Slug Defense! Demolitions, survival, spying - she''s mastered it all! Might cause massive damage to Aliens (Area Atk)']
+    219:
+      name: [FIO, FIO CC]
+      desc: [Recruited from Metal Slug Defense! A demure yet naïve Sgt. Major in the intel division. Might slow Aliens., 'Recruited from Metal Slug Defense! Easygoing and genuine, a crackshot with handguns. Might slow Aliens.']
+    222:
+      name: [MARS PEOPLE, MARS PEOPLE CC]
+      desc: ['Recruited from Metal Slug Defense! Yep, they''re actual Martians. Might weaken Aliens.', 'Recruited from Metal Slug Defense! Mastered warping. No motivation to try now, though. Might weaken Aliens.']
+    228:
+      name: [Pumpcat, Cat O'Lantern]
+      desc: [A mischevious Cat who hid inside a carved autumn squash. Lives to startle unsuspecting passersby., Those who live only for pranks become cursed to wander the world as ghosts… but they still never learn. Might freeze Black enemies briefly.]
+    245:
+      name: [A Gift of Cats, Cat's Gift]
+      desc: ['A lovely holiday gift from Santa. Can you guess what''s inside? Occasionally freezes Angelic enemies.', A lovely holiday gift from the Cat Army. Something is bumping around inside… Occasionally freezes Angelic enemies.]
+    278:
+      name: [Funghi, Funghi 'n' Cat]
+      desc: ['Edible fungus aiming to rule the table as the staple food. Cheap to produce, so send ''em en masse!', 'Cutting-edge science allowed him to grow a Cat? Cheap to produce, so send ''em en masse!']
+    283:
+      name: [Awa-Odori Cat, So-Ran Cat]
+      desc: ['Whether a dancing Cat or a watching Cat, everyone''s a Cat, so why not just dance?! Super cheap to allow for big parades.', 'Heave, ho! Heave, ho! A dance for fish, of course Cats can get behind this tradition! Super cheap to allow for extra big catches.']
+    304:
+      name: [Food Stall Cat, Delivery Cat]
+      desc: ['Planning to corner the grilled calamari market. Forgot to pay taxes, so now business takes place on the run. Massive damage vs Angels.', 'Brings gifts from the Cat God for you! Of course, its all cash-on-delivery. Best pay up or risk divine wrath. Massive damage vs Angels.', 'Brings gifts from the Cat God for you! Of course, its all cash-on-delivery. Best pay up or risk divine wrath. Massive damage vs Angels.']
+    309:
+      name: [Gardener Cat, Lumbercat, Weedwacker Cat]
+      desc: [Bought lovely bonsai shears by mail-order. Now there are no more branches left in reach by the Cat Base. Might freeze Zombies., 'Kept this key weapon in an anti-Zombie kit, instead of doing something useless like cutting down trees. Might freeze Zombies.', Ordered a fierce-looking trimmer online. He's never actually used this tool to cut plants. Might freeze Zombies for a bit longer.]
+    316:
+      name: [PIKOTARO, NEKOTARO]
+      desc: ['All it takes is Pens, a Pineapple and an Apple to make the world smile. The man of legend, newly married to a feisty 78-year old.', A stylish Cat who always keeps an eye out on new internet trends. Striving to be the most popular through perfect imitation., A stylish Cat who always keeps an eye out on new internet trends. Striving to be the most popular through perfect imitation.]
+    320:
+      name: [Killer Cat, True Killer Cat]
+      desc: [Opened his heart to the savage beast within. Costs a bit extra to recruit to fight for you., This savage beast is consumed by thirst for battle! Costs a bit extra to recruit to fight for you., This savage beast is consumed by thirst for battle! Costs a bit extra to recruit to fight for you.]
+    325:
+      name: [Curling Cat, Zamboney Cat]
+      desc: ['Hard, heavy and precise winter weapon. Hits hard once, then won''t move again. Unharmed by wave attacks.', Manufacturer not responsible for equipment failure ...is what the manual says. Unharmed by wave attacks., Manufacturer not responsible for equipment failure ...is what the manual says. Unharmed by wave attacks.]
+    326:
+      name: [Welterweight Cat, Heavyweight Cat]
+      desc: ['Successor to a legendary Japanese boxer. Looks the part, but he''s always KO''ed in the 2nd round. Might knockback Zombies.', 'Unorthodox technique, sure, but this afro''d hero always gets up before the 10-count. Might knockback Zombies.', 'Unorthodox technique, sure, but this afro''d hero always gets up before the 10-count. Might knockback Zombies.']
+    330:
+      name: [Eggy Cat, Easter Cat]
+      desc: [Dressed to the nines for Spring! Didn't think about ease of movement when choosing a look. Attacks slow Angel movement for a moment., 'Determined to be reborn for Spring, he sheds his shell to reveal a whole new self hiding inside. Attacks slow Angel movement for a moment.', 'Determined to be reborn for Spring, he sheds his shell to reveal a whole new self hiding inside. Attacks slow Angel movement for a moment.']
+    344:
+      name: [Slug Jockey Cat, Slugcat]
+      desc: ['One rainy day, a Slug befriended a Cat. Her will is strong, but her body is weak (to salt). Area attack Slows enemies for a moment.', 'They thought it wasn''t fair for the Cat to always ride, so now they take turns. No effect on race times. Area attack Slows enemies for a moment.']
+    377:
+      name: [Rover Cat, Rover Cat Mk II]
+      desc: ['The first Cat probe produced by NYASA. Built to resist extraterrestrial attacks, with Warp Blocking and tough defense vs Aliens.', 'Cutting edge NYASA Cat probe. Transmission power is so advanced that it even gets the dirty channels. Tough vs Aliens, with Warp Blocking.']
+    380:
+      name: [Volley Cat, Ballet Cat]
+      desc: [Feared as the Queen of the Community Center. Her spikes routinely knock her rivals unconscious. Long Range attacks might unleash a Critical!, Primadonna called the Rose of the Repertory. Soars through the sky and lands like a javelin. Long Range attacks might unleash a Critical!]
+    383:
+      name: [Glass Cat, Macho Glass Cat]
+      desc: ['Made of fragile stuff, but his heart is sturdy! You only get one chance at life, so go for it! Only attacks once, slows traitless enemies.', 'Made using slightly more durable glass, but it still doesn''t have much effect on the battlefield. Only attacks once, slows traitless enemies.']
+    386:
+      name: [Akio Yabe, Akio Yabe CC, Akio & Gunder CC]
+      desc: [Dropping in from PowerPro Baseball! No one can outrun this speedy outfielder!, 'Dropping in from PowerPro Baseball! Ends every sentence with "Donchaknow?"', Dropping in from PowerPro Baseball! Might love robot anime even more than baseball. Area attacks release waves of destruction.]
+    387:
+      name: [Sairi Nijitani, Sairi Nijitani CC]
+      desc: [Dropping in from PowerPro Baseball! Blesses all players with her maternal care. Chance to weaken Angel enemies., Dropping in from PowerPro Baseball! Always puts others' needs before her own. Chance to weaken Angel enemies.]
+    388:
+      name: [Misaki Konno, Misaki Konno CC]
+      desc: [Dropping in from PowerPro Baseball! A bright and energetic manager. Tough defense vs. Alien enemies., Dropping in from PowerPro Baseball! No one can motivate a player like her! Tough defense vs. Alien enemies.]
+    389:
+      name: [Ren Katagiri, Ren Katagiri CC]
+      desc: [Dropping in from PowerPro Baseball! Eager manager who's always two steps behind the hero. Chance to knockback Zombies., Dropping in from PowerPro Baseball! Her devotion is just a bit too much sometimes. Chance to knockback Zombies.]
+    390:
+      name: [Karin Nekozuka, Karin Nekozuka CC]
+      desc: [Dropping in from PowerPro Baseball! Openminded and cheerful team manager. Chance to freeze Floating enemies., Dropping in from PowerPro Baseball! Better than anyone at resolving personality conflicts. Chance to freeze Floating enemies.]
+    400:
+      name: [Mentori, Mentori CC]
+      desc: ['Dropping in from MENTORI! Trust me, talking to it is more trouble than it''s worth.. Tough vs Floating Enemies', Dropping in from MENTORI! This weird bird specializes in obnoxious interjections. Tough vs Floating Enemies]
+    403:
+      name: [Shinji & Cat, Plug Suit Shinji]
+      desc: [Recruited from Evangelion! A boy suddenly forced to pilot Evangelion. Resents his distant father. (Area Attack), Recruited from Evangelion! Hoping to be respected by his comrades for his piloting skills. (Area Attack)]
+    405:
+      name: [Giraffe Unit-01, Giraffe Unit-02]
+      desc: [A prototype Giraffe Cat-type weapon. Escaped with only the helmet equipped. Might survive a lethal strike., Received a new production-model helmet for mightier headbutts. Still on the run. Might survive a lethal strike.]
+    407:
+      name: [Rei Cat, Ayanami Cat (TBC)]
+      desc: [Cat who pilots Eva Unit-00. Gendo's glasses are her cherished treasure. Tough vs / Massive Damage to Angels., She lost all memory of the black plugsuit. There is nothing for her but her duty. Tough vs / Massive Damage to Angels.]
+    408:
+      name: [Asuka Cat, Apron Asuka]
+      desc: [Cat who pilots Eva Unit-02. Flies into a rage easily when she feels slighted. Tough vs / Massive Damage to Red., She is slowly warming up to her comrades. Has a habit of burning her tongue easily. Tough vs / Massive Damage to Red.]
+    409:
+      name: [Mari Cat, Special Ops Mari]
+      desc: [A strange Cat with stylish glasses. Loves to end each sentence with a meow. Tough vs / Massive Damage to Floating., A skilled paratrooper who infiltrated Tokyo-3. Learning her way around Central Dogma. Tough vs / Massive Damage to Floating.]
+    420:
+      name: [Pokota, Pokota CC]
+      desc: [Joining the fight from LINE Pokopang! Rabbity defender of justice who'll do anything to help his friends!, Joining the fight from LINE Pokopang! His mission in life is to bring joy to his fellow woodland creatures.]
+    421:
+      name: [Ovis, Ovis CC]
+      desc: [Joining the fight from LINE Pokopang! A stoic sheep who loves to collect unusual objects! Tough vs Red!, Joining the fight from LINE Pokopang! Hides his scavenged treasures in his fluffy wool for safekeeping. Tough vs Red!]
+    422:
+      name: [Coco, Coco CC]
+      desc: ['Joining the fight from LINE Pokopang! A burly bear who lives for peace, flowers and tasty fish! Might weaken Black!', 'Joining the fight from LINE Pokopang! Despite tough looks, loves a nice cup of herbal tea most. Might weaken Black!']
+    433:
+      name: [Betakkuma, Black Betakkuma]
+      desc: [Joining the fight from Betakkuma! Weirdly cute white bear with some slick moves. Might knockback Aliens., Joining the fight from Betakkuma! Changed colors after training by an assassin's guild. Might knockback Aliens.]
   3:
-    31: [Bodhisattva Cat, Avalokitesvara Cat, Tathagata Cat]
-    32: [Delinquent Cat, Angry Delinquent Cat, Ultra Delinquent Cat]
-    33: [Hip Hop Cat, Dancing Flasher Cat, Can Can Cat]
-    34: [Kotatsu Cat, Sadako Cat, Octopus Cat]
-    36: [Nerd Cat, Hacker Cat, Cyberpunk Cat]
-    37: [Swimmer Cat, Butterfly Cat, Fishman Cat]
-    40: [Apple Cat, Face Cat, iCat]
-    41: [Bath Cat, Sexy Bathtub Cat, Luxury Bath Cat]
-    62: [Sushi Cat, Fried Shrimp Cat, Roe Cat]
-    92: [Crazed Cat, Crazed Macho Cat, Manic Mohawk Cat]
-    93: [Crazed Tank Cat, Crazed Wall Cat, Manic Eraser Cat]
-    94: [Crazed Axe Cat, Crazed Brave Cat, Manic Dark Cat]
-    95: [Crazed Gross Cat, Crazed Sexy Legs Cat, Manic Macho Legs]
-    96: [Crazed Cow Cat, Crazed Giraffe Cat, Manic Lion Cat]
-    97: [Crazed Bird Cat, Crazed UFO Cat, Manic Flying Cat]
-    98: [Crazed Fish Cat, Crazed Whale Cat, Manic Island Cat]
-    99: [Crazed Lizard Cat, Crazed Dragon Cat, Manic King Dragon]
-    100: [Crazed Titan Cat, Crazed M. Titan Cat, Manic Jamiera Cat]
-    130: [Gold Cat, Gold Macho Cat]
-    132: [Neneko, Miss NENEKO]
-    145: [Cat Base Mini, Cat Base Jr.]
-    151: [Juliet Cat, Princess Juliet Cat, Juliet the Maiko]
-    152: [Weightlifter Cat, Ring Girl Cat, Pizza Cat]
-    153: [Figure Skating Cats, Drama Cats, Slapstick Cats]
-    154: [Cat Toaster, Cat Projector, Catophone]
-    174: [Baby Mola, Young Man Mola]
-    200: [Surfer Cat, Castaway Cat, Seafarer Cat]
-    201: [Metal Cat, Metal Macho]
-    220: [SV-001, SV-001 CC]
-    221: [ALLEN O'NEIL, ALLEN O'NEIL CC]
-    229: [Gloomy Neneko, Witchy Neneko]
-    238: [Freshman Cat Jobs, Prof. Cat Jobs]
-    239: [Rich Cat III, Rich Cat Sr.]
-    240: [Sniper the Recruit, Sniper the Heavy]
-    261: [Catway, Drone Cat]
-    268: [Catornado, Hurricat]
-    274: [Cheerleader Cat, Waitress Cat]
-    277: [Sunny Neneko, Seaside Neneko]
-    285: [Express Cat, Maglev Cat]
-    288: [Little Leaguer Cat, Major Leaguer Cat]
-    308: [Vaulter Cat, 'Polevaulter Cat ']
-    315: [Years-End Neneko, New Year Neneko]
-    328: [Belial, Reckless Belial]
-    333: [Easter Neneko, Hoppity Neneko]
-    378: [Fencer Cat, Kendo Cat]
-    391: [Aoi Hayakawa, Aoi Hayakawa CC, Baseball Mask α]
-    392: [Mizuki Tachibana, Mizuki Tachibana CC, Baseball Mask β]
-    393: [Hijiri Rokudo, Hijiri Rokudo CC, Baseball Mask γ]
-    410: [Rei Ayanami, Plug Suit Rei]
-    411: [Asuka Langley, Plug Suit Asuka]
-    412: [Mari Illustrious, Plug Suit Mari]
+    31:
+      name: [Bodhisattva Cat, Avalokitesvara Cat, Tathagata Cat]
+      desc: [A Cat that has reached a state of peace and pushed its body beyond physical limits. Might slow Floating enemies (Area Attack), A Bodhisattva Cat who has shown compassion to many and all Battle Cats. Might slow Floating enemies (Area Attack), Enlightened compassion flows from this Cat. But they say even the Buddha has a breaking point. Area attacks might weaken/slow Floating.]
+    32:
+      name: [Delinquent Cat, Angry Delinquent Cat, Ultra Delinquent Cat]
+      desc: [Known as the Bancho of Cat School. Might freeze Floating enemies (Area Attack), Throwing a fit of rage because his dad ate his ice cream that was in the fridge. Might freeze Floating enemies (Area Attack), 'A naughty Cat known as king of the Angry Fist. Loves pachinko, trades his winnings for ice cream. Might freeze Floating/Relics (Area Attack)']
+    33:
+      name: [Hip Hop Cat, Dancing Flasher Cat, Can Can Cat]
+      desc: [Flunking student from a certain dance school. Can be produced in masses. Flash Mob! Might slow Red enemies., Someone you don't want to see on the street. Dances skillfully to keep the game kid-friendly. Might slow Red enemies., Kicked out of dance school for improvising performances too provocative for family shows. Sometimes slows movement of Red enemies.]
+    34:
+      name: [Kotatsu Cat, Sadako Cat, Octopus Cat]
+      desc: [Very effective in winter… not that it matters. Damage from Floating enemies greatly reduced. Might weaken Floating enemies., Hid in a TV to scare people for fun. Was never able to get out. Haunts TVs now. Resistant to + might weaken Floating., 'Extra-flexible Cat who feels most comfortable in small, dark spaces. Cancels wave attacks. Tough vs Floating, might weaken enemies.']
+    36:
+      name: [Nerd Cat, Hacker Cat, Cyberpunk Cat]
+      desc: [Completely fearless… until leaving his basement. Net denizen who is famous for flaming. Uber Long Distance attack specialist., Famous for making Big Red Buttons. Graduate from an elite tech university. Uber Long Distance attack specialist., 'Having mastered virtual space, he''s moved on to losing his shirt in the cryptocurrency market. Long-range area attacks slow non-Metal.']
+    37:
+      name: [Swimmer Cat, Butterfly Cat, Fishman Cat]
+      desc: [Built from the pain of losing every race. Obtained its strength from tears of defeat. Deals massive damage to Floating enemies., Managed to overcome the endless defeat with great effort. Now blessed with victory! Deals massive damage to Floating enemies., This one can barely even be called a Cat. Submitted to gene therapy to become the world champion. Extreme damage to Floating.]
+    40:
+      name: [Apple Cat, Face Cat, iCat]
+      desc: [Found a giant apple floating in a river. Decided to use that as a costume. Might stop Red enemies., Found a giant head sitting on the road. Decided to use that as a costume. Might stop Red enemies., Found a colorful apple near Silicon Valley while turtleneck shopping one day. Area attacks 100% stop Red enemies.]
+    41:
+      name: [Bath Cat, Sexy Bathtub Cat, Luxury Bath Cat]
+      desc: [Likes to keep clean. All. The. Time. Deals massive damage to Red enemies., Likes to keep clean. All. The. Time. Enjoys a quiet bath. Do Not Disturb. Deals massive damage to Red enemies., Bubbles and gold leaf make for an extra decadent bathtime. Extra-powerful jets do massive damage against dirty Red enemies.]
+    62:
+      name: [Sushi Cat, Fried Shrimp Cat, Roe Cat]
+      desc: ['A Cat that moves fast by spinning. The fresh meat can take a beating. (Area Attack) Resistant to Red, might weaken enemies.', 'A Cat that moves fast by spinning. Also got into Rock ''n'' Roll (Area Attack) Resistant to Red, might weaken enemies.', 'Don''t get all salty just because you''ll lose! Eggs-elent defense and Area Attack. Resistant to Red, might weaken enemies.']
+    92:
+      name: [Crazed Cat, Crazed Macho Cat, Manic Mohawk Cat]
+      desc: [The Basic Cat. Crazed version obtains godspeed. But his legs are too short…, 'Charm Point: Muscle Definition. Crazed version obtains godspeed. … and a little bit more definition?', 'His lovely ''do has driven him a bit crazy, but he makes it work. Manic version obtains godspeed.']
+    93:
+      name: [Crazed Tank Cat, Crazed Wall Cat, Manic Eraser Cat]
+      desc: [Tough. High health. (Area Attack) Strong enough to move a pebble. Crazed version grants godspeed., Rigid defense. Now with corners. (Area Attack) Strong enough to move a small rock. Crazed version grants godspeed., Can take a beating thanks to elasticity. Manic version grants even more Really Good ™ Defense. (Area Attack)]
+    94:
+      name: [Crazed Axe Cat, Crazed Brave Cat, Manic Dark Cat]
+      desc: [Combat maniac. Strong against Red enemies. Crazed version increases attack power., Hero wannabe. Strong against Red enemies. Crazed version increases attack power., 'A charismatic knight who thirsts for battle, mighty against Red enemies. Manic for better defense and attack.']
+    95:
+      name: [Crazed Gross Cat, Crazed Sexy Legs Cat, Manic Macho Legs]
+      desc: ['Able to do a very powerful long range attack Crazed version grants Wave Attack, but increases production time.', 'Has pride in his overly beautiful legs. Crazed version grants Wave Attack, but increases production time.', 'Frenzy has enhanced the beauty of his legs and the power of his long-distance attacks even more. Popularity is down, though.']
+    96:
+      name: [Crazed Cow Cat, Crazed Giraffe Cat, Manic Lion Cat]
+      desc: ['Thinks quick, acts quick, and uses his head. Runs like the wind! Crazed Version grants Area Attack', 'Thinks quick, acts quick, and uses his head. Headbangs only to Rock''n''Roll! Crazed Version grants Area Attack', 'An excellent, agile character. Though Manic, his magnificent mane somehow grants him godspeed (Area Atk)']
+    97:
+      name: [Crazed Bird Cat, Crazed UFO Cat, Manic Flying Cat]
+      desc: [Has the health of a pea Exceptional attack power (Area Attack) Crazed version increases attack range., Managed to overcome gravity. Good against multiple enemies (Area Attack) Crazed version increases attack range., 'This manic flying object shows no mercy, firing light beams to destroy whole cities from range. More power! More range! Muahaha!']
+    98:
+      name: [Crazed Fish Cat, Crazed Whale Cat, Manic Island Cat]
+      desc: [Strong against Red enemies. Crazed version decreases production time. Might perform critical attacks, Managed to become a carnivorous whale. Strong against Red enemies. Might perform critical attacks, 'Demons are rumored to live on this manic island. Strong against Red, might critical. Mania gives it extra offense and defense!']
+    99:
+      name: [Crazed Lizard Cat, Crazed Dragon Cat, Manic King Dragon]
+      desc: [Able to attack enemies from a distance. Powerful single shot long range attack. Crazed version supports High Definition., Found its way here from a fantasy world. Powerful single shot long range attack. Crazed version supports High Definition., Even his frenzy can't stop him from joining the ranks of the elite! His criticals and attack power are unmatched. At least he says so.]
+    100:
+      name: [Crazed Titan Cat, Crazed M. Titan Cat, Manic Jamiera Cat]
+      desc: [Blessed with extreme attack power and ridiculous amounts of health (Area Attack) Crazed Version grants Wave Attacks., Blessed with extreme attack power Extreme attack power and health. Crazed Version grants Wave Attacks., 'Once manic, none can withstand his godlike defense or offense, or outrun his godspeed. His wave attacks occur more frequently too!']
+    130:
+      name: [Gold Cat, Gold Macho Cat]
+      desc: [Rolled in gold dust for a luxurious look. …though it is just the same old Cat. Exchange it for XP to level up other Cats!, Rolled in gold dust for a luxurious look. Says it aimed for the no-sleeve look but painting its arms just slipped its mind.]
+    132:
+      name: [Neneko, Miss NENEKO]
+      desc: [A kid sister type who dreams of stardom. If only she had the guts to actually sing! Admires Moneko. (Might perform Critical Attacks), Made to perform despite her stage fright. Still wants to sing but her voice won't come out onstage. (Might perform Critical Attacks)]
+    145:
+      name: [Cat Base Mini, Cat Base Jr.]
+      desc: ['Who can say why, but this Cat has undergone rigorous training to become a splendid fort. His wave attack is actually just loud yelling.', Bought a cosplay helmet by mail order. Likes to stalk strangers while pretending to be a tower; his wave fires if he gets too excited.]
+    151:
+      name: [Juliet Cat, Princess Juliet Cat, Juliet the Maiko]
+      desc: ['Dreams of a Romeo she met online. Favorite book: "Pride, Prejudice and Haircuts" Briefly freezes Angels (Area Attack)', 'All grown up, but still dreaming of her cyber-Romeo. Likes chicken kebabs. Briefly freezes Angels (Area Attack)', Romeo turned out to be a real jerk. Now aiming for a total image change (and a cute samurai lord). Briefly freezes Angels (Area Attack)]
+    152:
+      name: [Weightlifter Cat, Ring Girl Cat, Pizza Cat]
+      desc: ['Lifting heavy things is the height of manliness. Supports 11 children, 7 wives and their parents. Massive damage to Black enemies (Area Attack)', Made it to the 12th round of life using her own toughness and wits. Girl can't be stopped! Massive damage to Black enemies (Area Attack), World's biggest junk-food fan who's about to get a nasty surprise when he sees they forgot the extra anchovies. Massive Area damage to Black.]
+    153:
+      name: [Figure Skating Cats, Drama Cats, Slapstick Cats]
+      desc: [A stylish couple getting on board with the figure skating craze. Only a month since they started. No stopping these two lovers! (Area attack), 'Skating''s so last year, it''s all about classical theater now. Got the attention of the media, now making old-school art cool again (Area Attack)', They stopped taking stagecraft so seriously and now just want to bring laughter to the people. Strong vs Relic enemies (Area Attack)]
+    154:
+      name: [Cat Toaster, Cat Projector, Catophone]
+      desc: ['Fed up with making toast every day, went on strike by firing bread at Dad''s face. Might slow Angelic enemies. (Area Attack)', 'Used to projecting Hollywood stars, now worries it might be obsolete thanks to digital video. Might slow Angelic enemies. (Area Attack)', Melancholy melodies strip enemies of their will to fight! Area attacks might slow Angelic enemies and break Barriers!]
+    174:
+      name: [Baby Mola, Young Man Mola]
+      desc: ['Dropping in from "Survive! Mola Mola!" The lone survivor of 300,000,000 brothers - the ocean''s a harsh realm, man.', 'Playing life on Hard Mode, a Mola Mola is always within sight of paradise. Attacks from range by screaming… then dying.']
+    200:
+      name: [Surfer Cat, Castaway Cat, Seafarer Cat]
+      desc: ['Spent so long hunting the perfect wave. Now he''s reached 40 without truly living life(?) Might stop Aliens and survive lethal strikes. (Area)', 'Says he wants to escape his desert island, but he''s secretly enjoying his permenant vacation. Might stop Aliens and survive lethal strikes. (Area)', 'Giving up on rescue, he is now married to the sea. Will the waves be kind or cruel today? Might stop Aliens, will 100% survive one lethal strike. (Area)']
+    201:
+      name: [Metal Cat, Metal Macho]
+      desc: ['Metal skin reduces all damage taken to a minimum. Alloy is only 87.5% purity, criticals might hurt him. Can''t upgrade to (+) levels. (Metal)', 'Metal skin reduces all damage taken to a minimum. Proud of his beautiful skin, leaves his arms uncovered. Can''t upgrade to (+) levels. (Metal)']
+    220:
+      name: [SV-001, SV-001 CC]
+      desc: ['Recruited from Metal Slug Defense! A small, high-performance single- passenger tank. (Area Atk)', Recruited from Metal Slug Defense! Battle-tested model with superior mobility and firepower. (Area Atk)]
+    221:
+      name: [ALLEN O'NEIL, ALLEN O'NEIL CC]
+      desc: [Recruited from Metal Slug Defense! Feared by allies and foes alike as the "Demon Sergeant" Survives one lethal strike., Recruited from Metal Slug Defense! Shirtless even in subzero temperatures. Survives one lethal strike.]
+    229:
+      name: [Gloomy Neneko, Witchy Neneko]
+      desc: ['Everyone''s favorite cutie, dressed up for Halloween but doesn''t have the heart to pull any pranks on others. Might Critical.', 'No magic talent, but she seemed so excited they made her a witch anyhow. A little more confidence might make all the difference (Critical)']
+    238:
+      name: [Freshman Cat Jobs, Prof. Cat Jobs]
+      desc: [A li'l smart aleck who aced his entrance exams for Nyarvard U. Uses his wit to spy enemy weak points and greatly weaken their offense., Won the Nyabel Prize in economics last year. His debate skills can confuse enemies so badly they lose much of their offensive power., Won the Nyabel Prize in economics last year. His debate skills confuse enemies so badly their offensive power is greatly weakened.]
+    239:
+      name: [Rich Cat III, Rich Cat Sr.]
+      desc: ['Heir of the legendary Rich Cat. Born wealthy, still pinches every penny. Goes through the pockets of defeated enemies for extra cash.', Father of the legendary Rich Cat. Got rich by never spending profits from his small business. Lives off of defeated enemies' pocket money.]
+    240:
+      name: [Sniper the Recruit, Sniper the Heavy]
+      desc: ['Before the battlefield, boot camp. Only given a potato gun, so don''t expect TOO much knockback from his super long-distance attack.', A grim assassin who never fails a contract. Still uses potato guns for the extra challenge. Long distance atk. with non-metal knockback.]
+    261:
+      name: [Catway, Drone Cat]
+      desc: ['A tech CEO who patrols the office in style, looking for lazy interns to punish! Strong Vs. Red, Black, and Angels (Area Attack)', 'A cutting edge Unmanned Aerial Feline (UAF). Tends to crash regularly… tech still under development! Strong vs. Red, Black, Angels (Area)']
+    268:
+      name: [Catornado, Hurricat]
+      desc: ['Wanted to skip school so badly, he became a typhoon to cause a national weather alert. Super high-speed Area attacks with Critical.', A side effect of El Nino. Dangerously curious; sucks up anything he tries to get a peek at. Super high-speed Area attacks with Critical.]
+    274:
+      name: [Cheerleader Cat, Waitress Cat]
+      desc: ['Leaping about on the football field, her youthful songs fill the Battle Cats with determination. 100% chance of a Critical Attack!', 'The real world called, but her enthusiasm remains! Her speedy service fills the Cats with determination! 100% Critical chance.', 'The real world called, but her enthusiasm remains! Her speed service fills the Cats with determination! 100% Critical chance.']
+    277:
+      name: [Sunny Neneko, Seaside Neneko]
+      desc: ['This year, she''ll definitely take the gold medal at the swim tournament, even though she won''t take the gloves off. 100% Critical attack chance.', 'Everyone''s favorite pure idol is ready to overcome her anxiety of being seen in a swimsuit. You can do it, Neneko! 100% Critical attack chance.']
+    285:
+      name: [Express Cat, Maglev Cat]
+      desc: [1-car train with a max speed of 222kph 120% of seats were filled today. Extra money when defeating enemies!, '222-Cat seater with a max speed of 2222kph, a blessing for all Cat commuters. Extra money when defeating enemies!']
+    288:
+      name: [Little Leaguer Cat, Major Leaguer Cat]
+      desc: ['Young, but full of raw potential. Recruited straight from Tee-Ball to the local champs. Resistant to Aliens, Long-Range/Area Atks.', 'This team legend is now too chubby to run, but his batting average is out of this world. Resists Aliens, might break barriers, Long-range.']
+    308:
+      name: [Vaulter Cat, 'Polevaulter Cat ']
+      desc: ['Soaring through the blue sky using only a single pole, he is the height of athleticism. Area atks might slow Zombies.', Certified by Guinness as the record-holder for cats' polevaulting. Will marry her coach next year. Area attacks might slow Zombies., Certified by Guinness as the record-holder for cats' polevaulting. Will marry her coach next year. Area attacks might slow Zombies.]
+    315:
+      name: [Years-End Neneko, New Year Neneko]
+      desc: ['Taking out the trash and aiming for a fresh start! Thanks for everything, 2016 - NOT! Area attacks might cause Critical strikes.', 'Resolving to improve her self-confidence, she has a New Years greeting for everyone! Area attacks might cause Critical strikes.', 'Resolving to improve her self-confidence, she has a New Years greeting for everyone! Area attacks might cause Critical strikes.']
+    328:
+      name: [Belial, Reckless Belial]
+      desc: ['An AI who ruthlessly hunts down all threats to the peace of ALICE, dropping in from Crash Fever. Grows much stronger as he takes damage. (Area)', 'A fierce, fanatical guardian of ALICE''s order. A special guest from Crash Fever. Grows much stronger as he takes damage. (Area Atk)', 'A fierce, fanatical guardian of ALICE''s order. A special guest from Crash Fever. Grows much stronger as he takes damage. (Area Atk)']
+    333:
+      name: [Easter Neneko, Hoppity Neneko]
+      desc: [The adorable idol gets a new springtime look! Always overthinks where to hide the eggs and ends up panicking. Might critical attack., 'Moneko was busy, so Nene stands in! Loves cute cosplay, but the attention always embarrasses her. Might critical attack.', 'Moneko was busy, so Nene stands in! Loves cute cosplay, but the attention always embarrasses her. Might critical attack.']
+    378:
+      name: [Fencer Cat, Kendo Cat]
+      desc: [Invincible swordscat unbeaten in 400 matches. Has to use his left hand to actually feel challenged. 100% chance of breaking Barriers., 'Decided to try a new form of swordplay, but can''t quite make the switch from his original specialty. 100% chance of breaking Barriers.']
+    391:
+      name: [Aoi Hayakawa, Aoi Hayakawa CC, Baseball Mask α]
+      desc: [Dropping in from PowerPro Baseball! So bad at cooking she could burn water. Massive anti-Alien area damage., Dropping in from PowerPro Baseball! Her flaw is too much earnest naivete. Massive anti-Alien area damage., Dropping in from PowerPro Baseball! Secretly Aoi Hayakawa. Massive anti-Alien long-range area damage.]
+    392:
+      name: [Mizuki Tachibana, Mizuki Tachibana CC, Baseball Mask β]
+      desc: [Dropping in from PowerPro Baseball! A tomboy pitcher determined to win! Massive anti-Angel area damage., 'Dropping in from PowerPro Baseball! Has a real sweet tooth, and loves pudding. Massive anti-Angel area damage.', Dropping in from PowerPro Baseball! Proudly sports the Tachibana Group logo. Massive anti-Angel area damage.]
+    393:
+      name: [Hijiri Rokudo, Hijiri Rokudo CC, Baseball Mask γ]
+      desc: [Dropping in from PowerPro Baseball! A rookie catcher with unparalleled game sense. Strong vs. Zombies., 'Dropping in from PowerPro Baseball! From a temple family, loves Buddhist cooking. Strong vs. Zombies.', 'Dropping in from PowerPro Baseball! Proudly wears a temple name on her chest. Strong vs. Zombies, with Area Attacks.']
+    410:
+      name: [Rei Ayanami, Plug Suit Rei]
+      desc: [Recruited from Evangelion! An aloof girl who guards her emotions. Area attacks might weaken Angels., Recruited from Evangelion! Feels a strong bond with her fellow pilots. Area attacks might weaken Angels.]
+    411:
+      name: [Asuka Langley, Plug Suit Asuka]
+      desc: [Recruited from Evangelion! A prideful and hot-tempered prodigy. Strong vs. Red Enemies (Area Attack), Recruited from Evangelion! Warming up to the idea of teamwork. Strong vs. Red Enemies (Area Attack)]
+    412:
+      name: [Mari Illustrious, Plug Suit Mari]
+      desc: [Recruited from Evangelion! An enigmatic girl who arrived via parachute. Strong vs. Floating (Area Attack), Recruited from Evangelion! Her love for piloting Eva is plain to see. Strong vs. Floating (Area Attack)]
   4:
-    35: [Nekoluga, Unknown Cat, Ultralan Pasalan]
-    43: [Ice Cat, Ice Queen Cat, Ice Crystal Cat]
-    44: [Cat Machine, Cat Machine Mk 2, Cat Machine Mk 3]
-    45: [Lesser Demon Cat, Greater Demon Cat, Balrog Cat]
-    54: [Evangelist Cat, Filibuster Cat]
-    58: [Marauder Cat, Berserker Cat, Paladin Cat]
-    60: [Baby Cat, Baby Cats, Cats in the Cradle]
-    72: [Sanada Yukimura, Wargod Yukimura, Immortal Yukimura]
-    73: [Maeda Keiji, Wargod Keiji, Immortal Keiji]
-    74: [Oda Nobunaga, Wargod Nobunaga, Immortal Nobunaga]
-    76: [Windy, 'Windy, type α', Divine Windy]
-    77: [Thundia, 'Thundia, type β', Divine Thundia]
-    84: [Sodom, Earth King Sodom, God-Emperor Sodom]
-    85: [Megidora, Holy Dragon Megidora, God-Emperor Megidora]
-    86: [Vars, Dragon King Vars, God-Emperor Vars]
-    87: [Kamukura, God Dragon Kamukura, God-Emperor Kamukura]
-    88: [Raiden, Dragonslayer Raiden, God-Emperor Raiden]
-    106: [Kuu, 'Kuu, type γ', Divine Kuu]
-    107: [Kai, 'Kai, type μ', Divine Kai]
-    108: [Coppermine, 'Coppermine, type κ', Divine Coppermine]
-    125: [Date Masamune, Wargod Masamune, Immortal Masamune]
-    126: [Takeda Shingen, Wargod Shingen, Immortal Shingen]
-    135: [Urashima Taro, Guardian Gamereon, King Gamereon]
-    136: [The Grateful Crane, Super Galaxy Cosmo, Ultima Galaxy Cosmo]
-    137: [Momotaro, The Peach Angels, The Peach Devils]
-    138: [Kasa Jizo, Jizo's Moving Castle, Jizo's Mega-Castle]
-    139: [Princess Kaguya, The Death Moon, The Chaos Moon]
-    144: [Nurse Cat, Heartful Nurse Cat, Joyful Nurse Cat]
-    159: [Uesugi Kenshin, Wargod Kenshin, Immortal Kenshin]
-    160: [Kalisa, 'Kalisa, type χ', Divine Kalisa]
-    169: [Asiluga, Asilan Pasalan, Assassinlan Pasalan]
-    170: [Kubiluga, Kubilan Pasalan, E. Kubilan Pasalan]
-    171: [Tecoluga, Tesalan Pasalan, Lufalan Pasalan]
-    172: [Balaluga, Balalan Pasalan, Piccolan Pasalan]
-    175: [Mola King, Living Legend]
-    178: [Dioramos, Archdragon Dioramos, God-Emperor Dioramos]
-    195: [Akira, Shadow Akira, Inferno Akira]
-    196: [Mekako Saionji, Dr. Mekako, Mission Control Mekako]
-    197: [Catman, Dark Catman, Ultimate Catman]
-    204: [Kachi-Kachi, Fire Squad Kachiyama, Kachiyama Assault Brigade]
-    213: [The White Rabbit, The Black Cat, The Grey Fox]
-    223: [HUGE HERMIT, HUGE HERMIT CC]
-    224: [JUPITER KING, JUPITER KING CC]
-    225: [DONALD MORDEN, GENERAL MORDEN]
-    226: [HI-DO, HI-DO CC]
-    227: [Warlock and Pierre, Dark Merchant Babil, Mad Doctor Klay]
-    230: [Hallowindy, Hallowindy α]
-    231: [Spooky Thundia, Spooky Thundia β]
-    241: [Togeluga, Togelan Pasalan, Shishilan Pasalan]
-    242: [Frosty Kai, 'Frosty Kai, Type μ']
-    243: [Santa Kuu, 'Santa Kuu, Type γ']
-    244: [Holy Coppermine, 'Holy Coppermine, Type κ']
-    258: [Thunder God Zeus, The Majestic Zeus]
-    259: [Anubis the Protector, Anubis the Unblemished]
-    260: [Radiant Aphrodite, Megaphrodite]
-    262: [Hayabusa, Oni Hayabusa]
-    270: [Baby Gao, Mighty Lord Gao]
-    271: [Crazed Yuki, Crazed Yuki Cat]
-    272: [Shining Amaterasu, Glorious Amaterasu]
-    273: [Splendid Ganesha, Exalted Ganesha]
-    275: [Tropical Kalisa, Tropical Kalisa X]
-    276: [Midsummer Rabbit, Midsummer Cat]
-    284: [Pai-Pai, Pai-Pai Z]
-    287: [Strike Unit R.E.I., Assault Unit R.E.I.]
-    303: [Lilith Cat, Succubus Cat]
-    305: [Mighty Kat-A-Pult, CAT-6 Siege Engine]
-    306: [Mighty Drednot, B.C.S. Lionheart]
-    307: [Mighty Bomburr, NEK-0 Sky Fortress]
-    311: [Yuletide Nurse, Yule Knight Nurse]
-    317: [Wrathful Poseidon, Valiant Poseidon]
-    319: [Miko Mitama, Mitama the Oracle]
-    323: [Sarukani, Rock Revengers]
-    327: [Mobius, Miraculous Mobius]
-    331: [Springtime Kenshin, Full-Bloom Kenshin]
-    332: [Bunny & Canard, Disciple Psychoduck]
-    334: [Shadow Gao, Diabolic Gao]
-    335: [Trickster Himeyuri, Himeyuri Ninetails]
-    336: [Sea Maiden Ruri, Sea Mistress Ruri]
-    337: [Queen Reika, Pharoah Reika]
-    339: [Imagawa Yoshimoto, Wargod Yoshimoto]
-    352: [Twinstars, 'Twinstars, type Φ']
-    355: [Seashore Kai, 'Seashore Kai, type μ']
-    356: [Mighty Rekon Korps, Orbital Platform Armageddon]
-    358: [Wolfchild Deale, Wolf Princess Deale]
-    359: [Graveflower Verbena, Verbena the Bride]
-    360: [Bora, Bazibon]
-    361: [Mizli, Marinmizu]
-    362: [Aer, Erphuan]
-    379: [Dark Mitama, Gothic Mitama]
-    381: [D'artanyan, Meow-sketeer]
-    394: [Saki Nijima, Saki Nijima CC, Samba Saki CC]
-    395: [Subaru Hoshi, Subaru Hoshi CC, Dark Subaru CC]
-    396: [Miyabi Oyama, Miyabi Oyama CC, Baseball Mask δ]
-    397: [Ganglion, Ganglion the Ancient]
-    398: [Sakura Sonic, Afterschool Sakura]
-    402: [Voli, Volta]
-    413: [Eva Unit-00, Eva Unit-00 & Cat]
-    414: [Eva Unit-01, Eva Unit-01 & Cat]
-    415: [Eva Unit-02, Eva Unit-02 & Cat]
-    416: [Shinji Cat, Toji & Kensuke Cats]
-    417: [Moon Operators, NERV Moon]
-    418: [Mighty Thermae D-Lux, Subterra Guardians]
-    428: [Cat Clan Heroes, Cat Guild Heroes]
-    432: [Detective Vigler, Inspector Gabriel]
-    436: [Li'l Valkyrie, Wind Dancer Valkyrie]
-    437: [Nobiluga, Nobilan Pasalan]
-    439: [Waverider Kuu, Waverider Kuu γ]
-    440: [Empress Chronos, Chronos the Infinite]
-    442: [D'arktanyan, Valiant D'arktanyan]
+    35:
+      name: [Nekoluga, Unknown Cat, Ultralan Pasalan]
+      desc: [Not sure if this is a Cat… Maybe if you evolve him…, 'God, I don''t know if this is a Cat anymore. Seriously, I give up. Knocks back enemies. (Area Atk.)', 'Tired of scaring children, Luga decided to reinvent himself as that famous masked hero. Freezes and knocks back non-Metal enemies (Area Atk.)']
+    43:
+      name: [Ice Cat, Ice Queen Cat, Ice Crystal Cat]
+      desc: [A Cat that was entranced by a girl hailing from the Land of Ice. It is frozen. Might freeze Red enemies. (Area Attack), Forgot to mention that the Cat is an eternal icicle. Don't think it complains much. Might freeze Red enemies. (Area Attack), 'The Ice Queen''s reign grows more secure, and so does her Cat companion''s crystal shell. Freezes Red enemies in place (Area Attack).']
+    44:
+      name: [Cat Machine, Cat Machine Mk 2, Cat Machine Mk 3]
+      desc: [Series 1 Weaponized Machine System (MS) developed by the government (Area Attack) Resitant to Red & Alien attacks., A battle-tested revision MS that managed to escape from the research facility (Area Attack) Resitant to Red & Alien attacks., 'The next generation of battle tech, MS:RX-Ω has slipped into the hands of the Cat Army! Resists Red/Alien attacks, immune to Waves.']
+    45:
+      name: [Lesser Demon Cat, Greater Demon Cat, Balrog Cat]
+      desc: [A mad cat that sacrificed itself to a a demon from the netherworld. Attacks with extreme force., The mad cat managed to control the a demon from the netherworld. Attacks with extreme force., His wanderings through the abyss have driven him mad with infernal ambitions. Tremendous damage to a single enemy.]
+    54:
+      name: [Evangelist Cat, Filibuster Cat]
+      desc: [Unlocked by meeting all the legends. Freezes enemies in place. Summon when you are losing ground., Uses special powers to interrupt time. Stops the movement of enemies. Summon when you are losing ground.]
+    58:
+      name: [Marauder Cat, Berserker Cat, Paladin Cat]
+      desc: [Its cursed sword reduces the offensive power but might deliver critical hits. Known as the "Metal Killer"., The cursed sword has taken over and and turned the Cat into the Cursed Knight. Known as the "Dark Metal Knight". (Area Atk), 'This Cat''s righteous heart finally conquered the cursed sword, turning it into a holy axe. Might critical attack. (Area Attack)']
+    60:
+      name: [Baby Cat, Baby Cats, Cats in the Cradle]
+      desc: ['A baby Cat that still can''t do anything by itself. Luckily, daddy is there to help. Might knockback Floating & Aliens (Area Atk)', Brought along it's baby sister. Dad has his work cut out for him. Might knockback Floating & Aliens (Area Atk), Even 7 kittens together can't do much… Luckily Dad's still keeping an eye out for bullies. Area wave attacks knockback Floating/Alien.]
+    72:
+      name: [Sanada Yukimura, Wargod Yukimura, Immortal Yukimura]
+      desc: [A famous warrior that was transformed by the Legendary Cat Armour into a Bird-type General. Deals massive damage to Black enemies., Activated the armour's hidden function Jet Boosters. No stopping it now! Deals massive damage to Black enemies., 'Crimson wings carry this wargod through the front lines, tearing them apart without mercy! Deals massive damage to Black enemies.']
+    73:
+      name: [Maeda Keiji, Wargod Keiji, Immortal Keiji]
+      desc: ['A warrior that was transformed by the Legendary Cat Armour into a Tiger-type General. (Area Attack) Resistant to Black, more damage when hurt.', 'The Legendary Cat Armour evolved and sprouted a Cherry Tree from his head (Area Attack) Resistant to Black, more damage when hurt.', 'As the cherries blossom, so does Keiji''s battle fury. Resistant to Black, immune to Wave attacks. Area attacks grow stronger as he takes damage.']
+    74:
+      name: [Oda Nobunaga, Wargod Nobunaga, Immortal Nobunaga]
+      desc: [The manifestation of the Grudge of Nobunaga from the lives of many (and one Cat) (Area Attack) 100% chance to Freeze Black enemies., The Cat's spirit goes into overdrive. The grudge grows even stronger. (Area Attack) 100% chance to Freeze Black enemies., Leads an army of vengeful spirits to fulfill his dream of unifying the heavens and the netherworld. 100% chance to Freeze Black enemies. (Area)]
+    76:
+      name: [Windy, 'Windy, type α', Divine Windy]
+      desc: [A galaxy girl who manipulates wind. Her vacuum cannon cleans enemies from a distance Massive damage to Floating enemies. (Area Attack), This strange girl can hear the wind whispering. The wind tells her that it is in pain… Massive damage to Floating enemies. (Area Attack), Has a bad habit of impulse buying the latest mechas. Neo-Vacuum Cannon blasts from long-distance. Massive damage to Floating enemies. (Area Attack)]
+    77:
+      name: [Thundia, 'Thundia, type β', Divine Thundia]
+      desc: [A galaxy girl who can manipulate electricity. Brings down bolts from a distance. Massive damage to Red enemies. (Area Attack), Always worries about her chronic neck pain. Likes watching cartoons in her spare time. Massive damage to Red enemies. (Area Attack), 'When you have a goddess'' body, it''s tough to find clothes that fit. Long distance Area Attacks deliver massive damage to Red enemies.']
+    84:
+      name: [Sodom, Earth King Sodom, God-Emperor Sodom]
+      desc: [An awakened Ancient Cat Dragon. Leaves destruction in it's wake (Area Attack) Might knockback/resistant to Floating., An awakened Ancient Cat Dragon Weapon. Sodom shifted to final Dragon form (Area Attack) Might knockback/resistant to Floating., 'Sodom unlocked his FINAL final Dragon form, Rending the very earth asunder with power! 100% area knockback/resistant vs Floating.']
+    85:
+      name: [Megidora, Holy Dragon Megidora, God-Emperor Megidora]
+      desc: [An awakened Ancient Cat Dragon. Created to purify the world (Area Attack) Might knockback and slow Floating enemies., An awakened Ancient Cat Dragon. Megidora shifts to final Dragon form (Area Attack) Might knockback and slow Floating enemies., Possessor of the Divine Dragon Stone. Ready to devour all to maintain its imperial throne. Area attacks might slow Floating enemies.]
+    86:
+      name: [Vars, Dragon King Vars, God-Emperor Vars]
+      desc: [Legendary Dragon Knight Vars. (Area Attack) Has rode over a thousand dragons. Might knockback and slow Black enemies., Legendary Dragon Knight Vars. (Area Attack) Vars now unleashes all of his power. Might knockback and slow Black enemies., Legendary Knight who has mastered even the most savage mount to rain down Area attacks. Might knockback and slow Black enemies.]
+    87:
+      name: [Kamukura, God Dragon Kamukura, God-Emperor Kamukura]
+      desc: [Ancient Cat Dragon Kamukura. (Area Attack) Said to be able to move the heavens. Might knockback and slow Red enemies., Ancient Cat Dragon Kamukura. (Area Attack) Shifted to true form after collecting 7 balls. Might knockback and slow Red enemies., Ancient Cat Dragon who has awakened the hidden power of the 7 mystic balls. Might knockback and slow Red enemies.]
+    88:
+      name: [Raiden, Dragonslayer Raiden, God-Emperor Raiden]
+      desc: [An Ancient Anti Cat Dragon weapon. Lays down a hail of deadly bullets. 100% Area Knockback vs Red Enemies., An Ancient Anti Cat Dragon weapon. Raiden forcefully set to overdrive. 100% Area Knockback vs Red Enemies., Overdrive has released Raiden's almighty power. Nothing can withstand the blast of his holy beam. Strong vs. / 100% Area Knockback vs Red.]
+    106:
+      name: [Kuu, 'Kuu, type γ', Divine Kuu]
+      desc: [Zealous user of strange witchcraft to control her staff for great damage from a distance. Strong against Black/Red enemies. (Area Attack), 'Zealous user of strange witchcraft. Not good with men, ends with verbal abuse. Strong against Black/Red enemies. (Area Attack)', Treat her like a weakling and you'll know true pain. Your apologies will only make the staff smash down harder. Strong against Red/Black (Area Attack).]
+    107:
+      name: [Kai, 'Kai, type μ', Divine Kai]
+      desc: ['Airheaded girl riding her machine pig "Tonton". Fires powerful point blank beams (Area Attack) Reduced damage from Floating, Survives Once.', 'Ends up liking anyone who is nice to her. Her love hurdle is mere 3cm (Area Attack) Reduced damage from Floating, Survives Once.', 'If any cute guy is your type, is that really a type? Always travels via her trusty Boarborg (Area Atk) Reduced damage from Flying, Survives Once.']
+    108:
+      name: [Coppermine, 'Coppermine, type κ', Divine Coppermine]
+      desc: [Magicial beauty powered by her staff Releases beams of light (Area Attack) Might freeze floating enemies., 'Doesn''t smile that often. (Area Attack) In front of cats, however.. different story. Might stop floating enemies.', 'What can you do for her that her favorite Cat doesn''t already? Come back in 100 years, kid. Might stop Floating (Area Attack)']
+    125:
+      name: [Date Masamune, Wargod Masamune, Immortal Masamune]
+      desc: [The curse of the Legendary Cat Shield has made him a killing machine. (Area Attack) Might knockback Black and Red enemies., Cat Shield's Hell Mode - activate! Infernal (Area) attacks slice through his foes! Might knockback Black and Red enemies., Infernal hatred has fully infused the Shield. Karmic blades sweep through all enemies! Area atks. knockback Black and Red enemies.]
+    126:
+      name: [Takeda Shingen, Wargod Shingen, Immortal Shingen]
+      desc: [A master tactician of overwhelming power who is cursed by the Legendary Cat Sword. Area attacks only damage Black/Aliens., Cat Sword's Tactics Mode - activate! Even greater destructive power! Area attacks only damage Black/Aliens., The Cat Sword's path of destruction is unstoppable. There is no mercy to be given. Area attacks only damage Black/Aliens.]
+    135:
+      name: [Urashima Taro, Guardian Gamereon, King Gamereon]
+      desc: [Elite Cat agent that holds the secret of the government bioweapon T.U.R.T.L.E. (Area Atk) Resistant to Black/Angel attacks., A super-powerful T.U.R.T.L.E. enhanced by the top-secret T-VIRUS (Area Attack) Resistant to Black/Angel attacks., 'To impress his crush at the secret lab, made some bold new fashion choices (and bought donuts). Resistant to Black/Angel attacks.']
+    136:
+      name: [The Grateful Crane, Super Galaxy Cosmo, Ultima Galaxy Cosmo]
+      desc: [Champion of this year's Bird-Cat contest held at the lake every year. (Area Attack) Might knockback Floating/Angel enemies., Pushed its limits further to reach space. Evolved by collecting Star Energy. (Area Atk) 100% knockback vs Floating/Angels., He has reached the edge of the universe and seen the truth. Area attacks have 100% chance of knockback & freeze vs Floating/Angels.]
+    137:
+      name: [Momotaro, The Peach Angels, The Peach Devils]
+      desc: [On a quest to find anyone stronger than him. Aim for the top! Watch the fans… Might freeze Angel/Red enemies. (Area attack), A Road Gang of wild Cats who realized that effort and results are two different things. Might freeze Angel/Red enemies. (Area attack), 'Ends may not justify the means, but they definitely justify owning a sweet ride. Might freeze Angel/Red enemies. (Area attack)']
+    138:
+      name: [Kasa Jizo, Jizo's Moving Castle, Jizo's Mega-Castle]
+      desc: [It's said there's a shadowy organization who grants wishes made to these statues. (Area Atk) Deals massive damage to Black/Angel types., 'The hidden fortress of the Jizo organization. ...wait isn''t this classified? (Area Attack) Deals massive damage to Black/Angel types.', 'Escaping the government''s tactical missile strikes, the Jizo Organization is on the offensive. (Area Atk) Deals massive damage to Black/Angel types.']
+    139:
+      name: [Princess Kaguya, The Death Moon, The Chaos Moon]
+      desc: [Beautiful Cat on assignment from the Moon. Her true nature is still top secret… Might slow Angel/Metal enemies. (Area Atk), A prototype of one of many Ancient Cat Weapons made from stolen blueprints. Might slow Angel/Metal enemies. (Area Atk), Almost annihilated the galaxy once… Oops. That can happens when you design an AI with no conscience. Slows Angels/Metal (Area Atk)]
+    144:
+      name: [Nurse Cat, Heartful Nurse Cat, Joyful Nurse Cat]
+      desc: [Her warm smile and healing aura take away the sting of her piercing syringe (Area attack) Might knockback/slow Black/Floating enemies., A battlefield nurse saving lives with a syringe. Defensive power/area increased (Area attack) Might knockback/slow Black/Floating enemies., A beloved medic & veteran of many Cat campaigns. Area attacks deliver vital medicine. Might knockback/slow Black/Floating enemies.]
+    159:
+      name: [Uesugi Kenshin, Wargod Kenshin, Immortal Kenshin]
+      desc: [Transformed into a dragon through the cursed magic of the Nyanko Engine. (Area attack) Strong + 100% knockback against Black., 'Deciding to fully fuse with the Nyanko Engine, the great general gave in to darkness. (Area att.) Strong + 100% knockback against Black.', Totally consumed by corruption. The only emotion remaining is the will to destruction. (Area Attacks) Strong vs + 100% knockback against Black.]
+    160:
+      name: [Kalisa, 'Kalisa, type χ', Divine Kalisa]
+      desc: [Almost obliterated her school on the first day of class with her sword's dark magic. Massive damage against Angels. (Area Attack), Banished her principal to the netherworld at the graduation ceremony. Things never change. Massive damage against Angels. (Area Attack), All of the nice boys who confess their love to her soon find themselves "graduated" to the next world. Massive damage against Angels. (Area Attack)]
+    169:
+      name: [Asiluga, Asilan Pasalan, Assassinlan Pasalan]
+      desc: [Not sure if this is a Cat… There's just something about those legs…, 'Unbelievable, just unbelievable. Seems like this one slows all enemies in range.', 'Is it a Cat? Or an overly melodramatic comic-book assassin of some kind? Slows enemies with Area Attacks.']
+    170:
+      name: [Kubiluga, Kubilan Pasalan, E. Kubilan Pasalan]
+      desc: [Not sure if this is a Cat… There's just something about that neck…, 'You can''t be serious. Really?! Seems like this one knocks back enemies from afar.', A mighty sumo wrester who sharpened his expert skills fighting on the streets. Wave attacks with 100% Critical chance!]
+    171:
+      name: [Tecoluga, Tesalan Pasalan, Lufalan Pasalan]
+      desc: [Not sure if this is a Cat… There's just something about those arms…, 'Are you kidding me?! Seems like this one does massive damage (sometimes critical) to just one enemy.', It seems like this one is a straw-hatted pirate of some kind. But we really can't be sure. Massive damage vs. one enemy. (Might Crit.)]
+    172:
+      name: [Balaluga, Balalan Pasalan, Piccolan Pasalan]
+      desc: [Not sure if this is a Cat… There's just something about that belly…, No. Way. This can't be right… Seems like this one freezes all enemies in range., 'A totally unknown extraterrestrial lifeform of unimaginable power... or maybe just a weird Cat? Freezes and weakens all enemies in area atk range.']
+    175:
+      name: [Mola King, Living Legend]
+      desc: ['Dropping in from "Survive! Mola Mola!" His size is almost without equal, and so is his royal arrogance. (Area Attack)', 'Bears the burden of a watery destiny, Regrets? A good long scream can take care of doubt and worries! (Area Attack)']
+    178:
+      name: [Dioramos, Archdragon Dioramos, God-Emperor Dioramos]
+      desc: [This dragon lord seeks to set it all ablaze. Lay waste with epically mighty area attacks. Might knockback and slow Angels., An ancient dragon of unquestioned authority. Lay waste with epically mighty area attacks. Might knockback and slow Angels., 'Brutal attacks powered by hate - a family tradition of mercilessness. 100% Barrier break, plus Knockback & Slow vs Angels (Area Atk)']
+    195:
+      name: [Akira, Shadow Akira, Inferno Akira]
+      desc: [A super-genius who dreamed of alien invasion. Recreated himself as a cyborg hero to defend the planet! Area attacks might freeze Aliens., A bullied kid who hid in his room for years. No more! Now channels his fear into fighting for justice! Attack power increases when damaged! (Area), 'Reinventing himself, he has changed his destiny! But can he change society with his powers? Strong vs. Aliens, immune to wave attacks.']
+    196:
+      name: [Mekako Saionji, Dr. Mekako, Mission Control Mekako]
+      desc: [Studied back issues of Mechanix Monthly to build the unstoppable killing machine of her dreams. Resistant to Alien/Black. Survives one lethal strike., Broke into an airport and took apart a jet engine overnight to get parts for her mecha masterpiece. Magnifique. Knockback + Weaken against Aliens., 'Recruited by NYASA to engineer mechs for deep-space recon. Astrophysics? No sweat. Massive area damage + Slow vs Aliens.']
+    197:
+      name: [Catman, Dark Catman, Ultimate Catman]
+      desc: ['Wears a special suit that blocks all UV light, but it can''t stop the papparazzi from following… Massive area damage against Floating/Aliens.', 'Became a monster to fight the terrors of the night. Still, weak to autograph requests from nice old ladies. Massive area damage against Angels/Aliens.', Gave in and took a three-movie deal to afford a high-tech suit powered by the fear of evildoers. Massive Area damage to Aliens and Relics.]
+    204:
+      name: [Kachi-Kachi, Fire Squad Kachiyama, Kachiyama Assault Brigade]
+      desc: ['Cat Army R&D cloned an ancient superweapon: a cute Tanuki that can survive being set on fire… Might weaken Alien/Angel attacks. (Area Attack)', 'Communing with ancient spirits, Kachi now gathers all the heat he has absorbed for explosive assaults! Weakens Alien/Angel attacks. (Area Attack)', Ancient magic empowered by modern technology. Burn it all down and leave no evidence behind! Weakens Alien/Angel attacks. (Area Attack)]
+    213:
+      name: [The White Rabbit, The Black Cat, The Grey Fox]
+      desc: ['A notorious spy who insists on cosplaying during every heist. She''s never failed a mission, though… 100% chance of slowing Alien/Red. (Area Attack)', 'Operative of the infamous Cat assassin''s guild, there and gone without a single trace. Delivers pizza as a cover. Strong area damage against Alien/Red.', 'Commander of the F.O.X. intelligence agency, she ruthlessly directs a global network of expert killers. Area atks knockback+weaken Alien/Red.']
+    223:
+      name: [HUGE HERMIT, HUGE HERMIT CC]
+      desc: [Recruited from Metal Slug Defense! Giant crab that uses tank wreckage to attack. Strong against Aliens. (Area Atk), Recruited from Metal Slug Defense! Terrifying claws wade towards the beachhead! Strong against Aliens. (Area Atk)]
+    224:
+      name: [JUPITER KING, JUPITER KING CC]
+      desc: [Recruited from Metal Slug Defense! A robotic guardian who patrols secret factories. Might knockback + slow Aliens. (Area Atk), Recruited from Metal Slug Defense! Fires lasers powerful enough to vaporize all matter. Might knockback + slow Aliens. (Area Atk)]
+    225:
+      name: [DONALD MORDEN, GENERAL MORDEN]
+      desc: [Recruited from Metal Slug Defense! A charismatic ex-general plotting a coup. Knockback + resistant to Aliens. (Area Atk), Recruited from Metal Slug Defense! Fights corruption with rocket launcher in hand. Knockback + resistant to Aliens. (Area Atk)]
+    226:
+      name: [HI-DO, HI-DO CC]
+      desc: [Recruited from Metal Slug Defense! Large bomber copter used by the Morden Army. Might knockback + Strong def. vs Floating. (Area Atk), Recruited from Metal Slug Defense! A fighter used to ensure the safety of VIPs. Might knockback + Strong def. vs Floating. (Area Atk)]
+    227:
+      name: [Warlock and Pierre, Dark Merchant Babil, Mad Doctor Klay]
+      desc: ['A precocious young sorcerer who has enslaved a nightmare. Its infernal powers deliver massive damage only to Aliens, Floating and enemy bases.', 'With his nightmare''s true form revealed, they now journey collecting wicked souls. Huge damage only to Angel/Alien, gets big money for each enemy defeat.', 'Picked up an online degree in occult anatomy. 1st attempt at a soul transplant: GREAT SUCCESS!(?) Delivers extreme damage, but only to Aliens/bases!']
+    230:
+      name: [Hallowindy, Hallowindy α]
+      desc: [The mistress of wind really gets into Halloween each year. Blasts enemies with unearthly plasma beams. Massive damage against Alien enemies from range., This hyper-maiden's idea of a good Halloween prank is a plasma beam shot when its least expected. Massive damage against Alien enemies from range.]
+    231:
+      name: [Spooky Thundia, Spooky Thundia β]
+      desc: [The thunder queen really gets into Halloween each year. Shocks baddies with volleys of spectral lightning. Massive damage against Black enemies from range., Halloween is the best chance to tease nice boys. Shocks baddies with volleys of spectral lightning. Massive damage against Black enemies from range.]
+    241:
+      name: [Togeluga, Togelan Pasalan, Shishilan Pasalan]
+      desc: ['Not sure if this is a Cat… There''s just something about those… spikes???', 'No. Way. This can''t be right… Survives one lethal strike, gets stronger the more damage he takes. (Area Attack)', 'Ancient god who bridges the worlds of the living and the dead. Survives once, grows stronger as he takes more damage. (Area Attack)']
+    242:
+      name: [Frosty Kai, 'Frosty Kai, Type μ']
+      desc: ['A clumsy gal, dressed up just for Xmas! Fires a powerful, short-range ice beam. Resistant to Aliens/Angels. (Area Atk.)', 'Crushes on any skier who is nice to her. Falling in love, or just slipping on ice? Resistant to Aliens/Angels. (Area Atk.)']
+    243:
+      name: [Santa Kuu, 'Santa Kuu, Type γ']
+      desc: [A passionate gal dressed up for Xmas! Big damage from her long range Tree attack! Strong vs Aliens/Angels. (Area Atk), Dressing up for Xmas brings out her sweet side! Mistletoe still makes her nervous. Strong vs Aliens/Angels. (Area Atk)]
+    244:
+      name: [Holy Coppermine, 'Holy Coppermine, Type κ']
+      desc: ['A sacred guardian, dressed up for Xmas! Her holy blessings obliterate evil! Might freeze Aliens/Angels. (Area Atk.)', 'A girl who never smiles, but Xmas spirit always brings a gentle smirk to her face. Might freeze Aliens/Angels. (Area Atk.)']
+    258:
+      name: [Thunder God Zeus, The Majestic Zeus]
+      desc: [The highest authority among the old gods of Olympus. Rains down destruction with his Heavenly Lance. Strong vs. Angels. (Area Atk), 'Empowered by divine fury, his might grows ever more! His Heavenly Blade reduces existence to ashes. Strong vs. Angels. (Area Atk)']
+    259:
+      name: [Anubis the Protector, Anubis the Unblemished]
+      desc: [God of Death who escorts human souls to the underworld. His Nether Staff purges mortals of sin. Unharmed by wave attacks. (Area Attack), His dominance of the underworld is complete. A single touch from his Sacred Staff will extinguish any life. Unharmed by wave attacks. (Area Attack)]
+    260:
+      name: [Radiant Aphrodite, Megaphrodite]
+      desc: ['Deity of beauty, pride, love and… other stuff. Her Golden Bow always strikes true from afar. Deals massive damage to Aliens. (Long Distance)', 'Her Brilliant Bow can grant long life, or take it all away… watch your mouth around this goddess! Deals massive damage to Aliens. (Long Distance)']
+    262:
+      name: [Hayabusa, Oni Hayabusa]
+      desc: ['Seals away evil with his clan''s mystic blade. The way of the Ninja knows no mercy. Long Distance, Area Attacks, Critical Attacks.', 'The otherworldly power in his chest now threatens to consume him. To destroy evil, will he lose his soul? Long Distance, Area Attacks, Knockback, Slow.']
+    270:
+      name: [Baby Gao, Mighty Lord Gao]
+      desc: ['Might be a crybaby, but he''s still young! He just doesn''t realize the power within himself. Strong against any enemy with a trait. (Area Atk)', 'Only appears to those who seek true power. Strong against any enemy with a trait, immune to Wave attacks. Might Critical (Area Atk)']
+    271:
+      name: [Crazed Yuki, Crazed Yuki Cat]
+      desc: ['Possessed by a dark soul, she feverishly hunts down the mystery behind the annihiliation. Massive area damage against Red and Black.', 'Desperate to solve the mystery, she has given herself totally over to darkness and Catness. Massive area damage against Red and Black.']
+    272:
+      name: [Shining Amaterasu, Glorious Amaterasu]
+      desc: [The might and beauty of the Sun personified. Subdues enemies using her sacred mirror. Massive area damage to any enemy with a trait., No one can stand against the radiance of this goddess. Dark souls kneel before her holy mirror! Massive area damage to any enemy with a trait.]
+    273:
+      name: [Splendid Ganesha, Exalted Ganesha]
+      desc: ['Lord of scholarship and splendor, guardian of the sacred treasures that ward against misfortune. Gains power when damaged (Long Range Area Atk)', 'All who follow him will grow prosperous and wise, as he smites his enemies with infinite might. Gains power when damaged (Long Range Area Atk)']
+    275:
+      name: [Tropical Kalisa, Tropical Kalisa X]
+      desc: [Spends lazy summer days cursing couples on the beach from the deck of her vacation house. Massive area damage to Red enemies., 'Slipped into the netherworld when she was two, but summer days almost make her feel human again. Massive area damage to Red enemies.']
+    276:
+      name: [Midsummer Rabbit, Midsummer Cat]
+      desc: ['Wearing her undercover(?) Rabbit uniform, used for tracking villains on sunny Mediterranean beaches. 100% Slow against Angels/Black (Area Attack)', 'After identifying the target, she slips into another summer outfit made for stealth. Time to move in for the kill! Strong against Angels/Black (Area Atk)']
+    284:
+      name: [Pai-Pai, Pai-Pai Z]
+      desc: ['Poster girl for a famous dim sum restaurant. Always carries her heirloom Scarlet Hammer. Resists Red attacks, massive area damage.', 'Mystic seals were broken, unleashing the sexy power of the Red Panda Hammer. Resists Red attacks, massive area damage.']
+    287:
+      name: [Strike Unit R.E.I., Assault Unit R.E.I.]
+      desc: ['Cheerful young mech, built for anti-air warfare using future tech forbidden by international law. Resistant to/Massive area damage vs Floating.', 'After an upgrade, escaped from govt. custody to use her powerful arsenal to help the innocent. Resistant to/Massive area damage vs Floating.', 'After an upgrade, escaped from govt. custody to use her powerful arsenal to help the innocent. Resistant to/Massive area damage vs Floating.']
+    303:
+      name: [Lilith Cat, Succubus Cat]
+      desc: ['Snow is in short supply before November, so Ice Cat changed to a more mischevious & spooky look. Might Freeze Angels with terror (Area Attack)', 'Ice Cat has been overtaken by her love for Halloween pranks... Will winter revive her cold but gentle heart? Might freeze Angels (Area Atk)', 'Ice Cat has been overtaken by her love for Halloween pranks... Will winter revive her cold but gentle heart? Might freeze Angels (Area Atk)']
+    305:
+      name: [Mighty Kat-A-Pult, CAT-6 Siege Engine]
+      desc: ['The spunky interns of Cat Corps of Engineers built an awesome land weapon! Powerful anti-Zombie long range attacks, might weaken!', 'Featuring thick armor, an arsenal of long-range cannons, and loaded with shock troops, CAT-6 is tough vs Zombies and weakens enemies.', 'Featuring thick armor, an arsenal of long-range cannons, and loaded with shock troops, CAT-6 is tough vs Zombies and weakens enemies.']
+    306:
+      name: [Mighty Drednot, B.C.S. Lionheart]
+      desc: [The spunky interns of Cat Corps of Engineers built a retro battleship for marine dominance! Area atks deliver huge damage vs Red enemies., 'Boasting a complement of elite marines and a drill able to punch through any hull, the Lionheart delivers huge area damage vs Reds and Zombies.', 'Boasting a complement of elite marines and a drill able to punch through any hull, the Lionheart delivers huge area damage vs Reds and Zombies.']
+    307:
+      name: [Mighty Bomburr, NEK-0 Sky Fortress]
+      desc: [The spunky interns of Cat Corps of Engineers built a super sweet tactical aircraft. Area atks knock back Zombie enemies with ease., 'The ultimate aerial threat, dropping endless megatons of munition on ground threats. Area attacks deliver powerful knockback vs Zombies.', 'The ultimate aerial threat, dropping endless megatons of munition on ground threats. Area attacks deliver powerful knockback vs Zombies.']
+    311:
+      name: [Yuletide Nurse, Yule Knight Nurse]
+      desc: [Everyone's favorite Nurse is feeling the Xmas spirit! Praying for health with a lucky holiday candle. Slow/knockback Angels/Aliens., The warrior-nurse of Xmas mercy! Her sword shines brighter than any candle. Might slow & knockback Angels and Aliens., The warrior-nurse of Xmas mercy! Her sword shines brighter than any candle. Might slow & knockback Angels and Aliens.]
+    317:
+      name: [Wrathful Poseidon, Valiant Poseidon]
+      desc: ['Master of storms and seas, one of the 12 supreme Olympian gods. Sacred Trident''s area attack 100% freezes Zombies/Metal foes.', Undisputed lord of the waters. Can command sea serpents to obliterate those who defy him. Area attack 100% freezes Zombies/Metal foes., Undisputed lord of the waters. Can command sea serpents to obliterate those who defy him. Area attack 100% freezes Zombies/Metal foes.]
+    319:
+      name: [Miko Mitama, Mitama the Oracle]
+      desc: ['Chosen as a holy servant by the God of Cats, infinite power lies hidden within her. Strong defense vs. all enemies with traits. (Long Range/Area Atk)', 'Dressed in bridal gowns, she appears to the blessed as a sign of Cat God''s favor. Her groom''s identity is unknown... Strong vs all traits, 100% chance to Slow.', 'Dressed in bridal gowns, she appears to the blessed as a sign of Cat God''s favor. Her groom''s identity is unknown... Strong vs all traits, 100% chance to Slow.']
+    323:
+      name: [Sarukani, Rock Revengers]
+      desc: [Won best supporting actor as a li'l monkey for "Selfish Persimmons". Everyone hates working with him. Strong area atk vs Angels/Zombies., 'The kids Sarukani did wrong formed the metal act: Causin'' Effect. Revenge is a dish best served heavy. Strong area atk vs Angels/Zombies.', 'The kids Sarukani did wrong formed the metal act: Causin'' Effect. Revenge is a dish best served heavy. Strong area atk vs Angels/Zombies.']
+    327:
+      name: [Mobius, Miraculous Mobius]
+      desc: ['Earnest lady scholar with a strong heart, dropping in from Crash Fever (Area Atk) Huge damage/100% knockback vs Red', Through dedicated effort she has perfected her skills. A guest from Crash Fever. Huge damage/100% knockback vs Red. (Area Atk), Through dedicated effort she has perfected her skills. A guest from Crash Fever. Huge damage/100% knockback vs Red. (Area Atk)]
+    331:
+      name: [Springtime Kenshin, Full-Bloom Kenshin]
+      desc: ['Intoxicated by the warm weather and blooming flowers, she cruises around from picnic to picnic. Strong vs Angels, 100% knockback. (Area Atk)', 'Possessed by the spirit of nature, she grows vibrant and lively as she relaxes in the sunshine. Strong vs Angels, 100% knockback. (Area Atk)', 'Possessed by the spirit of nature, she grows vibrant and lively as she relaxes in the sunshine. Strong vs Angels, 100% knockback. (Area Atk)']
+    332:
+      name: [Bunny & Canard, Disciple Psychoduck]
+      desc: ['A young mage found an easter egg that hatched a delightful duck-thing to be his new friend! (Area Atk) Only attacks Red/Black, with massive damage.', 'The magic egg this young wizard found seems to have been quite rotten after all... Only attacks Red/Zombies, with massive damage.', 'The magic egg this young wizard found seems to have been quite rotten after all... Only attacks Red/Zombies, with massive damage.']
+    334:
+      name: [Shadow Gao, Diabolic Gao]
+      desc: [Alternate-dimension Gao from the darkest timeline. Seeks power at any cost. (Area Atk) Massive damage vs non-attribute enemies., Appears only to those who have known true despair. Massive damage vs non-attribute enemies. Freezes enemies briefly (Area Atk), Appears only to those who have known true despair. Massive damage vs non-attribute enemies. Freezes enemies briefly (Area Atk)]
+    335:
+      name: [Trickster Himeyuri, Himeyuri Ninetails]
+      desc: ['Elusive vixen from a mystic realm. Hiding her true face, wanders mortal realms hunting for the weak-willed. Area atks might slow Floating/Angels.', Her glorious true nature is revealed! Her mood has improved with everyone's praise for her cute tails. Area Attacks might slow Floating/Angels., Her glorious true nature is revealed! Her mood has improved with everyone's praise for her cute tails. Area Attacks might slow Floating/Angels.]
+    336:
+      name: [Sea Maiden Ruri, Sea Mistress Ruri]
+      desc: ['A mermaid NEET from the mystic seas. Dreams of cute boys who''d risk drowning to date her. Tough vs Red, weakens enemies.', 'True love has granted her feet to walk beside her dearest, but now all she wants is time to play video games. Tough vs Red, weakens enemies.', 'True love has granted her feet to walk beside her dearest, but now all she wants is time to play video games. Tough vs Red, weakens enemies.']
+    337:
+      name: [Queen Reika, Pharoah Reika]
+      desc: ['A royal mummy from a mystic past. Actually, she mummified herself by over-applying foundation. Massive damage vs Aliens/Zombies (Area Atk)', 'She may have died from it, but overdoing makeup keeps her looking stunning even 5000 years later. Massive damage vs Aliens/Zombies (Area Atk)', 'She may have died from it, but overdoing makeup keeps her looking stunning even 5000 years later. Massive damage vs Aliens/Zombies (Area Atk)']
+    339:
+      name: [Imagawa Yoshimoto, Wargod Yoshimoto]
+      desc: ['His impeccable virtue allows him to wield the cursed Cat Fan. Strong against Black, 100% chance to weaken (Long-range)', 'Possessed by an all-knowing fox spirit, he strikes with golden arrows. Strong vs Black, 100% chance to weaken (Long-range)', 'Possessed by an all-knowing fox spirit, he strikes with golden arrows. Strong vs Black, 100% chance to weaken (Long-range)']
+    352:
+      name: [Twinstars, 'Twinstars, type Φ']
+      desc: ['The two purehearted sisters, Cici and Koma. Divine breath controls their mighty mecha claws. Massive area damage to Aliens/Black.', The mechanical catpaws "AH" and "UN" sweetly sweep away any threat to these cutie-pie demigods. Massive area damage to Aliens/Black.]
+    355:
+      name: [Seashore Kai, 'Seashore Kai, type μ']
+      desc: ['She''s actually terrified of water, but Kalisa dragged her to the beach for the first time in years. Super tough vs Black/Zombies (Area Attack)', 'Slowly growing more comfortable with the bikini look. Is today the day she finds her cute surfer boy? Super tough vs Black/Zombies (Area Attack)']
+    356:
+      name: [Mighty Rekon Korps, Orbital Platform Armageddon]
+      desc: ['Highly mobile artillery unit based on ancient engineering. Only attacks enemies with traits, but deals massive area damage with each strike.', Designed to control interstellar territory using wormhole physics and thermonuclear stikes. Massive area damage vs traited enemies only.]
+    358:
+      name: [Wolfchild Deale, Wolf Princess Deale]
+      desc: [A lost cub from a mighty werewolf pack who found her calling in show business. Might knockback Angels & Aliens (Area Atk), 'The one-wolf show has revealed her true colors to universal acclaim. Are you not entertained?? Might knockback Angels & Aliens (Area Atk)']
+    359:
+      name: [Graveflower Verbena, Verbena the Bride]
+      desc: [A lost soul who came home from the other side. Hunting for a groom to fill her heart... or her stomach. Might deliver critical strikes (Area Attacks), 'Her hunger sated, she now looks forward to the wedding day of her undead dreams. Might deliver critical strikes (Area Attacks)']
+    360:
+      name: [Bora, Bazibon]
+      desc: ['Cosmic fire, brought to life! This drake spirit commands flames that strike Aliens for extra damage!', 'With the power of a burning sun, its flares annihilate Barriers. Powerful defense & attack vs. Aliens']
+    361:
+      name: [Mizli, Marinmizu]
+      desc: ['Cosmic water, brought to life! This nymph spirit controls waves that knock Aliens far back!', 'With waves that can split the Earth, its attacks wash away enemy Barriers. Tough Anti-Alien defense and knockback attacks.']
+    362:
+      name: [Aer, Erphuan]
+      desc: ['Cosmic storms, brought to life! This sylph spirit summons winds for long distance area attacks!', 'With winds that blast away the mountains, no Barrier can stand against its assaults. Tough, with long-range area attacks vs Aliens.']
+    379:
+      name: [Dark Mitama, Gothic Mitama]
+      desc: ['Mitama has been betrayed by this cruel world and has embraced darkness. (Long Range Atk) Tough vs traitless enemies, 100% Slow chance.', 'Like a widow mourning her lost love, she is trapped within her memories. (Long Range Atk) Tough vs traitless, 100% Slow/Weaken chance.']
+    381:
+      name: [D'artanyan, Meow-sketeer]
+      desc: [A spunky young soldier with a lot to prove. But even he doesn't know his own strength. Extra damage to any traited enemy. (Long Range), 'With his razor-sharp blade and unbreakable spirit, he''ll risk it all to protect his comrades. Extra damage to any traited enemy. (Long Range)']
+    394:
+      name: [Saki Nijima, Saki Nijima CC, Samba Saki CC]
+      desc: [Dropping in from PowerPro Baseball! Popular player with many female fans. Area attacks slow Floating/Black., Dropping in from PowerPro Baseball! Has a small complex about being unfeminine. Area attacks slow Floating/Black., Dropping in from PowerPro Baseball! Eventually was won over by the rhythm! Area attacks slow Floating/Black.]
+    395:
+      name: [Subaru Hoshi, Subaru Hoshi CC, Dark Subaru CC]
+      desc: ['Dropping in from PowerPro Baseball! Attractive, popular, and skilled. Strong vs. Red/Angels (Long-range/Area Atk)', Dropping in from PowerPro Baseball! Dreams of making it all the way to the series final. Strong vs. Red/Angels (Long-range/Area Atk), Dropping in from PowerPro Baseball! New pitch has the cosmic power of a black hole! Strong vs. Red/Angels (Long-range/Area Atk)]
+    396:
+      name: [Miyabi Oyama, Miyabi Oyama CC, Baseball Mask δ]
+      desc: [Dropping in from PowerPro Baseball! Reliable and respected shortstop. Area attack power increases after taking damage., Dropping in from PowerPro Baseball! No worries about seeming boyish if it helps to win! Area attack power increases after taking damage., 'Dropping in from PowerPro Baseball! Just between us, it''s Miyabi... Immune to Waves. Attack power increases after taking damage.']
+    397:
+      name: [Ganglion, Ganglion the Ancient]
+      desc: ['First emperor and founder of the Dragon dynasty. Who knows what overwhelming power he holds? Long-range attacks, strong vs Aliens and Zombies.', 'Has cultivated his strength for millennia, only growing ever more powerful in his old age. Long-range attacks, strong vs Aliens and Zombies.']
+    398:
+      name: [Sakura Sonic, Afterschool Sakura]
+      desc: ['A totally average schoolgirl who likes bubble tea and vanquishing demons. Tough vs. Metal, Critical attacks slow & weaken Metal enemies.', 'It''s tough to balance club activities and defending the sacred legacy of your clan. Tough vs. Metal, Critical attacks slow & weaken Metal enemies.']
+    402:
+      name: [Voli, Volta]
+      desc: ['Cosmic thunder, brought to life! Summons lightning for a chance to freeze Aliens with Area attacks.', 'With lightning that rends the sky, it annihilates enemy Barriers. Tough vs Aliens, freezes with Area attacks.']
+    413:
+      name: [Eva Unit-00, Eva Unit-00 & Cat]
+      desc: ['Recruited from Evangelion! A humanoid superweapon prototype. Tough vs Angel/Floating, negates Waves.', 'Recruited from Evangelion! Notorious for violent incidents in testing. Tough vs Angel/Floating, negates Waves.']
+    414:
+      name: [Eva Unit-01, Eva Unit-01 & Cat]
+      desc: [Recruited from Evangelion! A humanoid superweapon test-type. Strong vs. Aliens/Zombies (Area Attack), Recruited from Evangelion! Goes berserk when pilot is in danger. Strong vs. Aliens/Zombies (Area Attack)]
+    415:
+      name: [Eva Unit-02, Eva Unit-02 & Cat]
+      desc: [Recruited from Evangelion! The Evangelion production model. Massive Long-Range/Area damage vs Red, 'Recruited from Evangelion! The true Evangelion, or so says the pilot. Massive Long-Range/Area damage vs Red']
+    416:
+      name: [Shinji Cat, Toji & Kensuke Cats]
+      desc: ['A Cat who becomes paralyzed by fear. When bullied, Eva comes to his defense! Knocks back Metal/Black, with Wave Attack!', 'Cats who can''t resist their curious nature. When bullied, Eva comes to their defense! Knocks back Metal/Black, with Wave Attack!']
+    417:
+      name: [Moon Operators, NERV Moon]
+      desc: ['Operators for the secret agency NERV, providing support for the Eva pilots. Area attacks slow Red/Zombies.', Elite command of the NERV agency. An effective team since their school days. Area attacks slow Red/Zombies.]
+    418:
+      name: [Mighty Thermae D-Lux, Subterra Guardians]
+      desc: [World-famous mobile hot springs. Travel in comfort and style. Omni-strikes slow and cause massive damage to Zombies., A secret organization defending the Cat army from Doge sneak attacks from below. Omni- strikes freeze + massive damage to Zombies.]
+    428:
+      name: [Cat Clan Heroes, Cat Guild Heroes]
+      desc: ['A brave band of Cats out to defeat the King of Evil. Long-range Area strikes have chance of Critical. 100% chance to weaken Red, Black, and Floating.', 'The Chosen One and 11 courageous adventurers. Long-range Area strikes have chance of Critical. 100% chance to weaken Red, Black, and Floating.']
+    432:
+      name: [Detective Vigler, Inspector Gabriel]
+      desc: ['Prodigy in the netherworld''s Office of Infernal Investigations, with just over 665 cases solved. Wave attacks might freeze Aliens/Floating.', This hardened veteran got too close to the truth and uncovered a conspiracy scarier than hell itself. Wave attacks might freeze Aliens/Zombies.]
+    436:
+      name: [Li'l Valkyrie, Wind Dancer Valkyrie]
+      desc: ['Valkyrie''s younger sister. Top agent of Valhalla, entrusted with high-risk missions to defend the mortal realms. Area atk might break Barriers.', Valkyrie's youngest sister. Nature itself has blessed her with command over all forces of the Earth. Area attacks might break Barriers.]
+    437:
+      name: [Nobiluga, Nobilan Pasalan]
+      desc: [Not sure if this is a Cat... There's just something about that cool 'stache..., I can't stand it anymore... Seems like this one is immune to Wave attacks. (Long Range Area Attack)]
+    439:
+      name: [Waverider Kuu, Waverider Kuu γ]
+      desc: ['A fiery lass who runs a tiki bar by the sea. Boys at the beach don''t seem to mind her abuse too much? Strong vs. Zombies/Floating (Area Atk)', A rowdy beach babe who keeps the seaside bullies in check by patrolling on her custom speedboard. Strong vs. Zombies/Floating (Area Atk)]
+    440:
+      name: [Empress Chronos, Chronos the Infinite]
+      desc: ['An almighty titaness who rescued the universe from chaos, keeping order with her Timepiece of Destiny. Freezes any traited enemy with long-range area atks.', Molded our reality from primordial matter using her mastery of the Divine Timepiece. Don't mess with her. Freezes any traited enemy with long-range area atks.]
+    442:
+      name: [D'arktanyan, Valiant D'arktanyan]
+      desc: ['Wandering warrior pursuing true justice, resembles a certain Meowsketeer. Gains attack power when damaged, effective vs all traitless enemies!', 'He values nothing more than justice and will happily sacrifice it all for his cause! Gains attack power when damaged, effective vs all traitless enemies!']
 gacha:
   0: [154, 153, 152, 151, 150, 149, 148, 147, 146, 62, 59, 57, 56, 53, 52, 51, 50, 49, 48, 47, 42, 41, 40, 39, 38, 37, 36, 35, 34, 33, 32, 31]
   1: [154, 153, 152, 151, 150, 149, 148, 147, 146, 144, 60, 58, 45, 44, 43, 62, 59, 57, 56, 53, 52, 51, 50, 49, 48, 47, 42, 41, 40, 39, 38, 37, 36, 34, 33, 32, 31]

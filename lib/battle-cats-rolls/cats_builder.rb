@@ -52,15 +52,24 @@ module BattleCatsRolls
 
     def store_cat_names res_local
       res_local.inject({}) do |result, (filename, data)|
-        separator =
+        separator_char =
           if filename.end_with?('_ja.csv')
             ','
           else
             '|'
           end
+        separator = Regexp.escape(separator_char)
 
         names = data.scan(/^(?:[^#{separator}]+)/).uniq
-        result[Integer(filename[/\d+/])] = names if names.any?
+        descs = data.scan(/(?=#{separator}).+$/).uniq.
+          map{ |s| s.tr(separator_char, ' ').squeeze(' ').strip }.
+          delete_if(&:empty?)
+
+        if names.any?
+          result[Integer(filename[/\d+/])] =
+            {'name' => names, 'desc' => descs}
+        end
+
         result
       end.compact
     end

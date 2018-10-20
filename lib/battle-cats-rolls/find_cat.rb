@@ -42,12 +42,12 @@ module BattleCatsRolls
           track_name = '+'.ord - 'A'.ord
 
           found.values + (ids - found.keys).map do |missing_id|
-            name = [Gacha::Uber, Gacha::SR, Gacha::Rare].find do |rarity|
+            info = [Gacha::Uber, Gacha::SR, Gacha::Rare].find do |rarity|
               found = gacha.pool.dig_cat(rarity, missing_id)
               break found if found
             end
 
-            cat = Cat.new(missing_id, name)
+            cat = Cat.new(missing_id, info)
             cat.sequence = max
 
             [cat, track_name]
