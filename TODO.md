@@ -22,6 +22,7 @@
 * echo 7000 2500 500 23 16 7 0 7 0 0 0 22 0 15 0 6 2 4 0 19 1 2 0 1 1 10 | time ./Seeker
 * Above is 1027349002
 * Picking an invalid event
+* 3112486085 is a very nice testing seed
 
 ## Seed seeker
 
