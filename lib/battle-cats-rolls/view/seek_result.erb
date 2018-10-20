@@ -11,7 +11,7 @@
       Do you want to <a href="/seek">try again</a>?
     <% else %>
       Your current seed is:
-      <a href="<%= "//#{web_host}/?seed=#{arg[:seed]}" %>"><%= arg[:seed] %></a>
+      <a href="<%= "//#{web_host}/?#{query_string({seed: arg[:seed]}.merge(default_query))}" %>"><%= arg[:seed] %></a>
     <% end %>
   <% elsif arg[:seek] %>
     <% if arg[:seek].started? %>

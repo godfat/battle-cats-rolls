@@ -1,5 +1,6 @@
 <div id="form">
   <form method="get" enctype="application/x-www-form-urlencoded">
+    <%= erb :options %>
     <%= erb :events %>
   </form>
 
@@ -13,19 +14,19 @@
 
             <optgroup label="Rare:">
               <% gacha.rare_cats.each.with_index do |cat, slot| %>
-                <option value="0 <%= slot %>"><%= cat.name %></option>
+                <option value="0 <%= slot %>"><%= cat_name(cat) %></option>
               <% end %>
             </optgroup>
 
             <optgroup label="Super Rare:">
               <% gacha.sr_cats.each.with_index do |cat, slot| %>
-                <option value="1 <%= slot %>"><%= cat.name %></option>
+                <option value="1 <%= slot %>"><%= cat_name(cat) %></option>
               <% end %>
             </optgroup>
 
             <optgroup label="Uber:">
               <% gacha.uber_cats.each.with_index do |cat, slot| %>
-                <option value="2 <%= slot %>"><%= cat.name %></option>
+                <option value="2 <%= slot %>"><%= cat_name(cat) %></option>
               <% end %>
             </optgroup>
           </select>
@@ -34,6 +35,8 @@
     </ol>
 
     <input type="hidden" name="event" value="<%= controller.event %>">
+    <input type="hidden" name="lang" value="<%= controller.lang %>">
+    <input type="hidden" name="name" value="<%= controller.name %>">
     <input type="submit" value="Seek">
   </form>
 </div>

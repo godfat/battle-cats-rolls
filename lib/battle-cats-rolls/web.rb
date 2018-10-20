@@ -108,7 +108,13 @@ module BattleCatsRolls
       end
 
       def show_gacha_slots cats
-        cats.map.with_index{ |cat, i| "#{i} #{cat.name}" }.join(', ')
+        cats.map.with_index do |cat, i|
+          "#{i} #{cat_name(cat)}"
+        end.join(', ')
+      end
+
+      def cat_name cat
+        h cat.pick_name(controller.name)
       end
 
       def h str
@@ -133,18 +139,11 @@ module BattleCatsRolls
       def details
         return @details if instance_variable_defined?(:@details)
 
-        @details = !request.GET['details'].to_s.strip.empty? || nil
+        @details = !request.params['details'].to_s.strip.empty? || nil
       end
 
       def uri_to_roll cat
-        uri(seed: cat.slot_fruit.seed,
-            event: controller.event,
-            lang: controller.lang,
-            name: controller.name,
-            count: controller.count,
-            find: controller.find,
-            ubers: controller.ubers,
-            details: details)
+        uri({seed: cat.slot_fruit.seed}.merge(default_query))
       end
 
       def uri_to_cat_db cat
@@ -152,17 +151,24 @@ module BattleCatsRolls
       end
 
       def uri query={}
-        query_string = cleanup_query(query).map do |key, value|
-          "#{u key.to_s}=#{u value.to_s}"
-        end.join('&')
-
         path = "#{request.base_url}#{request.path}"
 
         if query.empty?
           path
         else
-          "#{path}?#{query_string}"
+          "#{path}?#{query_string(query)}"
         end
+      end
+
+      def default_query
+        cleanup_query(
+          event: controller.event,
+          lang: controller.lang,
+          name: controller.name,
+          count: controller.count,
+          find: controller.find,
+          ubers: controller.ubers,
+          details: details)
       end
 
       def cleanup_query query
@@ -177,6 +183,12 @@ module BattleCatsRolls
             true
           end
         end
+      end
+
+      def query_string query
+        query.map do |key, value|
+          "#{u key.to_s}=#{u value.to_s}"
+        end.join('&')
       end
 
       def seek_host
@@ -199,7 +211,7 @@ module BattleCatsRolls
     module Imp
       def lang
         @lang ||=
-          case value = request.GET['lang']
+          case value = request.params['lang']
           when 'tw', 'jp'
             value
           else
@@ -209,7 +221,7 @@ module BattleCatsRolls
 
       def name
         @name ||=
-          case value = request.GET['name'].to_i
+          case value = request.params['name'].to_i
           when 1, 2
             value
           else
@@ -226,7 +238,7 @@ module BattleCatsRolls
       end
 
       def seed
-        @seed ||= request.GET['seed'].to_i
+        @seed ||= request.params['seed'].to_i
       end
 
       def event
@@ -234,22 +246,22 @@ module BattleCatsRolls
       end
 
       def count
-        @count ||= [1, [(request.GET['count'] || 100).to_i, Max].min].max
+        @count ||= [1, [(request.params['count'] || 100).to_i, Max].min].max
       end
 
       def find
-        @find ||= request.GET['find'].to_i
+        @find ||= request.params['find'].to_i
       end
 
       def no_guaranteed
         return @no_guaranteed if instance_variable_defined?(:@no_guaranteed)
 
         @no_guaranteed =
-          !request.GET['no_guaranteed'].to_s.strip.empty? || nil
+          !request.params['no_guaranteed'].to_s.strip.empty? || nil
       end
 
       def ubers
-        @ubers ||= request.GET['ubers'].to_i
+        @ubers ||= request.params['ubers'].to_i
       end
 
       def current_event
@@ -351,7 +363,7 @@ module BattleCatsRolls
       post '/seek/enqueue' do
         key = SeekSeed.enqueue(seek_source, cache, logger)
 
-        found "/seek/result/#{key}"
+        found "/seek/result/#{key}?event=#{event}&lang=#{lang}&name=#{name}"
       end
 
       get %r{^/seek/result/?(?<key>\w*)} do |m|

@@ -4,23 +4,23 @@
     <option></option>
 
     <optgroup label="Uber:">
-      <% gacha.uber_cats.uniq(&:name).each do |cat| %>
+      <% gacha.uber_cats.uniq(&:id).each do |cat| %>
         <option value="<%= cat.id %>"
-          <%= selected_find(cat) %>><%= cat.name %></option>
+          <%= selected_find(cat) %>><%= cat_name(cat) %></option>
       <% end %>
     </optgroup>
 
     <optgroup label="Super Rare:">
-      <% gacha.sr_cats.uniq(&:name).each do |cat| %>
+      <% gacha.sr_cats.uniq(&:id).each do |cat| %>
         <option value="<%= cat.id %>"
-          <%= selected_find(cat) %>><%= cat.name %></option>
+          <%= selected_find(cat) %>><%= cat_name(cat) %></option>
       <% end %>
     </optgroup>
 
     <optgroup label="Rare:">
-      <% gacha.rare_cats.uniq(&:name).each do |cat| %>
+      <% gacha.rare_cats.uniq(&:id).each do |cat| %>
         <option value="<%= cat.id %>"
-          <%= selected_find(cat) %>><%= cat.name %></option>
+          <%= selected_find(cat) %>><%= cat_name(cat) %></option>
       <% end %>
     </optgroup>
   </select>
