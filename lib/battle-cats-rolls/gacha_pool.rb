@@ -52,7 +52,8 @@ module BattleCatsRolls
     def add_future_ubers amount
       -1.downto(-amount).each do |n|
         slots[Gacha::Uber].unshift(n)
-        cats[Gacha::Uber][n] = ["(#{n}?)"]
+        cats[Gacha::Uber][n] =
+          {'name' => ["(#{n}?)"], 'desc' => ['An unknown future uber']}
       end
     end
 
