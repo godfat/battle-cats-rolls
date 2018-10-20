@@ -150,7 +150,7 @@ module BattleCatsRolls
         "https://battlecats-db.com/unit/#{'%03d' % cat.id}.html"
       end
 
-      def uri query={}
+      def uri query=default_query
         path = "#{request.base_url}#{request.path}"
 
         if query.empty?
@@ -197,6 +197,10 @@ module BattleCatsRolls
 
       def web_host
         ENV['WEB_HOST'] || request.host_with_port
+      end
+
+      def seek_uri
+        "//#{seek_host}/seek?#{query_string(default_query)}"
       end
 
       def erb name, &block

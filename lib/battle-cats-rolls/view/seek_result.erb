@@ -8,7 +8,7 @@
         <li>You put the cats wrong, or you picked the wrong event.</li>
         <li>The formula changed and we didn't update the code yet.</li>
       </ul>
-      Do you want to <a href="/seek">try again</a>?
+      Do you want to <a href="<%= seek_uri %>">try again</a>?
     <% else %>
       Your current seed is:
       <a href="<%= "//#{web_host}/?#{query_string({seed: arg[:seed]}.merge(default_query))}" %>"><%= arg[:seed] %></a>
@@ -23,6 +23,6 @@
       window.setTimeout(function(){ window.location.reload(true) }, 5000);
     </script>
   <% else %>
-    Are you <a href="/seek">seeking</a> the seed?
+    Are you <a href="<%= seek_uri %>">seeking</a> the seed?
   <% end %>
 </p>
