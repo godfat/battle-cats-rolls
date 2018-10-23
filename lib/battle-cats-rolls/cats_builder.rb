@@ -62,7 +62,7 @@ module BattleCatsRolls
 
         names = data.scan(/^(?:[^#{separator}]+)/).uniq
         descs = data.scan(/(?=#{separator}).+$/).uniq.
-          map{ |s| s.tr(separator_char, ' ').squeeze(' ').strip }.
+          map{ |s| s.tr(separator_char, "\n").squeeze(' ').strip }.
           delete_if(&:empty?)
 
         if names.any?
