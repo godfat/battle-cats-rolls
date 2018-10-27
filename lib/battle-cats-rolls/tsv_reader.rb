@@ -6,7 +6,8 @@ require_relative 'gacha'
 
 module BattleCatsRolls
   class TsvReader < Struct.new(:tsv)
-    OffsetIndex = 9
+    PoolOffset = 9
+    PoolFields = 15
 
     def self.download url
       require 'net/http'
@@ -21,7 +22,7 @@ module BattleCatsRolls
     def self.event_fields
       @event_fields ||= {
         'start_on' => 0, 'end_on' => 2, 'version' => 4,
-        'type' => 8, 'offset' => OffsetIndex
+        'type' => 8, 'offset' => PoolOffset
       }
     end
 
@@ -29,7 +30,7 @@ module BattleCatsRolls
       @pool_fields ||= {
         'id' => 0, 'step_up' => 3,
         'rare' => 6, 'sr' => 8, 'ssr' => 10,
-        'guaranteed' => 11
+        'guaranteed' => 11, 'name' => 14
       }
     end
 
@@ -39,10 +40,12 @@ module BattleCatsRolls
 
     def gacha
       @gacha ||= parsed_data.inject({}) do |result, row|
+
         data = convert_event(read_event(row, self.class.event_fields))
 
         if data.delete('type') == 1
           pool = data.delete('pool')[data.delete('offset') - 1]
+          data['name'] = pool['name']
 
           if pool['id'] > 0
             data.merge!(pool)
@@ -84,6 +87,8 @@ module BattleCatsRolls
             value.to_i & 4 == 4
           when 'guaranteed'
             value.to_i > 0
+          when 'name'
+            value.strip
           else
             value
           end || nil
@@ -94,12 +99,13 @@ module BattleCatsRolls
     def read_event row, event_fields
       result = read_row(row, event_fields)
 
-      result['name'] = ['name', row.last.strip]
+      pool_data = extract_pool(row).map do |pool_row|
+        if pool_row.size == PoolFields
+          read_row(pool_row, self.class.pool_fields)
+        end
+      end.compact
 
-      result['pool'] = ['pool', extract_pool(row).map do |pool_row|
-        read_row(pool_row, self.class.pool_fields)
-      end]
-
+      result['pool'] = ['pool', pool_data]
       result
     end
 
@@ -111,15 +117,15 @@ module BattleCatsRolls
     end
 
     def extract_pool row
-      row.drop(OffsetIndex + 1).each_slice(14).to_a[0...-1]
+      row.drop(PoolOffset + 1).each_slice(PoolFields)
     end
 
     def parsed_data
       @parsed_data ||= tsv.lines.inject([]) do |result, line|
-        if line.include?("\t")
-          result << line.split(/\t+/)
-        else
+        if line.start_with?('[')
           result
+        else
+          result << line.split("\t")
         end
       end
     end
