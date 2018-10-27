@@ -32,12 +32,4 @@
       <%= checked_no_guaranteed %>
       onchange="roll(this)">
   <% end %>
-
-  <label for="add_future_ubers">Add future ubers:</label>
-  <select id="add_future_ubers" name="ubers" onchange="roll(this)">
-    <% 0.upto(9).each do |n| %>
-      <option value="<%= n %>"
-        <%= selected_ubers(n) %>><%= n %></option>
-    <% end %>
-  </select>
 </div>

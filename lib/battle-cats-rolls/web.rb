@@ -49,7 +49,7 @@ module BattleCatsRolls
       def guaranteed_cat cat, offset
         if guaranteed = cat.guaranteed
           link = link_to_roll(guaranteed)
-          next_sequence = cat.sequence + gacha.pool.guaranteed_rolls + offset
+          next_sequence = cat.sequence + controller.guaranteed_rolls + offset
 
           if offset < 0
             "#{link}<br>-&gt; #{next_sequence}"
@@ -93,6 +93,10 @@ module BattleCatsRolls
 
       def checked_no_guaranteed
         'checked="checked"' if controller.no_guaranteed
+      end
+
+      def selected_force_guaranteed n
+        'selected="selected"' if controller.force_guaranteed == n
       end
 
       def selected_ubers n
@@ -167,6 +171,7 @@ module BattleCatsRolls
           name: controller.name,
           count: controller.count,
           find: controller.find,
+          force_guaranteed: controller.force_guaranteed,
           ubers: controller.ubers,
           details: details)
       end
@@ -177,6 +182,7 @@ module BattleCatsRolls
              (key == :name && value == 0) ||
              (key == :count && value == 100) ||
              (key == :find && value == 0) ||
+             (key == :force_guaranteed && value == 0) ||
              (key == :ubers && value == 0)
             false
           else
@@ -264,6 +270,19 @@ module BattleCatsRolls
           !request.params['no_guaranteed'].to_s.strip.empty? || nil
       end
 
+      def force_guaranteed
+        @force_guaranteed ||= request.params['force_guaranteed'].to_i
+      end
+
+      def guaranteed_rolls
+        @guaranteed_rolls ||=
+          if force_guaranteed.zero?
+            gacha.pool.guaranteed_rolls
+          else
+            force_guaranteed
+          end
+      end
+
       def ubers
         @ubers ||= request.params['ubers'].to_i
       end
@@ -344,7 +363,7 @@ module BattleCatsRolls
           gacha.roll_both_with_sequence!(sequence)
         end
 
-        gacha.fill_guaranteed(cats)
+        gacha.fill_guaranteed(cats, guaranteed_rolls)
 
         found_cats =
           FindCat.search(gacha, find,

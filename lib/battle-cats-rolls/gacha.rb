@@ -42,9 +42,7 @@ module BattleCatsRolls
       roll_cat!(roll_fruit!)
     end
 
-    def fill_guaranteed cats
-      guaranteed_rolls = pool.guaranteed_rolls
-
+    def fill_guaranteed cats, guaranteed_rolls=pool.guaranteed_rolls
       if guaranteed_rolls > 0
         cats.each.with_index do |ab, index|
           ab.each.with_index do |rolled_cat, a_or_b|
