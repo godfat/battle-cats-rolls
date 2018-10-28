@@ -4,6 +4,12 @@
     <%= erb :events %>
   </form>
 
+  <p>
+    Note that do not pick any guaranteed rolls. A guaranteed roll is
+    either the 11th roll in a guaranteed event, or the 15th roll in a
+    step up event.
+  </p>
+
   <form method="post" action="//<%= seek_host %>/seek/enqueue"
     enctype="application/x-www-form-urlencoded">
     <ol>
