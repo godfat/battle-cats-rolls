@@ -78,7 +78,7 @@ module BattleCatsRolls
         logger.info("Seeking seed with #{source}")
         io.puts source
         io.close_write
-        io.read.to_i
+        io.read.scan(/\d+/).map(&:to_i)
       end
     end
   end

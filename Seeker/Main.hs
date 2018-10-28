@@ -3,6 +3,8 @@ module Main where
 
 import GHC.Conc (numCapabilities)
 import Data.Word (Word32)
+import Control.Monad (join)
+import Control.Arrow ((***))
 
 import Roll
 import Seed
@@ -14,4 +16,4 @@ main = do
   result <- map read <$> words <$> getContents :: IO [Word32]
   let picks = sourcePicks (buildSource result)
   workStart picks numCapabilities >>=
-    sequence . fmap (putStrLn . show . fromSeed)
+    sequence . fmap (putStrLn . show . join (***) fromSeed)

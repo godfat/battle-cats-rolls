@@ -244,11 +244,47 @@ module BattleCatsRolls
       end
 
       def gacha
-        @gacha ||= Gacha.new(ball, event, seed)
+        @gacha ||= Gacha.new(ball, event, gacha_seed)
       end
 
+      # This is the seed we're using to calculate the tracks
+      def gacha_seed
+        @gacha_seed ||=
+          if next_seed.nonzero?
+            next_seed
+          else
+            seed
+          end
+      end
+
+      # This is the seed from the seed input field
       def seed
         @seed ||= request.params['seed'].to_i
+      end
+
+      # This is a special seed indicates that we don't want to
+      # advance the seed for the first roll. In Gacha#current_seed_mode!,
+      # we advance the seed once to simulate the actual states of the game.
+      # That is, the game will advance the seed before rolling.
+      #
+      # This is all good, but this also means that we do not know the
+      # very first seed from the seek result, because we can't roll back
+      # the very first seed to see what will roll into the current seed.
+      # Here the `next_seed` indicates that we should treat this seed
+      # as the next seed, therefore we don't advance the first seed.
+      # Thus in the controller we do:
+      #
+      #     gacha.current_seed_mode! if next_seed.zero?
+      #
+      # When there's no next seed, we enter current seed mode to advance
+      # the first seed. Otherwise, we just use the next seed as the first one.
+      # This is a special case for the very first seek result. Therefore
+      # we don't provide this as an option with an input. This will only
+      # be used in seek_result.erb. After the user clicks on the other links,
+      # they go back to the normal current seed mode because now we know
+      # what exactly is the current seed.
+      def next_seed
+        @next_seed ||= request.params['next_seed'].to_i
       end
 
       def event
@@ -355,7 +391,9 @@ module BattleCatsRolls
     controller_include NormalizedPath, Imp
 
     get '/' do
-      if event && seed != 0
+      if event && gacha_seed != 0
+        gacha.current_seed_mode! if next_seed.zero?
+
         gacha.pool.add_future_ubers(ubers) if ubers > 0
 
         # Human counts from 1

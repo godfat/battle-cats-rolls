@@ -19,7 +19,9 @@ module BattleCatsRolls
 
     def initialize crystal_ball, event_name, seed
       super(GachaPool.new(crystal_ball, event_name), seed)
+    end
 
+    def current_seed_mode!
       advance_seed!
     end
 

@@ -1,26 +1,30 @@
 
-module Seeker(seekStart, seekRange, minSeed, maxSeed) where
+module Seeker(SeekResult, seekStart, seekRange, minSeed, maxSeed) where
 
 import Seed
 import Roll
+import Control.Applicative ((<|>))
 
-seekStart :: [Pick] -> Maybe Seed
+type SeekResult = (Seed, Seed)
+
+seekStart :: [Pick] -> Maybe SeekResult
 seekStart = seekRange minSeed maxSeed
 
-seekRange :: Seed -> Seed -> [Pick] -> Maybe Seed
-seekRange seed@(Seed value) endSeed picks =
-  if seed == endSeed then
-    matchSeed endSeed picks
-  else if value == 0 then
+seekRange :: Seed -> Seed -> [Pick] -> Maybe SeekResult
+seekRange startSeed@(Seed value) endSeed picks =
+  if value == 0 then
     seekNext
+  else if startSeed == endSeed then
+    found seek
   else
-    found $ matchSeed seed picks
+    found seek <|> seekNext
   where
+    seek = matchSeed startSeed picks
     nextSeed = Seed (succ value)
     seekNext = seekRange nextSeed endSeed picks
 
-    found Nothing = seekNext
-    found theSeed = theSeed
+    found Nothing = Nothing
+    found (Just currentSeed) = Just (startSeed, currentSeed)
 
 matchSeed :: Seed -> [Pick] -> Maybe Seed
 matchSeed seed [] = Nothing
