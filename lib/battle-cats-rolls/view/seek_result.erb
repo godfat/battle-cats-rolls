@@ -10,13 +10,21 @@
       </ul>
       Do you want to <a href="<%= seek_uri %>">try again</a>?
     <% else %>
-      Your starting seed is
-      <a href="<%= "//#{web_host}/?#{query_string({next_seed: arg.dig(:seed, 0)}.merge(default_query))}" %>"><%= arg.dig(:seed, 0) %></a>,
-      and after rolling the cats you entered, your seed is
-      <a href="<%= "//#{web_host}/?#{query_string({seed: arg.dig(:seed, 1)}.merge(default_query))}" %>"><%= arg.dig(:seed, 1) %></a>.
-      If you have other cats rolled without entering the form, count yourself.
-      Note that a guaranteed roll counts as a half roll and thus will switch
-      your track.
+      Your starting seed is:
+      <p>
+        <a href="<%= "//#{web_host}/?#{query_string({next_seed: arg.dig(:seed, 0)}.merge(default_query))}" %>"><%= arg.dig(:seed, 0) %></a>
+        (Note that this value has a half roll offset.
+        We're showing this only for reference and debugging purpose.)
+      </p>
+      After rolling the cats you entered, your seed is:
+      <p>
+        <a href="<%= "//#{web_host}/?#{query_string({seed: arg.dig(:seed, 1)}.merge(default_query))}" %>"><%= arg.dig(:seed, 1) %></a>
+      </p>
+      <p>
+        If you have other cats rolled without entering the form, count
+        yourself. Note that a guaranteed roll counts as a half roll and thus
+        will switch your track.
+      </p>
     <% end %>
   <% elsif arg[:seek] %>
     <% if arg[:seek].started? %>
