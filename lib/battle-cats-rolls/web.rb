@@ -121,6 +121,14 @@ module BattleCatsRolls
         h cat.pick_name(controller.name)
       end
 
+      def event_lang
+        case controller.lang
+        when 'jp'
+        else
+          controller.lang
+        end
+      end
+
       def h str
         CGI.escape_html(str)
       end
