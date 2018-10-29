@@ -15,20 +15,20 @@ module BattleCatsRolls
     def self.tw
       @tw ||= [
         __method__,
-        '7.4.0',
+        '7.4.2',
         'https://ponos.s3.dualstack.ap-northeast-1.amazonaws.com/appli/battlecats/event_data/battlecatstw_production/gatya.tsv',
         # https://apkpure.com/a/jp.co.ponos.battlecatstw
-        'https://download.apkpure.com/b/apk/anAuY28ucG9ub3MuYmF0dGxlY2F0c3R3XzcwNDAwMF82OWZiOGJiYw?_fn=6LKT5ZKq5aSn5oiw54itX3Y3LjQuMF9hcGtwdXJlLmNvbS5hcGs&k=f57df15a9baefc727d13528fbbf8fd005bb8f8d8&as=3d399c8dd956bb27731555744d5d4d145bb65650&_p=anAuY28ucG9ub3MuYmF0dGxlY2F0c3R3&c=2%7CGAME_CASUAL%7CZGV2PVBPTk9TJnQ9YXBrJnZuPTcuNC4wJnZjPTcwNDAwMA'
+        'https://download.apkpure.com/b/apk/anAuY28ucG9ub3MuYmF0dGxlY2F0c3R3XzcwNDAyMF82YmI1NTFkNw?_fn=6LKT5ZKq5aSn5oiw54itX3Y3LjQuMl9hcGtwdXJlLmNvbS5hcGs&k=a4b66406a3c23cdb284f39320b97bc6e5bd97113&as=e718be834e37f6f6bff6fb9a1d71357f5bd6ce8b&_p=anAuY28ucG9ub3MuYmF0dGxlY2F0c3R3&c=2%7CGAME_CASUAL%7CZGV2PVBPTk9TJnQ9YXBrJnZuPTcuNC4yJnZjPTcwNDAyMA'
       ]
     end
 
     def self.jp
       @jp ||= [
         __method__,
-        '7.5.0',
+        '7.5.3',
         'https://ponos.s3.dualstack.ap-northeast-1.amazonaws.com/appli/battlecats/event_data/battlecats_production/gatya.tsv',
         # https://apkpure.com/a/jp.co.ponos.battlecats
-        'https://download.apkpure.com/b/apk/anAuY28ucG9ub3MuYmF0dGxlY2F0c183MDUwMDBfYzA5NmMyNWQ?_fn=44Gr44KD44KT44GT5aSn5oim5LqJX3Y3LjUuMF9hcGtwdXJlLmNvbS5hcGs&k=79219f100c3f256e731d5e3f7acbf6865bc02f74&as=ec056d048856373741a1349afe8a3ea35bbd8cec&_p=anAuY28ucG9ub3MuYmF0dGxlY2F0cw&c=2%7CGAME_CASUAL%7CZGV2PVBPTk9TJnQ9YXBrJnZuPTcuNS4wJnZjPTcwNTAwMA'
+        'https://download.apkpure.com/b/apk/anAuY28ucG9ub3MuYmF0dGxlY2F0c183MDUwMzBfZGY3Nzk5ODc?_fn=44Gr44KD44KT44GT5aSn5oim5LqJX3Y3LjUuM19hcGtwdXJlLmNvbS5hcGs&k=9fc0c5c8220c232ce5b5413f346a69745bd9718e&as=d570e7fa268fce1d4b58db8f6353b1ff5bd6cf06&_p=anAuY28ucG9ub3MuYmF0dGxlY2F0cw&c=2%7CGAME_CASUAL%7CZGV2PVBPTk9TJnQ9YXBrJnZuPTcuNS4zJnZjPTcwNTAzMA'
       ]
     end
 
