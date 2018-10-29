@@ -1953,3 +1953,75 @@ events:
     sr: 2000
     ssr: 500
     guaranteed: true
+  2018-11-01_224:
+    start_on: 2018-11-01
+    end_on: 2018-11-03
+    version: '70400'
+    name: "★ Galaxy Gals★ Cute 'n' tough Uber Cats!"
+    id: 224
+    rare: 7000
+    sr: 2500
+    ssr: 500
+  2018-11-01_321:
+    start_on: 2018-11-01
+    end_on: 2018-11-22
+    version: '70400'
+    name: "【Limited】 Crash Fever Collab Capsules! ★ Tap banner for more info!"
+    id: 321
+    rare: 7000
+    sr: 2500
+    ssr: 500
+  2018-11-03_315:
+    start_on: 2018-11-03
+    end_on: 2018-11-06
+    version: '70400'
+    name: New Uber "D'artanyan" is here! ★ Extra-high Uber drop rate for every draw!
+    id: 315
+    rare: 6500
+    sr: 2600
+    ssr: 900
+  2018-11-06_304:
+    start_on: 2018-11-06
+    end_on: 2018-11-08
+    version: '70400'
+    name: "★ Nekolugas ★  Super-creepy Uber Cats!"
+    id: 304
+    rare: 7000
+    sr: 2500
+    ssr: 500
+  2018-11-08_311:
+    start_on: 2018-11-08
+    end_on: 2018-11-10
+    version: '70400'
+    name: "★ The Almighties! ★ All-powerful Uber Cats, ready to be recruited!"
+    id: 311
+    rare: 7000
+    sr: 2500
+    ssr: 500
+  2018-11-10_319:
+    start_on: 2018-11-10
+    end_on: 2018-11-13
+    version: '70400'
+    name: D'arktanyan is here! ★ Plus higher drop rate for Uber Rares!
+    id: 319
+    rare: 6500
+    sr: 2600
+    ssr: 900
+  2018-11-10_322:
+    start_on: 2018-11-10
+    end_on: 2018-11-22
+    version: '70400'
+    name: "【Limited】 Crash Fever Collab Capsules! ★ Tap banner for more info!"
+    id: 322
+    rare: 7000
+    sr: 2500
+    ssr: 500
+  2018-11-13_298:
+    start_on: 2018-11-13
+    end_on: 2018-11-16
+    version: '70500'
+    name: "★ Dark Heroes ★ Defend justice with for superpowered Uber Cats!"
+    id: 298
+    rare: 7000
+    sr: 2500
+    ssr: 500
