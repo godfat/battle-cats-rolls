@@ -289,8 +289,8 @@ cats:
       name: [Doll Cats, Cat-o-tron, Nyalladin]
       desc: ["Cats that have dressed up as dolls.\nDon't have much health but shoots laser\nbeams to take down many foes (Area Attack)", "This young Cat controls the Cat Robot,\nCat-o-tron, to fire laser beams (Area Attack)\nUnforunately, it's not wireless yet.", "Always owns the latest model carpet,\ncan call on his turbaned friend to fire\npowerful wave attacks. (Area Attack)"]
     89:
-      name: [Rope Jump Cat, Pair Rope Jump Cat]
-      desc: ["In Japanese, it's Nawatobi\nThis Cat is cheap to produce, with added fun.\nMight perform critical attacks", "Well, Rope jump is more fun with two people.\nStill cheap and effective, with twice more fun.\nMight perform critical attacks"]
+      name: [Rope Jump Cat, Pair Rope Jump Cat, Noodle Cats]
+      desc: ["In Japanese, it's Nawatobi\nThis Cat is cheap to produce, with added fun.\nMight perform critical attacks", "Well, Rope jump is more fun with two people.\nStill cheap and effective, with twice more fun.\nMight perform critical attacks", "Always fast, cheap and delicious!\nThis describes both the Cats and their noodles.\nTough defense and chance of Critical Strikes."]
     101:
       name: [Maiden Cat, Sportsgirl Cat, Wrestling Cat]
       desc: ["Her punches are messages\nto convey the pure emotions in her heart.\nStrong against Red Enemies (Area Attack)", "Finished with matters of the heart,\nshe turned to sports, now no one can stop her.\nStrong against Red Enemies (Area Attack)", "She's dedicated her life to sport. Her unmatched\nphysical power has earned her 22 gold\nmedals in crushing Red enemies (Area Atk.)"]
@@ -391,8 +391,8 @@ cats:
       name: [Curling Cat, Zamboney Cat]
       desc: ["Hard, heavy and precise winter weapon.\nHits hard once, then won't move again.\nUnharmed by wave attacks.", "Manufacturer not responsible for equipment\nfailure ...is what the manual says.\nUnharmed by wave attacks.", "Manufacturer not responsible for equipment\nfailure ...is what the manual says.\nUnharmed by wave attacks."]
     326:
-      name: [Welterweight Cat, Heavyweight Cat]
-      desc: ["Successor to a legendary Japanese boxer.\nLooks the part, but he's always KO'ed in the \n2nd round. Might knockback Zombies.", "Unorthodox technique, sure, but this afro'd\nhero always gets up before the 10-count.\nMight knockback Zombies.", "Unorthodox technique, sure, but this afro'd\nhero always gets up before the 10-count.\nMight knockback Zombies."]
+      name: [Welterweight Cat, Heavyweight Cat, Ectoweight Cat]
+      desc: ["Successor to a legendary Japanese boxer.\nLooks the part, but he's always KO'ed in the \n2nd round. Might knockback Zombies.", "Unorthodox technique, sure, but this afro'd\nhero always gets up before the 10-count.\nMight knockback Zombies.", "Had a near death experience trying to lose weight\nfor the next bout, then revived after absorbing\nghostly energy. Might knockback Zombies."]
     330:
       name: [Eggy Cat, Easter Cat]
       desc: ["Dressed to the nines for Spring! Didn't think \nabout ease of movement when choosing a look.\nAttacks slow Angel movement for a moment.", "Determined to be reborn for Spring, he sheds his\nshell to reveal a whole new self hiding inside.\nAttacks slow Angel movement for a moment.", "Determined to be reborn for Spring, he sheds his\nshell to reveal a whole new self hiding inside.\nAttacks slow Angel movement for a moment."]
@@ -453,6 +453,9 @@ cats:
     433:
       name: [Betakkuma, Black Betakkuma]
       desc: ["Joining the fight from Betakkuma!\nWeirdly cute white bear with some slick moves.\nMight knockback Aliens.", "Joining the fight from Betakkuma!\nChanged colors after training by an assassin's guild.\nMight knockback Aliens."]
+    443:
+      name: [Lone Cat and Kitten, Vendor Cat and Kitten]
+      desc: ["Master assassin who wanders the park with his\ncheeky child seeking vengeance against litterers.\nTough + knockback + freeze vs Traitless.", "Lone Cat is sick in bed, so naughty Kitten is\nhelping mama while she sells drinks on the\ntrain. Tough + knockback + freeze vs Traitless."]
   3:
     31:
       name: [Bodhisattva Cat, Avalokitesvara Cat, Tathagata Cat]
@@ -846,8 +849,8 @@ cats:
       name: [Queen Reika, Pharoah Reika]
       desc: ["A royal mummy from a mystic past. Actually, she\nmummified herself by over-applying foundation.\nMassive damage vs Aliens/Zombies (Area Atk)", "She may have died from it, but overdoing makeup\nkeeps her looking stunning even 5000 years later.\nMassive damage vs Aliens/Zombies (Area Atk)", "She may have died from it, but overdoing makeup\nkeeps her looking stunning even 5000 years later.\nMassive damage vs Aliens/Zombies (Area Atk)"]
     339:
-      name: [Imagawa Yoshimoto, Wargod Yoshimoto]
-      desc: ["His impeccable virtue allows him to wield\nthe cursed Cat Fan. Strong against Black,\n100% chance to weaken (Long-range)", "Possessed by an all-knowing fox spirit, he\nstrikes with golden arrows. Strong vs Black,\n100% chance to weaken (Long-range)", "Possessed by an all-knowing fox spirit, he\nstrikes with golden arrows. Strong vs Black,\n100% chance to weaken (Long-range)"]
+      name: [Imagawa Yoshimoto, Wargod Yoshimoto, Immortal Yoshimoto]
+      desc: ["His impeccable virtue allows him to wield\nthe cursed Cat Fan. Strong against Black,\n100% chance to weaken (Long-range)", "Possessed by an all-knowing fox spirit, he\nstrikes with golden arrows. Strong vs Black,\n100% chance to weaken (Long-range)", "Stained crimson with the blood of his rivals, the\nCat Fan burns with an unearthly fire for even greater\ndamage and weakening against Black enemies."]
     352:
       name: [Twinstars, 'Twinstars, type Φ']
       desc: ["The two purehearted sisters, Cici and Koma.\nDivine breath controls their mighty mecha claws.\nMassive area damage to Aliens/Black.", "The mechanical catpaws \"AH\" and \"UN\" sweetly \nsweep away any threat to these cutie-pie demigods.\nMassive area damage to Aliens/Black."]
