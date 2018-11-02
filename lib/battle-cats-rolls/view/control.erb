@@ -10,10 +10,11 @@
 
   <a href="<%= seek_uri %>">Looking for your seed?</a>
 
-  <label for="details_input">Details:</label>
-  <input type="checkbox" id="details_input" name="details"
-    <%= checked_details %>
-    onchange="roll(this)">
+  <label for="details_input">Details:
+    <input type="checkbox" id="details_input" name="details"
+      <%= checked_details %>
+      onchange="roll(this)">
+  </label>
 
   <label for="count_input">Count:</label>
   <input
