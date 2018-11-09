@@ -172,8 +172,17 @@ module BattleCatsRolls
         end
       end
 
+      def permalink
+        if controller.next_seed.zero?
+          uri
+        else
+          uri({next_seed: controller.next_seed}.merge(default_query))
+        end
+      end
+
       def default_query
         cleanup_query(
+          seed: controller.seed,
           event: controller.event,
           lang: controller.lang,
           name: controller.name,
@@ -186,7 +195,9 @@ module BattleCatsRolls
 
       def cleanup_query query
         query.compact.select do |key, value|
-          if (key == :lang && value == 'en') ||
+          if (key == :next_seed && value == 0) ||
+             (key == :seed && value == 0) ||
+             (key == :lang && value == 'en') ||
              (key == :name && value == 0) ||
              (key == :count && value == 100) ||
              (key == :find && value == 0) ||
