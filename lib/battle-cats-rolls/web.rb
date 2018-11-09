@@ -173,16 +173,15 @@ module BattleCatsRolls
       end
 
       def permalink
-        if controller.next_seed.zero?
-          uri
-        else
+        if controller.next_seed.nonzero?
           uri({next_seed: controller.next_seed}.merge(default_query))
+        else
+          uri({seed: controller.seed}.merge(default_query))
         end
       end
 
       def default_query
         cleanup_query(
-          seed: controller.seed,
           event: controller.event,
           lang: controller.lang,
           name: controller.name,
