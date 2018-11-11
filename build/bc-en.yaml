@@ -1271,8 +1271,8 @@ events:
     name: "★ Red Busters w/ Pai-Pai! ★ Plus Increasing Capsules!"
     id: 245
     rare: 7000
-    sr: 2500
-    ssr: 500
+    supa: 2500
+    uber: 500
     step_up: true
   2018-06-08_289:
     start_on: 2018-06-08
@@ -1281,8 +1281,8 @@ events:
     name: Brave new adventurers join The Dynamites! ★ 11-Draw Uber Guarantee!
     id: 289
     rare: 7000
-    sr: 2500
-    ssr: 500
+    supa: 2500
+    uber: 500
     guaranteed: true
   2018-06-11_266:
     start_on: 2018-06-11
@@ -1291,8 +1291,8 @@ events:
     name: "★ Dragon Emperors ★ Collect a mighty monstrous Uber Cat!"
     id: 266
     rare: 7000
-    sr: 2500
-    ssr: 500
+    supa: 2500
+    uber: 500
   2018-06-12_294:
     start_on: 2018-06-12
     end_on: 2030-07-07
@@ -1300,8 +1300,8 @@ events:
     name: Get an Uber Rare Cat!! 100% Uber drop Rate in the PLATINUM CAPSULES!
     id: 294
     rare: 0
-    sr: 0
-    ssr: 10000
+    supa: 0
+    uber: 10000
     platinum: true
   2018-06-14_221:
     start_on: 2018-06-14
@@ -1310,8 +1310,8 @@ events:
     name: "★ Vajiras Wargods! ★ Tactical master Uber Cats!"
     id: 221
     rare: 7000
-    sr: 2500
-    ssr: 500
+    supa: 2500
+    uber: 500
   2018-06-16_293:
     start_on: 2018-06-16
     end_on: 2018-06-19
@@ -1319,8 +1319,8 @@ events:
     name: "★ EPICFEST ★ Extra-high drop rates for Ubers, plus Dark Mitama!"
     id: 293
     rare: 6500
-    sr: 2600
-    ssr: 900
+    supa: 2600
+    uber: 900
   2018-06-19_276:
     start_on: 2018-06-19
     end_on: 2018-06-21
@@ -1328,8 +1328,8 @@ events:
     name: "★ Elemental Pixies ★ Cosmic powers brought to life as Uber Rare allies!"
     id: 276
     rare: 7000
-    sr: 2500
-    ssr: 500
+    supa: 2500
+    uber: 500
   2018-06-21_224:
     start_on: 2018-06-21
     end_on: 2018-06-23
@@ -1337,8 +1337,8 @@ events:
     name: "★ Galaxy Gals★ Cute 'n' tough Uber Cats!"
     id: 224
     rare: 7000
-    sr: 2500
-    ssr: 500
+    supa: 2500
+    uber: 500
   2018-06-23_215:
     start_on: 2018-06-23
     end_on: 2018-06-26
@@ -1346,8 +1346,8 @@ events:
     name: "★ Nekolugas ★  Super-creepy Uber Cats with 11-Draw Guarantee!"
     id: 215
     rare: 7000
-    sr: 2500
-    ssr: 500
+    supa: 2500
+    uber: 500
     guaranteed: true
   2018-06-26_230:
     start_on: 2018-06-26
@@ -1356,8 +1356,8 @@ events:
     name: "★ Ultra Souls★ Guaranteed 11-Draw for legendary Uber Rare Cats!"
     id: 230
     rare: 7000
-    sr: 2500
-    ssr: 500
+    supa: 2500
+    uber: 500
     guaranteed: true
   2018-06-28_283:
     start_on: 2018-06-28
@@ -1366,8 +1366,8 @@ events:
     name: "★ IRON LEGION ★ Heavy metal Uber Cats with Zombie-crushing powers!!"
     id: 283
     rare: 7000
-    sr: 2500
-    ssr: 500
+    supa: 2500
+    uber: 500
   2018-06-30_292:
     start_on: 2018-06-30
     end_on: 2018-07-03
@@ -1375,8 +1375,8 @@ events:
     name: New Uber "D'artanyan" is here! ★ Extra-high Uber drop rate for every draw!
     id: 292
     rare: 6500
-    sr: 2600
-    ssr: 900
+    supa: 2600
+    uber: 900
   2018-07-03_289:
     start_on: 2018-07-03
     end_on: 2018-07-05
@@ -1384,8 +1384,8 @@ events:
     name: The mighty Dynamites are here! Variety and power await you!
     id: 289
     rare: 7000
-    sr: 2500
-    ssr: 500
+    supa: 2500
+    uber: 500
   2018-07-05_273:
     start_on: 2018-07-05
     end_on: 2018-07-07
@@ -1393,8 +1393,8 @@ events:
     name: Metal Busters ★ With Increasing Capsule Discount!
     id: 273
     rare: 7000
-    sr: 2500
-    ssr: 500
+    supa: 2500
+    uber: 500
     step_up: true
   2018-07-07_298:
     start_on: 2018-07-07
@@ -1403,8 +1403,8 @@ events:
     name: 'NEW UNIT: Detective Vigler, cursed defender of justice! With 11-Capsule Uber Guarantee!'
     id: 298
     rare: 7000
-    sr: 2500
-    ssr: 500
+    supa: 2500
+    uber: 500
     guaranteed: true
   2018-07-10_266:
     start_on: 2018-07-10
@@ -1413,8 +1413,8 @@ events:
     name: "★ Dragon Emperors ★ Collect a mighty monstrous Uber Cat!"
     id: 266
     rare: 7000
-    sr: 2500
-    ssr: 500
+    supa: 2500
+    uber: 500
   2018-07-12_276:
     start_on: 2018-07-12
     end_on: 2018-07-14
@@ -1422,8 +1422,8 @@ events:
     name: "★ Elemental Pixies ★ Cosmic powers brought to life as Uber Rare allies!"
     id: 276
     rare: 7000
-    sr: 2500
-    ssr: 500
+    supa: 2500
+    uber: 500
   2018-07-13_303:
     start_on: 2018-07-13
     end_on: 2030-08-03
@@ -1431,8 +1431,8 @@ events:
     name: Get an Uber Rare Cat!! 100% Uber drop Rate in the PLATINUM CAPSULES!
     id: 303
     rare: 0
-    sr: 0
-    ssr: 10000
+    supa: 0
+    uber: 10000
     platinum: true
   2018-07-14_302:
     start_on: 2018-07-14
@@ -1441,8 +1441,8 @@ events:
     name: "★ EPICFEST ★ Extra-high drop rates for Ubers, plus Dark Mitama!"
     id: 302
     rare: 6500
-    sr: 2600
-    ssr: 900
+    supa: 2600
+    uber: 900
   2018-07-17_224:
     start_on: 2018-07-17
     end_on: 2018-07-19
@@ -1450,8 +1450,8 @@ events:
     name: "★ Galaxy Gals★ Cute 'n' tough Uber Cats!"
     id: 224
     rare: 7000
-    sr: 2500
-    ssr: 500
+    supa: 2500
+    uber: 500
   2018-07-19_246:
     start_on: 2018-07-19
     end_on: 2018-07-21
@@ -1459,8 +1459,8 @@ events:
     name: AIR BUSTERS plus R.E.I ★ With Increasing Capsules discount!
     id: 246
     rare: 7000
-    sr: 2500
-    ssr: 500
+    supa: 2500
+    uber: 500
     step_up: true
   2018-07-21_221:
     start_on: 2018-07-21
@@ -1469,8 +1469,8 @@ events:
     name: "★ Vajiras Wargods! ★ Tactical master Uber Cats!"
     id: 221
     rare: 7000
-    sr: 2500
-    ssr: 500
+    supa: 2500
+    uber: 500
   2018-07-24_283:
     start_on: 2018-07-24
     end_on: 2018-07-26
@@ -1478,8 +1478,8 @@ events:
     name: "★ IRON LEGION ★ Heavy metal Uber Cats with Zombie-crushing powers!!"
     id: 283
     rare: 7000
-    sr: 2500
-    ssr: 500
+    supa: 2500
+    uber: 500
   2018-07-26_230:
     start_on: 2018-07-26
     end_on: 2018-07-28
@@ -1487,8 +1487,8 @@ events:
     name: "★ Ultra Souls★ Top-class Ubers of legendary might!"
     id: 230
     rare: 7000
-    sr: 2500
-    ssr: 500
+    supa: 2500
+    uber: 500
   2018-07-28_236:
     start_on: 2018-07-28
     end_on: 2018-07-31
@@ -1496,8 +1496,8 @@ events:
     name: "★ The Almighties! ★ Legendary Uber Cats with 11-Draw Guarantee!"
     id: 236
     rare: 7000
-    sr: 2500
-    ssr: 500
+    supa: 2500
+    uber: 500
     guaranteed: true
   2018-07-31_301:
     start_on: 2018-07-31
@@ -1506,8 +1506,8 @@ events:
     name: New Uber "D'artanyan" is here! ★ Extra-high Uber drop rate for every draw!
     id: 301
     rare: 6500
-    sr: 2600
-    ssr: 900
+    supa: 2600
+    uber: 900
   2018-08-03_304:
     start_on: 2018-08-03
     end_on: 2018-08-06
@@ -1515,8 +1515,8 @@ events:
     name: NOBILUGA is here! A new weirdo Cat(?)!★With 11-Draw Uber Guarantee!
     id: 304
     rare: 7000
-    sr: 2500
-    ssr: 500
+    supa: 2500
+    uber: 500
     guaranteed: true
   2018-08-03_310:
     start_on: 2018-08-03
@@ -1525,8 +1525,8 @@ events:
     name: Get an Uber Rare Cat!! 100% Uber drop Rate in the PLATINUM CAPSULES!
     id: 310
     rare: 0
-    sr: 0
-    ssr: 10000
+    supa: 0
+    uber: 10000
     platinum: true
   2018-08-06_289:
     start_on: 2018-08-06
@@ -1535,8 +1535,8 @@ events:
     name: The mighty Dynamites are here! Variety and power await you!
     id: 289
     rare: 7000
-    sr: 2500
-    ssr: 500
+    supa: 2500
+    uber: 500
   2018-08-08_245:
     start_on: 2018-08-08
     end_on: 2018-08-10
@@ -1544,8 +1544,8 @@ events:
     name: "★ Red Busters w/ Pai-Pai! ★ Plus Increasing Capsules!"
     id: 245
     rare: 7000
-    sr: 2500
-    ssr: 500
+    supa: 2500
+    uber: 500
     step_up: true
   2018-08-10_298:
     start_on: 2018-08-10
@@ -1554,8 +1554,8 @@ events:
     name: "★ Dark Heroes ★ Defend justice with for superpowered Uber Cats!"
     id: 298
     rare: 7000
-    sr: 2500
-    ssr: 500
+    supa: 2500
+    uber: 500
   2018-08-12_266:
     start_on: 2018-08-12
     end_on: 2018-08-14
@@ -1563,8 +1563,8 @@ events:
     name: "★ Dragon Emperors ★ Collect a mighty monstrous Uber Cat!"
     id: 266
     rare: 7000
-    sr: 2500
-    ssr: 500
+    supa: 2500
+    uber: 500
   2018-08-14_276:
     start_on: 2018-08-14
     end_on: 2018-08-16
@@ -1572,8 +1572,8 @@ events:
     name: "★ Elemental Pixies ★ Cosmic powers brought to life as Uber Rare allies!"
     id: 276
     rare: 7000
-    sr: 2500
-    ssr: 500
+    supa: 2500
+    uber: 500
   2018-08-16_230:
     start_on: 2018-08-16
     end_on: 2018-08-18
@@ -1581,8 +1581,8 @@ events:
     name: "★ Ultra Souls★ Top-class Ubers of legendary might!"
     id: 230
     rare: 7000
-    sr: 2500
-    ssr: 500
+    supa: 2500
+    uber: 500
   2018-08-18_309:
     start_on: 2018-08-18
     end_on: 2018-08-21
@@ -1590,8 +1590,8 @@ events:
     name: "★ EPICFEST ★ Extra-high drop rates for Ubers, plus Dark Mitama!"
     id: 309
     rare: 6500
-    sr: 2600
-    ssr: 900
+    supa: 2600
+    uber: 900
   2018-08-21_246:
     start_on: 2018-08-21
     end_on: 2018-08-23
@@ -1599,8 +1599,8 @@ events:
     name: AIR BUSTERS plus R.E.I ★ With Increasing Capsules discount!
     id: 246
     rare: 7000
-    sr: 2500
-    ssr: 500
+    supa: 2500
+    uber: 500
     step_up: true
   2018-08-23_221:
     start_on: 2018-08-23
@@ -1609,8 +1609,8 @@ events:
     name: "★ Vajiras Wargods! ★ Tactical master Uber Cats!"
     id: 221
     rare: 7000
-    sr: 2500
-    ssr: 500
+    supa: 2500
+    uber: 500
   2018-08-25_224:
     start_on: 2018-08-25
     end_on: 2018-08-28
@@ -1618,8 +1618,8 @@ events:
     name: "★ Galaxy Gals★ Cute 'n' tough Uber Cats with 11-Draw Guarantee!"
     id: 224
     rare: 7000
-    sr: 2500
-    ssr: 500
+    supa: 2500
+    uber: 500
     guaranteed: true
   2018-08-28_283:
     start_on: 2018-08-28
@@ -1628,8 +1628,8 @@ events:
     name: "★ IRON LEGION ★ Heavy metal Uber Cats with Zombie-crushing powers!!"
     id: 283
     rare: 7000
-    sr: 2500
-    ssr: 500
+    supa: 2500
+    uber: 500
   2018-08-30_248:
     start_on: 2018-08-30
     end_on: 2018-09-01
@@ -1637,8 +1637,8 @@ events:
     name: Spooky beauties from the netherworld! It's the GIRLS & MONSTERS!
     id: 248
     rare: 7000
-    sr: 2500
-    ssr: 500
+    supa: 2500
+    uber: 500
   2018-09-01_308:
     start_on: 2018-09-01
     end_on: 2018-09-04
@@ -1646,8 +1646,8 @@ events:
     name: New Uber "D'artanyan" is here! ★ Extra-high Uber drop rate for every draw!
     id: 308
     rare: 6500
-    sr: 2600
-    ssr: 900
+    supa: 2600
+    uber: 900
   2018-09-04_289:
     start_on: 2018-09-04
     end_on: 2018-09-07
@@ -1655,8 +1655,8 @@ events:
     name: The mighty Dynamites are here! Variety and power await you!
     id: 289
     rare: 7500
-    sr: 2000
-    ssr: 500
+    supa: 2000
+    uber: 500
   2018-09-07_311:
     start_on: 2018-09-07
     end_on: 2018-09-10
@@ -1664,8 +1664,8 @@ events:
     name: The almighty titaness Empress Chronos arrives, w/ 11-Draw Guarantee!
     id: 311
     rare: 7500
-    sr: 2000
-    ssr: 500
+    supa: 2000
+    uber: 500
     guaranteed: true
   2018-09-07_317:
     start_on: 2018-09-07
@@ -1674,8 +1674,8 @@ events:
     name: Get an Uber Rare Cat!! 100% Uber drop Rate in the PLATINUM CAPSULES!
     id: 317
     rare: 0
-    sr: 0
-    ssr: 10000
+    supa: 0
+    uber: 10000
     platinum: true
   2018-09-10_305:
     start_on: 2018-09-10
@@ -1684,8 +1684,8 @@ events:
     name: "★ Nekolugas ★  Super-creepy Uber Cats!"
     id: 305
     rare: 7500
-    sr: 2000
-    ssr: 500
+    supa: 2000
+    uber: 500
   2018-09-10_314:
     start_on: 2018-09-10
     end_on: 2018-09-24
@@ -1693,8 +1693,8 @@ events:
     name: Summer Gals are here with a new member!★Tap banner for more info!
     id: 314
     rare: 7500
-    sr: 2000
-    ssr: 500
+    supa: 2000
+    uber: 500
   2018-09-12_232:
     start_on: 2018-09-12
     end_on: 2018-09-14
@@ -1702,8 +1702,8 @@ events:
     name: "★ Ultra Souls★ Top-class Ubers of legendary might!"
     id: 232
     rare: 7500
-    sr: 2000
-    ssr: 500
+    supa: 2000
+    uber: 500
   2018-09-14_316:
     start_on: 2018-09-14
     end_on: 2018-09-17
@@ -1711,8 +1711,8 @@ events:
     name: "★ EPICFEST ★ Extra-high drop rates for Ubers, plus Dark Mitama!"
     id: 316
     rare: 6500
-    sr: 2600
-    ssr: 900
+    supa: 2600
+    uber: 900
   2018-09-17_299:
     start_on: 2018-09-17
     end_on: 2018-09-19
@@ -1720,8 +1720,8 @@ events:
     name: "★ Dark Heroes ★ Defend justice with for superpowered Uber Cats!"
     id: 299
     rare: 7000
-    sr: 2500
-    ssr: 500
+    supa: 2500
+    uber: 500
   2018-09-19_223:
     start_on: 2018-09-19
     end_on: 2018-09-21
@@ -1729,8 +1729,8 @@ events:
     name: "★ Vajiras Wargods! ★ Tactical master Uber Cats!"
     id: 223
     rare: 7000
-    sr: 2500
-    ssr: 500
+    supa: 2500
+    uber: 500
   2018-09-21_267:
     start_on: 2018-09-21
     end_on: 2018-09-24
@@ -1738,8 +1738,8 @@ events:
     name: "★ Dragon Emperors ★ Mighty monstrous Ubers with 11-Draw Guarantee!"
     id: 267
     rare: 7000
-    sr: 2500
-    ssr: 500
+    supa: 2500
+    uber: 500
     guaranteed: true
   2018-09-21_314:
     start_on: 2018-09-21
@@ -1748,8 +1748,8 @@ events:
     name: "★ Gals of Summer ★ Last chance, with 11-Draw Uber Guarantee!"
     id: 314
     rare: 7500
-    sr: 2000
-    ssr: 500
+    supa: 2000
+    uber: 500
     guaranteed: true
   2018-09-24_283:
     start_on: 2018-09-24
@@ -1758,8 +1758,8 @@ events:
     name: "★ IRON LEGION ★ Heavy metal Uber Cats with Zombie-crushing powers!!"
     id: 283
     rare: 7000
-    sr: 2500
-    ssr: 500
+    supa: 2500
+    uber: 500
   2018-09-26_224:
     start_on: 2018-09-26
     end_on: 2018-09-28
@@ -1767,8 +1767,8 @@ events:
     name: "★ Galaxy Gals★ Cute 'n' tough Uber Cats!"
     id: 224
     rare: 7000
-    sr: 2500
-    ssr: 500
+    supa: 2500
+    uber: 500
   2018-09-28_276:
     start_on: 2018-09-28
     end_on: 2018-10-01
@@ -1776,8 +1776,8 @@ events:
     name: Cosmic powers brought to life! Plus a Guaranteed Uber with 11-Draw!
     id: 276
     rare: 7000
-    sr: 2500
-    ssr: 500
+    supa: 2500
+    uber: 500
     guaranteed: true
   2018-09-28_307:
     start_on: 2018-09-28
@@ -1786,8 +1786,8 @@ events:
     name: NEW limited anniversary Uber! ★ With 11-Draw Uber Guarantee!
     id: 307
     rare: 7500
-    sr: 2000
-    ssr: 500
+    supa: 2000
+    uber: 500
     guaranteed: true
   2018-10-01_315:
     start_on: 2018-10-01
@@ -1796,8 +1796,8 @@ events:
     name: New Uber "D'artanyan" is here! ★ Extra-high Uber drop rate for every draw!
     id: 315
     rare: 6500
-    sr: 2600
-    ssr: 900
+    supa: 2600
+    uber: 900
   2018-10-04_289:
     start_on: 2018-10-04
     end_on: 2018-10-07
@@ -1805,8 +1805,8 @@ events:
     name: The mighty Dynamites are here! Variety and power await you!
     id: 289
     rare: 7000
-    sr: 2500
-    ssr: 500
+    supa: 2500
+    uber: 500
   2018-10-05_289:
     start_on: 2018-10-05
     end_on: 2018-10-07
@@ -1814,8 +1814,8 @@ events:
     name: The mighty Dynamites are here! Variety and power await you!
     id: 289
     rare: 7000
-    sr: 2500
-    ssr: 500
+    supa: 2500
+    uber: 500
   2018-10-07_245:
     start_on: 2018-10-07
     end_on: 2018-10-09
@@ -1823,8 +1823,8 @@ events:
     name: "★ Red Busters w/ Pai-Pai! ★ Plus Increasing Capsules!"
     id: 245
     rare: 7000
-    sr: 2500
-    ssr: 500
+    supa: 2500
+    uber: 500
     step_up: true
   2018-10-09_311:
     start_on: 2018-10-09
@@ -1833,8 +1833,8 @@ events:
     name: "★ The Almighties! ★ All-powerful Uber Cats, ready to be recruited!"
     id: 311
     rare: 7000
-    sr: 2500
-    ssr: 500
+    supa: 2500
+    uber: 500
   2018-10-11_304:
     start_on: 2018-10-11
     end_on: 2018-10-13
@@ -1842,8 +1842,8 @@ events:
     name: "★ Nekolugas ★  Super-creepy Uber Cats!"
     id: 304
     rare: 7000
-    sr: 2500
-    ssr: 500
+    supa: 2500
+    uber: 500
   2018-10-13_319:
     start_on: 2018-10-13
     end_on: 2018-10-16
@@ -1851,8 +1851,8 @@ events:
     name: D'arktanyan is here! ★ Plus higher drop rate for Uber Rares!
     id: 319
     rare: 6500
-    sr: 2600
-    ssr: 900
+    supa: 2600
+    uber: 900
   2018-10-13_320:
     start_on: 2018-10-13
     end_on: 2030-01-01
@@ -1860,8 +1860,8 @@ events:
     name: Get an Uber Rare Cat!! 100% Uber drop Rate in the PLATINUM CAPSULES!
     id: 320
     rare: 0
-    sr: 0
-    ssr: 10000
+    supa: 0
+    uber: 10000
     platinum: true
   2018-10-16_283:
     start_on: 2018-10-16
@@ -1870,8 +1870,8 @@ events:
     name: "★ IRON LEGION ★ Heavy metal Uber Cats with Zombie-crushing powers!!"
     id: 283
     rare: 7500
-    sr: 2000
-    ssr: 500
+    supa: 2000
+    uber: 500
   2018-10-18_257:
     start_on: 2018-10-18
     end_on: 2018-11-01
@@ -1879,8 +1879,8 @@ events:
     name: Limited Halloween Units! Get spooky special editions of Uber Cats!
     id: 257
     rare: 7500
-    sr: 2000
-    ssr: 500
+    supa: 2000
+    uber: 500
   2018-10-18_298:
     start_on: 2018-10-18
     end_on: 2018-10-21
@@ -1888,8 +1888,8 @@ events:
     name: "★ Dark Heroes ★ Defend justice with for superpowered Uber Cats!"
     id: 298
     rare: 7500
-    sr: 2000
-    ssr: 500
+    supa: 2000
+    uber: 500
   2018-10-19_257:
     start_on: 2018-10-19
     end_on: 2018-11-01
@@ -1897,8 +1897,8 @@ events:
     name: Limited Halloween Units! Get spooky special editions of Uber Cats!
     id: 257
     rare: 7500
-    sr: 2000
-    ssr: 500
+    supa: 2000
+    uber: 500
   2018-10-19_298:
     start_on: 2018-10-19
     end_on: 2018-10-21
@@ -1906,8 +1906,8 @@ events:
     name: "★ Dark Heroes ★ Defend justice with for superpowered Uber Cats!"
     id: 298
     rare: 7500
-    sr: 2000
-    ssr: 500
+    supa: 2000
+    uber: 500
   2018-10-21_266:
     start_on: 2018-10-21
     end_on: 2018-10-24
@@ -1915,8 +1915,8 @@ events:
     name: "★ Dragon Emperors ★ Collect a mighty monstrous Uber Cat!"
     id: 266
     rare: 7500
-    sr: 2000
-    ssr: 500
+    supa: 2000
+    uber: 500
   2018-10-24_276:
     start_on: 2018-10-24
     end_on: 2018-10-27
@@ -1924,8 +1924,8 @@ events:
     name: "★ Elemental Pixies ★ Cosmic powers brought to life as Uber Rare allies!"
     id: 276
     rare: 7500
-    sr: 2000
-    ssr: 500
+    supa: 2000
+    uber: 500
   2018-10-27_230:
     start_on: 2018-10-27
     end_on: 2018-10-30
@@ -1933,8 +1933,8 @@ events:
     name: "★ Ultra Souls★ Guaranteed 11-Draw for legendary Uber Rare Cats!"
     id: 230
     rare: 7500
-    sr: 2000
-    ssr: 500
+    supa: 2000
+    uber: 500
     guaranteed: true
   2018-10-27_257:
     start_on: 2018-10-27
@@ -1943,8 +1943,8 @@ events:
     name: "★ Halloween Gals ★  Guaranteed Uber with any 11-Capsule Draw!"
     id: 257
     rare: 7500
-    sr: 2000
-    ssr: 500
+    supa: 2000
+    uber: 500
     guaranteed: true
   2018-10-30_221:
     start_on: 2018-10-30
@@ -1953,8 +1953,8 @@ events:
     name: "★ Vajiras Wargods! ★  Superpowered Uber Cats with 11-Draw Guarantee!"
     id: 221
     rare: 7500
-    sr: 2000
-    ssr: 500
+    supa: 2000
+    uber: 500
     guaranteed: true
   2018-11-01_224:
     start_on: 2018-11-01
@@ -1963,8 +1963,8 @@ events:
     name: "★ Galaxy Gals★ Cute 'n' tough Uber Cats!"
     id: 224
     rare: 7000
-    sr: 2500
-    ssr: 500
+    supa: 2500
+    uber: 500
   2018-11-01_321:
     start_on: 2018-11-01
     end_on: 2018-11-22
@@ -1972,8 +1972,8 @@ events:
     name: "【Limited】 Crash Fever Collab Capsules! ★ Tap banner for more info!"
     id: 321
     rare: 7000
-    sr: 2500
-    ssr: 500
+    supa: 2500
+    uber: 500
   2018-11-03_315:
     start_on: 2018-11-03
     end_on: 2018-11-06
@@ -1981,8 +1981,8 @@ events:
     name: New Uber "D'artanyan" is here! ★ Extra-high Uber drop rate for every draw!
     id: 315
     rare: 6500
-    sr: 2600
-    ssr: 900
+    supa: 2600
+    uber: 900
   2018-11-06_304:
     start_on: 2018-11-06
     end_on: 2018-11-08
@@ -1990,8 +1990,8 @@ events:
     name: "★ Nekolugas ★  Super-creepy Uber Cats!"
     id: 304
     rare: 7000
-    sr: 2500
-    ssr: 500
+    supa: 2500
+    uber: 500
   2018-11-08_311:
     start_on: 2018-11-08
     end_on: 2018-11-10
@@ -1999,8 +1999,8 @@ events:
     name: "★ The Almighties! ★ All-powerful Uber Cats, ready to be recruited!"
     id: 311
     rare: 7000
-    sr: 2500
-    ssr: 500
+    supa: 2500
+    uber: 500
   2018-11-10_319:
     start_on: 2018-11-10
     end_on: 2018-11-13
@@ -2008,8 +2008,8 @@ events:
     name: D'arktanyan is here! ★ Plus higher drop rate for Uber Rares!
     id: 319
     rare: 6500
-    sr: 2600
-    ssr: 900
+    supa: 2600
+    uber: 900
   2018-11-10_322:
     start_on: 2018-11-10
     end_on: 2018-11-22
@@ -2017,8 +2017,8 @@ events:
     name: "【Limited】 Crash Fever Collab Capsules! ★ Tap banner for more info!"
     id: 322
     rare: 7000
-    sr: 2500
-    ssr: 500
+    supa: 2500
+    uber: 500
   2018-11-13_298:
     start_on: 2018-11-13
     end_on: 2018-11-16
@@ -2026,5 +2026,5 @@ events:
     name: "★ Dark Heroes ★ Defend justice with for superpowered Uber Cats!"
     id: 298
     rare: 7000
-    sr: 2500
-    ssr: 500
+    supa: 2500
+    uber: 500

@@ -11,7 +11,7 @@
     </optgroup>
 
     <optgroup label="Super Rare:">
-      <% gacha.sr_cats.uniq(&:id).each do |cat| %>
+      <% gacha.supa_cats.uniq(&:id).each do |cat| %>
         <option value="<%= cat.id %>"
           <%= selected_find(cat) %>><%= cat_name(cat) %></option>
       <% end %>

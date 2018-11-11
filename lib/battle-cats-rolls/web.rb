@@ -384,8 +384,8 @@ module BattleCatsRolls
 
       def seek_source
         @seek_source ||=
-          [gacha.rare, gacha.sr, gacha.ssr,
-           gacha.rare_cats.size, gacha.sr_cats.size, gacha.uber_cats.size,
+          [gacha.rare, gacha.supa, gacha.uber,
+           gacha.rare_cats.size, gacha.supa_cats.size, gacha.uber_cats.size,
            *request.POST['rolls']].join(' ').squeeze(' ')
       end
 

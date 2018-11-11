@@ -29,7 +29,7 @@ module BattleCatsRolls
     def self.pool_fields
       @pool_fields ||= {
         'id' => 0, 'step_up' => 3,
-        'rare' => 6, 'sr' => 8, 'ssr' => 10,
+        'rare' => 6, 'supa' => 8, 'uber' => 10,
         'guaranteed' => 11, 'name' => 14
       }
     end
@@ -50,7 +50,7 @@ module BattleCatsRolls
           if pool['id'] > 0
             data.merge!(pool)
             data['step_up'] = true if data.delete('step_up') # reorder
-            data['platinum'] = true if data['ssr'] == Gacha::Base
+            data['platinum'] = true if data['uber'] == Gacha::Base
 
             result["#{data['start_on']}_#{data['id']}"] = data
           end
@@ -81,7 +81,7 @@ module BattleCatsRolls
       data.map do |pool|
         pool.transform_values do |(key, value)|
           case key
-          when 'id', 'rare', 'sr', 'ssr'
+          when 'id', 'rare', 'supa', 'uber', 'legend'
             value.to_i
           when 'step_up'
             value.to_i & 4 == 4

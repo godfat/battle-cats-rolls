@@ -35,9 +35,9 @@ module BattleCatsRolls
       when 0...6500
         :rare
       when 6500...7000
-        :ssr_fest
+        :supa_fest
       when 7000...9100
-        :ssr
+        :supa
       when 9100...9500
         :uber_fest
       else
@@ -55,9 +55,9 @@ module BattleCatsRolls
       case color_label
       when :rare
         '00;3'
-      when :ssr_fest
+      when :supa_fest
         '33;1'
-      when :ssr
+      when :supa
         '33;3'
       when :uber_fest
         '32;1'

@@ -28,7 +28,7 @@ scoreBase = 10000
 
 data Chance = Chance
   { rare :: Rarity
-  , superRare :: Rarity
+  , supa :: Rarity
   , uber :: Rarity
   } deriving (Show, Eq)
 
@@ -38,19 +38,19 @@ data Source = Source
   } deriving (Show, Eq)
 
 buildSource :: [Word32] -> Source
-buildSource (r:sr:ssr:rCount:srCount:ssrCount:picks) = Source
+buildSource (r:s:u:rCount:sCount:uCount:picks) = Source
   { sourceChance = chance
   , sourcePicks = buildPicks chance rolls }
   where
     chance = Chance
       { rare = rare
-      , superRare = superRare
+      , supa = supa
       , uber = uber
       }
     rare = Rarity { begin = 0, end = r, count = rCount }
-    superRare = Rarity { begin = r, end = r + sr, count = srCount }
-    uber = Rarity { begin = r + sr, end = scoreBase, count = ssrCount }
-    rolls = buildRolls [rare, superRare, uber] picks
+    supa = Rarity { begin = r, end = r + s, count = sCount }
+    uber = Rarity { begin = r + s, end = scoreBase, count = uCount }
+    rolls = buildRolls [rare, supa, uber] picks
 
 buildRolls :: [Rarity] -> [Word32] -> [Roll]
 buildRolls rarities [] = []

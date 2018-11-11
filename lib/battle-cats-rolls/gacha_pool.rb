@@ -9,7 +9,7 @@ module BattleCatsRolls
     def_delegator :cats, :dig, :dig_cat
     def_delegator :slots, :dig, :dig_slot
 
-    %w[id start_on end_on name rare sr ssr platinum].each do |name|
+    %w[rare supa uber legend].each do |name|
       define_method(name) do
         event[name]
       end

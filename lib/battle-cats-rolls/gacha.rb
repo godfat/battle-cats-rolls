@@ -8,17 +8,28 @@ require 'forwardable'
 
 module BattleCatsRolls
   class Gacha < Struct.new(:pool, :seed)
-    Base = 10000
-    Rare = 2
-    SR   = 3
-    Uber = 4
+    Base   = 10000
+    Rare   = 2
+    Supa   = 3
+    Uber   = 4
+    Legend = 5
 
     extend Forwardable
 
-    def_delegators :pool, *%w[id start_on end_on name rare sr ssr]
+    def_delegators :pool, *%w[rare supa uber legend]
 
     def initialize crystal_ball, event_name, seed
       super(GachaPool.new(crystal_ball, event_name), seed)
+    end
+
+    %w[Rare Supa Uber Legend].each do |rarity|
+      define_method("#{rarity.downcase}_cats") do
+        name = "@#{__method__}"
+
+        instance_variable_get(name) ||
+          instance_variable_set(name,
+            pick_cats(self.class.const_get(rarity)))
+      end
     end
 
     def current_seed_mode!
@@ -62,18 +73,6 @@ module BattleCatsRolls
       guaranteed_rolls
     end
 
-    def rare_cats
-      @rare_cats ||= pick_cats(Rare)
-    end
-
-    def sr_cats
-      @sr_cats ||= pick_cats(SR)
-    end
-
-    def uber_cats
-      @uber_cats ||= pick_cats(Uber)
-    end
-
     private
 
     def pick_cats rarity
@@ -110,8 +109,8 @@ module BattleCatsRolls
       case score
       when 0...rare
         Rare
-      when rare...(rare + sr)
-        SR
+      when rare...(rare + supa)
+        Supa
       else
         Uber
       end
