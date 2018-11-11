@@ -436,7 +436,7 @@ module BattleCatsRolls
       controller_include NormalizedPath, Imp
 
       get '/seek' do
-        render :seek
+        render :seek, queue_size: SeekSeed.queue.size
       end
 
       post '/seek/enqueue' do
