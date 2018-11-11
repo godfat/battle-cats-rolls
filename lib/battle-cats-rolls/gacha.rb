@@ -76,9 +76,7 @@ module BattleCatsRolls
 
     def pick_cats rarity
       pool.dig_slot(rarity).map do |id|
-        cat = Cat.new(id, pool.dig_cat(rarity, id))
-        cat.rarity = rarity
-        cat
+        Cat.new(id, pool.dig_cat(rarity, id), rarity)
       end
     end
 
@@ -97,6 +95,7 @@ module BattleCatsRolls
       cat = dig_cat(slot_fruit, rarity)
 
       cat.rarity_fruit = rarity_fruit
+      cat.slot_fruit = slot_fruit
       cat.score = score
 
       cat
@@ -125,7 +124,7 @@ module BattleCatsRolls
       slot = slot_fruit.value % pool.dig_slot(rarity).size
       id = pool.dig_slot(rarity, slot)
 
-      Cat.new(id, pool.dig_cat(rarity, id), slot, slot_fruit, rarity)
+      Cat.new(id, pool.dig_cat(rarity, id), rarity, slot)
     end
 
     def advance_seed!
