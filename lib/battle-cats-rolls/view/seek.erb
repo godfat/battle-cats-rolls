@@ -36,7 +36,7 @@
               <% end %>
             </optgroup>
 
-            <optgroup label="Super Rare:">
+            <optgroup label="Super:">
               <% gacha.supa_cats.each.with_index do |cat, slot| %>
                 <option value="1 <%= slot %>"><%= cat_name(cat) %></option>
               <% end %>
@@ -45,6 +45,12 @@
             <optgroup label="Uber:">
               <% gacha.uber_cats.each.with_index do |cat, slot| %>
                 <option value="2 <%= slot %>"><%= cat_name(cat) %></option>
+              <% end %>
+            </optgroup>
+
+            <optgroup label="Legend:">
+              <% gacha.legend_cats.each.with_index do |cat, slot| %>
+                <option value="3 <%= slot %>"><%= cat_name(cat) %></option>
               <% end %>
             </optgroup>
           </select>

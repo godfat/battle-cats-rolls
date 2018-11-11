@@ -4,15 +4,21 @@ require 'forwardable'
 
 module BattleCatsRolls
   class GachaPool < Struct.new(:cats, :gacha, :event)
+    Base = 10000
+
     extend Forwardable
 
     def_delegator :cats, :dig, :dig_cat
     def_delegator :slots, :dig, :dig_slot
 
-    %w[rare supa uber legend].each do |name|
+    %w[rare supa uber].each do |name|
       define_method(name) do
         event[name]
       end
+    end
+
+    def legend
+      @legend ||= Base - rare - supa - uber
     end
 
     def initialize ball, event_name

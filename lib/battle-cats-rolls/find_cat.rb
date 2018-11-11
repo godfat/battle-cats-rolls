@@ -24,12 +24,14 @@ module BattleCatsRolls
     end
 
     def initialize new_gacha, target_ids
-      new_ids = %i[rare_cats supa_cats uber_cats legend_cats].
+      ids_in_gacha = %i[rare_cats supa_cats uber_cats legend_cats].
         flat_map(&new_gacha.method(:public_send)).select do |cat|
           target_ids.include?(cat.id)
         end.map(&:id)
 
-      super(new_gacha, new_ids)
+      ids_in_gacha.concat(new_gacha.legend_cats.map(&:id))
+
+      super(new_gacha, ids_in_gacha)
     end
 
     def search cats: [], guaranteed: true, max: 999
@@ -42,7 +44,8 @@ module BattleCatsRolls
           track_name = '+'.ord - 'A'.ord
 
           found.values + (ids - found.keys).map do |missing_id|
-            info = [Gacha::Uber, Gacha::SR, Gacha::Rare].find do |rarity|
+            info = [Gacha::Legend, Gacha::Uber,
+                    Gacha::Supa, Gacha::Rare].find do |rarity|
               found = gacha.pool.dig_cat(rarity, missing_id)
               break found if found
             end

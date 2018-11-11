@@ -3,6 +3,13 @@
   <select id="find_select" name="find" onchange="roll(this)">
     <option></option>
 
+    <optgroup label="Legend:">
+      <% gacha.legend_cats.uniq(&:id).each do |cat| %>
+        <option value="<%= cat.id %>"
+          <%= selected_find(cat) %>><%= cat_name(cat) %></option>
+      <% end %>
+    </optgroup>
+
     <optgroup label="Uber:">
       <% gacha.uber_cats.uniq(&:id).each do |cat| %>
         <option value="<%= cat.id %>"
@@ -10,7 +17,7 @@
       <% end %>
     </optgroup>
 
-    <optgroup label="Super Rare:">
+    <optgroup label="Super:">
       <% gacha.supa_cats.uniq(&:id).each do |cat| %>
         <option value="<%= cat.id %>"
           <%= selected_find(cat) %>><%= cat_name(cat) %></option>

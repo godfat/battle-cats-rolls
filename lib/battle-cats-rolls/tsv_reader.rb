@@ -2,7 +2,7 @@
 
 require 'date'
 
-require_relative 'gacha'
+require_relative 'gacha_pool'
 
 module BattleCatsRolls
   class TsvReader < Struct.new(:tsv)
@@ -50,7 +50,7 @@ module BattleCatsRolls
           if pool['id'] > 0
             data.merge!(pool)
             data['step_up'] = true if data.delete('step_up') # reorder
-            data['platinum'] = true if data['uber'] == Gacha::Base
+            data['platinum'] = true if data['uber'] == GachaPool::Base
 
             result["#{data['start_on']}_#{data['id']}"] = data
           end

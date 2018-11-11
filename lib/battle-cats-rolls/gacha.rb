@@ -8,7 +8,6 @@ require 'forwardable'
 
 module BattleCatsRolls
   class Gacha < Struct.new(:pool, :seed)
-    Base   = 10000
     Rare   = 2
     Supa   = 3
     Uber   = 4
@@ -90,7 +89,7 @@ module BattleCatsRolls
     end
 
     def roll_cat rarity_fruit
-      score = rarity_fruit.value % Base
+      score = rarity_fruit.value % GachaPool::Base
       rarity = dig_rarity(score)
       slot_fruit = if block_given? then yield else roll_fruit end
       cat = dig_cat(slot_fruit, rarity)
@@ -106,13 +105,17 @@ module BattleCatsRolls
     end
 
     def dig_rarity score
+      rare_supa = rare + supa
+
       case score
       when 0...rare
         Rare
-      when rare...(rare + supa)
+      when rare...rare_supa
         Supa
-      else
+      when rare_supa...(rare_supa + uber)
         Uber
+      else
+        Legend
       end
     end
 
