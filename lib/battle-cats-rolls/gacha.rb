@@ -76,7 +76,9 @@ module BattleCatsRolls
 
     def pick_cats rarity
       pool.dig_slot(rarity).map do |id|
-        Cat.new(id, pool.dig_cat(rarity, id))
+        cat = Cat.new(id, pool.dig_cat(rarity, id))
+        cat.rarity = rarity
+        cat
       end
     end
 

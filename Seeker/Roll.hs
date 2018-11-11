@@ -9,6 +9,7 @@ module Roll
   , buildSource) where
 
 import Data.Word (Word32)
+import Data.List (genericIndex)
 import Control.Monad (guard)
 
 type Pick = Roll
@@ -30,6 +31,7 @@ data Chance = Chance
   { rare :: Rarity
   , supa :: Rarity
   , uber :: Rarity
+  , legend :: Rarity
   } deriving (Show, Eq)
 
 data Source = Source
@@ -38,7 +40,7 @@ data Source = Source
   } deriving (Show, Eq)
 
 buildSource :: [Word32] -> Source
-buildSource (r:s:u:rCount:sCount:uCount:picks) = Source
+buildSource (r:s:u:l:rCount:sCount:uCount:lCount:picks) = Source
   { sourceChance = chance
   , sourcePicks = buildPicks chance rolls }
   where
@@ -46,18 +48,21 @@ buildSource (r:s:u:rCount:sCount:uCount:picks) = Source
       { rare = rare
       , supa = supa
       , uber = uber
+      , legend = legend
       }
-    rare = Rarity { begin = 0, end = r, count = rCount }
-    supa = Rarity { begin = r, end = r + s, count = sCount }
-    uber = Rarity { begin = r + s, end = scoreBase, count = uCount }
-    rolls = buildRolls [rare, supa, uber] picks
+    rare   = Rarity { count = rCount, begin = 0        , end = r }
+    supa   = Rarity { count = sCount, begin = r        , end = r + s }
+    uber   = Rarity { count = uCount, begin = r + s    , end = r + s + u }
+    legend = Rarity { count = lCount, begin = r + s + u, end = scoreBase }
+    rolls = buildRolls [rare, supa, uber, legend] picks
 
 buildRolls :: [Rarity] -> [Word32] -> [Roll]
 buildRolls rarities [] = []
 buildRolls rarities (rarity:slot:restRolls) =
-  Roll (rarities !! fromEnum rarity) (Slot slot) : rest
+  Roll (genericIndex rarities (rarity - rarityOffset)) (Slot slot) : rest
   where
     rest = buildRolls rarities restRolls
+    rarityOffset = 2
 
 buildPicks :: Chance -> [Roll] -> [Pick]
 buildPicks chance rolls@(firstRoll:_) =

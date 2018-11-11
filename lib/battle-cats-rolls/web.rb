@@ -75,6 +75,14 @@ module BattleCatsRolls
           end
       end
 
+      def pick_option cats
+        cats.map.with_index do |cat, slot|
+          <<~HTML
+            <option value="#{cat.rarity} #{slot}">#{cat_name(cat)}</option>
+          HTML
+        end.join
+      end
+
       def selected_lang lang_name
         'selected="selected"' if controller.lang == lang_name
       end
@@ -384,8 +392,9 @@ module BattleCatsRolls
 
       def seek_source
         @seek_source ||=
-          [gacha.rare, gacha.supa, gacha.uber,
-           gacha.rare_cats.size, gacha.supa_cats.size, gacha.uber_cats.size,
+          [gacha.rare, gacha.supa, gacha.uber, gacha.legend,
+           gacha.rare_cats.size, gacha.supa_cats.size,
+           gacha.uber_cats.size, gacha.legend_cats.size,
            *request.POST['rolls']].join(' ').squeeze(' ')
       end
 
