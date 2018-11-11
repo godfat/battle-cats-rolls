@@ -5,7 +5,10 @@
   <ul>
     <% arg[:found_cats].each do |(cat, a_or_b, guaranteed)| %>
       <li>
-        <%= "#{link_to_roll(cat)}: #{cat.sequence}#{(65 + a_or_b).chr}#{guaranteed}" %>
+        <span class="<%= cat.color_label %>">
+          <%= link_to_roll(cat) %>
+        </span>:
+        <%= "#{cat.sequence}#{(65 + a_or_b).chr}#{guaranteed}" %>
       </li>
     <% end %>
   </ul>

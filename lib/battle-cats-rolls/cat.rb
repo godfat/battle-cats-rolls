@@ -32,7 +32,7 @@ module BattleCatsRolls
 
     def color_label
       case score
-      when 0...6500
+      when nil, 0...6500
         :rare
       when 6500...7000
         :supa_fest
