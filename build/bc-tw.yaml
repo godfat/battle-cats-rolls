@@ -1674,3 +1674,106 @@ events:
     rare: 7000
     supa: 2500
     uber: 500
+  2018-11-16_289:
+    start_on: 2018-11-16
+    end_on: 2018-11-19
+    version: '70500'
+    name: 具備各種獨特能力的超激烈爆彈系列！★11連轉超激確定活動中！
+    id: 289
+    rare: 7000
+    supa: 2500
+    uber: 500
+    guaranteed: true
+  2018-11-16_321:
+    start_on: 2018-11-16
+    end_on: 2018-12-07
+    version: '70500'
+    name: "【限時開放】『Crash Fever』合作轉蛋登場！★11連轉超激確定活動中！"
+    id: 321
+    rare: 7000
+    supa: 2500
+    uber: 500
+    guaranteed: true
+  2018-11-19_283:
+    start_on: 2018-11-19
+    end_on: 2018-11-22
+    version: '70500'
+    name: 貓咪軍團對抗不死生物的超級武器！★11連轉超激確定活動中！
+    id: 283
+    rare: 7000
+    supa: 2500
+    uber: 500
+    guaranteed: true
+  2018-11-19_321:
+    start_on: 2018-11-19
+    end_on: 2018-12-07
+    version: '70500'
+    name: "【限時開放】『Crash Fever』合作轉蛋登場！★11連轉超激確定活動中！"
+    id: 321
+    rare: 7000
+    supa: 2500
+    uber: 500
+    guaranteed: true
+  2018-11-22_221:
+    start_on: 2018-11-22
+    end_on: 2018-11-23
+    version: '70500'
+    name: 快來獲得掃黑專家的戰國武將吧！★點圖可以看詳細內容喔！
+    id: 221
+    rare: 7000
+    supa: 2500
+    uber: 500
+  2018-11-22_321:
+    start_on: 2018-11-22
+    end_on: 2018-12-07
+    version: '70500'
+    name: "【限時開放】『Crash Fever』合作轉蛋登場！★點圖可以看詳細內容喔！"
+    id: 321
+    rare: 7000
+    supa: 2500
+    uber: 500
+  2018-11-23_248:
+    start_on: 2018-11-23
+    end_on: 2018-11-26
+    version: '70500'
+    name: 從異世界被召喚來的怪物美少女★點圖可以看詳細內容喔！
+    id: 248
+    rare: 7000
+    supa: 2500
+    uber: 500
+  2018-11-26_230:
+    start_on: 2018-11-26
+    end_on: 2018-11-28
+    version: '70500'
+    name: 進化後大變身！對抗天使敵人的最佳選擇！★點圖可以看詳細內容喔！
+    id: 230
+    rare: 7000
+    supa: 2500
+    uber: 500
+  2018-11-26_322:
+    start_on: 2018-11-26
+    end_on: 2018-12-07
+    version: '70500'
+    name: "【限時開放】『Crash Fever』合作轉蛋登場！★點圖可以看詳細內容喔！"
+    id: 322
+    rare: 7000
+    supa: 2500
+    uber: 500
+  2018-11-28_276:
+    start_on: 2018-11-28
+    end_on: 2018-11-30
+    version: '70500'
+    name: 來自宇宙盡頭的各種精靈們！★點圖可以看詳細內容喔！
+    id: 276
+    rare: 7000
+    supa: 2500
+    uber: 500
+  2018-11-30_315:
+    start_on: 2018-11-30
+    end_on: 2018-12-03
+    version: '70500'
+    name: 超強的限定角色「幼傑達太貓」登場！★超激出現率大幅上升！
+    id: 315
+    rare: 6500
+    supa: 2600
+    uber: 900
