@@ -62,7 +62,7 @@ module BattleCatsRolls
               cats.dig(index + guaranteed_rolls - 1, a_or_b, :rarity_fruit)
 
             if guaranteed_slot_fruit
-              rolled_cat.guaranteed = dig_cat(guaranteed_slot_fruit, Uber)
+              rolled_cat.guaranteed = new_cat(Uber, guaranteed_slot_fruit)
               rolled_cat.guaranteed.sequence = rolled_cat.sequence
             end
           end
@@ -92,10 +92,9 @@ module BattleCatsRolls
       score = rarity_fruit.value % GachaPool::Base
       rarity = dig_rarity(score)
       slot_fruit = if block_given? then yield else roll_fruit end
-      cat = dig_cat(slot_fruit, rarity)
+      cat = new_cat(rarity, slot_fruit)
 
       cat.rarity_fruit = rarity_fruit
-      cat.slot_fruit = slot_fruit
       cat.score = score
 
       cat
@@ -120,11 +119,11 @@ module BattleCatsRolls
       end
     end
 
-    def dig_cat slot_fruit, rarity
+    def new_cat rarity, slot_fruit
       slot = slot_fruit.value % pool.dig_slot(rarity).size
       id = pool.dig_slot(rarity, slot)
 
-      Cat.new(id, pool.dig_cat(rarity, id), rarity, slot)
+      Cat.new(id, pool.dig_cat(rarity, id), rarity, slot_fruit, slot)
     end
 
     def advance_seed!

@@ -2,9 +2,9 @@
 
 module BattleCatsRolls
   class Cat < Struct.new(
-    :id, :info,
-    :rarity, :slot,
-    :rarity_fruit, :slot_fruit,
+    :id, :info, :rarity,
+    :slot_fruit, :slot,
+    :rarity_fruit,
     :score, :sequence, :guaranteed)
 
     def name
