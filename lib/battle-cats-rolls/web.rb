@@ -39,7 +39,7 @@ module BattleCatsRolls
       end
 
       def each_ab_cat
-        arg[:cats].each.inject(nil) do |prev_b, ab|
+        arg[:cats].inject(nil) do |prev_b, ab|
           yield(prev_b, ab)
 
           ab.last
