@@ -2028,3 +2028,89 @@ events:
     rare: 7000
     supa: 2500
     uber: 500
+  2018-11-16_289:
+    start_on: 2018-11-16
+    end_on: 2018-11-19
+    version: '70500'
+    name: "★The Dynamites★ Guaranteed 11-Draw for Uber Rares!"
+    id: 289
+    rare: 7000
+    supa: 2500
+    uber: 500
+    guaranteed: true
+  2018-11-16_322:
+    start_on: 2018-11-16
+    end_on: 2018-11-22
+    version: '70500'
+    name: "【Limited】 Crash Fever Collab Capsules! ★ With 11-Draw Uber Guarantee!"
+    id: 322
+    rare: 7000
+    supa: 2500
+    uber: 500
+    guaranteed: true
+  2018-11-19_283:
+    start_on: 2018-11-19
+    end_on: 2018-11-22
+    version: '70500'
+    name: "★ IRON LEGION ★ Guaranteed 11-Draw for Zombie-smashing Ubers!"
+    id: 283
+    rare: 7000
+    supa: 2500
+    uber: 500
+    guaranteed: true
+  2018-11-19_322:
+    start_on: 2018-11-19
+    end_on: 2018-11-22
+    version: '70500'
+    name: "【Limited】 Crash Fever Collab Capsules! ★ With 11-Draw Uber Guarantee!"
+    id: 322
+    rare: 7000
+    supa: 2500
+    uber: 500
+    guaranteed: true
+  2018-11-22_221:
+    start_on: 2018-11-22
+    end_on: 2018-11-23
+    version: '70500'
+    name: "★ Vajiras Wargods! ★ Tactical master Uber Cats!"
+    id: 221
+    rare: 7000
+    supa: 2500
+    uber: 500
+  2018-11-23_248:
+    start_on: 2018-11-23
+    end_on: 2018-11-26
+    version: '70500'
+    name: "★ Girls & Monsters! ★ Terrifying beauties with an 11-Draw Guarantee!"
+    id: 248
+    rare: 7000
+    supa: 2500
+    uber: 500
+    guaranteed: true
+  2018-11-26_230:
+    start_on: 2018-11-26
+    end_on: 2018-11-28
+    version: '70500'
+    name: "★ Ultra Souls★ Top-class Ubers of legendary might!"
+    id: 230
+    rare: 7000
+    supa: 2500
+    uber: 500
+  2018-11-28_276:
+    start_on: 2018-11-28
+    end_on: 2018-11-30
+    version: '70500'
+    name: "★ Elemental Pixies ★ Cosmic powers brought to life as Uber Rare allies!"
+    id: 276
+    rare: 7000
+    supa: 2500
+    uber: 500
+  2018-11-30_315:
+    start_on: 2018-11-30
+    end_on: 2018-12-03
+    version: '70500'
+    name: New Uber "D'artanyan" is here! ★ Extra-high Uber drop rate for every draw!
+    id: 315
+    rare: 6500
+    supa: 2600
+    uber: 900
