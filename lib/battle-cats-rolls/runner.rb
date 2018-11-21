@@ -25,10 +25,10 @@ module BattleCatsRolls
     def self.jp
       @jp ||= [
         __method__,
-        '8.0.0',
+        '8.0.2',
         'https://ponos.s3.dualstack.ap-northeast-1.amazonaws.com/appli/battlecats/event_data/battlecats_production/gatya.tsv',
         # https://apkpure.co/%E3%81%AB%E3%82%83%E3%82%93%E3%81%93%E5%A4%A7%E6%88%A6%E4%BA%89/
-        'https://apk.apkpure.co/jp.co.ponos.battlecats/2da51508d9493bec7f4e43bc2e009f83/8.0.0/0da9401cfc5b7d1f7a95a1acdf2b726f/'
+        'https://apk.apkpure.co/jp.co.ponos.battlecats/0e17213d7197ab35b55978c00de4d3c3/8.0.2/d88ea0deccb640d51eb14b86a1a8aa76/'
       ]
     end
 
