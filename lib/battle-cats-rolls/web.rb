@@ -440,6 +440,14 @@ module BattleCatsRolls
       end
     end
 
+    get '/warmup' do
+      cache
+      Web.ball_en
+      Web.ball_tw
+      Web.ball_jp
+      'OK'
+    end
+
     class Seek
       include Jellyfish
       controller_include NormalizedPath, Imp
