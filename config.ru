@@ -3,7 +3,9 @@
 require_relative 'lib/battle-cats-rolls/server'
 
 warmup do |app|
-  print Rack::MockRequest.new(app).get('/warmup').errors
+  base = "http://#{ENV['WEB_YAHNS']}" if ENV['WEB_YAHNS']
+
+  print Rack::MockRequest.new(app).get("#{base}/warmup").errors
 end
 
 run BattleCatsRolls::Server
