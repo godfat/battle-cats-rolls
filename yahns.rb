@@ -1,7 +1,7 @@
 
-configru = File.expand_path(__dir__, 'config.ru')
+rack, = Rack::Builder.parse_file(File.expand_path(__dir__, 'config.ru'))
 
-app :rack, configru, preload: true do
+app :rack, rack, preload: true do
   listen ENV['SEEK_YAHNS'] || 9090
 
   queue do
@@ -9,7 +9,7 @@ app :rack, configru, preload: true do
   end
 end
 
-app :rack, configru, preload: true do
+app :rack, rack, preload: true do
   listen ENV['WEB_YAHNS'] || 8080
 
   queue do
