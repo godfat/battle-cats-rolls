@@ -3,7 +3,7 @@
 require_relative 'lib/battle-cats-rolls/server'
 
 warmup do |app|
-  Rack::MockRequest.new(app).get('/warmup')
+  print Rack::MockRequest.new(app).get('/warmup').errors
 end
 
 run BattleCatsRolls::Server
