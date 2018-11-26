@@ -465,7 +465,7 @@ module BattleCatsRolls
       get %r{^/seek/result/?(?<key>\w*)} do |m|
         key = m[:key]
         seed = cache[key] if /./.match?(key)
-        seek = SeekSeed.queue.dig(key, :seek)
+        seek = SeekSeed.queue[key]
 
         seek.yield if seek&.ended?
 
