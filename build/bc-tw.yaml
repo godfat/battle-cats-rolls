@@ -1777,3 +1777,72 @@ events:
     rare: 6500
     supa: 2600
     uber: 900
+  2018-12-03_322:
+    start_on: 2018-12-03
+    end_on: 2018-12-07
+    version: '80000'
+    name: "【限時開放】『Crash Fever』合作轉蛋登場！★點圖可以看詳細內容喔！"
+    id: 322
+    rare: 7000
+    supa: 2500
+    uber: 500
+    guaranteed: true
+  2018-12-03_345:
+    start_on: 2018-12-03
+    end_on: 2018-12-05
+    version: '80000'
+    name: 貓咪世界的眾神，集結於此！★11連轉超激確定活動中！
+    id: 345
+    rare: 7000
+    supa: 2500
+    uber: 500
+    guaranteed: true
+  2018-12-05_324:
+    start_on: 2018-12-05
+    end_on: 2018-12-07
+    version: '80000'
+    name: 神秘噁心又可愛的不明貓一族來了！★11連轉超激確定活動中！
+    id: 324
+    rare: 7000
+    supa: 2500
+    uber: 500
+    guaranteed: true
+  2018-12-07_336:
+    start_on: 2018-12-07
+    end_on: 2018-12-09
+    version: '80000'
+    name: 強大可靠的龍皇們降臨啦！★11連轉超激確定活動中！
+    id: 336
+    rare: 6970
+    supa: 2500
+    uber: 500
+    guaranteed: true
+  2018-12-09_273:
+    start_on: 2018-12-09
+    end_on: 2018-12-11
+    version: '80000'
+    name: 削鐵如泥！有效對抗鋼鐵敵人的角色大集合！★好康轉蛋活動中！
+    id: 273
+    rare: 7000
+    supa: 2500
+    uber: 500
+    step_up: true
+  2018-12-11_246:
+    start_on: 2018-12-11
+    end_on: 2018-12-13
+    version: '80000'
+    name: 專打飄浮敵人！以「閃電機兵飛雷」爲首的飄浮破壞者轉蛋！★好康轉蛋活動中！
+    id: 246
+    rare: 7000
+    supa: 2500
+    uber: 500
+    step_up: true
+  2018-12-13_361:
+    start_on: 2018-12-13
+    end_on: 2018-12-16
+    version: '80000'
+    name: 超強的限定角色「影傑漆黑達太貓」登場！★超激稀有角色出現率大幅上升！
+    id: 361
+    rare: 6500
+    supa: 2600
+    uber: 900

@@ -2114,3 +2114,62 @@ events:
     rare: 6500
     supa: 2600
     uber: 900
+  2018-12-03_345:
+    start_on: 2018-12-03
+    end_on: 2018-12-05
+    version: '80000'
+    name: "★ The Almighties! ★ Legendary Uber Cats with 11-Draw Guarantee!"
+    id: 345
+    rare: 7000
+    supa: 2500
+    uber: 500
+    guaranteed: true
+  2018-12-05_324:
+    start_on: 2018-12-05
+    end_on: 2018-12-07
+    version: '80000'
+    name: "★ Nekolugas ★  Super-creepy Uber Cats with 11-Draw Guarantee!"
+    id: 324
+    rare: 7000
+    supa: 2500
+    uber: 500
+    guaranteed: true
+  2018-12-07_336:
+    start_on: 2018-12-07
+    end_on: 2018-12-09
+    version: '80000'
+    name: "★ Dragon Emperors ★ Mighty monstrous Ubers with 11-Draw Guarantee!"
+    id: 336
+    rare: 6970
+    supa: 2500
+    uber: 500
+    guaranteed: true
+  2018-12-09_273:
+    start_on: 2018-12-09
+    end_on: 2018-12-11
+    version: '80000'
+    name: Metal Busters ★ With Increasing Capsule Discount!
+    id: 273
+    rare: 7000
+    supa: 2500
+    uber: 500
+    step_up: true
+  2018-12-11_246:
+    start_on: 2018-12-11
+    end_on: 2018-12-13
+    version: '80000'
+    name: AIR BUSTERS plus R.E.I ★ With Increasing Capsules discount!
+    id: 246
+    rare: 7000
+    supa: 2500
+    uber: 500
+    step_up: true
+  2018-12-13_361:
+    start_on: 2018-12-13
+    end_on: 2018-12-16
+    version: '80000'
+    name: D'arktanyan is here! ★ Plus higher drop rate for Uber Rares!
+    id: 361
+    rare: 6500
+    supa: 2600
+    uber: 900
