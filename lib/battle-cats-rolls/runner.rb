@@ -5,20 +5,20 @@ module BattleCatsRolls
     def self.en
       @en ||= [
         __method__,
-        '7.5.0',
+        '8.0.0',
         'https://ponos.s3.dualstack.ap-northeast-1.amazonaws.com/appli/battlecats/event_data/battlecatsen_production/gatya.tsv',
         # https://www.apkmirror.com/apk/ponos/the-battle-cats/
-        'https://www.apkmirror.com/wp-content/themes/APKMirror/download.php?id=531837'
+        'https://www.apkmirror.com/wp-content/themes/APKMirror/download.php?id=555471'
       ]
     end
 
     def self.tw
       @tw ||= [
         __method__,
-        '7.4.2',
+        '8.0.0',
         'https://ponos.s3.dualstack.ap-northeast-1.amazonaws.com/appli/battlecats/event_data/battlecatstw_production/gatya.tsv',
         # https://apkpure.com/a/jp.co.ponos.battlecatstw
-        'https://download.apkpure.com/b/apk/anAuY28ucG9ub3MuYmF0dGxlY2F0c3R3XzcwNDAyMF82YmI1NTFkNw?_fn=6LKT5ZKq5aSn5oiw54itX3Y3LjQuMl9hcGtwdXJlLmNvbS5hcGs&k=a4b66406a3c23cdb284f39320b97bc6e5bd97113&as=e718be834e37f6f6bff6fb9a1d71357f5bd6ce8b&_p=anAuY28ucG9ub3MuYmF0dGxlY2F0c3R3&c=2%7CGAME_CASUAL%7CZGV2PVBPTk9TJnQ9YXBrJnZuPTcuNC4yJnZjPTcwNDAyMA'
+        'https://download.apkpure.com/b/apk/anAuY28ucG9ub3MuYmF0dGxlY2F0c3R3XzgwMDAwMF8zNjNkZjc3NQ?_fn=6LKT5ZKq5aSn5oiw54itX3Y4LjAuMF9hcGtwdXJlLmNvbS5hcGs&k=29b88d731c3dcd5293a081a95f4253e55c0277b5&as=7787d23adc93046fb0e95722b923d7345bffd52d&_p=anAuY28ucG9ub3MuYmF0dGxlY2F0c3R3&c=2%7CGAME_CASUAL%7CZGV2PVBPTk9TJTIwQ29ycG9yYXRpb24mdD1hcGsmdm49OC4wLjAmdmM9ODAwMDAw'
       ]
     end
 
