@@ -40,7 +40,7 @@ module BattleCatsRolls
         :supa
       when 9100...9500
         :uber_fest
-      when 9500...9900
+      when 9500...9970
         :uber
       else
         :legend

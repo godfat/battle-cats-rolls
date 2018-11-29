@@ -4,22 +4,22 @@
 
     <ul>
       <li>
-        Rare: <%= gacha.rare / 100 %>%
+        Rare: <%= sprintf('%g', gacha.rare / 100.0) %>%
         (<%= gacha.rare_cats.size %> cats)
         <%= show_gacha_slots(gacha.rare_cats) %>
       </li>
       <li>
-        Super: <%= gacha.supa / 100 %>%
+        Super: <%= sprintf('%g', gacha.supa / 100.0) %>%
         (<%= gacha.supa_cats.size %> cats)
         <%= show_gacha_slots(gacha.supa_cats) %>
       </li>
       <li>
-        Uber: <%= gacha.uber / 100 %>%
+        Uber: <%= sprintf('%g', gacha.uber / 100.0) %>%
         (<%= gacha.uber_cats.size %> cats)
         <%= show_gacha_slots(gacha.uber_cats) %>
       </li>
       <li>
-        Legend: <%= gacha.legend / 100 %>%
+        Legend: <%= sprintf('%g', gacha.legend / 100.0) %>%
         (<%= gacha.legend_cats.size %> cats)
         <%= show_gacha_slots(gacha.legend_cats) %>
       </li>
