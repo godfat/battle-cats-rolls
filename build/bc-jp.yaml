@@ -2108,3 +2108,72 @@ events:
     rare: 6500
     supa: 2600
     uber: 900
+  2018-12-04_330:
+    start_on: 2018-12-04
+    end_on: 2018-12-07
+    version: '80000'
+    name: 黒い敵に強力効果を持つ、一騎当千の戦国武将達！★11連で超激レア確定!!
+    id: 330
+    rare: 6970
+    supa: 2500
+    uber: 500
+    guaranteed: true
+  2018-12-04_358:
+    start_on: 2018-12-04
+    end_on: 2018-12-07
+    version: '80000'
+    name: 6周年記念！感謝の気持ちを込めた特別セレクションガチャ！★11連で超激レア確定!!
+    id: 358
+    rare: 7000
+    supa: 2500
+    uber: 500
+    guaranteed: true
+  2018-12-07_357:
+    start_on: 2018-12-07
+    end_on: 2018-12-09
+    version: '80000'
+    name: ちびネコヴァルキリー新登場！6周年記念の特別ガチャ！★11連で超激レア確定!!
+    id: 357
+    rare: 7000
+    supa: 2500
+    uber: 500
+    guaranteed: true
+  2018-12-09_333:
+    start_on: 2018-12-09
+    end_on: 2018-12-11
+    version: '80000'
+    name: パワフルでキュートな電脳少女達を手に入れよう！★11連で超激レア確定!!
+    id: 333
+    rare: 6970
+    supa: 2500
+    uber: 500
+    guaranteed: true
+  2018-12-09_359:
+    start_on: 2018-12-09
+    end_on: 2018-12-13
+    version: '80000'
+    name: 6周年記念！感謝の気持ちを込めた特別セレクションガチャ！★11連で超激レア確定!!
+    id: 359
+    rare: 7000
+    supa: 2500
+    uber: 500
+    guaranteed: true
+  2018-12-11_336:
+    start_on: 2018-12-11
+    end_on: 2018-12-13
+    version: '80000'
+    name: 圧倒的破壊力のドラゴン達を手に入れよう！★11連で超激レア確定!!
+    id: 336
+    rare: 6970
+    supa: 2500
+    uber: 500
+    guaranteed: true
+  2018-12-13_361:
+    start_on: 2018-12-13
+    end_on: 2018-12-16
+    version: '80000'
+    name: 限定キャラ「影傑ダークダルターニャ」も参戦！★超激レア出現率が今だけ超アップ!!
+    id: 361
+    rare: 6500
+    supa: 2600
+    uber: 900
