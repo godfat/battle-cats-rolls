@@ -30,7 +30,7 @@ module BattleCatsRolls
       id == rhs.id
     end
 
-    def color_label
+    def rarity_label
       case score
       when nil, 0...6500
         :rare

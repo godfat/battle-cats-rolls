@@ -29,11 +29,11 @@
       <tr>
         <td rowspan="2"><%= a.sequence %></td>
         <%= seed_column(a.rarity_fruit) %>
-        <td class="score <%= a.color_label %>"><%= a.score %>, <%= a.slot %></td>
+        <td class="score <%= color_label(a) %>"><%= a.score %>, <%= a.slot %></td>
         <td rowspan="2"><%= guaranteed_cat(a, -1) %></td>
 
         <% if prev_b %>
-          <td class="cat <%= prev_b.color_label %>">
+          <td class="cat <%= color_label(prev_b) %>">
             <%= link_to_roll(prev_b) %></td>
           <%= seed_column(prev_b.slot_fruit) %>
         <% elsif details %>
@@ -45,9 +45,9 @@
 
       <tr>
         <%= seed_column(a.slot_fruit) %>
-        <td class="cat <%= a.color_label %>">
+        <td class="cat <%= color_label(a) %>">
           <%= link_to_roll(a) %></td>
-        <td class="score <%= b.color_label %>"><%= b.score %>, <%= b.slot %></td>
+        <td class="score <%= color_label(b) %>"><%= b.score %>, <%= b.slot %></td>
         <td rowspan="2"><%= guaranteed_cat(b, 0) %></td>
         <%= seed_column(b.rarity_fruit) %>
         <td rowspan="2"><%= b.sequence %></td>
@@ -62,7 +62,7 @@
       <% end %>
 
       <% last_b = arg.dig(:cats, -1, -1) %>
-      <td class="cat <%= last_b.color_label %>">
+      <td class="cat <%= color_label(last_b) %>">
         <%= link_to_roll(last_b) %></td>
       <%= seed_column(last_b.slot_fruit) %>
     </tr>

@@ -15,8 +15,6 @@ require 'forwardable'
 
 module BattleCatsRolls
   class Web
-    Max = 999
-
     def self.ball_en
       @ball_en ||= CrystalBall.load('build', 'en')
     end
@@ -55,6 +53,22 @@ module BattleCatsRolls
             "#{link}<br>-&gt; #{next_sequence}"
           else
             "#{link}<br>&lt;- #{next_sequence}"
+          end
+        end
+      end
+
+      def color_label cat
+        case rarity_label = cat.rarity_label
+        when :legend
+          :legend
+        else
+          case cat.id
+          when controller.find
+            :found
+          when *FindCat.exclusives
+            :exclusive
+          else
+            rarity_label
           end
         end
       end
@@ -318,7 +332,10 @@ module BattleCatsRolls
       end
 
       def count
-        @count ||= [1, [(request.params['count'] || 100).to_i, Max].min].max
+        @count ||=
+          [1,
+           [(request.params['count'] || 100).to_i, FindCat::Max].min
+          ].max
       end
 
       def find
@@ -432,7 +449,7 @@ module BattleCatsRolls
 
         found_cats =
           FindCat.search(gacha, find,
-            cats: cats, guaranteed: !no_guaranteed, max: Max)
+            cats: cats, guaranteed: !no_guaranteed, max: FindCat::Max)
 
         render :index, cats: cats, found_cats: found_cats
       else
