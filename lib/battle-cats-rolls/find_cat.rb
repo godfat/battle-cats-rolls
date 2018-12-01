@@ -19,8 +19,8 @@ module BattleCatsRolls
       ]
     end
 
-    def self.search gacha, extra, **args
-      new(gacha, ids << extra).search(**args)
+    def self.search gacha, find, **args
+      new(gacha, ids << find).search(**args)
     end
 
     def initialize new_gacha, target_ids
