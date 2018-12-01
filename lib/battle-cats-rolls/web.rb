@@ -57,6 +57,15 @@ module BattleCatsRolls
         end
       end
 
+      def guaranteed_color cat
+        case cat.guaranteed&.id
+        when controller.find
+          :found
+        when *FindCat.exclusives
+          :exclusive
+        end
+      end
+
       def color_label cat
         case rarity_label = cat.rarity_label
         when :legend

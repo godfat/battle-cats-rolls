@@ -30,7 +30,8 @@
         <td rowspan="2"><%= a.sequence %></td>
         <%= seed_column(a.rarity_fruit) %>
         <td class="score <%= color_label(a) %>"><%= a.score %>, <%= a.slot %></td>
-        <td rowspan="2"><%= guaranteed_cat(a, -1) %></td>
+        <td rowspan="2" class="<%= guaranteed_color(a) %>">
+          <%= guaranteed_cat(a, -1) %></td>
 
         <% if prev_b %>
           <td class="cat <%= color_label(prev_b) %>">
@@ -48,7 +49,8 @@
         <td class="cat <%= color_label(a) %>">
           <%= link_to_roll(a) %></td>
         <td class="score <%= color_label(b) %>"><%= b.score %>, <%= b.slot %></td>
-        <td rowspan="2"><%= guaranteed_cat(b, 0) %></td>
+        <td rowspan="2" class="<%= guaranteed_color(b) %>">
+          <%= guaranteed_cat(b, 0) %></td>
         <%= seed_column(b.rarity_fruit) %>
         <td rowspan="2"><%= b.sequence %></td>
       </tr>
