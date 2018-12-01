@@ -43,7 +43,7 @@ module BattleCatsRolls
 
         data = convert_event(read_event(row, self.class.event_fields))
 
-        if data.delete('type') == 1
+        if data.delete('type') == 1 # rare gacha
           pool = data.delete('pool')[data.delete('offset') - 1]
           data['name'] = pool['name']
 
@@ -122,7 +122,7 @@ module BattleCatsRolls
 
     def parsed_data
       @parsed_data ||= tsv.lines.inject([]) do |result, line|
-        if line.start_with?('[')
+        if line.start_with?('[') # ignore [start] and [end]
           result
         else
           result << line.split("\t")
