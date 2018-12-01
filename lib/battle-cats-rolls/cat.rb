@@ -46,26 +46,5 @@ module BattleCatsRolls
         :legend
       end
     end
-
-    def to_ansi
-      "\e[#{color_sequence}m#{name}\e[0m"
-    end
-
-    private
-
-    def color_sequence
-      case color_label
-      when :rare
-        '00;3'
-      when :supa_fest
-        '33;1'
-      when :supa
-        '33;3'
-      when :uber_fest
-        '32;1'
-      when :uber
-        '32;3'
-      end
-    end
   end
 end
