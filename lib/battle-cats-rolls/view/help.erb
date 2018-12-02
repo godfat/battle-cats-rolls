@@ -2,8 +2,16 @@
 <p class="section">
   This is a simulator rolling the rare gacha (rare cat capsule) for
   Battle Cats. With the simulator, you can look into the future to
-  predict your future rolling results.
+  predict and track your future rolling results.
 </p>
+
+<ol>
+  <li>Every game save has a <strong>seed</strong> used to calculate the rolling result</li>
+  <li>The seed data is static, which will only change if you roll the rare gacha</li>
+  <li>We can observe the rolling results and find a matching seed for your game save</li>
+  <li>The simulator is able to use the seed to calculate all the future rolling results</li>
+  <li>Thereby you'll be able to predict and track all the future rolling results without actual rolling it</li>
+</ol>
 
 <%= header(1, 'How to use') %>
 <p class="section">
@@ -12,17 +20,16 @@
 
 <%= header(2, 'Seek the seed') %>
 <ol>
-  <li>Pick a gacha event (e.g. <em>Ultra Souls</em> or <em>Uberfest</em>)</li>
-  <li>Use your rare (gold) tickets or cat food</li>
-  <li>Roll several times. Preferably 7 to 10 rolls. Record the results</li>
-  <li>The more rolls you made, the more accurate the result will be</li>
-  <li><em>Don't</em> fill in any <a href="#what-is-a-guaranteed-roll">guaranteed rolls</a></li>
-  <li>Fill the results in <a href="<%= seek_uri %>">seed seeking</a>. Make sure you pick the gacha event you rolled</li>
+  <li>Pick a gacha event (e.g. <em>Ultra Souls</em> or <em>Uberfest</em>). Use your rare (gold) tickets or cat food. Both work the same</li>
+  <li>Roll several times. Preferably 7 to 10 rolls. Record the results. The more rolls you made, the more accurate the result will be</li>
+  <li>Fill the results at <a href="<%= seek_uri %>">seed seeking</a> in the respective rolling order. Make sure you pick the gacha event you rolled</li>
+  <li><em>Don't fill</em> in any <a href="#what-is-a-guaranteed-roll">guaranteed rolls</a>. If you did, it will be wrong</li>
+  <li><em>Avoid gacha events</em> having duplicated cats (e.g. <em>Metal Busters</em> or <em>Best of the Best</em>). If you did, you'll need to trial and error to find the correct one, because we can't tell which one you actually rolled. You can only try them one by one</li>
   <li>If everything is correct, you'll get the <strong>seed number</strong>, and two links</li>
-  <li>One link is for debugging purpose, showing the status <em>before</em> you rolled</li>
-  <li>The other link will show you the current status, <em>after</em> you rolled</li>
+  <li>The first link is using your starting seed for reference and debugging purpose, showing the status <em>before</em> you rolled</li>
+  <li>The second link is using your last seed, which will show you the current status, <em>after</em> you rolled</li>
   <li>If you have other cats rolled without filling in the form, count yourself
-  <li>Note that a <a href="#what-is-a-guaranteed-roll">guaranteed roll</a> counts as a half roll and thus will switch your track</a></li>
+  <li>Note that a <a href="#what-is-a-guaranteed-roll">guaranteed roll</a> counts as a half roll and thus will switch your track. If you made a 11-rolls on a guaranteed event, and filled the first 10 rolls without the last guaranteed roll, you can find your current seed easily by using the first link with the starting seed, and click on the guaranteed uber cat to simulate your exact rolls</li>
 </ol>
 
 <%= header(2, 'Read the table') %>

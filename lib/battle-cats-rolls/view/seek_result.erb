@@ -16,14 +16,18 @@
         (Note that this value has a half roll offset.
         We're showing this only for reference and debugging purpose.)
       </p>
-      After rolling the cats you entered, your seed is:
+      After rolling the cats you entered, your last seed is:
       <p>
         <a href="<%= uri(query: {seed: arg.dig(:seed, 1)}) %>"><%= arg.dig(:seed, 1) %></a>
       </p>
       <p>
         If you have other cats rolled without filling in the form, count
         yourself. Note that a guaranteed roll counts as a half roll and thus
-        will switch your track.
+        will switch your track. If you made a 11-rolls on a guaranteed event,
+        and filled the first 10 rolls without the last guaranteed roll, you
+        can find your current seed easily by using the first link with
+        the starting seed, and click on the guaranteed uber cat to simulate
+        your exact rolls.
       </p>
     <% end %>
   <% elsif arg[:seek] %>
