@@ -207,8 +207,9 @@ module BattleCatsRolls
         "https://battlecats-db.com/unit/#{'%03d' % cat.id}.html"
       end
 
-      def uri query:, path: "//#{web_host}/"
-        query = query.merge(default_query)
+      def uri path: "//#{web_host}/", query: {}
+        # keep query hash order
+        query = cleanup_query(query.merge(default_query).merge(query))
 
         if query.empty?
           path
@@ -217,16 +218,10 @@ module BattleCatsRolls
         end
       end
 
-      def permalink path: "//#{web_host}/"
-        if controller.next_seed.nonzero?
-          uri(query: {next_seed: controller.next_seed}, path: path)
-        else
-          uri(query: {seed: controller.seed}, path: path)
-        end
-      end
-
       def default_query
-        cleanup_query(
+        {
+          next_seed: controller.next_seed,
+          seed: controller.seed,
           event: controller.event,
           lang: controller.lang,
           name: controller.name,
@@ -234,12 +229,13 @@ module BattleCatsRolls
           find: controller.find,
           force_guaranteed: controller.force_guaranteed,
           ubers: controller.ubers,
-          details: details)
+          details: details
+        }
       end
 
       def cleanup_query query
         query.compact.select do |key, value|
-          if (key == :next_seed && value == 0) ||
+          if (key == :next_seed && (value == 0 || query[:seed].nonzero?)) ||
              (key == :seed && value == 0) ||
              (key == :lang && value == 'en') ||
              (key == :name && value == 0) ||
@@ -269,15 +265,15 @@ module BattleCatsRolls
       end
 
       def cats_uri
-        permalink(path: "//#{web_host}/cats")
+        uri(path: "//#{web_host}/cats")
       end
 
       def help_uri
-        permalink(path: "//#{web_host}/help")
+        uri(path: "//#{web_host}/help")
       end
 
       def seek_uri
-        permalink(path: "//#{seek_host}/seek")
+        uri(path: "//#{seek_host}/seek")
       end
 
       def erb name, &block
