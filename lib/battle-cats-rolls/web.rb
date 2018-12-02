@@ -98,7 +98,7 @@ module BattleCatsRolls
           %Q{<span title="#{title}">#{name}</span>}
         end +
           if cat.id > 0
-            %Q{<a href="#{h uri_to_cat_db(cat)}">&#128062;</a>}
+            %Q{<a href="#{h uri_to_cat_db(cat)}">🐾</a>}
           else
             ''
           end
@@ -175,6 +175,14 @@ module BattleCatsRolls
       end
 
       private
+
+      def header n, name
+        id = name.to_s.downcase.gsub(/\W+/, '-')
+
+        <<~HTML
+          <a href="##{id}">⚓</a> <h#{n} id="#{id}">#{name}</h#{n}>
+        HTML
+      end
 
       def seed_column fruit
         return unless details
@@ -262,6 +270,10 @@ module BattleCatsRolls
 
       def cats_uri
         permalink(path: "//#{web_host}/cats")
+      end
+
+      def help_uri
+        permalink(path: "//#{web_host}/help")
       end
 
       def seek_uri
@@ -486,6 +498,10 @@ module BattleCatsRolls
 
     get '/cats' do
       render :cats, cats: ball.dig('cats')
+    end
+
+    get '/help' do
+      render :help
     end
 
     class Seek

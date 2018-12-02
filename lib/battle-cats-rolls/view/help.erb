@@ -1,0 +1,233 @@
+<%= header(1, 'What is this') %>
+<p class="section">
+  This is a simulator rolling the rare gacha (rare cat capsule) for
+  Battle Cats. With the simulator, you can look into the future to
+  predict your future rolling results.
+</p>
+
+<%= header(1, 'How to use') %>
+<p class="section">
+  First, you'll want to find your current seed.
+</p>
+
+<%= header(2, 'Seek the seed') %>
+<ol>
+  <li>Pick a gacha event (e.g. <em>Ultra Souls</em> or <em>Uberfest</em>)</li>
+  <li>Use your rare (gold) tickets or cat food</li>
+  <li>Roll several times. Preferably 7 to 10 rolls. Record the results</li>
+  <li>The more rolls you made, the more accurate the result will be</li>
+  <li><em>Don't</em> fill in any <a href="#what-is-a-guaranteed-roll">guaranteed rolls</a></li>
+  <li>Fill the results in <a href="<%= seek_uri %>">seed seeking</a>. Make sure you pick the gacha event you rolled</li>
+  <li>If everything is correct, you'll get the <strong>seed number</strong>, and two links</li>
+  <li>One link is for debugging purpose, showing the status <em>before</em> you rolled</li>
+  <li>The other link will show you the current status, <em>after</em> you rolled</li>
+  <li>If you have other cats rolled without filling in the form, count yourself
+  <li>Note that a <a href="#what-is-a-guaranteed-roll">guaranteed roll</a> counts as a half roll and thus will switch your track</a></li>
+</ol>
+
+<%= header(2, 'Read the table') %>
+<p class="section">
+  Using the link, you'll see a table like this:
+</p>
+<table>
+  <tr>
+    <th>No.</th>
+    <th>Result</th>
+    <th>Guaranteed</th>
+    <th>Alt. result</th>
+    <th>Alt. guaranteed</th>
+    <th>Alt. No.</th>
+  </tr>
+
+  <tr>
+    <td rowspan="2">1</td>
+    <td class="score rare">0, 0</td>
+    <td rowspan="2"></td>
+    <td colspan="3"></td>
+  </tr>
+
+  <tr>
+    <td class="cat rare">A rare cat🐾</td>
+    <td class="score rare">0, 0</td>
+    <td rowspan="2"></td>
+    <td rowspan="2">1</td>
+  </tr>
+
+  <tr>
+    <td rowspan="2">2</td>
+    <td class="score supa">0, 0</td>
+    <td rowspan="2"></td>
+    <td class="cat rare">B rare cat🐾</td>
+  </tr>
+
+  <tr>
+    <td class="cat supa">A super cat🐾</td>
+    <td class="score uber">0, 0</td>
+    <td rowspan="2"></td>
+    <td rowspan="2">2</td>
+  </tr>
+
+  <tr>
+    <td rowspan="2">3</td>
+    <td class="score rare">0, 0</td>
+    <td rowspan="2"></td>
+    <td class="cat uber">B uber cat🐾</td>
+  </tr>
+
+  <tr>
+    <td class="cat rare">A rare cat🐾</td>
+    <td class="score rare">0, 0</td>
+    <td rowspan="2"></td>
+    <td rowspan="2">3</td>
+  </tr>
+
+  <tr>
+    <td rowspan="2">4</td>
+    <td class="score rare">0, 0</td>
+    <td rowspan="2"></td>
+    <td class="cat rare">B rare cat🐾</td>
+  </tr>
+
+  <tr>
+    <td class="cat rare">A rare cat🐾</td>
+    <td class="score supa">0, 0</td>
+    <td rowspan="2"></td>
+    <td rowspan="2">4</td>
+  </tr>
+
+  <tr>
+    <td rowspan="2">5</td>
+    <td class="score supa">0, 0</td>
+    <td rowspan="2"></td>
+    <td class="cat supa">B supa cat🐾</td>
+  </tr>
+
+  <tr>
+    <td class="cat supa">A super cat🐾</td>
+    <td class="score supa">0, 0</td>
+    <td rowspan="2"></td>
+    <td rowspan="2">5</td>
+  </tr>
+
+  <tr>
+    <td colspan="3"></td>
+    <td class="cat supa">B supa cat🐾</td>
+  </tr>
+</table>
+
+<p class="section">
+  🐾🐾🐾🐾🐾 Place holder 🐾🐾🐾🐾🐾
+</p>
+
+<%= header(2, 'What is a guaranteed event') %>
+<p class="section">
+  🐾🐾🐾🐾🐾 Place holder 🐾🐾🐾🐾🐾
+</p>
+
+<%= header(2, 'What is a guaranteed roll') %>
+<p class="section">
+  🐾🐾🐾🐾🐾 Place holder 🐾🐾🐾🐾🐾
+</p>
+<table>
+  <tr>
+    <th>No.</th>
+    <th>Result</th>
+    <th>Guaranteed</th>
+    <th>Alt. result</th>
+    <th>Alt. guaranteed</th>
+    <th>Alt. No.</th>
+  </tr>
+
+  <tr>
+    <td rowspan="2">1</td>
+    <td class="score rare">0, 0</td>
+    <td rowspan="2"></td>
+    <td colspan="3"></td>
+  </tr>
+
+  <tr>
+    <td class="cat rare">A rare cat🐾</td>
+    <td class="score rare">0, 0</td>
+    <td rowspan="2"></td>
+    <td rowspan="2">1</td>
+  </tr>
+
+  <tr>
+    <td rowspan="2">2</td>
+    <td class="score supa">0, 0</td>
+    <td rowspan="2"></td>
+    <td class="cat rare">B rare cat🐾</td>
+  </tr>
+
+  <tr>
+    <td class="cat supa">A super cat🐾</td>
+    <td class="score uber">0, 0</td>
+    <td rowspan="2"></td>
+    <td rowspan="2">2</td>
+  </tr>
+
+  <tr>
+    <td rowspan="2">3</td>
+    <td class="score rare">0, 0</td>
+    <td rowspan="2"></td>
+    <td class="cat uber">B uber cat🐾</td>
+  </tr>
+
+  <tr>
+    <td class="cat rare">A rare cat🐾</td>
+    <td class="score rare">0, 0</td>
+    <td rowspan="2"></td>
+    <td rowspan="2">3</td>
+  </tr>
+
+  <tr>
+    <td rowspan="2">4</td>
+    <td class="score rare">0, 0</td>
+    <td rowspan="2"></td>
+    <td class="cat rare">B rare cat🐾</td>
+  </tr>
+
+  <tr>
+    <td class="cat rare">A rare cat🐾</td>
+    <td class="score supa">0, 0</td>
+    <td rowspan="2"></td>
+    <td rowspan="2">4</td>
+  </tr>
+
+  <tr>
+    <td rowspan="2">5</td>
+    <td class="score supa">0, 0</td>
+    <td rowspan="2"></td>
+    <td class="cat supa">B supa cat🐾</td>
+  </tr>
+
+  <tr>
+    <td class="cat supa">A super cat🐾</td>
+    <td class="score supa">0, 0</td>
+    <td rowspan="2"></td>
+    <td rowspan="2">5</td>
+  </tr>
+
+  <tr>
+    <td colspan="3"></td>
+    <td class="cat supa">B supa cat🐾</td>
+  </tr>
+</table>
+
+<%= header(1, 'How this works') %>
+<p class="section">
+  🐾🐾🐾🐾🐾 Place holder 🐾🐾🐾🐾🐾
+</p>
+
+<%= header(1, 'How this was implemented') %>
+<p class="section">
+  🐾🐾🐾🐾🐾 Place holder 🐾🐾🐾🐾🐾
+</p>
+
+<%= header(1, 'Glossary') %>
+<ul>
+  <li>Seed</li>
+</ul>
+
+<%= header(1, 'Table notes') %>
+<%= erb :table_notes %>

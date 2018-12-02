@@ -6,7 +6,7 @@
 
 <div id="cats">
 <% each_ball_cat do |rarity, cats| %>
-  <h1><%= rarity %></h1>
+  <%= header(1, rarity) %>
   <ol>
     <% cats.each do |c| %>
       <li><%= link_to_roll(c) %></li>

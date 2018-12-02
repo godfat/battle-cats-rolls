@@ -116,6 +116,11 @@ module BattleCatsRolls
       system('convert', '-resize', '50x50', cats, cats)
       system('convert', '-border', '5', '-bordercolor', 'none', cats, cats)
 
+      help = "#{asset}/help.png"
+      system('convert', '-crop', '60x60+180+0', path, help)
+      system('convert', '-resize', '46x46', help, help)
+      system('convert', '-border', '7', '-bordercolor', 'none', help, help)
+
       seek = "#{asset}/seek.png"
       system('convert', '-crop', '60x60+300+0', path, seek)
       system('convert', '-resize', '42x42', seek, seek)

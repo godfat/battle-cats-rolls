@@ -27,7 +27,8 @@
       .legend a { color: #d8a56f; }
       #seed_input { width: 10em; }
       #count_input { width: 3.5em; }
-      .menu { width: 60px; height: 60px;  }
+      .menu { width: 60px; height: 60px; }
+      .section { margin-bottom: 15px; }
 
       <% unless details %>
         .score {
@@ -51,6 +52,8 @@
         <img class="menu" src="/asset/image/treasure.png"></a>
       <a href="<%= cats_uri %>" title="Show me all cats">
         <img class="menu" src="/asset/image/cats.png"></a>
+      <a href="<%= help_uri %>" title="Help!">
+        <img class="menu" src="/asset/image/help.png"></a>
       <a href="<%= seek_uri %>" title="Looking for your seed?">
         <img class="menu" src="/asset/image/seek.png"></a>
       <hr>
@@ -62,11 +65,11 @@
 
     <div id="footer">
       <hr>
+      <a href="//<%= web_host %>/">Home</a>
+      /
+      <a href="//<%= web_host %>/help">Help</a>
+      /
       <a href="https://github.com/godfat/battle-cats-rolls">Source</a>
-      /
-      <a href="https://github.com/godfat/battle-cats-rolls/issues">Help</a>
-      /
-      <a href="//<%= web_host %>">Home</a>
       &copy;
       2018 Lin Jen-Shin (godfat)
     </div>
