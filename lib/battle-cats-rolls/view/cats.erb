@@ -1,0 +1,16 @@
+<div id="form">
+  <form method="get" enctype="application/x-www-form-urlencoded">
+    <%= erb :options %>
+  </form>
+</div>
+
+<div id="cats">
+<% each_ball_cat do |rarity, cats| %>
+  <h1><%= rarity %></h1>
+  <ol>
+    <% cats.each do |c| %>
+      <li><%= link_to_roll(c) %></li>
+    <% end %>
+  </ol>
+<% end %>
+</div>

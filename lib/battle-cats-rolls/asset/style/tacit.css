@@ -364,3 +364,6 @@ table, th, td {
   padding: 1px;
   vertical-align: middle;
 }
+h1 {
+  margin-top: 0;
+}

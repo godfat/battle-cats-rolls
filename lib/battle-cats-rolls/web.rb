@@ -36,6 +36,12 @@ module BattleCatsRolls
         erb(:layout){ erb(name) }
       end
 
+      def each_ball_cat
+        arg[:cats].each do |rarity, data|
+          yield(rarity, data.map{ |id, info| Cat.new(id, info) })
+        end
+      end
+
       def each_ab_cat
         arg[:cats].inject(nil) do |prev_b, ab|
           yield(prev_b, ab)
@@ -252,6 +258,10 @@ module BattleCatsRolls
 
       def web_host
         ENV['WEB_HOST'] || request.host_with_port
+      end
+
+      def cats_uri
+        permalink(path: "//#{web_host}/cats")
       end
 
       def seek_uri
@@ -472,6 +482,10 @@ module BattleCatsRolls
       Web.ball_tw
       Web.ball_jp
       'OK'
+    end
+
+    get '/cats' do
+      render :cats, cats: ball.dig('cats')
     end
 
     class Seek
