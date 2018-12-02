@@ -186,15 +186,15 @@ module BattleCatsRolls
       end
 
       def uri_to_roll cat
-        uri({seed: cat.slot_fruit.seed}.merge(default_query))
+        uri(query: {seed: cat.slot_fruit.seed})
       end
 
       def uri_to_cat_db cat
         "https://battlecats-db.com/unit/#{'%03d' % cat.id}.html"
       end
 
-      def uri query=default_query
-        path = "#{request.base_url}#{request.path}"
+      def uri query:, path: "//#{web_host}/"
+        query = query.merge(default_query)
 
         if query.empty?
           path
@@ -203,11 +203,11 @@ module BattleCatsRolls
         end
       end
 
-      def permalink
+      def permalink path: "//#{web_host}/"
         if controller.next_seed.nonzero?
-          uri({next_seed: controller.next_seed}.merge(default_query))
+          uri(query: {next_seed: controller.next_seed}, path: path)
         else
-          uri({seed: controller.seed}.merge(default_query))
+          uri(query: {seed: controller.seed}, path: path)
         end
       end
 
@@ -255,7 +255,7 @@ module BattleCatsRolls
       end
 
       def seek_uri
-        "//#{seek_host}/seek?#{query_string(default_query)}"
+        permalink(path: "//#{seek_host}/seek")
       end
 
       def erb name, &block

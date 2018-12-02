@@ -110,6 +110,11 @@ module BattleCatsRolls
 
       # Install ImageMagick for this
       system('convert', '-crop', '60x60+60+0', path, "#{asset}/treasure.png")
+
+      seek = "#{asset}/seek.png"
+      system('convert', '-crop', '60x60+300+0', path, seek)
+      system('convert', '-resize', '42x42', seek, seek)
+      system('convert', '-border', '9', '-bordercolor', 'none', seek, seek)
     end
 
     def write_events
