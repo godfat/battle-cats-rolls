@@ -7,7 +7,7 @@ module BattleCatsRolls
         __method__,
         '8.0.0',
         'https://ponos.s3.dualstack.ap-northeast-1.amazonaws.com/appli/battlecats/event_data/battlecatsen_production/gatya.tsv',
-        # https://www.apkmirror.com/apk/ponos/the-battle-cats/
+        # https://www.apkmonk.com/app/jp.co.ponos.battlecatsen/
         'https://www.apkmirror.com/wp-content/themes/APKMirror/download.php?id=555471'
       ]
     end
@@ -17,7 +17,7 @@ module BattleCatsRolls
         __method__,
         '8.0.0',
         'https://ponos.s3.dualstack.ap-northeast-1.amazonaws.com/appli/battlecats/event_data/battlecatstw_production/gatya.tsv',
-        # https://apkpure.com/a/jp.co.ponos.battlecatstw
+        # https://www.apkmonk.com/app/jp.co.ponos.battlecatstw/
         'https://download.apkpure.com/b/apk/anAuY28ucG9ub3MuYmF0dGxlY2F0c3R3XzgwMDAwMF8zNjNkZjc3NQ?_fn=6LKT5ZKq5aSn5oiw54itX3Y4LjAuMF9hcGtwdXJlLmNvbS5hcGs&k=29b88d731c3dcd5293a081a95f4253e55c0277b5&as=7787d23adc93046fb0e95722b923d7345bffd52d&_p=anAuY28ucG9ub3MuYmF0dGxlY2F0c3R3&c=2%7CGAME_CASUAL%7CZGV2PVBPTk9TJTIwQ29ycG9yYXRpb24mdD1hcGsmdm49OC4wLjAmdmM9ODAwMDAw'
       ]
     end
@@ -25,10 +25,10 @@ module BattleCatsRolls
     def self.jp
       @jp ||= [
         __method__,
-        '8.0.2',
+        '8.1.0',
         'https://ponos.s3.dualstack.ap-northeast-1.amazonaws.com/appli/battlecats/event_data/battlecats_production/gatya.tsv',
-        # https://apkpure.co/%E3%81%AB%E3%82%83%E3%82%93%E3%81%93%E5%A4%A7%E6%88%A6%E4%BA%89/
-        'https://apk.apkpure.co/jp.co.ponos.battlecats/0e17213d7197ab35b55978c00de4d3c3/8.0.2/d88ea0deccb640d51eb14b86a1a8aa76/'
+        # https://www.apkmonk.com/app/jp.co.ponos.battlecats/
+        'http://apk.apkmonk.com/apks-5/jp.co.ponos.battlecats_2018-12-05.apk?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=IFVYHACUO60QSGWW9L9Z%2F20181206%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20181206T071532Z&X-Amz-Expires=2400&X-Amz-SignedHeaders=host&X-Amz-Signature=ebc415983b0bd55f707dbd40ae94e27919683c4c26b70e77336954dcc3c212a2'
       ]
     end
 
