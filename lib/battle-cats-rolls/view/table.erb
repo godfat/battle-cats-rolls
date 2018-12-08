@@ -27,7 +27,7 @@
 
     <% each_ab_cat do |prev_b, (a, b)| %>
       <tr>
-        <td rowspan="2"><%= a.sequence %></td>
+        <td rowspan="2"><%= a.sequence %>A</td>
         <%= seed_column(a.rarity_fruit) %>
         <td class="score <%= color_label(a) %>"><%= a.score %>, <%= a.slot %></td>
         <td rowspan="2" class="<%= guaranteed_color(a) %>">
@@ -52,7 +52,7 @@
         <td rowspan="2" class="<%= guaranteed_color(b) %>">
           <%= guaranteed_cat(b, 0) %></td>
         <%= seed_column(b.rarity_fruit) %>
-        <td rowspan="2"><%= b.sequence %></td>
+        <td rowspan="2"><%= b.sequence %>B</td>
       </tr>
     <% end %>
 

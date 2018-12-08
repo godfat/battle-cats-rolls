@@ -6,11 +6,10 @@
 </p>
 
 <ol>
-  <li>Every game save has a <strong>seed</strong> used to calculate the rolling result</li>
-  <li>The seed data is static, which will only change if you roll the rare gacha</li>
-  <li>We can observe the rolling results and find a matching seed for your game save</li>
+  <li>Every game save has a <strong>seed</strong> number used to calculate the rolling result</li>
+  <li>The seed number will only change if you roll the rare gacha</li>
+  <li>We can observe the rolling results and figure out your seed for your game save</li>
   <li>The simulator is able to use the seed to calculate all the future rolling results</li>
-  <li>Thereby you'll be able to predict and track all the future rolling results without actual rolling it</li>
 </ol>
 
 <%= header(1, 'How to use') %>
@@ -18,21 +17,54 @@
   First, you'll want to find your current seed.
 </p>
 
-<%= header(2, 'Seek the seed') %>
+<%= header(2, %Q{<a href="#{seek_uri}">Seek the seed</a>}) %>
 <ol>
-  <li>Pick a gacha event (e.g. <em>Ultra Souls</em> or <em>Uberfest</em>). Use your rare (gold) tickets or cat food. Both work the same</li>
-  <li>Roll several times. Preferably 7 to 10 rolls. Record the results. The more rolls you made, the more accurate the result will be</li>
-  <li>Fill the results at <a href="<%= seek_uri %>">seed seeking</a> in the respective rolling order. Make sure you pick the gacha event you rolled</li>
-  <li><em>Don't fill</em> in any <a href="#what-is-a-guaranteed-roll">guaranteed rolls</a>. If you did, it will be wrong</li>
-  <li><em>Avoid gacha events</em> having duplicated cats (e.g. <em>Metal Busters</em> or <em>Best of the Best</em>). If you did, you'll need to trial and error to find the correct one, because we can't tell which one you actually rolled. You can only try them one by one</li>
-  <li>If everything is correct, you'll get the <strong>seed number</strong>, and two links</li>
-  <li>The first link is using your starting seed for reference and debugging purpose, showing the status <em>before</em> you rolled</li>
-  <li>The second link is using your last seed, which will show you the current status, <em>after</em> you rolled</li>
-  <li>If you have other cats rolled without filling in the form, count yourself
-  <li>Note that a <a href="#what-is-a-guaranteed-roll">guaranteed roll</a> counts as a half roll and thus will switch your track. If you made a 11-rolls on a guaranteed event, and filled the first 10 rolls without the last guaranteed roll, you can find your current seed easily by using the first link with the starting seed, and click on the guaranteed uber cat to simulate your exact rolls</li>
+  <li>
+    Before you hit <em>seek</em>, follow these steps:
+    <ol>
+      <li>Pick a gacha event (e.g. <em>Ultra Souls</em> or <em>Uberfest</em>). Use your rare (gold) tickets or cat food. Both work the same</li>
+      <li>Roll several times. Preferably 7 to 10 rolls. Record the results. The more rolls you made, the more accurate the result will be</li>
+      <li>Fill the results at seed seeking</a> in the respective rolling order. Make sure you pick the gacha event you rolled with</li>
+      <li>
+        If you made a 11-rolls with a guaranteed event, or a 15-rolls (3+5+7) with step-up event:
+        <ol>
+          <li><em>Don't fill</em> your last <a href="#what-is-a-guaranteed-uber">guaranteed uber</a> in the form</li>
+          <li>Fill the last 10 rolls without the last guaranteed uber</li>
+          <li>We'll need to accommodate this when reading your result because you <em>didn't fill</em> the last roll in the form. We need to count the offset. More on this below</li>
+        </ol>
+      </li>
+      <li><em>Avoid gacha events</em> having duplicated cats (e.g. <em>Metal Busters</em> or <em>Best of the Best</em>). If you did, you'll need to trial and error to find the correct one, because we can't tell which one you actually rolled. You can only try them one by one</li>
+    </ol>
+  </li>
+  <li>
+    Understand the results:
+    <ol>
+      <li>If everything is correct, you'll get the <strong>seed</strong> number, and two links</li>
+      <li>The <em>first link</em> is using your starting seed for reference and debugging purpose, which shows the status <em>before</em> you rolled</li>
+      <li>The <em>second link</em> is using your last seed, which shows you the current status, <em>after</em> you rolled</li>
+      <li>If you didn't roll any <a href="#what-is-a-guaranteed-event">guaranteed events</a>, you start at <strong>#1A</strong> in the <em>second link</em></li>
+      <li>
+        If you made a 11-rolls with a guaranteed event, or a 15-rolls (3+5+7) with step-up event:
+        <ul>
+          <li>
+            Since you <em>didn't fill</em> your last <a href="#what-is-a-guaranteed-uber">guaranteed uber</a> in the form, we'll need to accommodate this. There are several ways to accommodate this:
+            <ul>
+              <li>
+                If you don't care about the actual seed number, then you start at <strong>#1B</strong> in the <em>second link</em>. If you want to know your actual seed number:
+                <ol>
+                  <li>You can use the <em>second link</em>, which shows the status <em>after</em> you rolled, except the last guaranteed uber. Check the <strong>Details</strong> checkbox, and your actual seed number should be the first half of <strong>#1A</strong> because a guaranteed uber counts as a half roll. You can copy and paste your actual seed number to the seed input field to update your position. If you did, you'll find that your new <strong>#1A</strong> is exactly the same as the old <strong>#1B</strong></li>
+                  <li>If you made a 11-rolls, you can also use the <em>first link</em>, which shows the status <em>before</em> you rolled, and click on the guaranteed uber link in <strong>#1A</strong> showing <strong>-&gt; 11</strong>, simulating your exact 11-rolls, leading to where you are now. You start at <strong>#1A</strong> in the new page, which should be the same as the <strong>#1B</strong> in the <em>second link</em></li>
+                </ol>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </li>
 </ol>
 
-<%= header(2, 'Read the table') %>
+<%= header(2, 'Read the tracks') %>
 <p class="section">
   Using the link, you'll see a table like this:
 </p>
@@ -47,7 +79,7 @@
   </tr>
 
   <tr>
-    <td rowspan="2">1</td>
+    <td rowspan="2">1A</td>
     <td class="score rare">0, 0</td>
     <td rowspan="2"></td>
     <td colspan="3"></td>
@@ -57,11 +89,11 @@
     <td class="cat rare">A rare cat🐾</td>
     <td class="score rare">0, 0</td>
     <td rowspan="2"></td>
-    <td rowspan="2">1</td>
+    <td rowspan="2">1B</td>
   </tr>
 
   <tr>
-    <td rowspan="2">2</td>
+    <td rowspan="2">2A</td>
     <td class="score supa">0, 0</td>
     <td rowspan="2"></td>
     <td class="cat rare">B rare cat🐾</td>
@@ -71,11 +103,11 @@
     <td class="cat supa">A super cat🐾</td>
     <td class="score uber">0, 0</td>
     <td rowspan="2"></td>
-    <td rowspan="2">2</td>
+    <td rowspan="2">2B</td>
   </tr>
 
   <tr>
-    <td rowspan="2">3</td>
+    <td rowspan="2">3A</td>
     <td class="score rare">0, 0</td>
     <td rowspan="2"></td>
     <td class="cat uber">B uber cat🐾</td>
@@ -85,11 +117,11 @@
     <td class="cat rare">A rare cat🐾</td>
     <td class="score rare">0, 0</td>
     <td rowspan="2"></td>
-    <td rowspan="2">3</td>
+    <td rowspan="2">3B</td>
   </tr>
 
   <tr>
-    <td rowspan="2">4</td>
+    <td rowspan="2">4A</td>
     <td class="score rare">0, 0</td>
     <td rowspan="2"></td>
     <td class="cat rare">B rare cat🐾</td>
@@ -99,11 +131,11 @@
     <td class="cat rare">A rare cat🐾</td>
     <td class="score supa">0, 0</td>
     <td rowspan="2"></td>
-    <td rowspan="2">4</td>
+    <td rowspan="2">4B</td>
   </tr>
 
   <tr>
-    <td rowspan="2">5</td>
+    <td rowspan="2">5A</td>
     <td class="score supa">0, 0</td>
     <td rowspan="2"></td>
     <td class="cat supa">B supa cat🐾</td>
@@ -113,7 +145,7 @@
     <td class="cat supa">A super cat🐾</td>
     <td class="score supa">0, 0</td>
     <td rowspan="2"></td>
-    <td rowspan="2">5</td>
+    <td rowspan="2">5B</td>
   </tr>
 
   <tr>
@@ -131,7 +163,7 @@
   🐾🐾🐾🐾🐾 Place holder 🐾🐾🐾🐾🐾
 </p>
 
-<%= header(2, 'What is a guaranteed roll') %>
+<%= header(2, 'What is a guaranteed uber') %>
 <p class="section">
   🐾🐾🐾🐾🐾 Place holder 🐾🐾🐾🐾🐾
 </p>
@@ -146,7 +178,7 @@
   </tr>
 
   <tr>
-    <td rowspan="2">1</td>
+    <td rowspan="2">1A</td>
     <td class="score rare">0, 0</td>
     <td rowspan="2"></td>
     <td colspan="3"></td>
@@ -156,11 +188,11 @@
     <td class="cat rare">A rare cat🐾</td>
     <td class="score rare">0, 0</td>
     <td rowspan="2"></td>
-    <td rowspan="2">1</td>
+    <td rowspan="2">1B</td>
   </tr>
 
   <tr>
-    <td rowspan="2">2</td>
+    <td rowspan="2">2A</td>
     <td class="score supa">0, 0</td>
     <td rowspan="2"></td>
     <td class="cat rare">B rare cat🐾</td>
@@ -170,11 +202,11 @@
     <td class="cat supa">A super cat🐾</td>
     <td class="score uber">0, 0</td>
     <td rowspan="2"></td>
-    <td rowspan="2">2</td>
+    <td rowspan="2">2B</td>
   </tr>
 
   <tr>
-    <td rowspan="2">3</td>
+    <td rowspan="2">3A</td>
     <td class="score rare">0, 0</td>
     <td rowspan="2"></td>
     <td class="cat uber">B uber cat🐾</td>
@@ -184,11 +216,11 @@
     <td class="cat rare">A rare cat🐾</td>
     <td class="score rare">0, 0</td>
     <td rowspan="2"></td>
-    <td rowspan="2">3</td>
+    <td rowspan="2">3B</td>
   </tr>
 
   <tr>
-    <td rowspan="2">4</td>
+    <td rowspan="2">4A</td>
     <td class="score rare">0, 0</td>
     <td rowspan="2"></td>
     <td class="cat rare">B rare cat🐾</td>
@@ -198,11 +230,11 @@
     <td class="cat rare">A rare cat🐾</td>
     <td class="score supa">0, 0</td>
     <td rowspan="2"></td>
-    <td rowspan="2">4</td>
+    <td rowspan="2">4B</td>
   </tr>
 
   <tr>
-    <td rowspan="2">5</td>
+    <td rowspan="2">5A</td>
     <td class="score supa">0, 0</td>
     <td rowspan="2"></td>
     <td class="cat supa">B supa cat🐾</td>
@@ -212,7 +244,7 @@
     <td class="cat supa">A super cat🐾</td>
     <td class="score supa">0, 0</td>
     <td rowspan="2"></td>
-    <td rowspan="2">5</td>
+    <td rowspan="2">5B</td>
   </tr>
 
   <tr>
