@@ -8,7 +8,6 @@
 ## Architecture
 
 * Use server-sent event to pull seek result
-* Shutting down gracefully (seems to be pretty tough)
 
 ## Build script, language and APK
 
