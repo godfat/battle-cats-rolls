@@ -14,9 +14,9 @@ module BattleCatsRolls
       @processed ||= 0
     end
 
-    def self.finishing cache, key, seed
+    def self.finishing key
       Mutex.synchronize do
-        cache[key] = seed
+        yield
         queue.delete(key)
         @processed += 1
       end
@@ -64,7 +64,10 @@ module BattleCatsRolls
       self.previous_count = Pool.queue_size + self.class.processed
       self.promise = PromisePool::Promise.new.defer(Pool) do
         self.seed = cache[key] || seek
-        self.class.finishing(cache, key, seed)
+
+        self.class.finishing(key) do
+          cache[key] = seed if $?.success?
+        end
       end
     end
 
