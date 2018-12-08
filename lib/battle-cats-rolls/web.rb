@@ -56,9 +56,9 @@ module BattleCatsRolls
           next_sequence = cat.sequence + controller.guaranteed_rolls + offset
 
           if offset < 0
-            "#{link}<br>-&gt; #{next_sequence}"
+            "#{link}<br>-&gt; #{next_sequence}B"
           else
-            "#{link}<br>&lt;- #{next_sequence}"
+            "#{link}<br>&lt;- #{next_sequence}A"
           end
         end
       end
