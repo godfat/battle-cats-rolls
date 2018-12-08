@@ -22,12 +22,12 @@ by the Ruby server.
 Locally:
 
     # At project root
-    unicorn -N
+    ./bin/server
 
 Production with Nginx:
 
     # At project root
-    env WEB_YAHNS=... SEEK_YAHNS=... WEB_HOST=... SEEK_HOST=... yahns -c yahns.rb
+    env WEB_YAHNS=... SEEK_YAHNS=... WEB_HOST=... SEEK_HOST=... ./bin/server
 
 ## How to populate data:
 
