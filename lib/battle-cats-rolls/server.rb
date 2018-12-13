@@ -49,7 +49,7 @@ module BattleCatsRolls
       Kernel.at_exit(&method(:shutdown))
 
       until @shutdown do
-        printf "Memory total: %.2fM, current: %.2fM\n", *ps
+        printf "Memory total: %.2fM, current: %.2fM, CPU load: %.2f%\n", *ps
         sleep(10)
       end
 
@@ -60,14 +60,15 @@ module BattleCatsRolls
   def self.ps
     cpid = Process.pid
 
-    `ps -Ao pid,rss`.scan(/(\d+)\s+(\d+)/).
-      inject([0, 0]) do |result, (pid, rss)|
-        mem = rss.to_i
-        result[0] += mem.to_i
+    `ps -Ao pid,rss,pcpu`.scan(/(\d+)\s+(\d+)\s+(\d+\.\d+)/).
+      inject([0, 0, 0]) do |result, (pid, rss, pcpu)|
+        mem = rss.to_f / 1024
+        cpu = pcpu.to_f
+        result[0] += mem
+        result[2] += cpu
         result[1] = mem if pid.to_i == cpid
+
         result
-      end.map do |mem|
-        mem / 1024.0
       end
   end
 end
