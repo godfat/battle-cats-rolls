@@ -49,7 +49,9 @@ module BattleCatsRolls
       Kernel.at_exit(&method(:shutdown))
 
       until @shutdown do
-        printf "Memory total: %.2fM, current: %.2fM, CPU load: %.2f%\n", *ps
+        printf \
+          "Memory total: %.2fM, current: %.2fM, CPU: %.2f%%,%s",
+          *ps, `uptime`[/[^,]+\z/]
         sleep(10)
       end
 
@@ -65,8 +67,11 @@ module BattleCatsRolls
         mem = rss.to_f / 1024
         cpu = pcpu.to_f
         result[0] += mem
-        result[2] += cpu
-        result[1] = mem if pid.to_i == cpid
+
+        if pid.to_i == cpid
+          result[1] = mem
+          result[2] = cpu
+        end
 
         result
       end
