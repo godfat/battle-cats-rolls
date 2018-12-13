@@ -51,7 +51,7 @@ module BattleCatsRolls
       until @shutdown do
         printf \
           "Memory total: %.2fM, current: %.2fM, CPU: %.2f%%,%s",
-          *ps, `uptime`[/[^,]+\z/]
+          *ps, `uptime`[/(?<=users,).+\z/m]
         sleep(10)
       end
 
