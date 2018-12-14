@@ -1912,3 +1912,90 @@ events:
     rare: 6500
     supa: 2600
     uber: 900
+  2018-12-16_258:
+    start_on: 2018-12-16
+    end_on: 2018-12-26
+    version: '80000'
+    name: 冬季限定！快來獲得可愛的聖誕節貓咪吧！★點圖可以看詳細內容喔！
+    id: 258
+    rare: 7000
+    supa: 2500
+    uber: 500
+  2018-12-16_342:
+    start_on: 2018-12-16
+    end_on: 2018-12-19
+    version: '80000'
+    name: 正義的暗黑英雄，貓咪軍團的異星戰士剋星！★點圖可以看詳細內容喔！
+    id: 342
+    rare: 7000
+    supa: 2500
+    uber: 500
+  2018-12-19_327:
+    start_on: 2018-12-19
+    end_on: 2018-12-22
+    version: '80000'
+    name: 具備各種獨特能力的強力角色！★點圖可以看詳細內容喔！
+    id: 327
+    rare: 7000
+    supa: 2500
+    uber: 500
+  2018-12-22_258:
+    start_on: 2018-12-22
+    end_on: 2018-12-26
+    version: '80000'
+    name: 冬季限定！快來獲得可愛的聖誕節貓咪吧！★11連轉超激確定活動中！
+    id: 258
+    rare: 7000
+    supa: 2500
+    uber: 500
+    guaranteed: true
+  2018-12-22_348:
+    start_on: 2018-12-22
+    end_on: 2018-12-24
+    version: '80000'
+    name: 貓咪軍團對抗不死生物的超級武器！★11連轉超激確定活動中！
+    id: 348
+    rare: 7000
+    supa: 2500
+    uber: 500
+    guaranteed: true
+  2018-12-24_333:
+    start_on: 2018-12-24
+    end_on: 2018-12-26
+    version: '80100'
+    name: 可愛有活力的美少女們！神秘角色新登場！？★點圖可以看詳細內容喔！
+    id: 333
+    rare: 6970
+    supa: 2500
+    uber: 500
+    guaranteed: true
+  2018-12-26_324:
+    start_on: 2018-12-26
+    end_on: 2018-12-29
+    version: '80100'
+    name: 神秘噁心又可愛的不明貓一族來了！★11連轉超激確定活動中！
+    id: 324
+    rare: 7000
+    supa: 2500
+    uber: 500
+    guaranteed: true
+  2018-12-26_365:
+    start_on: 2018-12-26
+    end_on: 2019-01-01
+    version: '80100'
+    name: 特製歲末年終轉蛋來了！還有限時限定角色喔！★11連轉超激確定活動中！
+    id: 365
+    rare: 7000
+    supa: 2500
+    uber: 500
+    guaranteed: true
+  2018-12-29_336:
+    start_on: 2018-12-29
+    end_on: 2019-01-01
+    version: '80100'
+    name: 強大可靠的龍皇們降臨啦！神秘角色新登場！？★點圖可以看詳細內容喔！
+    id: 336
+    rare: 6970
+    supa: 2500
+    uber: 500
+    guaranteed: true

@@ -2236,3 +2236,90 @@ events:
     rare: 6500
     supa: 2600
     uber: 900
+  2018-12-16_258:
+    start_on: 2018-12-16
+    end_on: 2018-12-26
+    version: '80000'
+    name: Winter ladies, here for a limited time! ★ Get the Xmas Gals, only now!
+    id: 258
+    rare: 7000
+    supa: 2500
+    uber: 500
+  2018-12-16_342:
+    start_on: 2018-12-16
+    end_on: 2018-12-19
+    version: '80000'
+    name: "★ Dark Heroes ★ Defend justice with superpowered Uber Cats!"
+    id: 342
+    rare: 7000
+    supa: 2500
+    uber: 500
+  2018-12-19_327:
+    start_on: 2018-12-19
+    end_on: 2018-12-22
+    version: '80000'
+    name: The mighty Dynamites are here! Variety and power await you!
+    id: 327
+    rare: 7000
+    supa: 2500
+    uber: 500
+  2018-12-22_258:
+    start_on: 2018-12-22
+    end_on: 2018-12-26
+    version: '80000'
+    name: Winter ladies, now w/ an 11-Draw Guarantee! ★ Don't miss the Xmas Gals!
+    id: 258
+    rare: 7000
+    supa: 2500
+    uber: 500
+    guaranteed: true
+  2018-12-22_348:
+    start_on: 2018-12-22
+    end_on: 2018-12-24
+    version: '80000'
+    name: "★ IRON LEGION ★ Guaranteed 11-Draw for Zombie-smashing Ubers!"
+    id: 348
+    rare: 7000
+    supa: 2500
+    uber: 500
+    guaranteed: true
+  2018-12-24_333:
+    start_on: 2018-12-24
+    end_on: 2018-12-26
+    version: '80100'
+    name: "★ Galaxy Gals★ Cute 'n' tough Uber Cats, with a new mystery member?!?!"
+    id: 333
+    rare: 6970
+    supa: 2500
+    uber: 500
+    guaranteed: true
+  2018-12-26_324:
+    start_on: 2018-12-26
+    end_on: 2018-12-29
+    version: '80100'
+    name: "★ Nekolugas ★  Super-creepy Uber Cats with 11-Draw Guarantee!"
+    id: 324
+    rare: 7000
+    supa: 2500
+    uber: 500
+    guaranteed: true
+  2018-12-26_365:
+    start_on: 2018-12-26
+    end_on: 2019-01-01
+    version: '80100'
+    name: 2018 Year's End Limited Edition Capsules!★With 11-Draw Guarantee!
+    id: 365
+    rare: 7000
+    supa: 2500
+    uber: 500
+    guaranteed: true
+  2018-12-29_336:
+    start_on: 2018-12-29
+    end_on: 2019-01-01
+    version: '80100'
+    name: "★ Dragon Emperors ★ Mighty monstrous Ubers, with a new mystery member?!"
+    id: 336
+    rare: 6970
+    supa: 2500
+    uber: 500
+    guaranteed: true
