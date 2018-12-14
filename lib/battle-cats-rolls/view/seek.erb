@@ -4,58 +4,9 @@
     <%= erb :events %>
   </form>
 
-  <div id="note"><ul>
-    <li>
-      Do not pick any guaranteed rolls. A guaranteed roll is either the 11th
-      roll in a guaranteed event, or the 15th roll in a step-up event
-    </li>
-    <li>
-      The game will rotate the rare cat if it's followed by the same rare cat.
-      You don't have to consider this while filling the picks because the
-      program will consider this for you
-    </li>
-    <li>
-      For example, suppose you got Tin Cat, and then Rocker Cat. We won't
-      know if you really rolled that, or it's actually two Tin Cats in a row.
-      Again, the program will consider this possibility so you don't need to
-      worry about it
-    </li>
-    <li>
-      There are <%= arg[:queue_size] %> people waiting for their seeds
-    </li>
-  </ul></div>
-
-  <form method="post" action="//<%= seek_host %>/seek/enqueue"
-    enctype="application/x-www-form-urlencoded">
-    <ol>
-      <% 10.times do %>
-        <li>
-          <select name="rolls[]">
-            <option value="" selected="selected">Pick your roll</option>
-
-            <optgroup label="Rare:">
-              <%= pick_option(gacha.rare_cats) %>
-            </optgroup>
-
-            <optgroup label="Super:">
-              <%= pick_option(gacha.supa_cats) %>
-            </optgroup>
-
-            <optgroup label="Uber:">
-              <%= pick_option(gacha.uber_cats) %>
-            </optgroup>
-
-            <optgroup label="Legend:">
-              <%= pick_option(gacha.legend_cats) %>
-            </optgroup>
-          </select>
-        </li>
-      <% end %>
-    </ol>
-
-    <input type="hidden" name="event" value="<%= controller.event %>">
-    <input type="hidden" name="lang" value="<%= controller.lang %>">
-    <input type="hidden" name="name" value="<%= controller.name %>">
-    <input type="submit" value="Seek">
-  </form>
+  <% if gacha.pool.exist? %>
+    <%= erb :seek_form %>
+  <% else %>
+    Data only available in v<%= controller.gacha.pool.version %>+
+  <% end %>
 </div>
