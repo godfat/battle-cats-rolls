@@ -32,6 +32,15 @@ module BattleCatsRolls
         picked)
     end
 
+    def exist?
+      !!gacha
+    end
+
+    def version
+      num = event['version'].to_i
+      sprintf('%g', num / 10000 + (num % 1000 / 1000.0))
+    end
+
     def slots
       @slots ||= gacha.inject(Hash.new{|h,k|h[k]=[]}) do |result, cat_id|
         if rarity = find_rarity(cat_id)

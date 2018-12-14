@@ -204,7 +204,7 @@ module BattleCatsRolls
       end
 
       def uri_to_cat_db cat
-        "https://battlecats-db.com/unit/#{'%03d' % cat.id}.html"
+        "https://battlecats-db.com/unit/#{sprintf('%03d', cat.id)}.html"
       end
 
       def uri path: "//#{web_host}/", query: {}
@@ -462,7 +462,7 @@ module BattleCatsRolls
     controller_include NormalizedPath, Imp
 
     get '/' do
-      if event && gacha_seed != 0
+      if event && gacha_seed.nonzero? && gacha.pool.exist?
         gacha.current_seed_mode! if next_seed.zero?
 
         gacha.pool.add_future_ubers(ubers) if ubers > 0
