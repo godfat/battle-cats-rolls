@@ -5,10 +5,10 @@ module BattleCatsRolls
     def self.en
       @en ||= [
         __method__,
-        '8.0.0',
+        '8.1.0',
         'https://ponos.s3.dualstack.ap-northeast-1.amazonaws.com/appli/battlecats/event_data/battlecatsen_production/gatya.tsv',
         # https://www.apkmonk.com/app/jp.co.ponos.battlecatsen/
-        'https://www.apkmonk.com/down_file?pkg=jp.co.ponos.battlecatsen&key=4_jp.co.ponos.battlecatsen_2018-11-29.apk'
+        'https://www.apkmirror.com/wp-content/themes/APKMirror/download.php?id=574217'
       ]
     end
 
