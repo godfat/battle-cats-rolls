@@ -2335,3 +2335,61 @@ events:
     supa: 2500
     uber: 500
     guaranteed: true
+  2019-01-01_367:
+    start_on: 2019-01-01
+    end_on: 2019-01-04
+    version: '80100'
+    name: Li'l Valkyrie returns for the first Capsules of the year! ★ Uber drop rate UP!
+    id: 367
+    rare: 6500
+    supa: 2600
+    uber: 900
+  2019-01-04_362:
+    start_on: 2019-01-04
+    end_on: 2019-01-07
+    version: '80100'
+    name: "★ Ultra Souls ★ Mythical Uber Cats, with a new mystery member?!"
+    id: 362
+    rare: 6970
+    supa: 2500
+    uber: 500
+    guaranteed: true
+  2019-01-04_366:
+    start_on: 2019-01-04
+    end_on: 2019-01-09
+    version: '80100'
+    name: 2019 New Year's Limited Edition Capsules!★ With 11-Draw Guarantee!
+    id: 366
+    rare: 7000
+    supa: 2500
+    uber: 500
+    guaranteed: true
+  2019-01-07_351:
+    start_on: 2019-01-07
+    end_on: 2019-01-09
+    version: '80100'
+    name: Cosmic powers brought to life! Plus a Guaranteed Uber with 11-Draw!
+    id: 351
+    rare: 7000
+    supa: 2500
+    uber: 500
+    guaranteed: true
+  2019-01-09_245:
+    start_on: 2019-01-09
+    end_on: 2019-01-11
+    version: '80100'
+    name: "★ Red Busters w/ Pai-Pai! ★ Plus Increasing Capsules!"
+    id: 245
+    rare: 7000
+    supa: 2500
+    uber: 500
+    step_up: true
+  2019-01-11_361:
+    start_on: 2019-01-11
+    end_on: 2019-01-14
+    version: '80100'
+    name: D'arktanyan is here! ★ Plus higher drop rate for Uber Rares!
+    id: 361
+    rare: 6500
+    supa: 2600
+    uber: 900

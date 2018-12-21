@@ -2011,3 +2011,61 @@ events:
     supa: 2500
     uber: 500
     guaranteed: true
+  2019-01-01_367:
+    start_on: 2019-01-01
+    end_on: 2019-01-04
+    version: '80100'
+    name: 限定角色「小小瓦爾基麗貓」限時登場！★超激出現率大幅上升！
+    id: 367
+    rare: 6500
+    supa: 2600
+    uber: 900
+  2019-01-04_362:
+    start_on: 2019-01-04
+    end_on: 2019-01-07
+    version: '80100'
+    name: 進化後大變身的古代勇者們！神秘角色新登場！？★點圖可以看詳細內容喔！
+    id: 362
+    rare: 6970
+    supa: 2500
+    uber: 500
+    guaranteed: true
+  2019-01-04_366:
+    start_on: 2019-01-04
+    end_on: 2019-01-09
+    version: '80100'
+    name: 特製歡慶新年轉蛋來了！還有限時限定角色喔！★11連轉超激確定活動中！
+    id: 366
+    rare: 7000
+    supa: 2500
+    uber: 500
+    guaranteed: true
+  2019-01-07_351:
+    start_on: 2019-01-07
+    end_on: 2019-01-09
+    version: '80100'
+    name: 來自宇宙盡頭的各種精靈們！★11連轉超激確定活動中！
+    id: 351
+    rare: 7000
+    supa: 2500
+    uber: 500
+    guaranteed: true
+  2019-01-09_245:
+    start_on: 2019-01-09
+    end_on: 2019-01-11
+    version: '80100'
+    name: 紅色破壞者轉蛋限定角色「貓飯拳派派」登場！★好康轉蛋活動中！
+    id: 245
+    rare: 7000
+    supa: 2500
+    uber: 500
+    step_up: true
+  2019-01-11_361:
+    start_on: 2019-01-11
+    end_on: 2019-01-14
+    version: '80100'
+    name: 超強限定角色「影傑漆黑達太貓」出現中！★超激稀有角色出現率大幅上升！
+    id: 361
+    rare: 6500
+    supa: 2600
+    uber: 900
