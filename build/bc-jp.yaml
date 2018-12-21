@@ -2261,3 +2261,82 @@ events:
     supa: 2500
     uber: 500
     guaranteed: true
+  2018-12-26_345:
+    start_on: 2018-12-26
+    end_on: 2018-12-28
+    version: '80100'
+    name: 時空神クロノス参戦！偉大なる神々、ここに集結！★11連で超激レア確定!!
+    id: 345
+    rare: 7000
+    supa: 2500
+    uber: 500
+    guaranteed: true
+  2018-12-26_365:
+    start_on: 2018-12-26
+    end_on: 2019-01-01
+    version: '80100'
+    name: 期間限定キャラも登場する、特別仕様の忘年会ガチャ！★11連で超激レア確定!!
+    id: 365
+    rare: 7000
+    supa: 2500
+    uber: 500
+    guaranteed: true
+  2018-12-28_330:
+    start_on: 2018-12-28
+    end_on: 2018-12-30
+    version: '80100'
+    name: 黒い敵に強力効果のバサラーズ！シークレット武将新参戦！？★詳細はバナーをタップ!!
+    id: 330
+    rare: 6970
+    supa: 2500
+    uber: 500
+    guaranteed: true
+  2018-12-30_354:
+    start_on: 2018-12-30
+    end_on: 2019-01-01
+    version: '80100'
+    name: 異世界より召喚された愉快なモンスター美少女達！★11連で超激レア確定!!
+    id: 354
+    rare: 7000
+    supa: 2500
+    uber: 500
+    guaranteed: true
+  2019-01-01_367:
+    start_on: 2019-01-01
+    end_on: 2019-01-04
+    version: '80100'
+    name: 限定キャラ「ちびネコヴァルキリー」も特別参戦！★超激レア出現率が今だけ超アップ!!
+    id: 367
+    rare: 6500
+    supa: 2600
+    uber: 900
+  2019-01-04_362:
+    start_on: 2019-01-04
+    end_on: 2019-01-07
+    version: '80100'
+    name: にゃんこワールド最大級の仰天進化！シークレット新参戦！？★詳細はバナーをタップ!!
+    id: 362
+    rare: 6970
+    supa: 2500
+    uber: 500
+    guaranteed: true
+  2019-01-04_366:
+    start_on: 2019-01-04
+    end_on: 2019-01-09
+    version: '80100'
+    name: 期間限定キャラも登場する、特別仕様の新年ガチャ！★11連で超激レア確定!!
+    id: 366
+    rare: 7000
+    supa: 2500
+    uber: 500
+    guaranteed: true
+  2019-01-07_333:
+    start_on: 2019-01-07
+    end_on: 2019-01-09
+    version: '80100'
+    name: パワフルでキュートな電脳少女達！シークレット新参戦！？★詳細はバナーをタップ!!
+    id: 333
+    rare: 6970
+    supa: 2500
+    uber: 500
+    guaranteed: true

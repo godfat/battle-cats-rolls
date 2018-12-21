@@ -15,10 +15,10 @@ module BattleCatsRolls
     def self.tw
       @tw ||= [
         __method__,
-        '8.0.0',
+        '8.1.0',
         'https://ponos.s3.dualstack.ap-northeast-1.amazonaws.com/appli/battlecats/event_data/battlecatstw_production/gatya.tsv',
         # https://www.apkmonk.com/app/jp.co.ponos.battlecatstw/
-        'https://www.apkmonk.com/down_file?pkg=jp.co.ponos.battlecatstw&key=5_jp.co.ponos.battlecatstw_2018-11-29.apk'
+        'https://apk.apkpure.co/jp.co.ponos.battlecatstw/51b2b9b634f52e8eb9a5ec0c7a76f3c7/8.1.0/86ca21a5fa0eb6d12539e9b8aba7ca8f/'
       ]
     end
 
