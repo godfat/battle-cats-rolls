@@ -3,7 +3,7 @@
   <select id="find_select" name="find" onchange="roll(this)">
     <option></option>
 
-    <optgroup label="Legend:">
+    <optgroup label="Legendary:">
       <% gacha.legend_cats.uniq(&:id).each do |cat| %>
         <option value="<%= cat.id %>"
           <%= selected_find(cat) %>><%= cat_name(cat) %></option>
