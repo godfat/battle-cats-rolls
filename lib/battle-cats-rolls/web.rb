@@ -7,6 +7,7 @@ require_relative 'seek_seed'
 require_relative 'cache'
 
 require 'jellyfish'
+require 'tilt'
 
 require 'cgi'
 require 'erb'
@@ -277,11 +278,22 @@ module BattleCatsRolls
       end
 
       def erb name, &block
-        ERB.new(views(name)).result(binding, &block)
+        self.class.template(name).render(self, &block)
       end
 
-      def views name
-        File.read("#{__dir__}/view/#{name}.erb")
+      def self.template name
+        (@template ||= {})[name.to_s] ||=
+          Tilt.new("#{__dir__}/view/#{name}.erb")
+      end
+
+      def self.warmup
+        prefix = Regexp.escape("#{__dir__}/view/")
+
+        Dir.glob("#{__dir__}/view/**/*") do |name|
+          next if File.directory?(name)
+
+          View.template(name[/\A#{prefix}(.+)\.erb\z/m, 1])
+        end
       end
     end
 
@@ -489,6 +501,7 @@ module BattleCatsRolls
       Web.ball_en
       Web.ball_tw
       Web.ball_jp
+      View.warmup
       'OK'
     end
 
