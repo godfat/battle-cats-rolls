@@ -7,6 +7,6 @@
   <%= erb :table_notes %>
 <% end %>
 
-<% if controller.event && controller.gacha_seed.nonzero? %>
+<% unless gacha.pool.exist? %>
   Data only available in v<%= controller.gacha.pool.version %>+
 <% end %>
