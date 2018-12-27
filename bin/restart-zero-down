@@ -1,0 +1,7 @@
+#!/bin/sh
+
+systemctl start battlecatsrolls@2
+sleep 2
+systemctl restart battlecatsrolls@1
+sleep 2
+systemctl stop battlecatsrolls@2

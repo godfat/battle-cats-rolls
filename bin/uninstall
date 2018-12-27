@@ -1,0 +1,8 @@
+#!/bin/sh
+
+systemctl disable battlecatsrolls.socket
+systemctl disable battlecatsrolls@1
+systemctl stop battlecatsrolls.socket
+systemctl stop battlecatsrolls@1
+rm /etc/systemd/system/battlecatsrolls.socket
+rm /etc/systemd/system/battlecatsrolls@.service

@@ -1,4 +1,4 @@
-# Rolling Battle Cats Gacha <https://bc.godfat.org/>
+# Battle Cats Rolls <https://bc.godfat.org/>
 
 ## How to install the Ruby server:
 
@@ -14,15 +14,47 @@ First install [GHC](https://www.haskell.org/ghc/), then:
 This should build the seed seeker at: `Seeker/Seeker`, which will be used
 by the Ruby server.
 
-## How to run the server:
-
-Locally:
+## How to run the server locally:
 
     ./bin/server
 
-Production with Nginx:
+## Production with nginx, systemd and socket activation:
 
-    env WEB_YAHNS=... SEEK_YAHNS=... WEB_HOST=... SEEK_HOST=... ./bin/server
+### Setup nginx
+
+Take `config/nginx.conf` as an example to set up nginx, and start it with
+systemd:
+
+    sudo systemctl enable nginx
+    sudo systemctl start nginx
+
+### Installation for systemd
+
+Tweak the paths in `config/battlecatsrolls@.service` accordingly and run:
+
+    sudo ./bin/install
+
+### Read logs
+
+Read the whole logs:
+
+    ./bin/log
+
+Watch the logs in realtime:
+
+    ./bin/log -f
+
+### Restart with zero down time
+
+This will start a temporary server taking requests while shutting down
+the old server. When the old server is properly restarted, the temporary
+server will be shut down.
+
+    sudo ./bin/restart-zero-down
+
+### Uninstallation for systemd
+
+    sudo ./bin/uninstall
 
 ## How to populate data:
 

@@ -1,0 +1,56 @@
+# Based on https://yhbt.net/yahns/examples/yahns%40.service
+# ==> /etc/systemd/system/battlecatsrolls@.service <==
+# Since SIGUSR2 upgrades do not work under systemd, this service
+# file allows starting two (or more) simultaneous services
+# during upgrade (e.g. battlecatsrolls@1 and battlecatsrolls@2) with the intention
+# that they are both running during the upgrade process.
+#
+# This allows upgrading without downtime, using battlecatsrolls@2 as a
+# temporary hot spare:
+#
+#   systemctl start battlecatsrolls@2
+#   sleep 2 # wait for battlecatsrolls@2 to boot, increase as necessary for big apps
+#   systemctl restart battlecatsrolls@1
+#   sleep 2 # wait for battlecatsrolls@1 to warmup
+#   systemctl stop battlecatsrolls@2
+
+[Unit]
+Description = Battle Cats Rolls service %i
+Wants = battlecatsrolls.socket
+After = battlecatsrolls.socket
+
+[Service]
+# yahns can handle lots of open files:
+LimitNOFILE = 32768
+LimitCORE = infinity
+
+# The listen socket we give yahns should be blocking for optimal
+# load distribution between processes under the Linux kernel.
+# NonBlocking is false by default in systemd, but we specify it
+# here anyways to discourage users from blindly changing it.
+Sockets = battlecatsrolls.socket
+NonBlocking = false
+
+# bundler users must use the "--keep-file-descriptors" switch, here:
+# ExecStart = /path/to/bin/bundle exec --keep-file-descriptors yahns -c ...
+ExecStart = /home/godfat/.gem/ruby/2.5.0/bin/yahns -c /home/godfat/battle-cats-rolls/config/yahns.rb
+Environment = GEM_HOME=/home/godfat/.gem/ruby/2.5.0
+Environment = WEB_YAHNS=127.0.0.1:13599
+Environment = WEB_HOST=bc.godfat.org
+Environment = SEEK_YAHNS=127.0.0.1:13600
+Environment = SEEK_HOST=bc-seek.godfat.org
+KillSignal = SIGQUIT
+User = nobody
+Group = nobody
+ExecReload = /bin/kill -HUP $MAINPID
+
+# this should match the shutdown_timeout value in yahns_config(5)
+TimeoutStopSec = 15
+
+# Only kill the master process, it may be harmful to signal
+# workers via default "control-group" setting since some
+# Ruby extensions and applications misbehave on interrupts
+KillMode = process
+
+[Install]
+WantedBy = multi-user.target

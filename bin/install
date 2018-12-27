@@ -1,0 +1,8 @@
+#!/bin/sh
+
+cp config/battlecatsrolls@.service /etc/systemd/system/
+cp config/battlecatsrolls.socket /etc/systemd/system/
+systemctl enable battlecatsrolls@1
+systemctl enable battlecatsrolls.socket
+systemctl start battlecatsrolls@1
+systemctl start battlecatsrolls.socket

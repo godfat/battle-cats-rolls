@@ -1,0 +1,16 @@
+# ==> /etc/systemd/system/battlecatsrolls.socket <==
+[Unit]
+Description = Battle Cats Rolls sockets
+
+[Socket]
+
+# yahns can handle an arbitrary number of listen sockets,
+# so I prefer to keep listeners for IPv4 and IPv6 separate
+# to avoid ugly IPv4-mapped-IPv6 addresses for IPv4 clients:
+# (e.g ":ffff:10.0.0.1" instead of just "10.0.0.1").
+ListenStream = 127.0.0.1:13599
+ListenStream = 127.0.0.1:13600
+Service = battlecatsrolls@1.service
+
+[Install]
+WantedBy = sockets.target
