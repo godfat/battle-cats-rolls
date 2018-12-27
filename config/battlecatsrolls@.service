@@ -45,7 +45,7 @@ Group = nobody
 ExecReload = /bin/kill -HUP $MAINPID
 
 # this should match the shutdown_timeout value in yahns_config(5)
-TimeoutStopSec = 15
+TimeoutStopSec = 120
 
 # Only kill the master process, it may be harmful to signal
 # workers via default "control-group" setting since some
