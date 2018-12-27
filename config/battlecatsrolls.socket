@@ -1,3 +1,4 @@
+# Based on https://yhbt.net/yahns/examples/yahns.socket
 # ==> /etc/systemd/system/battlecatsrolls.socket <==
 [Unit]
 Description = Battle Cats Rolls sockets
