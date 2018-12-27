@@ -16,16 +16,20 @@ require 'forwardable'
 
 module BattleCatsRolls
   class Web
+    def self.root
+      @root ||= "#{__dir__}/../.."
+    end
+
     def self.ball_en
-      @ball_en ||= CrystalBall.load('build', 'en')
+      @ball_en ||= CrystalBall.load("#{root}/build", 'en')
     end
 
     def self.ball_tw
-      @ball_tw ||= CrystalBall.load('build', 'tw')
+      @ball_tw ||= CrystalBall.load("#{root}/build", 'tw')
     end
 
     def self.ball_jp
-      @ball_jp ||= CrystalBall.load('build', 'jp')
+      @ball_jp ||= CrystalBall.load("#{root}/build", 'jp')
     end
 
     class View < Struct.new(:controller, :arg)

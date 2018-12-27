@@ -73,7 +73,7 @@ module BattleCatsRolls
 
     def seek
       IO.popen([
-        'Seeker/Seeker',
+        "#{Web.root}/Seeker/Seeker",
         *ENV['SEEKER_OPT'].to_s.split(' '),
         err: %i[child out]], 'r+') do |io|
         logger.info("Seeking seed with #{source}")
