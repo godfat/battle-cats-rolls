@@ -2,7 +2,6 @@
 
 ## How to install the Ruby server:
 
-    # At project root
     gem install bundler
     bundle install
 
@@ -10,9 +9,7 @@
 
 First install [GHC](https://www.haskell.org/ghc/), then:
 
-    # At project root
-    cd Seeker
-    ./bin/build.sh
+    ./Seeker/bin/build.sh
 
 This should build the seed seeker at: `Seeker/Seeker`, which will be used
 by the Ruby server.
@@ -21,34 +18,28 @@ by the Ruby server.
 
 Locally:
 
-    # At project root
     ./bin/server
 
 Production with Nginx:
 
-    # At project root
     env WEB_YAHNS=... SEEK_YAHNS=... WEB_HOST=... SEEK_HOST=... ./bin/server
 
 ## How to populate data:
 
 Populate everything:
 
-    # At project root
     ruby bin/build.rb
 
 Populate BCEN data:
 
-    # At project root
     ruby bin/build.rb en
 
 Populate BCTW data:
 
-    # At project root
     ruby bin/build.rb tw
 
 Populate BCJP data:
 
-    # At project root
     ruby bin/build.rb jp
 
 ## Thanks:
