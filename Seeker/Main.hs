@@ -6,8 +6,7 @@ import Data.Word (Word32)
 import Control.Applicative (empty)
 import Control.Monad (join)
 import Control.Arrow ((***))
-import System.Posix.Signals
-  (installHandler, sigINT, sigQUIT, Handler(CatchOnce))
+import System.Posix.Signals (installHandler, sigINT, Handler(CatchOnce))
 
 import Roll
 import Seed
@@ -15,10 +14,9 @@ import Seeker
 import Worker
 
 main = do
-  -- Ignore sigINT and sigQUIT once so we can gracefully shutting it down
+  -- Ignore sigINT once so we can gracefully shutting it down
   -- when the parent process receives sigINT
   installHandler sigINT (CatchOnce empty) Nothing
-  installHandler sigQUIT (CatchOnce empty) Nothing
 
   result <- map read <$> words <$> getContents :: IO [Word32]
   let picks = sourcePicks (buildSource result)
