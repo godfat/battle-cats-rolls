@@ -1,0 +1,31 @@
+<%= header(1, "What's changed?") %><p></p>
+<%= header(2, "2018-12-28") %>
+<ul>
+  <li>Add change log page with cat job icon</li>
+  <li>Add titles to help page and seek page</li>
+  <li>
+    Slightly enlarge the sniper cat icon to make it more visually balanced
+  </li>
+</ul>
+<hr/><%= header(2, "2018-12-27") %>
+<ul>
+  <li>
+    Move the server under control of systemd from screen.
+    This should greatly increase the stability of the site,
+    because systemd will restart the server once it crashed.
+    Previously, I have to restart it manually.
+  </li>
+</ul>
+<hr/><%= header(2, "2018-12-26") %>
+<ul>
+  <li>
+    Views are now rendered by tilt and it should improve the performance a bit
+  </li>
+  <li>
+    Now views are also cached once the server started.
+    This avoids crashing when the code is updated yet the server
+    is not restarted yet. The server may not be restarted immediately if
+    someone is trying to find the seed. So this should improve stability.
+  </li>
+  <li>Some smaller bugs and text are fixed/updated</li>
+</ul>

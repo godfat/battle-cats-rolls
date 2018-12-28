@@ -121,10 +121,15 @@ module BattleCatsRolls
       system('convert', '-resize', '46x46', help, help)
       system('convert', '-border', '7', '-bordercolor', 'none', help, help)
 
+      logs = "#{asset}/logs.png"
+      system('convert', '-crop', '60x60+240+0', path, logs)
+      system('convert', '-resize', '44x44', logs, logs)
+      system('convert', '-border', '8', '-bordercolor', 'none', logs, logs)
+
       seek = "#{asset}/seek.png"
       system('convert', '-crop', '60x60+300+0', path, seek)
-      system('convert', '-resize', '42x42', seek, seek)
-      system('convert', '-border', '9', '-bordercolor', 'none', seek, seek)
+      system('convert', '-resize', '46x46', seek, seek)
+      system('convert', '-border', '7', '-bordercolor', 'none', seek, seek)
     end
 
     def write_events

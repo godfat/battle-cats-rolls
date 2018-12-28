@@ -277,6 +277,10 @@ module BattleCatsRolls
         uri(path: "//#{web_host}/help")
       end
 
+      def logs_uri
+        uri(path: "//#{web_host}/logs")
+      end
+
       def seek_uri
         uri(path: "//#{seek_host}/seek")
       end
@@ -515,6 +519,10 @@ module BattleCatsRolls
 
     get '/help' do
       render :help
+    end
+
+    get '/logs' do
+      render :logs
     end
 
     class Seek
