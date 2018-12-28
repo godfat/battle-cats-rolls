@@ -45,6 +45,10 @@ Group = nobody
 ExecReload = /bin/kill -HUP $MAINPID
 
 # this should match the shutdown_timeout value in yahns_config(5)
+# Should be high enough so seeking can be done for 1 person.
+# It can happen that there are multiple people in the queue,
+# but... let's just interrupt them for now. We'll need to put
+# the queue in memcached in order to avoid this.
 TimeoutStopSec = 120
 
 # Only kill the master process, it may be harmful to signal
