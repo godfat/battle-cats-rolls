@@ -8,6 +8,8 @@
 ## Architecture
 
 * Use server-sent event to pull seek result
+* Queue in memcached rather than in-process! Otherwise can't do great
+  zero down time restarting.
 
 ## Build script, language and APK
 
