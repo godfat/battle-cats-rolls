@@ -46,6 +46,8 @@ module BattleCatsRolls
       b_fruit = roll_fruit
       a_cat = roll_cat!(a_fruit)
       b_cat = roll_cat(b_fruit)
+      a_cat.track = 'A'
+      b_cat.track = 'B'
 
       [a_cat, b_cat]
     end
@@ -64,6 +66,7 @@ module BattleCatsRolls
             if guaranteed_slot_fruit
               rolled_cat.guaranteed = new_cat(Uber, guaranteed_slot_fruit)
               rolled_cat.guaranteed.sequence = rolled_cat.sequence
+              rolled_cat.guaranteed.track = "#{rolled_cat.track}G"
             end
           end
         end

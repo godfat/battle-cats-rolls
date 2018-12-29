@@ -44,8 +44,6 @@ module BattleCatsRolls
         found = search_deep(cats, guaranteed, max)
 
         if found.size < ids.size
-          track_name = '+'.ord - 'A'.ord
-
           found.values + (ids - found.keys).map do |missing_id|
             info = [Gacha::Legend, Gacha::Uber,
                     Gacha::Supa, Gacha::Rare].find do |rarity|
@@ -56,7 +54,7 @@ module BattleCatsRolls
             cat = Cat.new(missing_id, info)
             cat.sequence = max
 
-            [cat, track_name]
+            cat
           end
         else
           found.values
@@ -79,12 +77,12 @@ module BattleCatsRolls
     def search_from_cats cats, guaranteed, remaining_ids
       cats.each.inject({}) do |result, ab|
         (remaining_ids - result.keys).each do |id|
-          ab.each.with_index do |cat, a_or_b|
+          ab.each.with_index do |cat|
             case id
             when cat.id
-              result[id] = [cat, a_or_b]
+              result[id] = cat
             when cat.guaranteed&.id
-              result[id] = [cat.guaranteed, a_or_b, 'G'] if guaranteed
+              result[id] = cat.guaranteed if guaranteed
             end
           end
         end
