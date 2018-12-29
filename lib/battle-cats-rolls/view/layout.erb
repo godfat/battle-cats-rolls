@@ -58,7 +58,8 @@
         element.form.submit();
       };
       function pick(position) {
-        window.location = '<%= uri %>' + '&pick=' + position;
+        window.location = '<%= uri %>' + '&pick=' + position
+          + '#N' + position.replace(/G$/, '');
       };
     </script>
   </head>

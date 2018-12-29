@@ -27,7 +27,7 @@
 
     <% each_ab_cat do |prev_b, (a, b)| %>
       <tr>
-        <td rowspan="2" id="N<%= a.sequence %>"><%= a.sequence_track %></td>
+        <td rowspan="2" id="N<%= a.sequence_track %>"><%= a.sequence_track %></td>
         <%= seed_column(a.rarity_fruit) %>
         <td class="score <%= color_label(a) %>" <%= onclick_pick(a) %>>
           <%= a.score %>, <%= a.slot %></td>
@@ -56,7 +56,7 @@
           <%= onclick_pick(b.guaranteed) %>>
           <%= guaranteed_cat(b, 0) %></td>
         <%= seed_column(b.rarity_fruit) %>
-        <td rowspan="2"><%= b.sequence_track %></td>
+        <td rowspan="2" id="N<%= b.sequence_track %>"><%= b.sequence_track %></td>
       </tr>
     <% end %>
 
