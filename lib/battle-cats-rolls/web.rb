@@ -74,6 +74,8 @@ module BattleCatsRolls
           :found
         when *FindCat.exclusives
           :exclusive
+        when Integer
+          :rare
         end
       end
 
