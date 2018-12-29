@@ -234,6 +234,7 @@ module BattleCatsRolls
           name: controller.name,
           count: controller.count,
           find: controller.find,
+          no_guaranteed: controller.no_guaranteed,
           force_guaranteed: controller.force_guaranteed,
           ubers: controller.ubers,
           details: details
@@ -248,6 +249,7 @@ module BattleCatsRolls
              (key == :name && value == 0) ||
              (key == :count && value == 100) ||
              (key == :find && value == 0) ||
+             (key == :no_guaranteed && value == 0) ||
              (key == :force_guaranteed && value == 0) ||
              (key == :ubers && value == 0)
             false
