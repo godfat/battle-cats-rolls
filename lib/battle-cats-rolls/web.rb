@@ -79,18 +79,28 @@ module BattleCatsRolls
       end
 
       def color_picked cat
+        sequence = cat.sequence
         pick_position = controller.pick_position
+        pick_guaranteed = controller.pick_guaranteed
+        guaranteed_rolls = controller.guaranteed_rolls
+        guaranteed_position = pick_position + guaranteed_rolls
 
-        if pick_position > 0 && cat.track == controller.pick_track
-          if controller.pick_guaranteed
-            if cat.sequence < pick_position
+        if pick_position > 0
+          if cat.track == controller.pick_track
+            if pick_guaranteed
+              if sequence < pick_position
+                :picked
+              elsif sequence < guaranteed_position - 1
+                :picked_cumulatively
+              end
+            elsif sequence <= pick_position
               :picked
-            elsif cat.sequence < pick_position +
-                                   controller.guaranteed_rolls - 1
-              :picked_cumulatively
+            elsif sequence == pick_position + 1
+              :next_position
             end
-          elsif cat.sequence <= pick_position
-            :picked
+          elsif pick_guaranteed &&
+                sequence == guaranteed_position - (cat.track.ord - 'A'.ord)
+            :next_position
           end
         end
       end

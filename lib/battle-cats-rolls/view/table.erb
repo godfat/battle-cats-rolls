@@ -36,7 +36,7 @@
           <%= guaranteed_cat(a, -1) %></td>
 
         <% if prev_b %>
-          <td class="cat <%= color_label(prev_b) %>">
+          <td class="cat <%= color_label(prev_b) %>" <%= onclick_pick(prev_b) %>>
             <%= link_to_roll(prev_b) %></td>
           <%= seed_column(prev_b.slot_fruit) %>
         <% elsif details %>
@@ -50,9 +50,10 @@
         <%= seed_column(a.slot_fruit) %>
         <td class="cat <%= color_label(a) %>" <%= onclick_pick(a) %>>
           <%= link_to_roll(a) %></td>
-        <td class="score <%= color_label(b) %>">
+        <td class="score <%= color_label(b) %>" <%= onclick_pick(b) %>>
           <%= b.score %>, <%= b.slot %></td>
-        <td rowspan="2" class="<%= color_label_guaranteed(b) %>">
+        <td rowspan="2" class="<%= color_label_guaranteed(b) %>"
+          <%= onclick_pick(b.guaranteed) %>>
           <%= guaranteed_cat(b, 0) %></td>
         <%= seed_column(b.rarity_fruit) %>
         <td rowspan="2"><%= b.sequence_track %></td>
