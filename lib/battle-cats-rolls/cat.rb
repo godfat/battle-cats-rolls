@@ -27,6 +27,10 @@ module BattleCatsRolls
       info.dig('desc', index) || pick_description(index - 1) if index >= 0
     end
 
+    def sequence_track
+      "#{sequence}#{track}"
+    end
+
     def == rhs
       id == rhs.id
     end

@@ -27,10 +27,12 @@
 
     <% each_ab_cat do |prev_b, (a, b)| %>
       <tr>
-        <td rowspan="2"><%= a.sequence %>A</td>
+        <td rowspan="2" id="N<%= a.sequence %>"><%= a.sequence_track %></td>
         <%= seed_column(a.rarity_fruit) %>
-        <td class="score <%= color_label(a) %>"><%= a.score %>, <%= a.slot %></td>
-        <td rowspan="2" class="<%= guaranteed_color(a) %>">
+        <td class="score <%= color_label(a) %>" <%= onclick_pick(a) %>>
+          <%= a.score %>, <%= a.slot %></td>
+        <td rowspan="2" class="<%= color_label_guaranteed(a) %>"
+          <%= onclick_pick(a.guaranteed) %>>
           <%= guaranteed_cat(a, -1) %></td>
 
         <% if prev_b %>
@@ -46,13 +48,14 @@
 
       <tr>
         <%= seed_column(a.slot_fruit) %>
-        <td class="cat <%= color_label(a) %>">
+        <td class="cat <%= color_label(a) %>" <%= onclick_pick(a) %>>
           <%= link_to_roll(a) %></td>
-        <td class="score <%= color_label(b) %>"><%= b.score %>, <%= b.slot %></td>
-        <td rowspan="2" class="<%= guaranteed_color(b) %>">
+        <td class="score <%= color_label(b) %>">
+          <%= b.score %>, <%= b.slot %></td>
+        <td rowspan="2" class="<%= color_label_guaranteed(b) %>">
           <%= guaranteed_cat(b, 0) %></td>
         <%= seed_column(b.rarity_fruit) %>
-        <td rowspan="2"><%= b.sequence %>B</td>
+        <td rowspan="2"><%= b.sequence_track %></td>
       </tr>
     <% end %>
 

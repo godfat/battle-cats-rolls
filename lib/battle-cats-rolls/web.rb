@@ -68,18 +68,39 @@ module BattleCatsRolls
         end
       end
 
-      def guaranteed_color cat
-        case cat.guaranteed&.id
-        when controller.find
-          :found
-        when *FindCat.exclusives
-          :exclusive
-        when Integer
-          :rare
+      def color_label cat
+        "#{color_rarity(cat)} #{color_picked(cat)}"
+      end
+
+      def color_label_guaranteed cat
+        if cat.guaranteed
+          "#{color_guaranteed(cat)} #{color_picked_guaranteed(cat)}"
         end
       end
 
-      def color_label cat
+      def color_picked cat
+        pick_position = controller.pick_position
+
+        if pick_position > 0 && cat.track == controller.pick_track
+          if controller.pick_guaranteed
+            if cat.sequence < pick_position
+              :picked
+            elsif cat.sequence < pick_position +
+                                   controller.guaranteed_rolls - 1
+              :picked_cumulatively
+            end
+          elsif cat.sequence <= pick_position
+            :picked
+          end
+        end
+      end
+
+      def color_picked_guaranteed cat
+        :picked_cumulatively if
+          controller.pick == cat.guaranteed.sequence_track
+      end
+
+      def color_rarity cat
         case rarity_label = cat.rarity_label
         when :legend
           :legend
@@ -92,6 +113,17 @@ module BattleCatsRolls
           else
             rarity_label
           end
+        end
+      end
+
+      def color_guaranteed cat
+        case cat.guaranteed.id
+        when controller.find
+          :found
+        when *FindCat.exclusives
+          :exclusive
+        when Integer
+          :rare
         end
       end
 
@@ -204,6 +236,12 @@ module BattleCatsRolls
         return @details if instance_variable_defined?(:@details)
 
         @details = !request.params['details'].to_s.strip.empty? || nil
+      end
+
+      def onclick_pick(cat)
+        return unless cat
+
+        %Q{onclick="pick('#{cat.sequence_track}')"}
       end
 
       def uri_to_roll cat
@@ -391,6 +429,25 @@ module BattleCatsRolls
 
       def find
         @find ||= request.params['find'].to_i
+      end
+
+      def pick
+        @pick ||= request.params['pick'].to_s
+      end
+
+      def pick_position
+        @pick_pos ||= pick.to_i
+      end
+
+      def pick_track
+        @pick_track ||= pick[/\A\d+(\w)/, 1]
+      end
+
+      def pick_guaranteed
+        return @pick_guaranteed if
+          instance_variable_defined?(:@pick_guaranteed)
+
+        @pick_guaranteed = pick.end_with?('G')
       end
 
       def no_guaranteed

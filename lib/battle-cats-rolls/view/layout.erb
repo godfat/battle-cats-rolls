@@ -25,6 +25,12 @@
       .uber { background-color: red; }
       .legend { background-color: darkviolet; }
       .legend a { color: #d8a56f; }
+      .picked {
+        background-image: linear-gradient(#00000033, #00000033);
+      }
+      .picked_cumulatively {
+        background-image: linear-gradient(#00000088, #00000088);
+      }
       #seed_input { width: 10em; }
       #count_input { width: 3.5em; }
       .menu { width: 60px; height: 60px; }
@@ -43,7 +49,10 @@
     <script type="text/javascript">
       function roll(element) {
         element.form.submit();
-      }
+      };
+      function pick(position) {
+        window.location = '<%= uri %>' + '&pick=' + position;
+      };
     </script>
   </head>
   <body>
