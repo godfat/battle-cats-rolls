@@ -2,10 +2,20 @@
 <%= header(2, "2018-12-29") %>
 <ul>
   <li>
+    Add a new feature that we can click on the table cell and it'll highlight
+    the rolled cats.
+    <span class="picked">Stands for regularly rolled</span> cats, and
+    <span class="picked_cumulatively">stands for cumulatively (11 or 15)
+    rolled</span> cats. <span class="next_position">Indicates the next
+    position</span> after the rolls. Highlights are not preserved for now
+    because it's not very easy to implement based on the current approach.
+    Maybe we can do that later if needed.
+  </li>
+  <li>Fix a bug that "Exclude guaranteed" wasn't preserved.</li>
+  <li>
     Add white background to guaranteed column if there is a cat.
     This should make it more visually consistent.
   </li>
-  <li>Fix a bug that "Exclude guaranteed" wasn't preserved.</li>
 </ul>
 <hr/>
 <%= header(2, "2018-12-28") %>
