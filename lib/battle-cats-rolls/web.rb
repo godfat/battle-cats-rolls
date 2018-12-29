@@ -69,12 +69,12 @@ module BattleCatsRolls
       end
 
       def color_label cat
-        "#{color_rarity(cat)} #{color_picked(cat)}"
+        "pick #{color_rarity(cat)} #{color_picked(cat)}"
       end
 
       def color_label_guaranteed cat
         if cat.guaranteed
-          "#{color_guaranteed(cat)} #{color_picked_guaranteed(cat)}"
+          "pick #{color_guaranteed(cat)} #{color_picked_guaranteed(cat)}"
         end
       end
 
