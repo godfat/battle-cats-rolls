@@ -2393,3 +2393,58 @@ events:
     rare: 6500
     supa: 2600
     uber: 900
+  2019-01-14_345:
+    start_on: 2019-01-14
+    end_on: 2019-01-16
+    version: '80100'
+    name: "★ The Almighties! ★ All-powerful Uber Cats, ready to be recruited!"
+    id: 345
+    rare: 7000
+    supa: 2500
+    uber: 500
+  2019-01-16_342:
+    start_on: 2019-01-16
+    end_on: 2019-01-18
+    version: '80100'
+    name: "★ Dark Heroes ★ Defend justice with superpowered Uber Cats!"
+    id: 342
+    rare: 7000
+    supa: 2500
+    uber: 500
+  2019-01-18_330:
+    start_on: 2019-01-18
+    end_on: 2019-01-21
+    version: '80100'
+    name: "★ Vajiras Wargods ★ Tactical Master Uber Cats, with a new mystery general?!"
+    id: 330
+    rare: 6970
+    supa: 2500
+    uber: 500
+    guaranteed: true
+  2019-01-21_333:
+    start_on: 2019-01-21
+    end_on: 2019-01-23
+    version: '80100'
+    name: "★ Galaxy Gals★ Cute 'n' tough Uber Cats, with a new mystery member?!?!"
+    id: 333
+    rare: 6970
+    supa: 2500
+    uber: 500
+  2019-01-23_348:
+    start_on: 2019-01-23
+    end_on: 2019-01-25
+    version: '80100'
+    name: "★ IRON LEGION ★ Heavy metal Uber Cats with Zombie-crushing powers!!"
+    id: 348
+    rare: 7000
+    supa: 2500
+    uber: 500
+  2019-01-25_327:
+    start_on: 2019-01-25
+    end_on: 2019-01-28
+    version: '80100'
+    name: The mighty Dynamites are here! Variety and power await you!
+    id: 327
+    rare: 7000
+    supa: 2500
+    uber: 500
