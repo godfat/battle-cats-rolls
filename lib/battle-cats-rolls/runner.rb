@@ -25,10 +25,10 @@ module BattleCatsRolls
     def self.jp
       @jp ||= [
         __method__,
-        '8.1.1',
+        '8.2.0',
         'https://ponos.s3.dualstack.ap-northeast-1.amazonaws.com/appli/battlecats/event_data/battlecats_production/gatya.tsv',
         # https://www.apkmonk.com/app/jp.co.ponos.battlecats/
-        'https://www.apkmonk.com/down_file?pkg=jp.co.ponos.battlecats&key=5_jp.co.ponos.battlecats_2018-12-06.apk'
+        'https://www.apkmonk.com/down_file?pkg=jp.co.ponos.battlecats&key=5_jp.co.ponos.battlecats_2019-01-17.apk'
       ]
     end
 
