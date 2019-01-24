@@ -2448,3 +2448,60 @@ events:
     rare: 7000
     supa: 2500
     uber: 500
+  2019-01-28_324:
+    start_on: 2019-01-28
+    end_on: 2019-01-30
+    version: '80100'
+    name: "★ Nekolugas ★  Super-creepy Uber Cats!"
+    id: 324
+    rare: 7000
+    supa: 2500
+    uber: 500
+  2019-01-30_336:
+    start_on: 2019-01-30
+    end_on: 2019-02-01
+    version: '80100'
+    name: "★ Dragon Emperors ★ Collect a mighty monstrous Uber Cat!"
+    id: 336
+    rare: 6970
+    supa: 2500
+    uber: 500
+  2019-02-01_360:
+    start_on: 2019-02-01
+    end_on: 2019-02-04
+    version: '80100'
+    name: New Uber "D'artanyan" is here! ★ Extra-high Uber drop rate for every draw!
+    id: 360
+    rare: 6500
+    supa: 2600
+    uber: 900
+  2019-02-04_307:
+    start_on: 2019-02-04
+    end_on: 2019-02-07
+    version: '80100'
+    name: With the English-version only Li'l Valkyrie! ★ With 11-Draw Guarantee!
+    id: 307
+    rare: 7000
+    supa: 2500
+    uber: 500
+    guaranteed: true
+  2019-02-07_346:
+    start_on: 2019-02-07
+    end_on: 2019-02-09
+    version: '80100'
+    name: "★ The Almighties! ★ Legendary Uber Cats with 11-Draw Guarantee!"
+    id: 346
+    rare: 7000
+    supa: 2500
+    uber: 500
+    guaranteed: true
+  2019-02-09_364:
+    start_on: 2019-02-09
+    end_on: 2019-02-11
+    version: '80100'
+    name: "★ Ultra Souls★ Guaranteed 11-Draw for legendary Uber Rare Cats!"
+    id: 364
+    rare: 6970
+    supa: 2500
+    uber: 500
+    guaranteed: true
