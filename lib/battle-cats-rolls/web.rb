@@ -633,17 +633,17 @@ module BattleCatsRolls
 
       %w[gatya.tsv item.tsv sale.tsv].each do |file|
         get "/seek/#{file}" do
-          headers 'Content-Type' => 'text/plain'
+          headers 'Content-Type' => 'text/plain; charset=utf-8'
           body serve_tsv(file)
         end
 
         get "/seek/curl/#{file}" do
-          headers 'Content-Type' => 'text/plain'
+          headers 'Content-Type' => 'text/plain; charset=utf-8'
           body "#{aws_auth(file).to_curl}\n"
         end
 
         get "/seek/json/#{file}" do
-          headers 'Content-Type' => 'application/json'
+          headers 'Content-Type' => 'application/json; charset=utf-8'
           body JSON.dump(aws_auth(file).headers)
         end
       end
