@@ -13,6 +13,7 @@ require 'tilt'
 require 'cgi'
 require 'erb'
 require 'date'
+require 'json'
 require 'forwardable'
 require 'net/http'
 
@@ -540,9 +541,7 @@ module BattleCatsRolls
       end
 
       def request_tsv file
-        url =
-          "https://nyanko-events-prd.s3.ap-northeast-1.amazonaws.com/battlecats_production/#{file}"
-        aws = AwsAuth.new(:get, url)
+        aws = aws_auth(file)
         request = Net::HTTP::Get.new(aws.uri)
 
         aws.headers.each do |key, value|
@@ -557,6 +556,12 @@ module BattleCatsRolls
         end
 
         response.body
+      end
+
+      def aws_auth file
+        url =
+          "https://nyanko-events-prd.s3.ap-northeast-1.amazonaws.com/battlecats_production/#{file}"
+        AwsAuth.new(:get, url)
       end
 
       def cache
@@ -630,6 +635,16 @@ module BattleCatsRolls
         get "/seek/#{file}" do
           headers 'Content-Type' => 'text/plain'
           body serve_tsv(file)
+        end
+
+        get "/seek/curl/#{file}" do
+          headers 'Content-Type' => 'text/plain'
+          body "#{aws_auth(file).to_curl}\n"
+        end
+
+        get "/seek/json/#{file}" do
+          headers 'Content-Type' => 'application/json'
+          body JSON.dump(aws_auth(file).headers)
         end
       end
 
