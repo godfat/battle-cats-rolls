@@ -34,6 +34,7 @@ NonBlocking = false
 # bundler users must use the "--keep-file-descriptors" switch, here:
 # ExecStart = /path/to/bin/bundle exec --keep-file-descriptors yahns -c ...
 ExecStart = /home/godfat/.gem/ruby/2.6.0/bin/yahns -c /home/godfat/battle-cats-rolls/config/yahns.rb
+EnvironmentFile = /home/godfat/battle-cats-rolls/.env
 Environment = GEM_HOME=/home/godfat/.gem/ruby/2.6.0
 Environment = WEB_YAHNS=127.0.0.1:13599
 Environment = WEB_HOST=bc.godfat.org

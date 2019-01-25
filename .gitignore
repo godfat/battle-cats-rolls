@@ -2,3 +2,4 @@
 *.list
 *.apk
 /extract
+/.env

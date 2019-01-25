@@ -5,6 +5,7 @@ require_relative 'gacha'
 require_relative 'find_cat'
 require_relative 'seek_seed'
 require_relative 'cache'
+require_relative 'aws_auth'
 
 require 'jellyfish'
 require 'tilt'
@@ -13,6 +14,7 @@ require 'cgi'
 require 'erb'
 require 'date'
 require 'forwardable'
+require 'net/http'
 
 module BattleCatsRolls
   class Web
@@ -599,6 +601,29 @@ module BattleCatsRolls
     class Seek
       include Jellyfish
       controller_include NormalizedPath, Imp
+
+      %w[gatya.tsv item.tsv sale.tsv].each do |file|
+        get "/seek/#{file}" do
+          url =
+            "https://nyanko-events-prd.s3.ap-northeast-1.amazonaws.com/battlecats_production/#{file}"
+          aws = AwsAuth.new(:get, url)
+          request = Net::HTTP::Get.new(aws.uri)
+
+          aws.headers.each do |key, value|
+            request[key] = value
+          end
+
+          response = Net::HTTP.start(
+            aws.uri.hostname,
+            aws.uri.port,
+            use_ssl: true) do |http|
+            http.request(request)
+          end
+
+          headers 'Content-Type' => 'text/plain'
+          body response.body
+        end
+      end
 
       get '/seek' do
         render :seek, queue_size: SeekSeed.queue.size
