@@ -2398,16 +2398,6 @@ events:
     rare: 7000
     supa: 2500
     uber: 500
-  2019-01-18_327:
-    start_on: 2019-01-18
-    end_on: 2030-01-01
-    version: '80200'
-    name: 愉快痛快！世界一即戦力になるにゃんこ達！★11連で超激レア確定!!
-    id: 327
-    rare: 7000
-    supa: 2500
-    uber: 500
-    guaranteed: true
   2019-01-18_370:
     start_on: 2019-01-18
     end_on: 2019-01-21
