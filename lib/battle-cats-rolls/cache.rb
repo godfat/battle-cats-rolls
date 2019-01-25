@@ -16,6 +16,7 @@ module BattleCatsRolls
 
       def store key, value, expires_in: nil
         set(key, value, expires_in)
+        value
       end
     end
 
@@ -51,6 +52,10 @@ module BattleCatsRolls
       cache.extend(Module.new{
         def fetch key # original fetch could deadlock
           self[key] || self[key] = yield
+        end
+
+        def store key, value, expires_in: nil
+          self[key] = value
         end
       })
       cache

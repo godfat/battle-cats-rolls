@@ -535,6 +535,30 @@ module BattleCatsRolls
            *request.POST['rolls']].join(' ').squeeze(' ')
       end
 
+      def serve_tsv file
+        cache[file] || cache.store(file, request_tsv(file), expires_in: 300)
+      end
+
+      def request_tsv file
+        url =
+          "https://nyanko-events-prd.s3.ap-northeast-1.amazonaws.com/battlecats_production/#{file}"
+        aws = AwsAuth.new(:get, url)
+        request = Net::HTTP::Get.new(aws.uri)
+
+        aws.headers.each do |key, value|
+          request[key] = value
+        end
+
+        response = Net::HTTP.start(
+          aws.uri.hostname,
+          aws.uri.port,
+          use_ssl: true) do |http|
+          http.request(request)
+        end
+
+        response.body
+      end
+
       def cache
         @cache ||= Cache.default(logger)
       end
@@ -604,24 +628,8 @@ module BattleCatsRolls
 
       %w[gatya.tsv item.tsv sale.tsv].each do |file|
         get "/seek/#{file}" do
-          url =
-            "https://nyanko-events-prd.s3.ap-northeast-1.amazonaws.com/battlecats_production/#{file}"
-          aws = AwsAuth.new(:get, url)
-          request = Net::HTTP::Get.new(aws.uri)
-
-          aws.headers.each do |key, value|
-            request[key] = value
-          end
-
-          response = Net::HTTP.start(
-            aws.uri.hostname,
-            aws.uri.port,
-            use_ssl: true) do |http|
-            http.request(request)
-          end
-
           headers 'Content-Type' => 'text/plain'
-          body response.body
+          body serve_tsv(file)
         end
       end
 
