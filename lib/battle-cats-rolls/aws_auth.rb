@@ -9,6 +9,17 @@ module BattleCatsRolls
   # https://docs.aws.amazon.com/AmazonS3/latest/API/sigv4-auth-using-authorization-header.html
   # https://docs.aws.amazon.com/AmazonS3/latest/API/sig-v4-header-based-auth.html
   class AwsAuth < Struct.new(:verb, :url, :id, :secret, :region, :service)
+    def self.event_url lang, file, base_uri='https://bc-seek.godfat.org/seek'
+      case lang
+      when 'en', 'tw'
+        "https://ponos.s3.dualstack.ap-northeast-1.amazonaws.com/appli/battlecats/event_data/battlecats#{lang}_production/#{file}"
+      when 'jp'
+        "#{base_uri}/#{file}"
+      else
+        raise "Unknown language: #{lang}"
+      end
+    end
+
     def id
       super || self.id = ENV['AWSAccessKeyId']
     end

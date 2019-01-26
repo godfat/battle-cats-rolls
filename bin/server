@@ -1,3 +1,5 @@
 #!/bin/sh
 
-yahns -c $(realpath $(dirname $0)/../config/yahns.rb)
+dir=$(dirname $0)
+env $(cat $(realpath $dir/../.env)) \
+  yahns -c $(realpath $dir/../config/yahns.rb)

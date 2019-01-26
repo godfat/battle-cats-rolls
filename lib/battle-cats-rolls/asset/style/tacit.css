@@ -353,7 +353,7 @@ figure img {
 body {
   padding: 20px;
 }
-form, label, input, input[type="submit"], select, p, ul {
+form, label, input, input[type="submit"], select, p {
   margin-bottom: 5px;
 }
 label, input, select {

@@ -324,6 +324,10 @@ module BattleCatsRolls
         ENV['WEB_HOST'] || request.host_with_port
       end
 
+      def event_base_uri
+        "#{request.scheme}://#{seek_host}/seek"
+      end
+
       def cats_uri
         uri(path: "//#{web_host}/cats")
       end

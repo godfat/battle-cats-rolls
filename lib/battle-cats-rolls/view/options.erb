@@ -1,10 +1,5 @@
 <div id="options">
-  <label for="lang_select">Language:</label>
-  <select id="lang_select" name="lang" onchange="roll(this)">
-    <option value="en" <%= selected_lang('en') %>>BCEN</option>
-    <option value="tw" <%= selected_lang('tw') %>>BCTW</option>
-    <option value="jp" <%= selected_lang('jp') %>>BCJP</option>
-  </select>
+  <%= erb :lang %>
 
   <label for="name_select">Name:</label>
   <select id="name_select" name="name" onchange="roll(this)">

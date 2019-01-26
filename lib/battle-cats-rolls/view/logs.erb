@@ -1,15 +1,46 @@
+<div id="form">
+  <form method="get" enctype="application/x-www-form-urlencoded">
+    <div id="options">
+      <%= erb :lang %>
+    </div>
+  </form>
+</div>
+<%= header(1, "Event data links for BC#{controller.lang.upcase}") %>
+<ul>
+  <% %w[gatya.tsv item.tsv sale.tsv].each do |file| %>
+    <li>
+      <a href="<%= BattleCatsRolls::AwsAuth.event_url(controller.lang, file, event_base_uri) %>"><%= file %></a>
+    </li>
+  <% end %>
+</ul>
+
 <%= header(1, "What's changed?") %><p></p>
+<%= header(2, "2019-01-26") %>
+<ul>
+  <li>
+    I won't update this page merely for event data update any more.
+    Not worth the troubles.
+  </li>
+  <li>Now we serve event data links in this page.</li>
+  <li>
+    Remove 世界一即戦力になるにゃんこ達！ which lasts to 2030 for BCJP because
+    that's for older version (8.1-) and we have another properly scheduled
+    event for it, too.
+  </li>
+  <li>More margin-bottom for ul, remove hr.</li>
+</ul>
+
 <%= header(2, "2019-01-11") %>
 <ul>
   <li>Update BCEN and BCTW event data</li>
   <li>Update data source link to GitLab</li>
 </ul>
-<hr/>
+
 <%= header(2, "2019-01-07") %>
 <ul>
   <li>Update BCJP event data</li>
 </ul>
-<hr/>
+
 <%= header(2, "2018-12-29") %>
 <ul>
   <li>
@@ -32,7 +63,7 @@
     This should make it more visually consistent.
   </li>
 </ul>
-<hr/>
+
 <%= header(2, "2018-12-28") %>
 <ul>
   <li>Add change log page with cat job icon</li>
@@ -41,7 +72,7 @@
     Slightly enlarge the sniper cat icon to make it more visually balanced
   </li>
 </ul>
-<hr/>
+
 <%= header(2, "2018-12-27") %>
 <ul>
   <li>
@@ -51,7 +82,7 @@
     Previously, I have to restart it manually.
   </li>
 </ul>
-<hr/>
+
 <%= header(2, "2018-12-26") %>
 <ul>
   <li>
