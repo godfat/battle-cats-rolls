@@ -4,7 +4,11 @@
 <ul>
   <% %w[gatya.tsv item.tsv sale.tsv].each do |file| %>
     <li>
-      <a href="<%= BattleCatsRolls::AwsAuth.event_url(controller.lang, file, event_base_uri) %>"><%= file %></a>
+      <a href="<%= event_url(controller.lang, file: file) %>"><%= file %></a>
+      <% if controller.lang == 'jp' %>
+        | <a href="<%= event_url(controller.lang, file: file, kind: '/curl') %>">curl command</a>
+        | <a href="<%= event_url(controller.lang, file: file, kind: '/json') %>">headers in JSON</a>
+      <% end %>
     </li>
   <% end %>
 </ul>

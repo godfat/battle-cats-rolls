@@ -218,12 +218,9 @@ module BattleCatsRolls
         h cat.pick_name(controller.name)
       end
 
-      def event_lang
-        case controller.lang
-        when 'jp'
-        else
-          controller.lang
-        end
+      def event_url *args, **options
+        BattleCatsRolls::AwsAuth.event_url(
+          *args, base_uri: event_base_uri, **options)
       end
 
       def h str
