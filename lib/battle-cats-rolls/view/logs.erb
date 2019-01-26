@@ -6,8 +6,8 @@
     <li>
       <a href="<%= event_url(controller.lang, file: file) %>"><%= file %></a>
       <% if controller.lang == 'jp' %>
-        | <a href="<%= event_url(controller.lang, file: file, kind: '/curl') %>">curl command</a>
-        | <a href="<%= event_url(controller.lang, file: file, kind: '/json') %>">headers in JSON</a>
+        / <a href="<%= event_url(controller.lang, file: file, kind: '/curl') %>">curl command</a>
+        / <a href="<%= event_url(controller.lang, file: file, kind: '/json') %>">headers in JSON</a>
       <% end %>
     </li>
   <% end %>
@@ -28,6 +28,8 @@
   </li>
   <li>More margin-bottom for ul, remove hr.</li>
   <li>Now we preserve as much as arguments on query string.</li>
+  <li>Merge simulation for guaranteed into the same row with find cats.</li>
+  <li>Remove unuseful home page link in the bottom.</li>
 </ul>
 
 <%= header(2, "2019-01-11") %>
