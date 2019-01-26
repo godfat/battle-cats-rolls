@@ -1,3 +1,4 @@
+<% if controller.path_info == '/' %>
 <div id="control">
   <label for="seed_input">Seed:</label>
   <input
@@ -22,3 +23,6 @@
 
   <input type="submit" value="Roll">
 </div>
+<% else %>
+<%= hidden_inputs('seed', 'next_seed', 'details', 'count') %>
+<% end %>

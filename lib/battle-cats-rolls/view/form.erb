@@ -1,9 +1,9 @@
 <div id="form">
-  <form method="get" action="." enctype="application/x-www-form-urlencoded">
+  <form method="get" action="<%= controller.path_info %>"
+    enctype="application/x-www-form-urlencoded">
     <%= erb :options %>
     <%= erb :events %>
     <%= erb :control %>
-    <%= erb :find_cat if arg %>
-    <%= erb :simulate if arg %>
+    <%= erb :find_cat %>
   </form>
 </div>

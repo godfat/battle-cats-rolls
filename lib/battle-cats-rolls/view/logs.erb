@@ -1,10 +1,5 @@
-<div id="form">
-  <form method="get" enctype="application/x-www-form-urlencoded">
-    <div id="options">
-      <%= erb :lang %>
-    </div>
-  </form>
-</div>
+<%= erb :form %>
+
 <%= header(1, "Event data links for BC#{controller.lang.upcase}") %>
 <ul>
   <% %w[gatya.tsv item.tsv sale.tsv].each do |file| %>
@@ -28,6 +23,7 @@
     event for it, too.
   </li>
   <li>More margin-bottom for ul, remove hr.</li>
+  <li>Now we preserve as much as arguments on query string.</li>
 </ul>
 
 <%= header(2, "2019-01-11") %>

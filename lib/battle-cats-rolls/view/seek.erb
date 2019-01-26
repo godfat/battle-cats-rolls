@@ -1,14 +1,9 @@
 <%= header(1, 'Looking for your seed?') %>
 
-<div id="form">
-  <form method="get" enctype="application/x-www-form-urlencoded">
-    <%= erb :options %>
-    <%= erb :events %>
-  </form>
+<%= erb :form %>
 
-  <% if gacha.pool.exist? %>
-    <%= erb :seek_form %>
-  <% else %>
-    Data only available in v<%= controller.gacha.pool.version %>+
-  <% end %>
-</div>
+<% if gacha.pool.exist? %>
+  <%= erb :seek_form %>
+<% else %>
+  Data only available in v<%= controller.gacha.pool.version %>+
+<% end %>

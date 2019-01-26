@@ -38,7 +38,7 @@ module BattleCatsRolls
     class View < Struct.new(:controller, :arg)
       extend Forwardable
 
-      def_delegators :controller, *%w[request gacha]
+      def_delegators :controller, *%w[request gacha details]
 
       def render name
         erb(:layout){ erb(name) }
@@ -196,6 +196,14 @@ module BattleCatsRolls
         'checked="checked"' if details
       end
 
+      def hidden_inputs *input_names
+        input_names.map do |name|
+          <<~HTML
+            <input type="hidden" name="#{name}" value="#{controller.public_send(name)}">
+          HTML
+        end.join("\n")
+      end
+
       def show_event info
         h "#{info['start_on']} ~ #{info['end_on']}: #{info['name']}"
       end
@@ -243,12 +251,6 @@ module BattleCatsRolls
           <td>#{fruit.seed}</td>
           <td>#{if fruit.seed == fruit.value then '-' else fruit.value end}</td>
         HTML
-      end
-
-      def details
-        return @details if instance_variable_defined?(:@details)
-
-        @details = !request.params['details'].to_s.strip.empty? || nil
       end
 
       def onclick_pick(cat)
@@ -489,6 +491,12 @@ module BattleCatsRolls
 
       def ubers
         @ubers ||= request.params['ubers'].to_i
+      end
+
+      def details
+        return @details if instance_variable_defined?(:@details)
+
+        @details = !request.params['details'].to_s.strip.empty? || nil
       end
 
       def current_event

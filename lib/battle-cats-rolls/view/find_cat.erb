@@ -1,3 +1,4 @@
+<% if arg && controller.path_info == '/' %>
 <div class="find">
   <label for="find_select">Find next:</label>
   <select id="find_select" name="find" onchange="roll(this)">
@@ -39,4 +40,24 @@
       <%= checked_no_guaranteed %>
       onchange="roll(this)">
   <% end %>
+
+  <label for="force_guaranteed_input">Simulate guaranteed:</label>
+  <select id="force_guaranteed_input" name="force_guaranteed"
+    onchange="roll(this)">
+    <% [nil, 11, 15].each do |n| %>
+      <option value="<%= n %>"
+        <%= selected_force_guaranteed(n) %>><%= n %></option>
+    <% end %>
+  </select>
+
+  <label for="add_future_ubers">Add future ubers:</label>
+  <select id="add_future_ubers" name="ubers" onchange="roll(this)">
+    <% 0.upto(9).each do |n| %>
+      <option value="<%= n %>"
+        <%= selected_ubers(n) %>><%= n %></option>
+    <% end %>
+  </select>
 </div>
+<% else %>
+<%= hidden_inputs('find', 'no_guaranteed', 'force_guaranteed', 'ubers') %>
+<% end %>

@@ -47,8 +47,6 @@
     <% end %>
   </ol>
 
-  <input type="hidden" name="event" value="<%= controller.event %>">
-  <input type="hidden" name="lang" value="<%= controller.lang %>">
-  <input type="hidden" name="name" value="<%= controller.name %>">
+  <%= hidden_inputs 'event', 'lang', 'name' %>
   <input type="submit" value="Seek">
 </form>

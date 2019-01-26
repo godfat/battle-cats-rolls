@@ -1,10 +1,23 @@
+<% if controller.path_info.match?(%r{\A/(?:cats|logs|seek)?\z}) %>
 <div id="options">
-  <%= erb :lang %>
+  <label for="lang_select">Language:</label>
+  <select id="lang_select" name="lang" onchange="roll(this)">
+    <option value="en" <%= selected_lang('en') %>>BCEN</option>
+    <option value="tw" <%= selected_lang('tw') %>>BCTW</option>
+    <option value="jp" <%= selected_lang('jp') %>>BCJP</option>
+  </select>
 
+  <% if controller.path_info != '/logs' %>
   <label for="name_select">Name:</label>
   <select id="name_select" name="name" onchange="roll(this)">
     <option value="0" <%= selected_name(0) %>>Base</option>
     <option value="1" <%= selected_name(1) %>>Evolved</option>
     <option value="2" <%= selected_name(2) %>>True</option>
   </select>
+  <% else %>
+  <%= hidden_inputs('name') %>
+  <% end %>
 </div>
+<% else %>
+<%= hidden_inputs('lang', 'name') %>
+<% end %>

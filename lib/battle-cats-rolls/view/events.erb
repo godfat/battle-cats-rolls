@@ -1,3 +1,4 @@
+<% if controller.path_info.match?(%r{\A/(?:seek)?\z}) %>
 <div id="event">
   <label for="event_select">Event:</label>
   <select id="event_select" name="event" onchange="roll(this)">
@@ -20,3 +21,6 @@
     </optgroup>
   </select>
 </div>
+<% else %>
+<%= hidden_inputs('event') %>
+<% end %>

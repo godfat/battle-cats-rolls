@@ -1,10 +1,6 @@
 <%= header(1, "Show me all cats") %>
 
-<div id="form">
-  <form method="get" enctype="application/x-www-form-urlencoded">
-    <%= erb :options %>
-  </form>
-</div>
+<%= erb :form %>
 
 <div id="cats">
 <% each_ball_cat do |rarity, cats| %>
