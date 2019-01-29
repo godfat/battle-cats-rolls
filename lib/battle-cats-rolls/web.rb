@@ -215,7 +215,8 @@ module BattleCatsRolls
       end
 
       def serve_tsv file
-        cache[file] || cache.store(file, request_tsv(file), expires_in: 300)
+        cache[file] ||
+          cache.store(file, request_tsv(file), expires_in: tsv_expires_in)
       end
 
       def request_tsv file
@@ -234,6 +235,10 @@ module BattleCatsRolls
         end
 
         response.body
+      end
+
+      def tsv_expires_in
+        600
       end
 
       def aws_auth file

@@ -6,6 +6,7 @@
     <li>
       <a href="<%= event_url(controller.lang, file: file) %>"><%= file %></a>
       <% if controller.lang == 'jp' %>
+        (cached for <%= controller.tsv_expires_in %> seconds)
         / <a href="<%= event_url(controller.lang, file: file, kind: '/curl') %>">curl command</a>
         / <a href="<%= event_url(controller.lang, file: file, kind: '/json') %>">headers in JSON</a>
       <% end %>
@@ -14,6 +15,14 @@
 </ul>
 
 <%= header(1, "What's changed?") %><p></p>
+
+<%= header(2, "2019-01-30") %>
+<ul>
+  <li>
+    Cache for TSV files raised from 300 seconds to 600 seconds.
+    Use curl or JSON if you can't wait for it to expire.
+  </li>
+</ul>
 
 <%= header(2, "2019-01-26") %>
 <ul>
