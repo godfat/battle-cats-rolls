@@ -303,7 +303,19 @@ module BattleCatsRolls
     end
 
     get '/help' do
-      render :help
+      cats = [
+        %i[rare supa rare rare supa],
+        %i[rare uber rare supa supa]
+      ].map do |column|
+        column.map.with_index do |rarity, index|
+          cat = Cat.new(-1, {'name' => ["A #{rarity} cat"]}, rarity)
+          cat.rarity_label = rarity
+          cat.sequence = index + 1
+          cat
+        end
+      end.transpose
+
+      render :help, cats: cats
     end
 
     get '/logs' do

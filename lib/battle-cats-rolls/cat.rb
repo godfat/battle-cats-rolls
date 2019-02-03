@@ -4,7 +4,7 @@ module BattleCatsRolls
   class Cat < Struct.new(
     :id, :info, :rarity,
     :slot_fruit, :slot,
-    :rarity_fruit,
+    :rarity_fruit, :rarity_label,
     :score, :sequence, :track,
     :guaranteed)
 
@@ -36,20 +36,21 @@ module BattleCatsRolls
     end
 
     def rarity_label
-      case score
-      when nil, 0...6500
-        :rare
-      when 6500...7000
-        :supa_fest
-      when 7000...9100
-        :supa
-      when 9100...9500
-        :uber_fest
-      when 9500...9970
-        :uber
-      else
-        :legend
+      super ||
+        case score
+        when nil, 0...6500
+          :rare
+        when 6500...7000
+          :supa_fest
+        when 7000...9100
+          :supa
+        when 9100...9500
+          :uber_fest
+        when 9500...9970
+          :uber
+        else
+          :legend
+        end
       end
-    end
   end
 end
