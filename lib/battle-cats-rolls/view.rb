@@ -59,13 +59,11 @@ module BattleCatsRolls
 
     def color_picked cat
       sequence = cat.sequence
-      pick_position = controller.pick_position
-      pick_guaranteed = controller.pick_guaranteed
       guaranteed_rolls = controller.guaranteed_rolls
       guaranteed_position = pick_position + guaranteed_rolls
 
       if pick_position > 0
-        if cat.track == controller.pick_track
+        if cat.track == pick_track
           if pick_guaranteed
             if sequence < pick_position
               :picked
@@ -85,8 +83,7 @@ module BattleCatsRolls
     end
 
     def color_picked_guaranteed cat
-      :picked_cumulatively if
-        controller.pick == cat.guaranteed.sequence_track
+      :picked_cumulatively if pick == cat.guaranteed.sequence_track
     end
 
     def color_rarity cat
@@ -130,6 +127,25 @@ module BattleCatsRolls
         else
           ''
         end
+    end
+
+    def pick
+      arg[:pick] || controller.pick
+    end
+
+    def pick_position
+      @pick_pos ||= pick.to_i
+    end
+
+    def pick_track
+      @pick_track ||= pick[/\A\d+(\w)/, 1]
+    end
+
+    def pick_guaranteed
+      return @pick_guaranteed if
+        instance_variable_defined?(:@pick_guaranteed)
+
+      @pick_guaranteed = pick.end_with?('G')
     end
 
     def pick_option cats
@@ -226,7 +242,7 @@ module BattleCatsRolls
     end
 
     def onclick_pick(cat)
-      return unless cat
+      return unless cat && controller.path_info == '/'
 
       %Q{onclick="pick('#{cat.sequence_track}')"}
     end
@@ -318,8 +334,15 @@ module BattleCatsRolls
       uri(path: "//#{seek_host}/seek")
     end
 
-    def erb name, &block
-      self.class.template(name).render(self, &block)
+    def erb name, arg=nil, &block
+      context =
+        if arg
+          self.class.new(controller, arg)
+        else
+          self
+        end
+
+      self.class.template(name).render(context, &block)
     end
 
     def self.template name

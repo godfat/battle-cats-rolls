@@ -4,9 +4,10 @@ require_relative 'crystal_ball'
 require_relative 'gacha'
 require_relative 'find_cat'
 require_relative 'seek_seed'
-require_relative 'view'
 require_relative 'cache'
 require_relative 'aws_auth'
+require_relative 'view'
+require_relative 'help'
 
 require 'jellyfish'
 
@@ -118,21 +119,6 @@ module BattleCatsRolls
 
       def pick
         @pick ||= request.params['pick'].to_s
-      end
-
-      def pick_position
-        @pick_pos ||= pick.to_i
-      end
-
-      def pick_track
-        @pick_track ||= pick[/\A\d+(\w)/, 1]
-      end
-
-      def pick_guaranteed
-        return @pick_guaranteed if
-          instance_variable_defined?(:@pick_guaranteed)
-
-        @pick_guaranteed = pick.end_with?('G')
       end
 
       def no_guaranteed
@@ -303,19 +289,7 @@ module BattleCatsRolls
     end
 
     get '/help' do
-      cats = [
-        %i[rare supa rare rare supa],
-        %i[rare uber rare supa supa]
-      ].map do |column|
-        column.map.with_index do |rarity, index|
-          cat = Cat.new(-1, {'name' => ["A #{rarity} cat"]}, rarity)
-          cat.rarity_label = rarity
-          cat.sequence = index + 1
-          cat
-        end
-      end.transpose
-
-      render :help, cats: cats
+      render :help, help: Help.new
     end
 
     get '/logs' do
