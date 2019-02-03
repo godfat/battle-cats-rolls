@@ -59,7 +59,6 @@ module BattleCatsRolls
 
     def color_picked cat
       sequence = cat.sequence
-      guaranteed_rolls = controller.guaranteed_rolls
       guaranteed_position = pick_position + guaranteed_rolls
 
       if pick_position > 0
@@ -129,8 +128,13 @@ module BattleCatsRolls
         end
     end
 
+    def guaranteed_rolls
+      @guaranteed_rolls ||=
+        arg[:guaranteed_rolls] || controller.guaranteed_rolls
+    end
+
     def pick
-      arg[:pick] || controller.pick
+      @pick ||= arg[:pick] || controller.pick
     end
 
     def pick_position
