@@ -10,7 +10,7 @@ module BattleCatsRolls
         '8.1.0',
         AwsAuth.event_url('en'),
         # https://www.apkmonk.com/app/jp.co.ponos.battlecatsen/
-        'https://www.apkmirror.com/wp-content/themes/APKMirror/download.php?id=574217'
+        'https://www.apkmonk.com/down_file?pkg=jp.co.ponos.battlecatsen&key=4_jp.co.ponos.battlecatsen_2018-12-20.apk'
       ]
     end
 
@@ -20,7 +20,7 @@ module BattleCatsRolls
         '8.1.0',
         AwsAuth.event_url('tw'),
         # https://www.apkmonk.com/app/jp.co.ponos.battlecatstw/
-        'https://apk.apkpure.co/jp.co.ponos.battlecatstw/51b2b9b634f52e8eb9a5ec0c7a76f3c7/8.1.0/86ca21a5fa0eb6d12539e9b8aba7ca8f/'
+        'https://www.apkmonk.com/down_file?pkg=jp.co.ponos.battlecatstw&key=5_jp.co.ponos.battlecatstw_2018-12-20.apk'
       ]
     end
 
