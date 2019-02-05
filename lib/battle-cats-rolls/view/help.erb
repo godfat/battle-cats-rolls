@@ -70,16 +70,27 @@
 <ul>
   <li>Using the link, you'll see a table looks like below.</li>
   <li>Suppose you start at <strong>1A</strong>, then your next roll with rare ticket or cat food will be the cat located in 1A. It's a rare cat (<strong>1A rare cat</strong>) in this case.</li>
-  <li>Your next roll will be located at <strong>2A</strong>, which is a super rare cat (<strong>2A supa cat</strong>).</li>
+  <li>Your next roll will be located at <strong>2A</strong>, which is a super rare cat (<span class="supa">2A supa cat</span>).</li>
 </ul>
 
 <%= erb :table, cats: arg[:help].read_the_tracks %>
 
+<%= header(2, 'Highlight rolls') %>
+<ul>
+  <li>You can click on the cells, and it'll highlight the cats you'll roll out.</li>
+  <li>Suppose we click on <span class="supa">2A supa cat</span>'s cell, and 2A + 3A will be <span class="picked">highlighted</span> in light grey.</li>
+  <li><strong>3A rare cat</strong> will also be <span class="next_position">highlighted</span> in zebra, indicating your next position after the rolls.</li>
+</ul>
+
+<%= erb :table, cats: arg[:help].read_the_tracks, pick: '2A' %>
+
 <%= header(2, 'Advance the tracks') %>
 <ul>
   <li>You can click on the cat's name, which will simulate that you rolled to that cat.</li>
-  <li>Following the above example, let's click on the cat's name at 2A (i.e. <strong>2A supa cat</strong>) to simulate that you rolled to that cat. This will lead you to a table looks like below.</li>
-  <li>You can see that you advanced two rows. Previously <strong>3A rare cat</strong> was located at 3A, now it's located at 1A. This helps you record where you are at now.</li>
+  <li>Following the above example, let's click on the cat's name at 2A (i.e. <span class="supa">2A supa cat</span>) to simulate that you rolled to that cat. This will lead you to a table looks like below.</li>
+  <li>You can see that you advanced two rows. Previously <strong>3A rare cat</strong> was located at 3A, <span class="next_position">highlighted</span> in zebra, now it's located at 1A.</li>
+  <li>Your new next roll will be <strong>3A rare cat</strong> located at <strong>1A</strong>.</li>
+  <li>You can see that the other track will also advance, meaning that you can only pick one in the same row.</li>
 </ul>
 
 <%= erb :table, cats: arg[:help].advance_the_tracks %>
@@ -108,16 +119,17 @@
 <ul>
   <li>Ubers listed on the guaranteed column are the guaranteed ubers.</li>
   <li>Guaranteed ubers will only be displayed if we're looking at a guaranteed event.</li>
-  <li>Here if you make 11 guaranteed rolls, you'll get 1A ~ 10A and lastly 1A guaranteed uber, totally 11 cats.</li>
+  <li>Here if you make 11 guaranteed rolls, you'll get 1A ~ 10A and lastly <strong>1A guaranteed uber</strong>, totally 11 cats.</li>
 </ul>
 
 <%= erb :table, cats: arg[:help].guaranteed_tracks %>
 
-<%= header(2, 'Highlight rolls') %>
+<%= header(2, 'Highlight guaranteed rolls') %>
 <ul>
-  <li>You can click on the cells, and it'll highlight the cats you'll roll.</li>
-  <li>Here we click on the 1A guaranteed uber, and it'll <span class="picked_cumulatively">highlight</span> 1A ~ 10A + 1A guaranteed uber.</li>
-  <li>And <strong>11B</strong> will also be <span class="next_position">highlighted</span> in a zebra color, indicating your next position after the 11 rolls.</li>
+  <li>You can also click on the guaranteed cells, and all the cats you'll roll out will be highlighted.</li>
+  <li>Here we click on <strong>1A guaranteed uber</strong>'s cell, and 1A ~ 10A + 1A guaranteed uber are <span class="picked_cumulatively">highlighted</span> in dark grey.</li>
+  <li><strong>11B</strong> will also be <span class="next_position">highlighted</span> in zebra, indicating your next position after the 11 rolls.</li>
+  <li>This is also indicated on the 1A guaranteed uber's cell, shown as <em>-&gt; 11B</em>. Here we jump from 1A to 11B.</li>
   <li>This will lead to the next topic: <a href="#switch-tracks">Switch tracks</a>.</li>
 </ul>
 
@@ -125,9 +137,29 @@
 
 <%= header(2, 'Switch tracks') %>
 <ul>
-  <li>Switching tracks will happen whenever you made any guaranteed rolls in a <a href="#what-is-a-guaranteed-event">guaranteed event</a>.</li>
-  <li>To be added</li>
+  <li>Switching tracks will happen whenever you made any guaranteed rolls in a <a href="#what-is-a-guaranteed-event">guaranteed event</a>. Note that platinum gacha <strong>IS NOT</strong> a guaranteed event.</li>
+  <li>Beside that you always stay on the same track, regardless you're seeing it as track A or B. See <a href="#tracks-perspective">Tracks perspective</a> for details about perspective.</li>
+  <li>We already see an example switching from A to B above, let's see an example switching from B to A.</li>
+  <li>Due to the offset, we jump from 1B to <strong>12A</strong>.</li>
 </ul>
+
+<%= erb :table, cats: arg[:help].guaranteed_tracks, pick: '1BG', guaranteed_rolls: 11 %>
+
+<%= header(2, 'Tracks perspective') %>
+<ul>
+  <li>Track A or B is purely perspective. You're always on track A, and the other track is the alternative track.</li>
+  <li>To observe the perspective, let's look at this example. Suppose we click on <strong>2B rare cat</strong>'s cell, highlighting the rolls:</li>
+</ul>
+
+<%= erb :table, cats: arg[:help].read_the_tracks, pick: '2B' %>
+
+<ul>
+  <li>And then we click on <strong>2B rare cat</strong>'s name to roll to that position.</li>
+  <li>We'll see that now the previous track B swapped to A, and A swapped to B.</li>
+  <li>You're staying on the same track, because the next roll is still <span class="uber">3B uber cat</span> and so on, but the perspective is changed and swapped.</li>
+</ul>
+
+<%= erb :table, cats: arg[:help].swap_the_tracks %>
 
 <%= header(1, 'How this works') %>
 <p class="section">

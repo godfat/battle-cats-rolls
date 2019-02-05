@@ -35,6 +35,16 @@ module BattleCatsRolls
       id == rhs.id
     end
 
+    def new_with(args={})
+      result = self.class.new(*to_a)
+
+      args.each do |key, value|
+        result.public_send("#{key}=", value)
+      end
+
+      result
+    end
+
     def rarity_label
       super ||
         case score

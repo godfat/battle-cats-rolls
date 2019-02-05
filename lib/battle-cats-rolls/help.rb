@@ -11,7 +11,15 @@ module BattleCatsRolls
 
     def advance_the_tracks
       @advance_the_tracks ||=
-        read_the_tracks.drop(2).each{ |cs| cs.each{ |c| c.sequence -= 2 }}
+        read_the_tracks.drop(2).
+          map{ |cs| cs.map{ |c| c.new_with(sequence: c.sequence - 2) }}
+    end
+
+    def swap_the_tracks
+      @swap_the_tracks ||=
+        advance_the_tracks.map do |(a, b)|
+          [b.new_with(track: 'A'), a.new_with(track: 'B')]
+        end
     end
 
     def lookup_cat_data gacha
@@ -24,11 +32,11 @@ module BattleCatsRolls
 
     def guaranteed_tracks
       @guaranteed_tracks ||= begin
-        tracks = fake_tracks.dup
-        tracks.dig(0, 0).guaranteed =
-          fake_cat(-1, '1A guaranteed uber', 1, 'AG')
-        tracks.dig(0, 1).guaranteed =
-          fake_cat(-1, '1B guaranteed uber', 1, 'BG')
+        tracks = fake_tracks.map(&:dup)
+        tracks[0][0] = tracks.dig(0, 0).
+          new_with(guaranteed: fake_cat(-1, '1A guaranteed uber', 1, 'AG'))
+        tracks[0][1] = tracks.dig(0, 1).
+          new_with(guaranteed: fake_cat(-1, '1B guaranteed uber', 1, 'BG'))
         tracks
       end
     end
@@ -37,8 +45,8 @@ module BattleCatsRolls
 
     def fake_tracks
       @fake_tracks ||= [
-        %i[rare supa rare rare supa supa rare uber supa rare legend],
-        %i[supa rare uber supa rare rare supa rare rare supa rare]
+        %i[rare supa rare rare supa supa rare uber supa rare legend rare],
+        %i[supa rare uber supa rare rare supa rare rare supa rare uber]
       ].map.with_index do |column, a_or_b|
         column.map.with_index do |rarity_label, index|
           sequence = index + 1
