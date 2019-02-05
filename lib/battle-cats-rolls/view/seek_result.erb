@@ -4,14 +4,18 @@
 
   <% if arg[:seed] %>
     <% if arg[:seed].empty? %>
-      Unfortunately we didn't successfully find your seed. There could have
-      several possible reasons:
       <ul>
-        <li>There's a bug.</li>
-        <li>You put the cats wrong, or you picked the wrong event.</li>
-        <li>The formula changed and we didn't update the code yet.</li>
+        <li>
+          Unfortunately we didn't successfully find your seed. There could have
+          several possible reasons:
+          <ul>
+            <li>There's a bug.</li>
+            <li>You put the cats wrong, or you picked the wrong event.</li>
+            <li>The formula changed and we didn't update the code yet.</li>
+          </ul>
+        </li>
+        <li>Do you want to <a href="<%= seek_uri %>">try again</a>?</li>
       </ul>
-      Do you want to <a href="<%= seek_uri %>">try again</a>?
     <% else %>
       <ul>
         <li>
