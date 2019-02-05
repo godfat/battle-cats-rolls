@@ -1,4 +1,7 @@
 <p>
+  <%= erb :help_seek_result %>
+  <hr>
+
   <% if arg[:seed] %>
     <% if arg[:seed].empty? %>
       Unfortunately we didn't successfully find your seed. There could have
@@ -10,36 +13,37 @@
       </ul>
       Do you want to <a href="<%= seek_uri %>">try again</a>?
     <% else %>
-      Your starting seed is:
-      <p>
-        <a href="<%= uri(query: {next_seed: arg.dig(:seed, 0)}) %>"><%= arg.dig(:seed, 0) %></a>
-        (Note that this value has a half roll offset.
-        We're showing this only for reference and debugging purpose.)
-      </p>
-      After rolling the cats you entered, your last seed is:
-      <p>
-        <a href="<%= uri(query: {seed: arg.dig(:seed, 1)}) %>"><%= arg.dig(:seed, 1) %></a>
-      </p>
-      <p>
-        If you have other cats rolled without filling in the form, count
-        yourself. Note that a guaranteed roll counts as a half roll and thus
-        will switch your track. If you made a 11-rolls on a guaranteed event,
-        and filled the first 10 rolls without the last guaranteed roll, you
-        can find your current seed easily by using the first link with
-        the starting seed, and click on the guaranteed uber cat to simulate
-        your exact rolls.
-      </p>
+      <ul>
+        <li>
+          Your starting seed is:
+          <ul>
+            <li>
+              <a href="<%= uri(query: {next_seed: arg.dig(:seed, 0)}) %>"><%= arg.dig(:seed, 0) %></a>
+              (Note that this value has a half roll offset.
+              We're showing this only for reference and debugging purpose.)
+            </li>
+          </ul>
+        </li>
+        <li>
+          After rolling the cats you entered, your last seed is:
+          <ul>
+            <li>
+              <a href="<%= uri(query: {seed: arg.dig(:seed, 1)}) %>"><%= arg.dig(:seed, 1) %></a>
+            </li>
+          </ul>
+        </li>
+      </ul>
     <% end %>
   <% elsif arg[:seek] %>
     <% if arg[:seek].started? %>
-      Now seeking your seed...
+      <ul><li>Now seeking your seed...</li></ul>
     <% else %>
-      You're <%= arg[:seek].position %> in the queue.
+      <ul><li>You're <%= arg[:seek].position %> in the queue.</li></ul>
     <% end %>
     <script type="text/javascript">
       window.setTimeout(function(){ window.location.reload(true) }, 5000);
     </script>
   <% else %>
-    Are you <a href="<%= seek_uri %>">seeking</a> the seed?
+    <ul><li>Are you <a href="<%= seek_uri %>">seeking</a> the seed?</li></ul>
   <% end %>
 </p>
