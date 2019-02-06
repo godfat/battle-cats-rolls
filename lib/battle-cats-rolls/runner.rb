@@ -34,6 +34,16 @@ module BattleCatsRolls
       ]
     end
 
+    def self.kr
+      @kr ||= [
+        __method__,
+        '8.1.1',
+        AwsAuth.event_url('kr'),
+        # https://www.apkmonk.com/app/jp.co.ponos.battlecatskr/
+        'https://www.apkmonk.com/down_file?pkg=jp.co.ponos.battlecatskr&key=5_jp.co.ponos.battlecatskr_2019-01-10.apk'
+      ]
+    end
+
     def self.locale lang
       public_send(lang || :en)
     end

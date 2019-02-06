@@ -14,7 +14,7 @@ module BattleCatsRolls
       base_uri: 'https://bc-seek.godfat.org/seek',
       kind: ''
       case lang
-      when 'en', 'tw', 'jp'
+      when 'en', 'tw', 'jp', 'kr'
         "#{base_uri}/#{lang}#{kind}/#{file}"
       else
         raise "Unknown language: #{lang}"

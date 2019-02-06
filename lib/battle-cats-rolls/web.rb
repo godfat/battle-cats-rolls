@@ -33,11 +33,15 @@ module BattleCatsRolls
       @ball_jp ||= CrystalBall.load("#{root}/build", 'jp')
     end
 
+    def self.ball_kr
+      @ball_kr ||= CrystalBall.load("#{root}/build", 'kr')
+    end
+
     module Imp
       def lang
         @lang ||=
           case value = request.params['lang']
-          when 'tw', 'jp'
+          when 'tw', 'jp', 'kr'
             value
           else
             'en'
@@ -312,7 +316,7 @@ module BattleCatsRolls
       include Jellyfish
       controller_include NormalizedPath, Imp
 
-      (%w[/en /tw /jp] << '').each do |prefix|
+      (%w[/en /tw /jp /kr] << '').each do |prefix|
         %w[gatya.tsv item.tsv sale.tsv].each do |file|
           lang = prefix[1..-1] || 'jp'
 
