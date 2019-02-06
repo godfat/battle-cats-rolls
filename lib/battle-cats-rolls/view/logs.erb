@@ -5,16 +5,19 @@
   <% %w[gatya.tsv item.tsv sale.tsv].each do |file| %>
     <li>
       <a href="<%= event_url(controller.lang, file: file) %>"><%= file %></a>
-      <% if controller.lang == 'jp' %>
-        (cached for <%= controller.tsv_expires_in %> seconds)
-        / <a href="<%= event_url(controller.lang, file: file, kind: '/curl') %>">curl command</a>
-        / <a href="<%= event_url(controller.lang, file: file, kind: '/json') %>">headers in JSON</a>
-      <% end %>
+      (cached for <%= controller.tsv_expires_in %> seconds)
+      / <a href="<%= event_url(controller.lang, file: file, kind: '/curl') %>">curl command</a>
+      / <a href="<%= event_url(controller.lang, file: file, kind: '/json') %>">headers in JSON</a>
     </li>
   <% end %>
 </ul>
 
 <%= header(1, "What's changed?") %><p></p>
+
+<%= header(2, "2019-02-06") %>
+<ul>
+  <li>Update event data for 8.2 for BCEN and BCTW.</li>
+</ul>
 
 <%= header(2, "2019-01-30") %>
 <ul>

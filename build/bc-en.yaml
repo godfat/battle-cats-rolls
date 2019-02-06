@@ -2505,3 +2505,31 @@ events:
     supa: 2500
     uber: 500
     guaranteed: true
+  2019-02-11_246:
+    start_on: 2019-02-11
+    end_on: 2019-02-13
+    version: '80200'
+    name: AIR BUSTERS plus R.E.I ★ With Increasing Capsules discount!
+    id: 246
+    rare: 7000
+    supa: 2500
+    uber: 500
+    step_up: true
+  2019-02-13_351:
+    start_on: 2019-02-13
+    end_on: 2019-02-15
+    version: '80200'
+    name: "★ Elemental Pixies ★ Cosmic powers brought to life as Uber Rare allies!"
+    id: 351
+    rare: 7000
+    supa: 2500
+    uber: 500
+  2019-02-15_361:
+    start_on: 2019-02-15
+    end_on: 2019-02-18
+    version: '80200'
+    name: D'arktanyan is here! ★ Plus higher drop rate for Uber Rares!
+    id: 361
+    rare: 6500
+    supa: 2600
+    uber: 900

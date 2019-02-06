@@ -200,13 +200,16 @@ module BattleCatsRolls
            *request.POST['rolls']].join(' ').squeeze(' ')
       end
 
-      def serve_tsv file
-        cache[file] ||
-          cache.store(file, request_tsv(file), expires_in: tsv_expires_in)
+      def serve_tsv lang, file
+        key = "#{lang}/#{file}"
+
+        cache[key] ||
+          cache.store(
+            key, request_tsv(lang, file), expires_in: tsv_expires_in)
       end
 
-      def request_tsv file
-        aws = aws_auth(file)
+      def request_tsv lang, file
+        aws = aws_auth(lang, file)
         request = Net::HTTP::Get.new(aws.uri)
 
         aws.headers.each do |key, value|
@@ -227,9 +230,18 @@ module BattleCatsRolls
         600
       end
 
-      def aws_auth file
+      def aws_auth lang, file
+        prefix =
+          case lang
+          when 'jp'
+            ''
+          else
+            lang
+          end
+
         url =
-          "https://nyanko-events-prd.s3.ap-northeast-1.amazonaws.com/battlecats_production/#{file}"
+          "https://nyanko-events-prd.s3.ap-northeast-1.amazonaws.com/battlecats#{prefix}_production/#{file}"
+
         AwsAuth.new(:get, url)
       end
 
@@ -300,20 +312,24 @@ module BattleCatsRolls
       include Jellyfish
       controller_include NormalizedPath, Imp
 
-      %w[gatya.tsv item.tsv sale.tsv].each do |file|
-        get "/seek/#{file}" do
-          headers 'Content-Type' => 'text/plain; charset=utf-8'
-          body serve_tsv(file)
-        end
+      (%w[/en /tw /jp] << '').each do |prefix|
+        %w[gatya.tsv item.tsv sale.tsv].each do |file|
+          lang = prefix[1..-1] || 'jp'
 
-        get "/seek/curl/#{file}" do
-          headers 'Content-Type' => 'text/plain; charset=utf-8'
-          body "#{aws_auth(file).to_curl}\n"
-        end
+          get "/seek#{prefix}/#{file}" do
+            headers 'Content-Type' => 'text/plain; charset=utf-8'
+            body serve_tsv(lang, file)
+          end
 
-        get "/seek/json/#{file}" do
-          headers 'Content-Type' => 'application/json; charset=utf-8'
-          body JSON.dump(aws_auth(file).headers)
+          get "/seek#{prefix}/curl/#{file}" do
+            headers 'Content-Type' => 'text/plain; charset=utf-8'
+            body "#{aws_auth(lang, file).to_curl}\n"
+          end
+
+          get "/seek#{prefix}/json/#{file}" do
+            headers 'Content-Type' => 'application/json; charset=utf-8'
+            body JSON.dump(aws_auth(lang, file).headers)
+          end
         end
       end
 

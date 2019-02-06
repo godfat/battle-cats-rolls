@@ -14,10 +14,8 @@ module BattleCatsRolls
       base_uri: 'https://bc-seek.godfat.org/seek',
       kind: ''
       case lang
-      when 'en', 'tw'
-        "https://ponos.s3.dualstack.ap-northeast-1.amazonaws.com/appli/battlecats/event_data/battlecats#{lang}_production/#{file}"
-      when 'jp'
-        "#{base_uri}#{kind}/#{file}"
+      when 'en', 'tw', 'jp'
+        "#{base_uri}/#{lang}#{kind}/#{file}"
       else
         raise "Unknown language: #{lang}"
       end
