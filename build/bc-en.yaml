@@ -188,6 +188,12 @@ cats:
     353:
       name: [Hermit Cat, Grandmaster Cat]
       desc: ["A legendary sage who infiltrated the Cat Base.\nMemory might be going, but true strength cannot be\nforgotten. Rapid area attacks fire powerful waves.", "Captured an enemy base with nothing but one sweet \nrice cake. Imagine what happens when he gets angry.\nRapid area attacks fire powerful waves."]
+    370:
+      name: [Saber the Cat, Heroic Spirit Saber Cat, Saber Alter Cat]
+      desc: ["Golden-haired swordscat who appeared one\nfated night. Building strength by training with\na bamboo blade. Strong vs. Floating.", "Swordscat who dreams of being called by\na worthy Master. Maintains a calm \ndemeanor always. Strong vs. Floating.", "Despairing of never being summoned, this\nHeroic Spirit has wreathed herself in darkness.\nStrong vs. Floating, immune to negative effects."]
+    375:
+      name: [Li'l Sakura, Li'l Sakura CC]
+      desc: ["Joining the fight from Fate/stay night [HF]!\nAdmires Shirou, takes care of the Emiya\nhousehold. Area Attacks might Critical.", "Joining the fight from Fate/stay night [HF]! \"If I \nbecame a bad person, would you forgive me?\"\nArea Attacks might Critical."]
     376:
       name: [Coin Cat, Macho Coin Cat]
       desc: ["An invaluable collectors item!\nOnly 9 billion were produced!", "A memorial item imbued with Cat\ngratitude. Every third Coin Cat earns\nyou... another Coin Cat."]
@@ -221,6 +227,9 @@ cats:
     438:
       name: [Cat God the Great, Cat God the Awesome]
       desc: ["At long last, Cat God has joined the fight!\nHis holy sneeze knocks back all but Metal \nenemies, and his Omni-strikes are pretty cool too.", "Shining with glorious purpose and divine charisma.\nHis holy sneeze knocks back all but Metal \nenemies, and his Omni-strikes are pretty cool too."]
+    458:
+      name: [Shirou the Cat, Novice Magus Shirou Cat]
+      desc: ["A Cat who strives to be a defender of justice.\nSpent months in his room trying to summon\na Heroic Spirit. Strong vs. Black enemies.", "Still hasn't succeeded at Heroic Spirit\nsummoning. Now leaves his room sometimes\nto do night patrols. Strong vs. Black enemies."]
   2:
     38:
       name: [Pogo Cat, Masai Cat, Jiangshi Cat]
@@ -343,8 +352,8 @@ cats:
       name: [Onmyoji Cat, Magica Cat, Thaumaturge Cat]
       desc: ["Exorcist who time travelled from the past.\nAlways trying to purge sportscars of evil.\nSometimes weakens non-Metal enemies.", "Magical Girl by Alien contract - the\nshiny staff came as a signing bonus.\nSometimes weakens non-Metal enemies.", "The contract has been fulfilled. Ultimate power\nis within her grasp. But now she just works as a\ntheme park villain. 100% weakens non-Metal."]
     202:
-      name: [Drumcorps Cat, Banner Cat]
-      desc: ["Keeps the Cat Army marching to a lively beat.\nSo strict about keeping time, he only performs solo.\nMight reduce Metal damage by half.", "Heads an elite Cat Academy. Has inspired 40 years\nof students to conquer unknown lands for catkind.\nMight reduce Metal damage by half."]
+      name: [Drumcorps Cat, Banner Cat, Mochi Cat]
+      desc: ["Keeps the Cat Army marching to a lively beat.\nSo strict about keeping time, he only performs solo.\nMight reduce Metal damage by half.", "Heads an elite Cat Academy. Has inspired 40 years\nof students to conquer unknown lands for catkind.\nMight reduce Metal damage by half.", "Inherited a rice dumpling business. Looking \nfor a wife who can keep perfect time with his\nmallet strikes. Might Weaken Metal enemies."]
     215:
       name: [HYAKUTARO, HYAKUTARO CC]
       desc: ["Recruited from Metal Slug Defense!\nAn elite commando masked as a typical POW\nMight survive lethal attacks. (Area Atk)", "Recruited from Metal Slug Defense!\nLays down cover fire for the Cats with gas\nbombs. Might survive lethal attacks. (Area Atk)"]
@@ -399,6 +408,18 @@ cats:
     344:
       name: [Slug Jockey Cat, Slugcat]
       desc: ["One rainy day, a Slug befriended a Cat.\nHer will is strong, but her body is weak (to salt).\nArea attack Slows enemies for a moment.", "They thought it wasn't fair for the Cat to always\nride, so now they take turns. No effect on race\ntimes. Area attack Slows enemies for a moment."]
+    371:
+      name: [Sakura the Cat, Apron Sakura Cat, Dreaming Sakura Cat]
+      desc: ["Healthy and capable Cat filled with dreams.\nFine Western-style cuisine is her talent.\nHas a small chance of Critical Strike.", "Refining her household skills day by day.\nEvery morning must start with a proper greeting.\nHas a small chance of Critical Strike.", "She expresses her boundless hope in her cooking.\nHer overflowing optimism is unmistakable!\nChance of Critical Strike and Metal knockback."]
+    372:
+      name: [Rin the Cat, Magus Rin Cat]
+      desc: ["An Cat possessing elegance unrivaled at her\nschool. Beauty extends to behavior befitting\nan honor student. Might knockback Aliens.", "Endlessly seeks to improve on herself.\nLashes out when she feels her weakness\nmight be exposed. Might knockback Aliens."]
+    373:
+      name: [Ilya the Cat, Snow Faerie Ilya]
+      desc: ["An uncanny Cat with silver hair and red eyes.\nOnce tried to care for a small bird.\nMight Slow Red enemies.", "Inheritor of the blood of a venerable House.\nRecently purchased new winter clothes.\nMight Slow Red enemies."]
+    374:
+      name: [Li'l Shirou, Li'l Shirou CC]
+      desc: ["Joining the fight from Fate/stay night [HF]!\nDreams of defending justice like his adopted\nfather. Tough vs. Black enemies.", "Joining the fight from Fate/stay night [HF]!\nJoined the Holy Grail War after summoning\nhis Servant, Saber. Tough vs. Black enemies."]
     377:
       name: [Rover Cat, Rover Cat Mk II, Catellite]
       desc: ["The first Cat probe produced by NYASA.\nBuilt to resist extraterrestrial attacks, with\nWarp Blocking and tough defense vs Aliens.", "Cutting edge NYASA Cat probe. Transmission\npower is so advanced that it even gets the dirty \nchannels. Tough vs Aliens, with Warp Blocking.", "Experimental NYASA satellite made for remote\nobservation of areas as far as the corner store.\nTough vs Aliens, with Warp Blocking."]
@@ -459,6 +480,12 @@ cats:
     453:
       name: [Primordial Cat, Modern Cat]
       desc: ["A primitive felinoid from an ancient time, with\na charming finned tail and useful gills.\nTough versus Metal and Relic enemies.", "This strange Cat(?) was found napping on the\nwindowsill. What unusual proportions she has!\nTough versus Metal and Relic enemies."]
+    459:
+      name: [Archer the Cat, Heroic Spirit Archer Cat]
+      desc: ["A Heroic Cat Spirit proficient with both bow\nand blade. Who knows why he dislikes\nShirou the Cat so? Immune to Wave Attacks.", "Mastered the bow in order to claim the title\nof Archer. His hate for Shirou the Cat keeps\nhim up at night. Long-range, Immune to Waves."]
+    460:
+      name: [Rider the Cat, Heroic Spirit Rider Cat]
+      desc: ["A Cat who wields dagger and chain with\ngrace. At a slight visual disadvantage thanks \nto her mask. Chance to Freeze Angels.", "Gained command of a legendary lifeform.\nCan't see much due to the mask and\nPegasus' head. Chance to Freeze Angels."]
   3:
     31:
       name: [Bodhisattva Cat, Avalokitesvara Cat, Tathagata Cat]
@@ -593,8 +620,8 @@ cats:
       name: [Easter Neneko, Hoppity Neneko]
       desc: ["The adorable idol gets a new springtime look!\nAlways overthinks where to hide the eggs and\nends up panicking. Might critical attack.", "Moneko was busy, so Nene stands in! Loves\ncute cosplay, but the attention always\nembarrasses her. Might critical attack.", "Moneko was busy, so Nene stands in! Loves\ncute cosplay, but the attention always\nembarrasses her. Might critical attack."]
     378:
-      name: [Fencer Cat, Kendo Cat]
-      desc: ["Invincible swordscat unbeaten in 400 matches.\nHas to use his left hand to actually feel\nchallenged. 100% chance of breaking Barriers.", "Decided to try a new form of swordplay, but\ncan't quite make the switch from his original\nspecialty. 100% chance of breaking Barriers."]
+      name: [Fencer Cat, Kendo Cat, The Kitty of Liberty]
+      desc: ["Invincible swordscat unbeaten in 400 matches.\nHas to use his left hand to actually feel\nchallenged. 100% chance of breaking Barriers.", "Decided to try a new form of swordplay, but\ncan't quite make the switch from his original\nspecialty. 100% chance of breaking Barriers.", "Retired from competition to enter the tourism\nindustry. Everyone uses him as a meeting spot.\n100% chance of breaking Barriers."]
     391:
       name: [Aoi Hayakawa, Aoi Hayakawa CC, Baseball Mask α]
       desc: ["Dropping in from PowerPro Baseball!\nSo bad at cooking she could burn water.\nMassive anti-Alien area damage.", "Dropping in from PowerPro Baseball!\nHer flaw is too much earnest naivete.\nMassive anti-Alien area damage.", "Dropping in from PowerPro Baseball!\nSecretly Aoi Hayakawa.\nMassive anti-Alien long-range area damage."]
@@ -628,6 +655,9 @@ cats:
     448:
       name: [Miter Saw Cat, Power Saw Cat]
       desc: ["The sawmaster-in-residence of Grandon.\nHates it when things aren't cut in half.\nMassive Damage and Tough vs. Aliens!", "It's so boring when there's nothing to cut...\nThe box has groceries for mommy in it.\nMassive Damage and Tough vs. Aliens!"]
+    461:
+      name: [Kotomine & Gilgamesh Cats, Gilgamesh & Kotomine Cats]
+      desc: ["A Cat-priest with a taste for extra-spicy mapo tofu,\nand a Cat Spirit with flawless tactical sense.\nMight weaken Black, stronger after damage.", "One Cat has begun to tire of the game of battle,\nbut the other still can't get enough mapo tofu.\nMight weaken Zombies, stronger after damage."]
   4:
     35:
       name: [Nekoluga, Unknown Cat, Ultralan Pasalan]
@@ -843,8 +873,8 @@ cats:
       name: [Miko Mitama, Mitama the Oracle]
       desc: ["Chosen as a holy servant by the God of Cats,\ninfinite power lies hidden within her. Strong defense \nvs. all enemies with traits. (Long Range/Area Atk)", "Dressed in bridal gowns, she appears to the blessed\nas a sign of Cat God's favor. Her groom's identity is\nunknown... Strong vs all traits, 100% chance to Slow.", "Dressed in bridal gowns, she appears to the blessed\nas a sign of Cat God's favor. Her groom's identity is\nunknown... Strong vs all traits, 100% chance to Slow."]
     323:
-      name: [Sarukani, Rock Revengers]
-      desc: ["Won best supporting actor as a li'l monkey for \n\"Selfish Persimmons\". Everyone hates working\nwith him. Strong area atk vs Angels/Zombies.", "The kids Sarukani did wrong formed the metal\nact: Causin' Effect. Revenge is a dish best served \nheavy. Strong area atk vs Angels/Zombies.", "The kids Sarukani did wrong formed the metal\nact: Causin' Effect. Revenge is a dish best served \nheavy. Strong area atk vs Angels/Zombies."]
+      name: [Sarukani, Rock Revengers, The One-Hit Wonders]
+      desc: ["Won best supporting actor as a li'l monkey for \n\"Selfish Persimmons\". Everyone hates working\nwith him. Strong area atk vs Angels/Zombies.", "The kids Sarukani did wrong formed the metal\nact: Causin' Effect. Revenge is a dish best served \nheavy. Strong area atk vs Angels/Zombies.", "Saru convinced the rockers to reform the\nband to try to capitalize on every pop trend\nat once. Strong area atk vs Angels/Zombies."]
     327:
       name: [Mobius, Miraculous Mobius]
       desc: ["Earnest lady scholar with a strong heart,\ndropping in from Crash Fever (Area Atk)\nHuge damage/100% knockback vs Red", "Through dedicated effort she has perfected\nher skills. A guest from Crash Fever. Huge \ndamage/100% knockback vs Red. (Area Atk)", "Through dedicated effort she has perfected\nher skills. A guest from Crash Fever. Huge \ndamage/100% knockback vs Red. (Area Atk)"]
@@ -893,6 +923,27 @@ cats:
     362:
       name: [Aer, Erphuan]
       desc: ["Cosmic storms, brought to life!\nThis sylph spirit summons winds\nfor long distance area attacks!", "With winds that blast away the mountains,\nno Barrier can stand against its assaults.\nTough, with long-range area attacks vs Aliens."]
+    363:
+      name: [Saber, Saber CC, Saber Alter CC]
+      desc: ["Joining the fight from Fate/stay night [HF]! Her\nsword is pledged to her Master, Shirou Emiya.\nMassive long-range area damage vs. Floating!", "Joining the fight from Fate/stay night [HF]! Peerless \nwarrior in possession of a Noble Phantasm.\nMassive long-range area damage vs. Floating!", "Joining the fight from Fate/stay night [HF]! A \nmenacing swordwoman who resembles Saber...\nMassive long-range area damage vs. Floating!"]
+    364:
+      name: [Rin Tohsaka, Rin Tohsaka CC]
+      desc: ["Joining the fight from Fate/stay night [HF]! Seeks \nthe Holy Grail with her summoned Archer. Chance \nto knockback Aliens/Zombies, with Area Attack!", "Joining the fight from Fate/stay night [HF]! Classmate \nof Shirou, heir to the Tohsaka lineage. Chance \nto knockback Aliens/Zombies, with Area Attack!"]
+    365:
+      name: [Illyasviel, Illyasviel CC]
+      desc: ["Joining the fight from Fate/stay night [HF]! With \nBerserker at her command, she is ready for battle.\nChance to Slow Red/Metal, with Area Attack!", "Joining the fight from Fate/stay night [HF]! Guardian \nof the Einzbern family's honorable name.\nChance to Slow Red/Metal, with Area Attack!"]
+    366:
+      name: [Archer, Archer CC]
+      desc: ["Joining the fight from Fate/stay night [HF]! His bow\nis pledged to his Master, Rin Tohsaka. Immune to\nWave Damage, with Long-range Area Attack!", "Joining the fight from Fate/stay night [HF]! His \nenmity for Shirou is still a mystery. Immune to\nWave Damage, with Long-range Area Attack!"]
+    367:
+      name: [Lancer, Lancer CC]
+      desc: ["Joining the fight from Fate/stay night [HF]! His \nspear is pledged to an unknown Master.\n100% chance to break Barriers! (Area Attack)", "Joining the fight from Fate/stay night [HF]! Agility \nwhich rivals even Saber's is his point of pride.\n100% chance to break Barriers! (Area Attack)"]
+    368:
+      name: [Rider, Rider CC]
+      desc: ["Joining the fight from Fate/stay night [HF]! Her \ndagger is pledged to her Master, Shinji Matou.\nFreezes Angels with Area Attacks!", "Joining the fight from Fate/stay night [HF]!\nExcellent mobility, expert in barrier magecraft.\nFreezes Angels with Area Attacks!"]
+    369:
+      name: [Gilgamesh, Gilgamesh CC]
+      desc: ["Joining the fight from Fate/stay night [HF]! Inscrutible \nyoung man with an air of invincibility. Long-range\nArea atttacks gets stronger after taking damage!", "Joining the fight from Fate/stay night [HF]! 8th\nincarnation of a Spirit that shouldn't exist. Long-\nrange atttacks gets stronger after taking damage!"]
     379:
       name: [Dark Mitama, Gothic Mitama]
       desc: ["Mitama has been betrayed by this cruel world\nand has embraced darkness. (Long Range Atk)\nTough vs traitless enemies, 100% Slow chance.", "Like a widow mourning her lost love, she is\ntrapped within her memories. (Long Range Atk)\nTough vs traitless, 100% Slow/Weaken chance."]
@@ -956,6 +1007,9 @@ cats:
     442:
       name: [D'arktanyan, Valiant D'arktanyan]
       desc: ["Wandering warrior pursuing true justice, resembles\na certain Meowsketeer. Gains attack power\nwhen damaged, effective vs all traitless enemies!", "He values nothing more than justice and will happily\nsacrifice it all for his cause! Gains attack power\nwhen damaged, effective vs all traitless enemies!"]
+    457:
+      name: [Sakura Matou, Sakura Matou CC]
+      desc: ["Joining the fight from Fate/stay night [HF]!\nTakes charge of daily care for the Emiya house.\nTough vs Black/Aliens/Zombies (Area Attack)", "Joining the fight from Fate/stay night [HF]! Fears \nthat Shirou will fall victim to the Holy Grail War.\nTough vs Black/Aliens/Zombies (Area Attack)"]
   5:
     449:
       name: [Musashi Miyamoto, Wargod Miyamoto]
@@ -969,6 +1023,9 @@ cats:
     452:
       name: [Ushiwakamaru, Colossal Benkei]
       desc: ["A celestial hero who has vowed to avenge his father.\nHis magic flute can track the evil H.E.I.K.E. corps.\nTough vs Angels with Insane Area Damage.", "Ushi unearthed an invincible mecha ally during his\ntravels. Now victory over H.E.I.K.E. is all but certain.\nTough vs Angels with Insane Area Damage."]
+    456:
+      name: [Wonder MOMOCO, Cutie MOMOCO]
+      desc: ["Cosmic policegirl hunting interdimensional\ncriminals with lovely plasma beams of justice.\nFreezes Red/Black/Angels with Wave Attacks.", "The galaxy's most stylish detective, cleaning up\ncosmic crime with her cutting edge Cutie Beam.\nArea Wave attacks freeze Red/Black/Angels."]
 gacha:
   0: [154, 153, 152, 151, 150, 149, 148, 147, 146, 62, 59, 57, 56, 53, 52, 51, 50, 49, 48, 47, 42, 41, 40, 39, 38, 37, 36, 35, 34, 33, 32, 31]
   1: [154, 153, 152, 151, 150, 149, 148, 147, 146, 144, 60, 58, 45, 44, 43, 62, 59, 57, 56, 53, 52, 51, 50, 49, 48, 47, 42, 41, 40, 39, 38, 37, 36, 34, 33, 32, 31]
@@ -1338,6 +1395,10 @@ gacha:
   365: [355, 398, 360, 305, 258, 195, 139, 77, 84, 126, 43, 169, 315, 315, 315, 315, 315, 378, 377, 326, 308, 309, 200, 199, 198, 154, 153, 152, 151, 150, 149, 148, 147, 146, 62, 59, 57, 56, 53, 52, 51, 50, 49, 48, 47, 42, 41, 40, 39, 38, 37, 36, 34, 33, 32, 31]
   366: [276, 284, 402, 306, 273, 262, 204, 76, 85, 74, 45, 172, 315, 315, 315, 315, 315, 378, 377, 326, 308, 309, 200, 199, 198, 154, 153, 152, 151, 150, 149, 148, 147, 146, 62, 59, 57, 56, 53, 52, 51, 50, 49, 48, 47, 42, 41, 40, 39, 38, 37, 36, 34, 33, 32, 31]
   367: [436, 440, 437, 432, 428, 418, 402, 397, 381, 378, 377, 362, 361, 360, 356, 352, 339, 326, 323, 319, 317, 307, 306, 305, 308, 309, 273, 272, 270, 35, 43, 44, 45, 58, 60, 72, 73, 74, 76, 77, 84, 85, 86, 87, 88, 106, 107, 108, 125, 126, 135, 136, 137, 138, 139, 144, 159, 160, 169, 170, 171, 172, 178, 195, 196, 197, 204, 213, 227, 262, 241, 258, 259, 260, 200, 199, 198, 154, 153, 152, 151, 150, 149, 148, 147, 146, 62, 59, 57, 56, 53, 52, 51, 50, 49, 48, 47, 42, 41, 40, 39, 38, 37, 36, 34, 33, 32, 31]
+  368: [461, 461, 461, 461, 461, 461, 460, 460, 460, 459, 459, 459, 457, 363, 364, 365, 366, 367, 368, 369, 371, 371, 371, 372, 372, 372, 373, 373, 373, 378, 377, 326, 308, 309, 200, 199, 198, 154, 153, 152, 151, 150, 149, 148, 147, 146, 62, 59, 57, 56, 53, 52, 51, 50, 49, 48, 47, 42, 41, 40, 39, 38, 37, 36, 34, 33, 32, 31]
+  369: [456, 448, 447, 446, 445, 444, 428, 378, 377, 326, 308, 309, 200, 199, 198, 154, 153, 152, 151, 150, 149, 148, 147, 146, 144, 60, 58, 45, 44, 43, 62, 59, 57, 56, 53, 52, 51, 50, 49, 48, 47, 42, 41, 40, 39, 38, 37, 36, 34, 33, 32, 31]
+  370: [456, 448, 447, 446, 445, 444, 428, 378, 377, 326, 308, 309, 201, 200, 199, 198, 154, 153, 152, 151, 150, 149, 148, 147, 146, 145, 144, 132, 130, 60, 58, 45, 44, 43, 62, 59, 57, 56, 53, 52, 51, 50, 49, 48, 47, 42, 41, 40, 39, 38, 37, 36, 34, 33, 32, 31]
+  371: [456, 448, 447, 446, 445, 444, 428, 378, 377, 326, 308, 309, 240, 239, 238, 200, 199, 198, 154, 153, 152, 151, 150, 149, 148, 147, 146, 144, 60, 58, 45, 44, 43, 62, 59, 57, 56, 53, 52, 51, 50, 49, 48, 47, 42, 41, 40, 39, 38, 37, 36, 34, 33, 32, 31]
 events:
   2018-06-06_245:
     start_on: 2018-06-06
