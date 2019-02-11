@@ -226,6 +226,17 @@ module BattleCatsRolls
       CGI.escape(str)
     end
 
+    def made10rolls? seeds
+      gacha = Gacha.new(controller.ball, controller.event, seeds.first)
+      gacha.send(:advance_seed!) # Account offset for next_seed
+      9.times{ gacha.roll! } # Only 9 rolls left
+
+      if gacha.seed == seeds.last
+        gacha.send(:advance_seed!) # Account for guaranteed roll
+        gacha.seed
+      end
+    end
+
     private
 
     def header n, name

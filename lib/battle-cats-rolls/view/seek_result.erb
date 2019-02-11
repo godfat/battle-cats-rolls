@@ -36,6 +36,19 @@
             </li>
           </ul>
         </li>
+        <% if offset_seed = made10rolls?(arg[:seed]) %>
+          <li>
+            If you made 11-rolls with a <strong>guaranteed event</strong>,
+            or 15-rolls (3+5+7) with a <strong>step-up event</strong>,
+            and you didn't fill the guaranteed uber in the previous form,
+            then your seed should be:
+            <ul>
+              <li>
+                <a href="<%= uri(query: {seed: offset_seed}) %>"><%= offset_seed %></a> (1A here is the same as 1B in the above link)
+              </li>
+            </ul>
+          </li>
+        <% end %>
       </ul>
     <% end %>
   <% elsif arg[:seek] %>
